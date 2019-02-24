@@ -1,0 +1,43 @@
+body{
+    background-color: #cccccc;
+}
+
+.navbar-custom {
+    background-color: #31708F;
+    color: white;
+}
+
+.navbar-brand{
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+}
+
+
+.card, .btn, .form-control {
+    border-radius: 0;
+}
+
+.dropdown-custom{
+    color: white;
+}
+
+.dropdown-custom:hover{
+    color: #F0AD4E;
+}
+
+.searchbar{
+    border-radius: 10px;
+    width: 256px;
+    transition: border-color .25s ease-in-out,box-shadow .15s ease-in-out;
+    transition-property: border-color, box-shadow;
+    transition-duration: 0.15s, 0.15s;
+    transition-timing-function: ease-in-out, ease-in-out;
+    transition-delay: 0s, 0s;
+
+}
+
+flipNY{
+    animation-name: flipInY;
+}
