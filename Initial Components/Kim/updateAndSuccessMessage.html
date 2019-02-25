@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="./../css/animate.min.css">
+    <!-- Your custom css goes here -->
+    <link rel="stylesheet" href="../../css/custom-kim.css">
+
+
+    <title></title>
+
+</head>
+<body>
+ 
+<br>  
+
+<!------------------- Success Modal Design -------------------------->
+  
+  <!-- Modal Trigger Button-->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#successModal">Success Trigger Button</button>
+
+  <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "successHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <i id=  "successIcon" class="far fa-check-circle fa-10x"></i>
+        <p id= "successText">You have sucessfully added ........</p>
+      </div>
+
+      <div class="modal-footer">
+        <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!------------------- Failed Modal Design -------------------------->
+  
+  <!-- Modal Trigger Button-->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#failedModal">Fail to Add Trigger Button</button>
+
+  <!-- Modal -->
+    <div class="modal fade" id="failedModal" tabindex="-1" role="dialog" aria-labelledby="failedModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "failedHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <i id=  "failedIcon" class="far fa-times-circle fa-10x"></i>
+        <p id= "failedText">Failed to addd ........</p>
+      </div>
+
+      <div class="modal-footer">
+        <button id="retryFailedButton" type="button" class="btn btn-danger" data-dismiss="modal">RETRY</button>
+
+        <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+</body>
+</html>
