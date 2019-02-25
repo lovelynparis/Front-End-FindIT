@@ -155,3 +155,7 @@
       font-weight: bold;
       color: black;
     }
+	
+	div.last {
+		height: 38px;
+	}
