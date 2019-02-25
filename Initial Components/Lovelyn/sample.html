@@ -22,22 +22,25 @@
             <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
                 <div class="navbar-header">
                     <!-- Needs logo -->
-                    <a class="navbar-brand">FindIT</a>
+                    <a class="navbar-brand">FindIT</a><span>
+                        <i class="fas fa-bars"></i>
+                    </span>
                 </div>
 
                 <ul class="navbar-nav mr-auto">
                     <!-- Sidebar Toggler -->
                     <li class="nav-item">
-                        <a class="nav-link nav-toggler d-block d-sm-none waves-effect waves-dark" href="javascript:void(0)"><i
-                                class="ti-menu"></i></a> </li>
+                        <a class="nav-link nav-toggler d-block d-sm-none" href="javascript:void(0)">
+                            <i class="ti-menu"></i>
+                        </a>
                     </li>
                     <!-- Searchbar -->
-                    <li class="nav-item">
+                    <!-- <li class="nav-item">
                         <form class="form-inline my-1 my-lg-0">
                             <input class="form-control mr-sm-3-n4 searchbar" type="search" placeholder="Search"
-                            aria-label="Search">
+                                aria-label="Search">
                         </form>
-                    </li>
+                    </li> -->
                 </ul>
                 <ul class="navbar-nav my-lg-0">
                     <!-- Dropdown Toggler-->
@@ -46,11 +49,11 @@
                             id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
                             <span class="hidden-md-down">John Doe &nbsp;
-                            <i class="fa fa-angle-down"></i></span>
+                                <i class="fa fa-angle-down"></i></span>
                         </a>
-                        
+
                         <!-- Dropdown Menu -->
-                        <div class="dropdown-menu dropdown-menu-right animated flipInY" aria-labelledby="navbarDropdown">
+                        <div class="dropdown-menu dropdown-menu-right animated flipInY">
                             <a class="dropdown-item dropdown-item-custom" href="#">Settings</a>
                             <a class="dropdown-item dropdown-item-custom" href="#">Log Out</a>
                         </div>
@@ -58,6 +61,19 @@
                 </ul>
             </nav>
         </header>
+
+        <aside class="left-sidebar">
+            <div class="scroll-sidebar">
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li> <a class="waves-effect waves-dark" href="calendar.html" aria-expanded="false"><i
+                                    class="ti-calendar"></i><span class="hide-menu">Calendar</span></a></li>
+                        <li> <a class="waves-effect waves-dark" href="guest.html" aria-expanded="false"><i
+                                    class="ti-user"></i><span class="hide-menu">Guest</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
     </div>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

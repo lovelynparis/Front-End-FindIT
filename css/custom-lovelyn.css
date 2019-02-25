@@ -45,6 +45,9 @@ body{
     border-color: #F0AD4E;
 }
 
+.searchbar input[type="text"]{
+    border-color: #F0AD4E;
+}
 ::-webkit-input-placeholder {
    font-style: italic;
 }
