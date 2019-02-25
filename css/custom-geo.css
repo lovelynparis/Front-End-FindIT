@@ -1,0 +1,33 @@
+/* breadcrumb slash*/
+.breadcrumb {
+  background-color: transparent;
+
+ }
+
+ .breadcrumb-item a {
+  text-decoration: none;
+  color: black;
+ }
+
+ /*Breadcrump arrow*/
+
+ .arr-right .breadcrumb-item+.breadcrumb-item::before {
+  content: "›";
+  vertical-align: top;
+  color: white;
+  font-size: 35px;
+  line-height: 18px;
+ }
+
+/*Tabs design style*/
+	.nav-pills .nav-link.active,
+	.nav-pills .show>.nav-link {
+		color: #fff;
+		background-color: #ffc107;
+	}
+
+	a {
+		color:black;
+		text-decoration: none;
+		background-color: transparent;
+	}
