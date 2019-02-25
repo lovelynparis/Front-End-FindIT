@@ -15,11 +15,14 @@
   background-color: white;
 }
 .modal-header{
-	background-color: gray;
+  background-color: #757575;
+  color: white;
 }
 
 .modal-title{
-	color: white;
+  color: white;
+  padding-top: 80px;
+  font-family: sans-serif; 
 }
 
 .close:hover{
@@ -27,7 +30,9 @@
 }
 
 .modal-dialog{
-    overflow-y: initial !important
+    overflow-y: initial !important;
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25); */
 }
 
 .modal-body{
@@ -117,3 +122,5 @@
 	border-color: purple;
 	background-color: purple;
 }
+
+
