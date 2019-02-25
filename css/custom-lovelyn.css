@@ -27,17 +27,24 @@ body{
     color: #F0AD4E;
 }
 
+.dropdown-item-custom{
+    color: #000000;
+    font-size: 15px;
+}
+
+.dropdown-item-custom:hover{
+    background-color: #F0AD4E;
+    color: #4285F4;
+}
+
 .searchbar{
     border-radius: 10px;
     width: 256px;
-    transition: border-color .25s ease-in-out,box-shadow .15s ease-in-out;
-    transition-property: border-color, box-shadow;
-    transition-duration: 0.15s, 0.15s;
-    transition-timing-function: ease-in-out, ease-in-out;
-    transition-delay: 0s, 0s;
-
+    height: 36px;
+    top: 11px;
+    border-color: #F0AD4E;
 }
 
-flipNY{
-    animation-name: flipInY;
+::-webkit-input-placeholder {
+   font-style: italic;
 }
