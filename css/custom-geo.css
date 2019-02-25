@@ -1,3 +1,4 @@
+
 /* breadcrumb slash*/
 .breadcrumb {
   background-color: transparent;
@@ -20,14 +21,14 @@
  }
 
 /*Tabs design style*/
-	.nav-pills .nav-link.active,
-	.nav-pills .show>.nav-link {
-		color: #fff;
-		background-color: #ffc107;
-	}
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #ffbb33;
+}
 
-	a {
-		color:black;
-		text-decoration: none;
-		background-color: transparent;
-	}
+a {
+	color:black;
+	text-decoration: none;
+	background-color: transparent;
+}
+
