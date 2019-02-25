@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./../css/animate.min.css">
+
+    <!-- Webfonts CSS -->
+    <link rel="stylesheet" type="text/css" href="../../css/all.css">
+
+    <!-- Your custom css goes here -->
+    <link rel="stylesheet" href="../../css/custom-mehanie.css">
+
+    <title>inputTypeDesign</title>
+
+  </head>
+  <body>
+  <!--first card-->
+    <div class="card" id="inputType1">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <p class="card-title">Name</p>
+            <div class="input-group mb-3">
+              <input type="text" class="form-control">
+            </div>
+            <p class="card-title">Quantity</p>
+            <div class="input-group mb-3" >
+              <input type="text" class="form-control">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <p class="card-title">Dropdown Input</p>
+            <select class="custom-select" id="inputGroupSelect01">
+              <option selected>Item 1</option>
+              <option value="1">Item 2</option>
+              <option value="2">Item 3</option>
+              <option value="3">Item 4</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!--second card -->
+    <div class="card" id="inputType2">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-5">
+            <p class="card-title">Name</p>
+            <div class="input-group mb-3">
+              <input type="text" class="form form-control">
+            </div>
+            <p class="card-title">Quantity</p>
+            <div class="">
+              <select class="custom custom-select" id="inputGroupSelect01">
+                <option selected>Item 1</option>
+                <option value="1">Item 2</option>
+                <option value="2">Item 3</option>
+                <option value="3">Item 4</option>
+              </select>
+            </div>
+            <br>
+            <p class="card-title">Official Receipt No.</p>
+            <div class="input-group input-group-sm mb-3" style="max-width: 10rem;">
+            	<input type="text" id="text" class="form form-control" aria-label="Text input with checkbox" placeholder="908231991793">
+            	<button id="button" class="fas fa-lock" onclick="lock()"></button>
+            </div>
+          </div>
+
+          <div class="col-sm-5">
+            <p class="card-title">Dropdown Input</p>
+            <div class="input-group mb-3">
+              <select class="custom custom-select" id="inputGroupSelect01">
+                <option selected>Item 1</option>
+                <option value="1">Item 2</option>
+                <option value="2">Item 3</option>
+                <option value="3">Item 4</option>
+              </select>
+            </div>
+            <p class="card-title">Switches
+            <label class="switch">
+              <input type="checkbox">
+              <span class="slider round">
+              </span>
+            </label>
+            </p>
+          <br>
+          <p class="card-title">Status</p>
+          <div class="input-group input-group-sm mb-3">
+            <select class="custom custom-select" id="inputGroupSelect01">
+              <option selected>In Stock</option>
+              <option value="1">Available</option>
+              <option value="2">Unavailable</option>
+              <option value="3">For Disposal</option>
+            </select>
+            <button id="button1" class="fas fa-lock" onclick="lock2()"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+
+    <!--third card -->
+    <div class="">
+      <select class="custom1 custom-select" id="inputGroupSelect01">
+        <option selected>Item 1</option>
+        <option value="1">Item 2</option>
+        <option value="2">Item 3</option>
+        <option value="3">Item 4</option>
+        <option value="3">Item 5</option>
+      </select>
+    </div>
+
+    <div class="">
+      <select class="custom2 custom-select" id="inputGroupSelect01">
+        <option selected class="option">ITEM 1</option>
+        <option class="option" value="1">ITEM 2</option>
+        <option class="option" value="2">ITEM 3</option>
+        <option class="option" value="3">ITEM 4</option>
+        <option class="option" value="3">ITEM 5</option>
+      </select>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../js/custom-Mehanie.js"></script>
+  </body>
+</html>
