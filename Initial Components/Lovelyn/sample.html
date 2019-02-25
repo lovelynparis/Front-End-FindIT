@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../../css/animate.css">
     <!-- Your custom css goes here -->
     <link rel="stylesheet" href="../../css/custom-lovelyn.css">
+    <link rel="stylesheet" href="sidenav.css">
 
     <title>Navbars</title>
 </head>
@@ -62,18 +63,104 @@
             </nav>
         </header>
 
-        <aside class="left-sidebar">
-            <div class="scroll-sidebar">
-                <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="calendar.html" aria-expanded="false"><i
-                                    class="ti-calendar"></i><span class="hide-menu">Calendar</span></a></li>
-                        <li> <a class="waves-effect waves-dark" href="guest.html" aria-expanded="false"><i
-                                    class="ti-user"></i><span class="hide-menu">Guest</span></a></li>
-                    </ul>
-                </nav>
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h3>FindIT</h3>
+                <strong>FI</strong>
             </div>
-        </aside>
+        
+            <ul class="list-unstyled components">
+                <li class="active">
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        Dashboard
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        Inventory
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        Associates
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        Insuance
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        Issuable Items
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        Inventory Items
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="#">
+                        <i class="fas fa-home"></i>
+                        Activity Logs
+                    </a>
+                </li>
+        
+                <li>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li>
+        
+                <li>
+                    <a href="#">
+                        <i class="fas fa-briefcase"></i>
+                        About
+                    </a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                        <i class="fas fa-copy"></i>
+                        Pages
+                    </a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        
+        </nav>
     </div>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
