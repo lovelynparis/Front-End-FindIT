@@ -124,6 +124,7 @@ span {
     color: #333333;
     transition: all 0.3s;
     position: relative;
+    z-index:0;
     box-shadow: 0px 5.5px 5px rgba(0, 0, 0, 0.24), 0px 9px 18px rgba(0, 0, 0, 0.18);
     /* overflow-y: initial !important; */
     -webkit-overflow-scrolling: touch
@@ -211,7 +212,7 @@ span {
 
 #sidebar .sidebar-header {
     height: 63px;
-    background: #FAF2CC;
+    background: #23527C;
     position: relative;
 }
 
@@ -233,7 +234,7 @@ span {
 
 #sidebar ul li a:hover {
     color: #7386D5;
-    background: #fff;
+    background: #FAF2CC;
 }
 
 #sidebar ul li a i {
@@ -242,8 +243,8 @@ span {
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
-    color: #fff;
-    background: #4DB6AC;
+    color: #5BC0DE;
+    background: #FAF2CC;
 }
 
 a[data-toggle="collapse"] {
@@ -290,15 +291,9 @@ a.article:hover {
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
-#topnav {
-    width: 100%;
-    min-height: 100vh;
-    transition: all 0.3s;
-}
 
 #content {
     width: 100%;
-    padding: 20px;
     min-height: 100vh;
     transition: all 0.3s;
 }
@@ -354,4 +349,49 @@ a.article:hover {
     #sidebarCollapse span {
         display: none;
     }
+}
+
+/* USER AVATAR IMAGE */
+
+.img-avatar {
+    border-radius: 100%;
+    border-style: none;
+    width: 70px;
+    height: 70px;
+}
+
+#sidebar.active .img-avatar{
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+#sidebar .sidebar-user {
+    height: 130px;
+    background: #FFC107;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+#sidebar.active .sidebar-user {
+    height: 90px;
+    background: #FFC107;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 1px;
+}
+
+
+#sidebar .sidebar-user strong {
+    display: none;
+    font-size: 1.8em;
+}
+
+#sidebar .sidebar-user .list-email{
+    color: #23527C;
+}
+
+#sidebar .sidebar-user .list-email:hover{
+    color: white;
 }
