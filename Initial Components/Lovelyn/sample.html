@@ -21,35 +21,42 @@
     <div class="fluid-container">
         <header class="topbar ">
             <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
-                <div class="navbar-header">
-                    <!-- Needs logo -->
-                    <a class="navbar-brand">FindIT</a><span>
-                        <i class="fas fa-bars"></i>
-                    </span>
-                </div>
-
                 <ul class="navbar-nav mr-auto">
                     <!-- Sidebar Toggler -->
-                    <li class="nav-item">
-                        <a class="nav-link nav-toggler d-block d-sm-none" href="javascript:void(0)">
-                            <i class="ti-menu"></i>
-                        </a>
+                    <li class="nav-item sidebar-toggler">
+                        <button type="button" id="sidebarCollapse" class="btn btn-info">
+                            <i class="fas fa-align-left"></i>
+                            <span></span>
+                        </button>
                     </li>
-                    <!-- Searchbar -->
-                    <!-- <li class="nav-item">
-                        <form class="form-inline my-1 my-lg-0">
-                            <input class="form-control mr-sm-3-n4 searchbar" type="search" placeholder="Search"
-                                aria-label="Search">
-                        </form>
-                    </li> -->
+                    
+                    <li class="nav-item">
+                        <div class="navbar-header">
+                            <!-- Needs logo -->
+                            <a class="navbar-brand">FindIT</a><span>
+                                <i class="fas fa-bars"></i>
+                            </span>
+                        </div>
+                    </li>
                 </ul>
+                
+                
+                <ul class="navbar-nav mr-auto">
+                    <!-- Searchbar -->
+                    <li class="nav-item">
+                        <form class="form-inline my-1 my-lg-0">
+                            <input class="form-control mr-sm-3-n4 searchbar" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </li>
+                </ul>
+                
+                
                 <ul class="navbar-nav my-lg-0">
-                    <!-- Dropdown Toggler-->
                     <li class="nav-item dropdown u-pro">
                         <a class="nav-link dropdown-toggle navbar-toggler-right dropdown-custom" href="#"
                             id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">
-                            <span class="hidden-md-down">John Doe &nbsp;
+                            <span class="hidden-md-down pl-1">John Doe &nbsp;
                                 <i class="fa fa-angle-down"></i></span>
                         </a>
 
@@ -63,104 +70,108 @@
             </nav>
         </header>
 
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>FindIT</h3>
-                <strong>FI</strong>
-            </div>
-        
-            <ul class="list-unstyled components">
-                <li class="active">
-                    <a href="#">
-                        <i class="fas fa-home"></i>
-                        Dashboard
-                    </a>
-                </li>
-        
-                <li>
-                    <a href="#">
-                        <i class="fas fa-home"></i>
-                        Inventory
-                    </a>
-                </li>
-        
-                <li>
-                    <a href="#">
-                        <i class="fas fa-home"></i>
-                        Associates
-                    </a>
-                </li>
-        
-                <li>
-                    <a href="#">
-                        <i class="fas fa-home"></i>
-                        Insuance
-                    </a>
-                </li>
-        
-                <li>
-                    <a href="#">
-                        <i class="fas fa-home"></i>
-                        Issuable Items
-                    </a>
-                </li>
-        
-                <li>
-                    <a href="#">
-                        <i class="fas fa-home"></i>
-                        Inventory Items
-                    </a>
-                </li>
-        
-                <li>
-                    <a href="#">
-                        <i class="fas fa-home"></i>
-                        Activity Logs
-                    </a>
-                </li>
-        
-                <li>
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-home"></i>
-                        Home
-                    </a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
-                </li>
-        
-                <li>
-                    <a href="#">
-                        <i class="fas fa-briefcase"></i>
-                        About
-                    </a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                        <i class="fas fa-copy"></i>
-                        Pages
-                    </a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-        
-        </nav>
+        <!-- Sidebar -->
+        <div class="wrapper">
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>FindIT</h3>
+                    <strong>FI</strong>
+                </div>
+            
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span class="hide-menu">Dashboard</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span class="hide-menu">Inventory</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span class="hide-menu">Associates</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span class="hide-menu">Insuance</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span class="hide-menu">Issuable Items</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span class="hide-menu">Inventory Items</span>
+                        </a>
+                    </li>
+            
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-home"></i>
+                            <span class="hide-menu">Activity Logs</span>
+                        </a>
+                    </li>
+            
+                    <!-- SubMenus -->
+                    <!--<li>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-home"></i>
+                            Home
+                        </a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="#">Home 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Home 3</a>
+                            </li>
+                        </ul>
+                    </li>
+            
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-briefcase"></i>
+                            About
+                        </a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                            <i class="fas fa-copy"></i>
+                            Pages
+                        </a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="#">Page 1</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 2</a>
+                            </li>
+                            <li>
+                                <a href="#">Page 3</a>
+                            </li>
+                        </ul>
+                    </li> -->
+                </ul>
+            
+            </nav>
+        </div>
     </div>
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -169,6 +180,15 @@
     <script src="../../js/bootstrap.min.js"></script>
 
     <!-- Your scripts go below this comment -->
+    <script>
+        $(document).ready(function () {
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+
+        });
+    </script>
 
 </body>
 
