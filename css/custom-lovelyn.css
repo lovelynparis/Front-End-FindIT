@@ -152,6 +152,11 @@ span {
     position: relative;
 } 
 
+#sidebarCollapse:hover{
+    background: #333333;
+    color: #FFC107;
+}
+
 #sidebarCollapse:focus,#sidebarCollapse:active {
    outline: none !important;
    box-shadow: none;
