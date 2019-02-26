@@ -14,70 +14,35 @@
     <link rel="stylesheet" href="../../css/custom-lovelyn.css">
     <link rel="stylesheet" href="sidenav.css">
 
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+        integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ"
+        crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+        integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY"
+        crossorigin="anonymous"></script>
+
     <title>Navbars</title>
 </head>
 
 <body>
     <div class="fluid-container">
-        <header class="topbar ">
-            <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
-                <ul class="navbar-nav mr-auto">
-                    <!-- Sidebar Toggler -->
-                    <li class="nav-item sidebar-toggler">
-                        <button type="button" id="sidebarCollapse" class="btn btn-info">
-                            <i class="fas fa-align-left"></i>
-                            <span></span>
-                        </button>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <div class="navbar-header">
-                            <!-- Needs logo -->
-                            <a class="navbar-brand">FindIT</a><span>
-                                <i class="fas fa-bars"></i>
-                            </span>
-                        </div>
-                    </li>
-                </ul>
-                
-                
-                <ul class="navbar-nav mr-auto">
-                    <!-- Searchbar -->
-                    <li class="nav-item">
-                        <form class="form-inline my-1 my-lg-0">
-                            <input class="form-control mr-sm-3-n4 searchbar" type="search" placeholder="Search" aria-label="Search">
-                        </form>
-                    </li>
-                </ul>
-                
-                
-                <ul class="navbar-nav my-lg-0">
-                    <li class="nav-item dropdown u-pro">
-                        <a class="nav-link dropdown-toggle navbar-toggler-right dropdown-custom" href="#"
-                            id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">
-                            <span class="hidden-md-down pl-1">John Doe &nbsp;
-                                <i class="fa fa-angle-down"></i></span>
-                        </a>
-
-                        <!-- Dropdown Menu -->
-                        <div class="dropdown-menu dropdown-menu-right animated flipInY">
-                            <a class="dropdown-item dropdown-item-custom" href="#">Settings</a>
-                            <a class="dropdown-item dropdown-item-custom" href="#">Log Out</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-
-        <!-- Sidebar -->
         <div class="wrapper">
+            <!-- Sidebar  -->
             <nav id="sidebar">
                 <div class="sidebar-header">
-                    <h3>FindIT</h3>
-                    <strong>FI</strong>
+                    <button type="button" id="sidebarCollapse" class="btn btn-info float-right">
+                        <i class="fas fa-align-left"></i>
+                        <span></span>
+                    </button>
+                    <!-- <h3>FindIT</h3>
+                        <strong>FI</strong> -->
                 </div>
-            
+    
+                <!-- User avatar -->
+                <!-- <div class="sidebar-header">
+                    </div> -->
+    
                 <ul class="list-unstyled components">
                     <li class="active">
                         <a href="#">
@@ -85,94 +50,146 @@
                             <span class="hide-menu">Dashboard</span>
                         </a>
                     </li>
-            
+    
                     <li>
                         <a href="#">
                             <i class="fas fa-home"></i>
                             <span class="hide-menu">Inventory</span>
                         </a>
                     </li>
-            
+    
                     <li>
                         <a href="#">
                             <i class="fas fa-home"></i>
                             <span class="hide-menu">Associates</span>
                         </a>
                     </li>
-            
+    
                     <li>
                         <a href="#">
                             <i class="fas fa-home"></i>
                             <span class="hide-menu">Insuance</span>
                         </a>
                     </li>
-            
+    
                     <li>
                         <a href="#">
                             <i class="fas fa-home"></i>
                             <span class="hide-menu">Issuable Items</span>
                         </a>
                     </li>
-            
+    
                     <li>
                         <a href="#">
                             <i class="fas fa-home"></i>
                             <span class="hide-menu">Inventory Items</span>
                         </a>
                     </li>
-            
+    
                     <li>
                         <a href="#">
                             <i class="fas fa-home"></i>
                             <span class="hide-menu">Activity Logs</span>
                         </a>
                     </li>
-            
-                    <!-- SubMenus -->
-                    <!--<li>
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                            <i class="fas fa-home"></i>
-                            Home
-                        </a>
-                        <ul class="collapse list-unstyled" id="homeSubmenu">
-                            <li>
-                                <a href="#">Home 1</a>
-                            </li>
-                            <li>
-                                <a href="#">Home 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Home 3</a>
-                            </li>
-                        </ul>
-                    </li>
-            
-                    <li>
-                        <a href="#">
-                            <i class="fas fa-briefcase"></i>
-                            About
-                        </a>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                            <i class="fas fa-copy"></i>
-                            Pages
-                        </a>
-                        <ul class="collapse list-unstyled" id="pageSubmenu">
-                            <li>
-                                <a href="#">Page 1</a>
-                            </li>
-                            <li>
-                                <a href="#">Page 2</a>
-                            </li>
-                            <li>
-                                <a href="#">Page 3</a>
-                            </li>
-                        </ul>
-                    </li> -->
+                    <!-- Submenu -->
+                    <!-- <li>
+                            <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <i class="fas fa-home"></i>
+                                <span class="hide-menu">Home</span>
+                            </a>
+                            <ul class="collapse list-unstyled" id="homeSubmenu">
+                                <li>
+                                    <a href="#">Home 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Home 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Home 3</a>
+                                </li>
+                            </ul>
+                        </li>
+    
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-briefcase"></i>
+                                About
+                            </a>
+                            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                <i class="fas fa-copy"></i>
+                                Pages
+                            </a>
+                            <ul class="collapse list-unstyled" id="pageSubmenu">
+                                <li>
+                                    <a href="#">Page 1</a>
+                                </li>
+                                <li>
+                                    <a href="#">Page 2</a>
+                                </li>
+                                <li>
+                                    <a href="#">Page 3</a>
+                                </li>
+                            </ul>
+                        </li> -->
                 </ul>
-            
+    
+            </nav>
+            <!-- Top Nav  -->
+            <div id="topnav">
+                <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
+                    <ul class="navbar-nav pr-4">
+                        <li class="nav-item">
+                            <div class="navbar-header">
+                                <!-- Needs logo -->
+                                <a class="navbar-brand">FindIT</a>
+                            </div>
+                        </li>
+                    </ul>
+    
+    
+                    <ul class="navbar-nav mr-auto">
+                        <!-- Searchbar -->
+                        <li class="nav-item">
+                            <form class="form-inline my-1 my-lg-0">
+                                <input class="form-control mr-sm-3-n4 searchbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                            </form>
+                        </li>
+                    </ul>
+    
+    
+                    <ul class="navbar-nav my-lg-0">
+                        <span class="hidden-md-down pl-1">John Doe &nbsp;</span>
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle navbar-toggler-right dropdown-custom" href="#"
+                                id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+    
+                            </a>
+    
+                            <!-- Dropdown Menu -->
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <a class="dropdown-item dropdown-item-custom" href="#">Settings</a>
+                                <a class="dropdown-item dropdown-item-custom" href="#">Log Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <span></span>
+                    </button> -->
+            </div>
             </nav>
         </div>
+    
+        <!-- Page Content -->
+        <!-- <div id="content">
+    
+            </div> -->
     </div>
+
     <!-- Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
