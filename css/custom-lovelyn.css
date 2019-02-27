@@ -28,7 +28,8 @@ p {
 .navbar-custom {
     background-color: #31708F;
     color: white; 
-    max-height: 63px;   
+    max-height: 63px;
+    min-width: 490px;   
 }
 
 .navbar-brand{
@@ -118,7 +119,6 @@ span {
 }
 
 #sidebar {
-    min-width: 250px;
     max-width: 250px;
     min-height: 100%;
     background: #FAFAFA;
@@ -137,10 +137,6 @@ span {
     position: relative;
     
 }
-
-/* #sidebar:hover{
-   overflow-y: scroll;
-} */
 
 #sidebarCollapse{
     min-width: 60px;
@@ -241,8 +237,7 @@ span {
     margin-right: 10px;
 }
 
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
+#sidebar ul li.active>a{
     color: #5BC0DE;
     background: #FAF2CC;
 }
