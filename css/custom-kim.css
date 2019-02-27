@@ -138,22 +138,24 @@
 .card-body{
   box-shadow: 20px 20px 50px grey;
 }
-.card-signin .card-title {
+
+#newMedia {
+  margin-top: -20%;
+  margin-bottom: 5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: #CCCCCC;
+
+}
+
+#signInTitle {
   margin-bottom: 1rem;
   font-weight: 300;
   font-size: 1rem;
   font-family: sans-serif;
   font-weight: bold;
   color: #555555;
-}
-
-.card-signin .companyName {
-  margin-top: -4rem;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  font-size: 1.5rem;
-  font-family: sans-serif;
-  color: #CCCCCC;
 }
 
 
