@@ -20,3 +20,22 @@ function unlock2() {
   document.getElementById("button1").onclick = lock2;
   document.getElementById("button1").className = "fas fa-lock";
 }
+
+
+/*Select all checkbox*/
+var selectedIds = [];
+function toggle(source) {
+    checkboxes = document.getElementsByName('ALL');
+    for ( var i in checkboxes)
+        checkboxes[i].checked = source.checked;
+}
+function addSelects() {
+
+    var ids = document.getElementsByName('ALL');
+
+    for ( var i = 0; i < ids.length; i++) {
+        if (ids[i].checked == true) {
+            selectedIds.push(ids[i].value);
+        }
+    }
+}
