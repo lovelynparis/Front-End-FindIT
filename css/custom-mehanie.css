@@ -155,7 +155,92 @@
       font-weight: bold;
       color: black;
     }
-	
-	div.last {
-		height: 38px;
-	}
+
+  	div.last {
+  		height: 38px;
+  	}
+
+ /*filterTabs.html*/
+    div.filter-card {
+      background-color: #E5E5E5;
+    }
+
+    div#card-header1 {
+      border-bottom: 2px solid #CCCCCC;
+    }
+
+    div#card-body {
+      border-bottom: 2px solid #CCCCCC;
+    }
+
+    h5 {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    .form-check {
+      font-size: 14px;
+    }
+
+    /*Customized Checkbox*/
+    .checkbox-custom {
+      position: relative;
+      font-size: 12px;
+    }
+
+    span.all {
+      margin-right: 2.7rem;
+    }
+
+    .checkbox-custom input[type=checkbox] {
+      display: none;
+    }
+
+    .checkbox-custom input[type=checkbox]~b {
+      cursor: pointer;
+      outline: 0;
+      position: relative;
+      display: inline-block;
+      margin: 4px 1px 0;
+      background-color: #FFFFFF;
+      border: 1px solid #FFC107;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      line-height: 1;
+      text-align: center;
+      font-size: 12px;
+      color: #ad823a;
+    }
+
+    .checkbox-custom input[type=checkbox]:checked~b:after {
+      content: '\2713';
+      cursor: pointer;
+      outline: 0;
+      display: inline-block;
+      background-color: #337AB7;
+      border-right: 1px solid #FFC107;
+      border-bottom: 1px solid #FFC107;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      line-height: 1;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+
+    #buttons{
+      font-size: 12px;
+      border-radius: 0;
+      width: 6rem;
+      margin-top: 5rem;
+      box-shadow: 0 3px 3px rgba(0,0,0,0.20);
+    }
+
+    #button2{
+      font-size: 12px;
+      border-radius: 0;
+      width: 5rem;
+      box-shadow: 0 3px 3px rgba(0,0,0,0.20);
+    }
