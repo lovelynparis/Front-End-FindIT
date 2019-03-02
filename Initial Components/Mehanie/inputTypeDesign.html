@@ -70,8 +70,12 @@
               </div>
               <label class="label">Official Receipt No.</label>
               <div class="form-group">
+                <input id="text" type="text">
+	               <button id="lock-unlock-button" onclick="lock()"><span id="lock-unlock" class="fas fa-lock-open"></span></button>
+                <!--
                 <input type="text" id="text" class="">
                 <button id="button" class="fas fa-lock button" onclick="lock()"></button>
+              -->
               </div>
           </div>
           <div class="col-sm-6">
@@ -95,12 +99,15 @@
               </div>
               <label class="label">Status</label>
                 <div class="form-group">
-                  <select class="exampleFormControlSelect1" id="inputGroupSelect01">
+                  <select class="exampleFormControlSelect1" id="text2">
                     <option>Status 1</option>
                     <option>Status 2</option>
                     <option>Status 3</option>
                   </select>
+                  <button id="lock-unlock-button2" onclick="lock2()"><span id="lock-unlock2" class="fas fa-lock-open"></span></button>
+                  <!--
                   <button id="button1" class="fas fa-lock button" onclick="lock2()"></button>
+                -->
                 </div>
           </div>
         </div>
