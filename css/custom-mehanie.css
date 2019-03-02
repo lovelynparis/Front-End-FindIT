@@ -10,7 +10,7 @@
       box-shadow: 0 5px 20px rgba(0,0,0,0.23);
     }
 
-    .card-title {
+    .card-title, .label{
       font-size: 14px;
       font-weight: bold;
     }
@@ -20,6 +20,7 @@
       background: transparent;
       border: none;
       border-bottom: 2px solid black;
+      border-radius: 0;
     }
 
     input.form {
@@ -33,6 +34,7 @@
       border: none;
       border-bottom: 2px solid black;
       margin-bottom: 2rem;
+      border-radius: 0;
     }
 
     select.custom {
@@ -59,9 +61,7 @@
       color: #FFC107;
     }
 
-    div.input-group {
-      max-width: 15rem;
-    }
+
 
   /* The switch - the box around the slider */
     .switch {
@@ -69,8 +69,6 @@
       display: inline-block;
       width: 38px;
       height: 17px;
-      margin-left: 1rem;
-      margin-bottom: 2.5rem;
     }
 
     /* Hide default HTML checkbox */
@@ -126,7 +124,6 @@
 
   /* cardStyle */
     .card {
-      max-width: 15rem;
       box-shadow: 0 5px 20px rgba(0,0,0,0.23);
     }
 
@@ -149,16 +146,21 @@
     }
 
     .card.card-sm{
-      max-width: 8rem;
+      max-width: 10rem;
       box-shadow: 0 5px 20px rgba(0,0,0,0.23);
-      font-size: 12px;
+      font-size: 15px;
       font-weight: bold;
       color: black;
+      height: 3.1rem;
     }
 
-  	div.last {
-  		height: 38px;
+  	.last{
+  		height: 3rem;
   	}
+
+    .input-group-text{
+      font-size: 24px;
+    }
 
  /*filterTabs.html*/
     div.filter-card {
@@ -230,6 +232,23 @@
       color: white;
     }
 
+    .checkbox-custom input[name=status]:checked~b:after {
+      content: '\2212';
+      cursor: pointer;
+      outline: 0;
+      display: inline-block;
+      background-color: #555555;
+      border-right: 1px solid #FFC107;
+      border-bottom: 1px solid #FFC107;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      line-height: 1;
+      text-align: center;
+      font-size: 12px;
+      color: white;
+    }
+
     #buttons{
       font-size: 12px;
       border-radius: 0;
@@ -243,4 +262,22 @@
       border-radius: 0;
       width: 5rem;
       box-shadow: 0 3px 3px rgba(0,0,0,0.20);
+    }
+
+    /*sample card*/
+
+    .row {
+      padding-top: 2rem;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      padding-bottom: 1rem;
+    }
+
+    .exampleFormControlSelect1 {
+      width: 11rem;
+      height: 2rem;
+    }
+
+    .button {
+      height: 1.9rem;
     }
