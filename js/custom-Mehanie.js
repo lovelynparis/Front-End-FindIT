@@ -1,25 +1,27 @@
 function lock() {
-  document.getElementById("text").disabled = true;
-  document.getElementById("button").onclick = unlock;
-  document.getElementById("button").className = "fas fa-lock-open";
-}
-function unlock() {
-  document.getElementById("text").disabled = false;
-  document.getElementById("button").onclick = lock;
-  document.getElementById("button").className = "fas fa-lock";
-}
+			document.getElementById("text").disabled = true;
+			document.getElementById("lock-unlock-button").onclick = unlock;
+			document.getElementById("lock-unlock").className = "fas fa-lock";
+		}
 
-//may error pa. di pa tapos
+		function unlock() {
+			document.getElementById("text").disabled = false;
+			document.getElementById("lock-unlock-button").onclick = lock;
+			document.getElementById("lock-unlock").className = "fas fa-lock-open";
+		}
+
+
 function lock2() {
-  document.getElementById("inputGroupSelect01").disabled = true;
-  document.getElementById("button1").onclick = unlock2;
-  document.getElementById("button1").className = "fas fa-lock-open";
-}
-function unlock2() {
-  document.getElementById("inputGroupSelect01").disabled = false;
-  document.getElementById("button1").onclick = lock2;
-  document.getElementById("button1").className = "fas fa-lock";
-}
+			document.getElementById("text2").disabled = true;
+			document.getElementById("lock-unlock-button2").onclick = unlock2;
+			document.getElementById("lock-unlock2").className = "fas fa-lock";
+		}
+
+		function unlock2() {
+			document.getElementById("text2").disabled = false;
+			document.getElementById("lock-unlock-button2").onclick = lock2;
+			document.getElementById("lock-unlock2").className = "fas fa-lock-open";
+		}
 
 
 /*Select all checkbox*/
