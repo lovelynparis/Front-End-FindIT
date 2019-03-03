@@ -33,3 +33,11 @@ a {
 	text-decoration: none;
 	background-color: transparent;
 }
+
+/*tables design*/
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #ffc107;
+    border-color: white;
+  }
