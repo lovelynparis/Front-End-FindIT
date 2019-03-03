@@ -221,7 +221,7 @@ span {
     padding-left: 10px;
 }
 
-.active .sidebar-user {
+#sidebar.active .sidebar-user {
     height: 90px;
     background: #757575;
     position: relative;
