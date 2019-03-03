@@ -43,10 +43,10 @@ p {
     line-height: normal;
     font-size: 24px;
 }
-
+/* 
 .navbar-nav .pr-4{
     border-right: 2px #F0AD4E;
-}
+} */
 
 
 .card, .btn, .form-control {
@@ -107,8 +107,7 @@ a:focus {
     margin: 40px 0;
 }
 
-i,
-span {
+i{
     display: inline-block;
 }
 
