@@ -15,7 +15,7 @@ body {
     overflow:hidden;
 }
 
-/* ------------FONT STYLE ------------ */
+/* ------------ FONT STYLE ------------ */
 p {
     font-size: 1.1em;
     font-weight: 300;
@@ -29,10 +29,11 @@ a, a:hover, a:focus {
     transition: all 0.3s;
 }
 
-i, span {
+i{
     display: inline-block;
 }
 
+/* ------------ MAIN CONTAINER ------------ */
 .wrapper {
     display: flex;
     align-items: stretch;
@@ -48,9 +49,7 @@ i, span {
     NAVIGATION STYLES
 ----------------------------------------------------- */
 
-/* ---------------------------------------------------
-    TOP NAVIGATION BAR STYLES
------------------------------------------------------ */
+/* ------------ TOP NAVIGATION BAR ------------ */
 .navbar {
     padding: 15px 10px;
     border: none;
@@ -65,4 +64,10 @@ i, span {
     min-width: 490px;   
 }
 
-/****** Footer Style *********/
+.navbar-brand{
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 24px;
+}
+
