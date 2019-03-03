@@ -94,8 +94,6 @@ a:focus {
     transition: all 0.3s;
 }
 
-
-
 .navbar-btn {
     box-shadow: none;
     outline: none !important;
@@ -212,7 +210,7 @@ span {
 }
 
 /* USER AVATAR IMAGE */
-#sidebar .sidebar-user {
+.sidebar-user {
     border-top: 5px solid #eba133;
     height: 130px;
     background: #757575;
@@ -221,7 +219,7 @@ span {
     padding-left: 10px;
 }
 
-.active .sidebar-user {
+#sidebar.active .sidebar-user {
     height: 90px;
     background: #757575;
     position: relative;
