@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Page Header and Breadcrumbs</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="../../css/custom-geo.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+/*
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #ffc107;
+    border-color: white;
+  }
+*/
+</style>
+
+<body>
+  <!-- Tables -->
+  <div class="container">
+    <h3>TABLE TITLE</h3>
+
+
+    <hr>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+
+        <label>Show entries 
+          <select name="dtVerticalScrollExample_length" aria-controls="dtVerticalScrollExample" class="custom-select custom-select-sm form-control form-control-sm">
+            <option value="10">10</option>
+            <option value="25">25</option>
+            <option value="50">50</option>
+            <option value="100">100</option>
+          </select> </label>
+
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <div id="dtVerticalScrollExample_filter" class="dataTables_filter"><label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dtVerticalScrollExample"></label></div>
+      </div>
+    </div>
+
+    <table class="table table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">First</th>
+          <th scope="col">Last</th>
+          <th scope="col">Handle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td colspan="2">Larry the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+    <div class="row">
+      <div class="col-sm-8">Showing 11 to 20 of 57 entries</div>
+      <div class="col-sm-4">
+
+        <nav aria-label="Demo of Bootstrap 4 Navigation">
+
+          <ul class="pagination">
+
+            <li class="page-item "><a class="page-link text-dark" href="#">Prev</a></li>
+
+            <li class="page-item active"><a class="page-link text-dark" href="#">1</a></li>
+
+            <li class="page-item"><a class="page-link text-dark" href="#">2</a></li>
+
+            <li class="page-item"><a class="page-link text-dark" href="#">3</a></li>
+
+            <li class="page-item"><a class="page-link text-dark" href="#">4</a></li>
+
+            <li class="page-item"><a class="page-link text-dark" href="#">5</a></li>
+
+            <li class="page-item"><a class="page-link text-dark" href="#">6</a></li>
+
+            <li class="page-item"><a class="page-link text-dark" href="#">7</a></li>
+
+            <li class="page-item"><a class="page-link text-dark" href="#">Next</a></li>
+
+          </ul>
+
+        </nav>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+</html>
