@@ -23,12 +23,12 @@
             FILTER
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-            <button class="dropdown-item" type="button">Category</button>
-            <button class="dropdown-item" type="button">Status</button>
+            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">Category</button>
+            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo2">Status</button>
           </div>
         </div>
       </div>
-      <div class="card-body" id="card-body">
+      <div class="card-body panel-collapse collapse show" id="demo1" >
         <h5> CATEGORIES </h5>
         <hr style="border: 0.5px solid #ffbb33; width: 15rem; margin-top: 0;">
         <div class="row">
@@ -102,10 +102,9 @@
             </div>
           </div>
         </div>
+        </div>
 
-        <br>
-        <br>
-
+        <div class="card-body panel-collapse collapse show" id="demo2">
         <h5> STATUS </h5>
         <hr style="border: 0.5px solid #ffbb33; width: 15rem; margin-top: 0;">
         <div class="row">
@@ -158,6 +157,12 @@
         </div>
       </div>
     </div>
+
+
+
+
+
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
