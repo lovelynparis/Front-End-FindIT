@@ -1,5 +1,5 @@
 /*
-    DEMO STYLE
+DEMO STYLE
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
@@ -17,6 +17,11 @@ p {
     color: #999;
 }
 
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
 /* Top Navbar */
 .navbar {
     padding: 15px 10px;
@@ -26,7 +31,7 @@ p {
 }
 
 .navbar-custom {
-    background-color: #31708F;
+    background-color: #333333;
     color: white; 
     max-height: 63px;
     min-width: 490px;   
@@ -113,17 +118,13 @@ span {
     SIDEBAR STYLE
 ----------------------------------------------------- */
 
-.wrapper {
-    display: flex;
-    align-items: stretch;
-}
 
 #sidebar {
-    min-width: 250px;
-    max-width: 250px;
+    min-width: 270px;
+    max-width: 270px;
     min-height: 100%;
-    background: #FAFAFA;
-    color: #333333;
+    background: #333;
+    color: #FAFAFA;
     transition: all 0.3s;
     position: relative;
     z-index:0;
@@ -139,6 +140,7 @@ span {
     
 }
 
+/* Sidebar Toggler */
 #sidebarCollapse{
     min-width: 60px;
     max-width: 60px;
@@ -168,10 +170,6 @@ span {
     display: block;
 }
 
-#sidebar ul li a {
-    text-align: left;
-}
-
 #sidebar.active ul li a {
     text-align: center;
     max-height: 50px;
@@ -180,7 +178,7 @@ span {
 #sidebar.active ul li a i {
     margin-right: 0;
     display: block;
-    font-size: 1.5em;
+    font-size: 1.3em;
     margin-bottom: 5px;
 }
 
@@ -202,19 +200,62 @@ span {
 }
 
 #sidebar .sidebar-topnav {
-    background: #333333;
     float: right;
 }
 
 
 #sidebar .sidebar-header {
     height: 63px;
-    background: #23527C;
+    background: #333;
     position: relative;
+        
 }
 
+/* USER AVATAR IMAGE */
+#sidebar .sidebar-user {
+    border-top: 5px solid #eba133;
+    height: 130px;
+    background: #757575;
+    position: relative;
+    padding-top: 10px;
+    padding-left: 10px;
+}
 
-#sidebar .sidebar-header strong {
+.active .sidebar-user {
+    height: 90px;
+    background: #757575;
+    position: relative;
+    padding-top: 5px;
+    padding-left: 1px;
+}
+
+.img-avatar {
+    border-radius: 100%;
+    border-style: none;
+    width: 70px;
+    height: 70px;
+}
+
+.active .img-avatar{
+    margin-top: 5px;
+    width: 50px;
+    height: 50px;
+}
+
+.sidebar-user strong {
+    display: none;
+    font-size: 1.2em;
+}
+
+ .sidebar-user .list-email{
+    color: white;
+}
+
+ .sidebar-user .list-email:hover{
+    color: #23527C;
+}
+
+.sidebar-header strong {
     display: none;
     font-size: 1.8em;
 }
@@ -227,10 +268,12 @@ span {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    text-transform: uppercase;
+    text-align: left;
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
+    color: #333333;
     background: #FAF2CC;
 }
 
@@ -239,8 +282,8 @@ span {
 }
 
 #sidebar ul li.active>a{
-    color: #5BC0DE;
-    background: #FAF2CC;
+    color: #23527C;
+    background: #FFC107;
 }
 
 a[data-toggle="collapse"] {
@@ -347,47 +390,3 @@ a.article:hover {
     }
 }
 
-/* USER AVATAR IMAGE */
-
-.img-avatar {
-    border-radius: 100%;
-    border-style: none;
-    width: 70px;
-    height: 70px;
-}
-
-#sidebar.active .img-avatar{
-    margin-top: 5px;
-    width: 50px;
-    height: 50px;
-}
-
-#sidebar .sidebar-user {
-    height: 130px;
-    background: #FFC107;
-    position: relative;
-    padding-top: 10px;
-    padding-left: 10px;
-}
-
-#sidebar.active .sidebar-user {
-    height: 90px;
-    background: #FFC107;
-    position: relative;
-    padding-top: 5px;
-    padding-left: 1px;
-}
-
-
-#sidebar .sidebar-user strong {
-    display: none;
-    font-size: 1.8em;
-}
-
-#sidebar .sidebar-user .list-email{
-    color: #23527C;
-}
-
-#sidebar .sidebar-user .list-email:hover{
-    color: white;
-}

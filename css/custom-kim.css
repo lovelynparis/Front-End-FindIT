@@ -163,10 +163,7 @@ body{
 }
 
 .yellow-divider{
-  max-height: 5px;
-  background: #F0AD4E;
-  padding: 3px;
-  border: none;
+  border-top: 5px solid #eba133;
 }
 
 #signInTitle {
