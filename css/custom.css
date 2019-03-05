@@ -1,26 +1,29 @@
 /* *****************************************************
     INDEX
         - 1. General Styles
-            - 1.1 Body
-            - 1.2 Font Styles
+            - 1.1. Body
+            - 1.2. Font Styles
 
         - 2. Containers Styles
-            - 2.1 Card Styles
+            - 2.1. Card Styles
 
         - 3. Header Styles
-            - 3.1 Breadcrumbs
+            - 3.1. Breadcrumbs
 
         - 4. Navigation Style
             - 4.1 Top Navigation Bar
-                - 4.1.1 Dropdown Top Bar
-                - 4.1.2 Searchbar
+                - 4.1.1. Dropdown Top Bar
+                - 4.1.2. Searchbar
             - 4.2 Sidebar
-                - 4.2.1 Sidebar Toggler Button
-                - 4.2.2 Sidebar Uncollapsed
-                - 4.2.3 Sidebar Collapsed
-                - 4.2.4 User Info Sidebar
+                - 4.2.1. Sidebar Toggler Button
+                - 4.2.2. Sidebar Uncollapsed
+                - 4.2.3. Sidebar Collapsed
+                - 4.2.4. User Info Sidebar
                     - 4.2.4.1 User Avatar Image
-            - 4.2 Mediaquerries
+            - 4.3 Mediaquerries
+
+            - 4.4. Tabs Style
+                - 4.4.1. 
         
         - 5. Content Styles
 
@@ -36,7 +39,7 @@
     +---------------------------------------+ */
 
 body {
-    font-family:sans-serif;
+    font-family:sans-serif, Roboto;
     background: #E5E5E5;
 }
 
@@ -50,6 +53,7 @@ h5 {
 
 p {
     font-size: 12px;
+    font-family:sans-serif, Roboto;
     font-weight: 300;
     line-height: 1.7em;
     color: #999;
@@ -59,6 +63,8 @@ a, a:hover, a:focus {
     color: inherit;
     text-decoration: none;
     transition: all 0.3s;
+	text-decoration: none;
+	background-color: transparent;
 }
 
 i{
@@ -66,6 +72,7 @@ i{
 }
 
 .title{
+    font-style: openSans;
     text-transform: uppercase;
 }
 
@@ -469,6 +476,34 @@ ul ul a {
         display: none;
     }
 }
+
+
+/*  +---------------------------------------+ 
+       4.4 TABS STYLE                    
+    +---------------------------------------+ */
+
+.tab-item{
+    color: black;
+    background-color: #fff;
+    margin-right: 5px;
+    /* padding: 0 2em; */
+    border-radius: 0;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    border-radius: 0;
+    color: #fff;
+	background-color: #ffc107;
+}
+
+/*tables design*/
+  .page-item.active .page-link {
+    z-index: 1;
+    color: #fff;
+    background-color: #ffc107;
+    border-color: white;
+  }
 
 
 /* ================================================ 
