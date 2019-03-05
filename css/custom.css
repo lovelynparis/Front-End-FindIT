@@ -1,28 +1,48 @@
-/* ================================================ 
+/* *****************************************************
     INDEX
-        - General Styles
-            - Body
-            - Font Styles
-        - Containers Styles
-            - Card Styles
-        - Header Styles
-            - Breadcrumbs
-        - Navigation Style
-            - Top Navigation Bar
-                - Dropdown Top Bar
-                - Searchbar
+        - 1. General Styles
+            - 1.1 Body
+            - 1.2 Font Styles
 
-=================================================== */
+        - 2. Containers Styles
+            - 2.1 Card Styles
+
+        - 3. Header Styles
+            - 3.1 Breadcrumbs
+
+        - 4. Navigation Style
+            - 4.1 Top Navigation Bar
+                - 4.1.1 Dropdown Top Bar
+                - 4.1.2 Searchbar
+            - 4.2 Sidebar
+                - 4.2.1 Sidebar Toggler Button
+                - 4.2.2 Sidebar Uncollapsed
+                - 4.2.3 Sidebar Collapsed
+                - 4.2.4 User Info Sidebar
+                    - 4.2.4.1 User Avatar Image
+            - 4.2 Mediaquerries
+        
+        - 5. Content Styles
+
+
+******************************************************/
 
 /* ================================================ 
-                    GENERAL STYLES
+                1. GENERAL STYLES
 =================================================== */
+
+/*  +---------------------------------------+ 
+       1.1 BODY STYLE                      
+    +---------------------------------------+ */
+
 body {
     font-family:sans-serif;
     background: #E5E5E5;
 }
 
-/* ------------ FONT STYLE ------------ */
+/*  +---------------------------------------+ 
+       1.2 FONT STYLE                      
+    +---------------------------------------+ */
 h5 {
     font-size: 14px;
     text-align: center;
@@ -54,7 +74,7 @@ a[data-toggle="collapse"] {
 }
 
 /*================================================ 
-                CONTAINER STYLES
+                2. CONTAINER STYLES
 ================================================== */
 .wrapper {
     display: flex;
@@ -67,7 +87,10 @@ a[data-toggle="collapse"] {
     transition: all 1.3s;
 }
 
-/* ------------ CARD STYLES ------------ */
+/*  +---------------------------------------+ 
+       2.1 CARD STYLE                      
+    +---------------------------------------+ */
+
 .card {
 box-shadow: 0 5px 20px rgba(0,0,0,0.23);
 }
@@ -113,16 +136,17 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.23);
     font-size: 24px;
 }
 /* ================================================ 
-                    HEADER STYLES
+                3. HEADER STYLES
 =================================================== */
 
-/*  ------------ BREADCRUMBS ------------ */
+/*  +---------------------------------------+ 
+       3.1 BREADCRUMBS                     
+    +---------------------------------------+ */
 .breadcrumbs > nav , .breadcrumb{
     padding: .5rem 1.5rem;
     background-color: transparent;
     margin-bottom: 0;
 }
-
 
 .breadcrumb-item a {
     text-decoration: none;
@@ -142,10 +166,13 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.23);
     color: #23527C;
 }
 /*  ================================================ 
-                    NAVIGATION STYLES
-    ================================================ */
+                4. NAVIGATION STYLES
+==================================================== */
 
-/*  ------------ TOP NAVIGATION BAR ------------ */
+/*  +---------------------------------------+ 
+       4.1 TOP NAVIGATION BAR                     
+    +---------------------------------------+ */
+
 .navbar-custom {
     background-color: #333333;
     color: white; 
@@ -170,7 +197,9 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.23);
     border: none;
 }
 
-/***** DROPDOWN TOP BAR *****/
+
+/******** 4.1.1 Dropdown Top Bar ********/
+
 .dropdown-custom{
     color: white;
 }
@@ -197,7 +226,9 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.23);
     transform: translateY(-50%);
 }
 
-/***** SEARCHBAR *****/
+
+/******** 4.1.2 Searchbar ********/
+
 .searchbar{
     border-radius: 10px;
     width: 256px;
@@ -213,9 +244,11 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.23);
    font-style: italic;
 }
 
-/* ------------ SIDEBAR ------------ */
 
-/***** Sidebar Toggler Button *****/
+/*  +---------------------------------------+ 
+       4.2 SIDEBAR                     
+    +---------------------------------------+ */
+
 #sidebarCollapse{
     min-width: 60px;
     max-width: 60px;
@@ -236,7 +269,9 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.23);
    box-shadow: none;
 }
 
-/* ------------ SIDEBAR UNCOLLAPSED ------------ */
+
+/******** 4.2.2 Sidebar Uncollapsed ********/
+
 #sidebar {
     min-width: 270px;
     max-width: 270px;
@@ -293,7 +328,8 @@ ul ul a {
     background: #4DB6AC;
 }
 
-/* ------------ SIDEBAR COLLAPSED ------------ */
+/******** 4.2.3. Sidebar Collapsed ********/
+
 #sidebar.active {
     min-width: 60px;
     max-width: 60px;
@@ -334,8 +370,9 @@ ul ul a {
     transform: translateX(50%);
 }
 
-/* ------------ USER INFO SIDEBAR ------------ */
-/* USER AVATAR IMAGE */
+/******** 4.2.4. Sidebar Collapsed ********/
+
+/* 4.2.4.1. User Avatar Image */
 .sidebar-user {
     border-top: 5px solid #eba133;
     height: 130px;
@@ -379,9 +416,10 @@ ul ul a {
     color: #23527C;
 }
 
-/* ---------------------------------------------------
-    MEDIAQUERIES
------------------------------------------------------ */
+
+/*  +---------------------------------------+ 
+       4.2 MEDIAQUERRIES                    
+    +---------------------------------------+ */
 
 @media (max-width: 200px) {
     #sidebar {
@@ -432,7 +470,8 @@ ul ul a {
     }
 }
 
-/* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
+
+/* ================================================ 
+                5. CONTENT STYLES
+=================================================== */
 
