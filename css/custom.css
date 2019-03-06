@@ -23,19 +23,19 @@
             - 4.3 Mediaquerries
 
             - 4.4. Tabs Style
-                - 4.4.1. 
-        
+                - 4.4.1.
+
         - 5. Content Styles
 
 
 ******************************************************/
 
-/* ================================================ 
+/* ================================================
                 1. GENERAL STYLES
 =================================================== */
 
-/*  +---------------------------------------+ 
-       1.1 BODY STYLE                      
+/*  +---------------------------------------+
+       1.1 BODY STYLE
     +---------------------------------------+ */
 
 body {
@@ -43,8 +43,8 @@ body {
     background: #E5E5E5;
 }
 
-/*  +---------------------------------------+ 
-       1.2 FONT STYLE                      
+/*  +---------------------------------------+
+       1.2 FONT STYLE
     +---------------------------------------+ */
 h5 {
     font-size: 14px;
@@ -80,7 +80,7 @@ a[data-toggle="collapse"] {
     position: relative;
 }
 
-/*================================================ 
+/*================================================
                 2. CONTAINER STYLES
 ================================================== */
 .wrapper {
@@ -94,12 +94,12 @@ a[data-toggle="collapse"] {
     transition: all 1.3s;
 }
 
-/*  +---------------------------------------+ 
-       2.1 CARD STYLE                      
+/*  +---------------------------------------+
+       2.1 CARD STYLE
     +---------------------------------------+ */
 
 .card {
-box-shadow: 0 5px 20px rgba(0,0,0,0.23);
+box-shadow: 0 5px 18px rgba(0,0,0,0.10);
 }
 
 .card, .btn, .form-control {
@@ -142,12 +142,13 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.23);
 .card-counter{
     font-size: 24px;
 }
-/* ================================================ 
+
+/* ================================================
                 3. HEADER STYLES
 =================================================== */
 
-/*  +---------------------------------------+ 
-       3.1 BREADCRUMBS                     
+/*  +---------------------------------------+
+       3.1 BREADCRUMBS
     +---------------------------------------+ */
 .breadcrumbs > nav , .breadcrumb{
     padding: .5rem 1.5rem;
@@ -172,19 +173,19 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.23);
     text-decoration: none;
     color: #23527C;
 }
-/*  ================================================ 
+/*  ================================================
                 4. NAVIGATION STYLES
 ==================================================== */
 
-/*  +---------------------------------------+ 
-       4.1 TOP NAVIGATION BAR                     
+/*  +---------------------------------------+
+       4.1 TOP NAVIGATION BAR
     +---------------------------------------+ */
 
 .navbar-custom {
     background-color: #333333;
-    color: white; 
+    color: white;
     max-height: 63px;
-    min-width: 490px;   
+    min-width: 490px;
     padding: 15px 10px;
     border: none;
     border-radius: 0;
@@ -252,8 +253,8 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.23);
 }
 
 
-/*  +---------------------------------------+ 
-       4.2 SIDEBAR                     
+/*  +---------------------------------------+
+       4.2 SIDEBAR
     +---------------------------------------+ */
 
 #sidebarCollapse{
@@ -264,7 +265,7 @@ box-shadow: 0 5px 20px rgba(0,0,0,0.23);
     background: #333333;
     border-color: transparent;
     position: relative;
-} 
+}
 
 #sidebarCollapse:hover{
     background: #FFC107;
@@ -424,8 +425,8 @@ ul ul a {
 }
 
 
-/*  +---------------------------------------+ 
-       4.2 MEDIAQUERRIES                    
+/*  +---------------------------------------+
+       4.2 MEDIAQUERRIES
     +---------------------------------------+ */
 
 @media (max-width: 200px) {
@@ -478,8 +479,8 @@ ul ul a {
 }
 
 
-/*  +---------------------------------------+ 
-       4.4 TABS STYLE                    
+/*  +---------------------------------------+
+       4.4 TABS STYLE
     +---------------------------------------+ */
 
 .tab-item{
@@ -506,7 +507,62 @@ ul ul a {
   }
 
 
-/* ================================================ 
+/* ================================================
                 5. CONTENT STYLES
 =================================================== */
+/*recently added - 3/6/19*/
+div.card-row {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1rem;
+}
 
+.background {/*card background*/
+    background-color: #C4C4C4;
+    border-color: #C4C4C4;
+}
+
+div.p {
+    padding: 0;
+}
+
+div.box {
+    width: 6rem;
+    height: 5rem;
+    background-color: #757575;
+    padding: 0;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+div.box2 {
+    width: 18.7rem;
+    height: 5rem;
+    background-color: #C4C4C4;
+    border-color: #C4C4C4;
+    margin-top: 1rem;
+    margin-left: 7px;
+}
+
+div.view {
+    font-size: 12px;
+    color: white;
+    align-content: center;
+    background-color: #757575;
+    width: 6rem;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+div.view2 {
+    width: 18.7rem;
+    font-size: 12px;
+    color: white;
+    background-color: #C4C4C4;
+    margin-left: 7px;
+    margin-top: 3px;
+}
+
+div.height {
+    height: 16rem;
+}
