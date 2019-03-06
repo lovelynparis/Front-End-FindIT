@@ -536,12 +536,15 @@ div.box {
 }
 
 div.box2 {
-    width: 18.7rem;
-    height: 5rem;
+    padding: 10px;
+    font-size: 12px;
+    color: white;
     background-color: #C4C4C4;
-    border-color: #C4C4C4;
-    margin-top: 1rem;
-    margin-left: 7px;
+    margin-top: 10px;
+    margin-right: 9%;
+    margin-left: 9%;
+
+
 }
 
 div.view {
@@ -555,12 +558,14 @@ div.view {
 }
 
 div.view2 {
-    width: 18.7rem;
+    padding: 5px;
     font-size: 12px;
     color: white;
     background-color: #C4C4C4;
-    margin-left: 7px;
     margin-top: 3px;
+    margin-right: 9%;
+    margin-left: 9%;
+
 }
 
 div.height {
@@ -572,3 +577,71 @@ div.margin {
     margin-bottom: 7px;
 }
 /*******************************************/
+
+.repaired .box{
+    font-size: 12px;
+    color: white;
+    padding-left: 7%;
+    background-color: #31708F;
+}
+
+.repaired .col{
+    background-color: #31708F;
+}
+
+div.box .fas{
+  text-align: center;
+  border-radius: 50%;
+  margin-top: 20%;
+  margin-left: 10%;
+  padding: 10px;
+  background-color: #757575;
+}
+
+.disposed .box{
+    font-size: 12px;
+    color: white;
+    padding-left: 5%;
+    background-color: #333333;
+}
+
+
+.disposed .col{
+    background-color: #333333;
+}
+
+.returned .box{
+    font-size: 12px;
+    color: white;
+    padding-left: 5%;
+    background-color: #23527C;
+}
+
+.returned .col{
+    background-color: #23527C;
+}
+
+
+.return-equipment .box{
+    padding-right: 5px ;
+    color: #CCCCCC;
+}
+
+.return-equipment .col{
+     text-align: center;
+}
+
+.low-stock .box{
+    padding-right: 5px ;
+    color: #CCCCCC;
+}
+
+.low-stock .col{
+    text-align: center;
+}
+
+.row-alignment{
+    padding-left: 10px;
+    text-align: center;
+    color: red;
+}
