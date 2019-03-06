@@ -510,7 +510,7 @@ ul ul a {
 /* ================================================
                 5. CONTENT STYLES
 =================================================== */
-/*recently added - 3/6/19*/
+/*recently added - dashboard - 3/6/19*/
 div.card-row {
     padding-left: 2rem;
     padding-right: 2rem;
@@ -566,3 +566,9 @@ div.view2 {
 div.height {
     height: 16rem;
 }
+
+div.margin {
+    margin: auto;
+    margin-bottom: 7px;
+}
+/*******************************************/
