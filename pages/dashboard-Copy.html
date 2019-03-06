@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../css/all.css">
+    <link rel="stylesheet" href="../css/animate.css">
+
+    <link rel="stylesheet" href="../css/custom.css">
+    <title>Sample Compiled Components</title>
+</head>
+
+<body>
+    <div class="fluid-container">
+        <div class="wrapper">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+                <!-- Sidebar Toggle Button -->
+                <div class="sidebar-header">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info float-right">
+                        <i class="fas fa-align-left"></i>
+                        <span></span>
+                    </button>
+                </div>
+
+                <!-- <div class="card-header yellow-divider"></div> -->
+
+                <!-- Sidebar User Info -->
+                <div class="sidebar-user">
+                    <img src="../assets/user/squidward.jpg" class="img-avatar" alt="" srcset="">
+                    <span class="hide-menu">
+                        <ul class="list-unstyled avatar">
+                            <li class="list-email"><small>john_doe@nms.ph</small></li>
+                            <li><small>Admin</small></li>
+                        </ul>
+                    </span>
+                    <a class="nav-link dropdown-toggle navbar-toggler-right dropdown-avatar" href="#"
+                        id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                        <a class="dropdown-item dropdown-item-avatar" href="#">Settings</a>
+                        <a class="dropdown-item dropdown-item-avatar" href="#">Log Out</a>
+                    </div>
+                </div>
+
+                <!-- Menu List -->
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <a href="#">
+                            <i class="fas fa-chart-line"></i>
+                            <span class="hide-menu">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-warehouse"></i>
+                            <span class="hide-menu">Inventory</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-users"></i>
+                            <span class="hide-menu">Associates</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-hand-holding"></i>
+                            <span class="hide-menu">Issuance</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-desktop"></i>
+                            <span class="hide-menu">Issuable Items</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-exclamation-circle"></i>
+                            <span class="hide-menu">Inventory Concerns</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-list-alt"></i>
+                            <span class="hide-menu">Activity Logs</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-file-export"></i>
+                            <span class="hide-menu">Generate Reports</span>
+                        </a>
+                    </li>
+                    <!-- Submenu -->
+                    <!-- <li>
+                                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="fas fa-home"></i>
+                                    <span class="hide-menu">Home</span>
+                                </a>
+                                <ul class="collapse list-unstyled" id="homeSubmenu">
+                                    <li>
+                                        <a href="#">Home 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Home 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Home 3</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-briefcase"></i>
+                                    About
+                                </a>
+                                <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                                    <i class="fas fa-copy"></i>
+                                    Pages
+                                </a>
+                                <ul class="collapse list-unstyled" id="pageSubmenu">
+                                    <li>
+                                        <a href="#">Page 1</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Page 2</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Page 3</a>
+                                    </li>
+                                </ul>
+                            </li> -->
+                </ul>
+
+            </nav>
+
+            <div id="content">
+                <!-- Top Navigation Bar -->
+                <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
+                    <ul class="navbar-nav pr-4">
+                        <li class="nav-item">
+                            <div class="navbar-header">
+                                <!-- Needs logo -->
+                                <a class="navbar-brand">FindIT</a>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                    <ul class="navbar-nav mr-auto">
+                        <!-- Searchbar -->
+                        <li class="nav-item">
+                            <form class="form-inline my-1 my-lg-0">
+                                <input class="form-control mr-sm-3-n4 searchbar" type="search" placeholder="Search"
+                                    aria-label="Search">
+                            </form>
+                        </li>
+                    </ul>
+
+
+                    <ul class="navbar-nav my-lg-0">
+                        <li class="nav-item dropdown u-pro">
+                            <a class="nav-link dropdown-toggle navbar-toggler-right dropdown-custom" href="#"
+                                id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true"
+                                aria-expanded="false">
+
+                            </a>
+
+                            <!-- Dropdown Menu -->
+                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                                <a class="dropdown-item dropdown-item-custom" href="#">Settings</a>
+                                <a class="dropdown-item dropdown-item-custom" href="#">Log Out</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+
+                <!-- Breadcrumbs -->
+                <div class="breadcrumbs">
+                    <nav class="navbar navbar-light bg-light yellow-divider">
+                        <span class="navbar-brand mb-0 h2 title">
+                            <i class="fas fa-chart-line"></i>
+                            Dashboard
+                        </span>
+                        <nav class="mb-0" aria-label="breadcrumb">
+                            <ol class="breadcrumb arr-right">
+                                <li class="breadcrumb-item ">
+                                    <a href="#" class="text-warning">Dashboard</a>
+                                </li>
+                                <li class="breadcrumb-item ">
+                                    <a href="#" class="text-warning">Item1</a>
+                                </li>
+                                <li class="breadcrumb-item text-dark active" aria-current="page">Current</li>
+                            </ol>
+                        </nav>
+
+                    </nav>
+                </div>
+
+
+                <!-- Page Content -->
+                <div class="container p-2">
+                    <!-- Cards -->
+                    <div class="cards-component">
+                        <!-- first card -->
+                        <div class="row card-row">
+                            <div class="col col-3">
+                                <div class="card">
+                                    <div class="card-header text-white mb-3" id="card-header">Most Issued Items</div>
+                                    <div class="card-body row height">
+                                        <div class="col-6 p">
+                                            <p>Computer Units</p>
+                                            <p>Mouse</p>
+                                            <p>iPhone X</p>
+                                            <p>Mac Book Air</p>
+                                            <p>Keyboard</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p>Available:15</p>
+                                            <p>Available:25</p>
+                                            <p>Available:15</p>
+                                            <p>Available:10</p>
+                                            <p>Available:25</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-4.5">
+                                <div class="card">
+                                    <div class="card-header text-white mb-3" id="card-header">Inventory Concerns</div>
+                                    <div class="card-body">
+                                      <div class="row d-flex justify-content-center">
+                                          <div class="">
+                                              <div class="box col">
+                                              </div>
+                                              <div class="col view">
+                                                  View Details
+                                              </div>
+                                          </div>
+                                          <div class="">
+                                              <div class="box col">
+                                              </div>
+                                              <div class="col view">
+                                                  View Details
+                                              </div>
+                                          </div>
+                                          <div class="">
+                                              <div class="box col">
+                                              </div>
+                                              <div class="col view">
+                                                  View Details
+                                              </div>
+                                          </div>
+                                      </div>
+                                      <div class="row box2 d-flex justify-content-center">
+                                      </div>
+                                      <div class="col view2 d-flex justify-content-center">
+                                          View Details
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-4.5">
+                                <div class="card">
+                                    <div class="card-header text-white mb-3" id="card-header">Recent Associate Activity</div>
+                                    <div class="card-body height">
+                                        <p>Chris issued item PC002 to jane a few minutes ago</p>
+                                        <p>Chris added associate John 5 10 hours ago</p>
+                                        <p>Chris issued item PC001 to John 5 minutes ago</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row card-row">
+                            <div class="col col-7">
+                                <div class="card">
+                                    <div class="card-header text-white mb-3" id="card-header">Most Issued Items</div>
+                                    <div class="card-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col col-5">
+                                <div class="card mb-2 background">
+                                    <div class="card-body">
+                                    </div>
+                                </div>
+                                <div class="card background">
+                                    <div class="card-body">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+
+    <!-- Your scripts go below this comment -->
+    <script>
+        $(document).ready(function () {
+
+            $('#sidebarCollapse').on('click', function () {
+                $('#sidebar').toggleClass('active');
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
