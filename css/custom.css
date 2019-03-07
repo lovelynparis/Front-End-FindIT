@@ -555,6 +555,7 @@ div.view {
     width: 6rem;
     margin-left: 3px;
     margin-top: 3px;
+    font-weight: bold;
 }
 
 div.view2 {
@@ -565,17 +566,63 @@ div.view2 {
     margin-top: 3px;
     margin-right: 9%;
     margin-left: 9%;
-
+    font-weight: bold;
 }
+
+div.view3 {
+    padding: 5px 10px;
+    font-size: 12px;
+    color: white;
+    font-weight: bold;
+    background-color: #C4C4C4;
+    margin-top: 84px;
+    margin-right: 0%;
+    margin-left: 0%;
+    margin-bottom: -51px; 
+}
+
+div.view4 {
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: #C4C4C4;
+    margin-top: -5px;
+    margin-right: 9%;
+    margin-left: 9%;
+    font-weight: bold;
+}
+
+div.view5 {
+    padding: 5px;
+    font-size: 12px;
+    color: white;
+    background-color: #C4C4C4;
+    margin-top: -22px;
+    margin-right: 9%;
+    margin-left: 9%;
+    font-weight: bold;
+}
+
+
 
 div.height {
-    height: 16rem;
+    padding: 15px 30px;
+
 }
+
+div.recent-height{
+    padding: 70px 35px;
+    margin-top: -15%;
+}
+
 
 div.margin {
     margin: auto;
     margin-bottom: 7px;
+    margin-top: 1px;
 }
+
+
 /*******************************************/
 
 .repaired .box{
