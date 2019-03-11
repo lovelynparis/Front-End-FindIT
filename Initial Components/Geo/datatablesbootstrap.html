@@ -5,23 +5,21 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- CSS CDN-->
-    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
 
-<!--LOCAL FILES-->
-<!--
+    <!--LOCAL FILES-->
+    <!--
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
 -->
-
-
-
     <title>Datattable Bootstrap</title>
 </head>
+
 <style>
-    /*    active page number */
+    /*active page number style*/
 
     .page-item.active .page-link {
         z-index: 1;
@@ -30,17 +28,26 @@
         border-color: white;
     }
 
-    /*black page number*/
+    /*black page number style*/
 
     .page-link {
         color: black;
     }
 
-    /*table row hover*/
+    /*table row hover style*/
 
     .table-hover tbody tr:hover td,
     .table-hover tbody tr:hover th {
         background-color: #FFE38D;
+    }
+
+    /*tool-item style*/
+
+    .tool-item {
+
+        height: 20px;
+        width: 20px;
+        margin: 5px;
     }
 
 </style>
@@ -49,6 +56,18 @@
 
     <div class="container">
         <h1>Data table bootstrap 4</h1>
+        <!--Table tools-->
+        <div class="d-flex flex-row-reverse">
+            <div class="p-2">
+                <span><a href="#" data-toggle="tooltip" title="Multiple Select"><img class="tool-item" src="../../assets/icons/table-toolbar-icons/checkbox-icon.png"></a></span>
+                <span><a href="#" data-toggle="tooltip" title="Edit"><img class="tool-item" src="../../assets/icons/table-toolbar-icons/edit-icon.png"></a></ span>
+                <span><a href="#" data-toggle="tooltip" title="Add"><img class="tool-item" src="../../assets/icons/table-toolbar-icons/add-icon.png"></a></span>
+                <span><a href="#" data-toggle="tooltip" title="Hide/Unhide Columns"><img class="tool-item" src="../../assets/icons/table-toolbar-icons/view.png"></a></span>
+                <span><a href="#" data-toggle="tooltip" title="Delete Row(s)"><img class="tool-item" src="../../assets/icons/table-toolbar-icons/delete-icon.png"></a></span>
+                <span><a href="#" data-toggle="tooltip" title="Sort by Column"><img class="tool-item" src="../../assets/icons/table-toolbar-icons/sort-icon.png"></a></span>
+            </div>
+        </div>
+
         <table id="mydatatable" class="table table-borderless table-hover" style="width:100%">
             <thead class="thead-dark">
                 <tr>
@@ -541,26 +560,32 @@
 -->
 
     <!--LOCAL FILES-->
-<!--
+    <!--
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/jquery.dataTables.min.js"></script>
 <script type="text/javascript" src="js/dataTables.bootstrap4.min.js"></script>
 -->
     <!--CDN FILES-->
-    
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
 
 
     <script type="text/javascript">
+        //table initialisation
         $(document).ready(function() {
             $('#mydatatable').DataTable();
         });
-
+        //tooltip initialisation
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
     </script>
+    
 </body>
 
 </html>
