@@ -627,26 +627,25 @@
             my_table.column(i).visible(1);
         }
     }
-        $(document).ready(function () {
+        jQuery(document).ready(function () {
 
             my_table = $('#myDataTable').DataTable();
             
 
-            $('#toggle_column').multipleSelect({
+            jQuery('#toggle_column').multipleSelect({
                 width: 200,
                 onClick: function(view){
-                    var selectedItems = ('#toggle_columns').multipleSelect("getSelects");
+                    var selectedItems = jQuery('#toggle_column').multipleSelect("getSelects");
                     hideAllColumns();
-
                     for(var i=0; i<selectedItems.length;i++){
                         var s = selectedItems[i];
-                        my_table.column(s).visible(i);
+                        my_table.column(s).visible(1);
                     }
-                    ('#my_table').css('width','100%');
+                    jQuery('#myDataTable').css('width','100%');
                 },
                 onCheckAll: function(){
                     showAllColumns();
-                    ('#my_table').css('width','100%');
+                    jQuery('#myDataTable').css('width','100%');
                 },
                 onUncheckAll: function(){
                     hideAllColumns();
