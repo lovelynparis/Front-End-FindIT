@@ -5,29 +5,18 @@
 	<title>Tabs</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../../css/custom-geo.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</head>
-<style>
-	/*
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="../../lib/dist/bootstrap/css/bootstrap-reboot.min.css">
+	<link rel="stylesheet" href="../../lib/dist/bootstrap/css/bootstrap.min.css">
 	
-	.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-    color: #fff;
-    background-color: #ffbb33;
-	}
+	<!-- Font Awesome JS -->
+	<link rel="stylesheet" href="../../lib/custom/css/all.css">
+	<link rel="stylesheet" href="../../lib/dist/animate/animate.css">
 
-	a {
-		color:black;
-		text-decoration: none;
-		background-color: transparent;
-	}
-*/
+	<!-- Your custom css goes here -->
+	<link rel="stylesheet" href="../../lib/custom/css/custom.css">
 
-</style>
-
+</head>
 <body>
 	<!-- Basic Tabs Design-->
 	<div class="container">
@@ -38,18 +27,18 @@
 
 		<hr style="border: 1px solid #ffbb33;">
 		<br>
-		<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-			<li class="nav-item ">
-				<a class="nav-link active " id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">tab1</a>
+		<ul class="nav nav-pills mb-3 p-3 nav-justified nav-fill font-weight-bold" id="pills-tab" role="tablist">
+			<li class="nav-item text-uppercase">
+				<a class="nav-link active " id="pills-1-tab" data-toggle="pill" href="#pills-1" role="tab" aria-controls="pills-1" aria-selected="true">tab 1</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">tab2</a>
+			<li class="nav-item text-uppercase">
+				<a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab" aria-controls="pills-2" aria-selected="false">tab 2</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">tab3</a>
+			<li class="nav-item text-uppercase">
+				<a class="nav-link" id="pills-3-tab" data-toggle="pill" href="#pills-3" role="tab" aria-controls="pills-3" aria-selected="false">tab 3</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">tab4</a>
+			<li class="nav-item text-uppercase">
+				<a class="nav-link" id="pills-4-tab" data-toggle="pill" href="#pills-4" role="tab" aria-controls="pills-4" aria-selected="false">tab 4</a>
 			</li>
 		</ul>
 		<div class="tab-content" id="pills-tabContent">
@@ -60,6 +49,12 @@
 
 		</div>
 	</div>
+	
+	<!-- JQuery Core -->
+	<script type="text/javascript" src="../../lib/dist/jquery/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="../../lib/dist/popper/popper.min.js"></script>
+	<!-- Bootstrap -->
+	<script type="text/javascript" src="../../lib/dist/bootstrap/js/bootstrap.js"></script>
 </body>
 
 </html>
