@@ -53,17 +53,17 @@ body{
 }
 
 
-#successHeader{
+.successHeader{
   background-color: #5cb85c;
 }
 
-#successIcon{
+.successIcon{
     width: 100%;
     color: #5cb85c;
     text-align: center;
 }
 
-#successText{
+.successText{
     padding: 50px 100px; 
     color: #5cb85c;
     font-style: sans-serif;
