@@ -37,33 +37,49 @@
                 <option value="4">Start Date</option>
                 <option value="5">Salary</option>
             </select>
-            <!-- <div class="container">
-                Show / Hide Columns
-                <a href="" class="showHideColumn" data-columnindex="0">Name</a>
-                <a href="" class="showHideColumn" data-columnindex="1">Position</a>
-                <a href="" class="showHideColumn" data-columnindex="2">Office</a>
-                <a href="" class="showHideColumn" data-columnindex="3">Age</a>
-                <a href="" class="showHideColumn" data-columnindex="4">Start date</a>
-                <a href="" class="showHideColumn" data-columnindex="5">Salary</a>
-            </div> -->
+
 
             <h1>Data table bootstrap 4</h1>
 
             <!-- Toolbox -->
             <div class="d-flex flex-row-reverse">
                 <div class="p-2">
-                    <span><a href="#" data-toggle="tooltip" title="Multiple Select"><img class="tool-item"
-                                src="../../assets/icons/table-toolbar-icons/checkbox-icon.png"></a></span>
-                    <span><a href="#" data-toggle="tooltip" title="Edit"><img class="tool-item"
-                                src="../../assets/icons/table-toolbar-icons/edit-icon.png"></a></span>
-                        <span><a href="#" data-toggle="tooltip" title="Add"><img class="tool-item"
-                                    src="../../assets/icons/table-toolbar-icons/add-icon.png"></a></span>
-                        <span><a href="#" data-toggle="tooltip" title="Hide/Unhide Columns"><img class="tool-item"
-                                    src="../../assets/icons/table-toolbar-icons/view.png"></a></span>
-                        <span><a href="#" data-toggle="tooltip" title="Delete Row(s)"><img class="tool-item"
-                                    src="../../assets/icons/table-toolbar-icons/delete-icon.png"></a></span>
-                        <span><a href="#" data-toggle="tooltip" title="Sort by Column"><img class="tool-item"
-                                    src="../../assets/icons/table-toolbar-icons/sort-icon.png"></a></span>
+                    <span>
+                        <a id="multiple_select" href="#" data-toggle="tooltip" title="Multiple Select">
+                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/checkbox-icon.png">
+                        </a>
+                    </span>
+
+                    <span>
+                        <a href="#" data-toggle="tooltip" title="Edit">
+                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/edit-icon.png">
+                        </a>
+                    </span>
+
+                    <span>
+                        <a href="#" data-toggle="tooltip" title="Add">
+                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/add-icon.png">
+                        </a>
+                    </span>
+
+                    <span>
+                        <a href="#" data-toggle="tooltip" title="Hide/Unhide Columns">
+                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/view.png">
+                        </a>
+                    </span>
+
+                    <span>
+                        <a href="#" data-toggle="tooltip" title="Delete Row(s)">
+                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/delete-icon.png">
+                        </a>
+                    </span>
+
+                    <span>
+                        <a href="#" data-toggle="tooltip" title="Sort by Column">
+                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/sort-icon.png">
+                        </a>
+                    </span>
+
                 </div>
             </div>
 
@@ -558,58 +574,59 @@
 
 
     <script type="text/javascript">
-    $(document).ready(function(){
-        $('#myDataTable').DataTable({
-            scrollY: '50vh',
+        $(document).ready(function () {
+            $('#myDataTable').DataTable({
+                scrollY: '50vh',
                 scrollCollapse: true,
-                    scrollX: '50vw',
-                    fixedColumns: {
-                        leftColumns: 2
-                    }
-
-        });
-
-    });
-    function hideAllColumns(){
-        for(var i=0; i<6; i++){
-            columns = my_table.column(i).visible(0);
-        }
-    };
-    function showAllColumns(){
-        for(var i=0; i<5; i++){
-            my_table.column(i).visible(1);
-        }
-    }
-        jQuery(document).ready(function () {
-
-            my_table = $('#myDataTable').DataTable();
-            
-            
-            jQuery('#toggle_column').multipleSelect({
-                width: 200,
-                onClick: function(view){
-                    var selectedItems = jQuery('#toggle_column').multipleSelect("getSelects");
-                    hideAllColumns();
-                    for(var i=0; i<selectedItems.length;i++){
-                        var s = selectedItems[i];
-                        my_table.column(s).visible(1);
-                    }
-                    jQuery('#myDataTable').css('width','100%');
-                },
-                onCheckAll: function(){
-                    showAllColumns();
-                    jQuery('#myDataTable').css('width','100%');
-                },
-                onUncheckAll: function(){
-                    hideAllColumns();
+                scrollX: '50vw',
+                fixedColumns: {
+                    leftColumns: 2
                 }
+
             });
 
-        });
-        //tooltip initialisation
-         $(function () {
-             $('[data-toggle="tooltip"]').tooltip()
-         })
+            function hideAllColumns() {
+                for (var i = 0; i < 6; i++) {
+                    columns = my_table.column(i).visible(0);
+                }
+            };
+
+            function showAllColumns() {
+                for (var i = 0; i < 5; i++) {
+                    my_table.column(i).visible(1);
+                }
+            }
+
+            jQuery(document).ready(function () {
+
+                my_table = $('#myDataTable').DataTable();
+
+
+                jQuery('#toggle_column').multipleSelect({
+                    width: 200,
+                    onClick: function (view) {
+                        var selectedItems = jQuery('#toggle_column').multipleSelect("getSelects");
+                        hideAllColumns();
+                        for (var i = 0; i < selectedItems.length; i++) {
+                            var s = selectedItems[i];
+                            my_table.column(s).visible(1);
+                        }
+                        jQuery('#myDataTable').css('width', '100%');
+                    },
+                    onCheckAll: function () {
+                        showAllColumns();
+                        jQuery('#myDataTable').css('width', '100%');
+                    },
+                    onUncheckAll: function () {
+                        hideAllColumns();
+                    }
+                });
+
+            });
+            //tooltip initialisation
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })
     </script>
 
 </body>
