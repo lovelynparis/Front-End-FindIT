@@ -1,131 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <!-- Required meta tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/all.css">
-    <link rel="stylesheet" href="./../css/animate.min.css">
-    <!-- Your custom css goes here -->
-    <link rel="stylesheet" href="../../css/custom-kim.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../../lib/dist/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../../lib/dist/bootstrap/css/bootstrap.min.css">
 
+  <!-- Font Awesome JS -->
+  <link rel="stylesheet" href="../../lib/custom/css/all.css">
+  <link rel="stylesheet" href="../../lib/dist/animate/animate.css">
 
+  <!-- Your custom css goes here -->
+  <link rel="stylesheet" href="../../lib/custom/css/custom.css">
 
-    <title></title>
-
+  <title>Modal and Button Design</title>
 </head>
+
 <body>
- 
-<br>  
-
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Launch demo modal</button>
-
+  <!-- Button trigger modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Launch demo
+    modal</button>
   <!-- Modal -->
-    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle"
+    aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
 
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="ModalTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
+        <div class="modal-body">
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum."
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum."
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum."
+        </div>
 
-      <div class="modal-body">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info"> <span class="fas fa-plus"></span> ADD ITEM</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
 
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-      </div>
-
-      <div class="modal-footer">
-        <button type="button" class="btn btn-info"> <span class="fas fa-plus"></span>    ADD ITEM</button>
-        <button type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
-
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<br>
-<br>
-
-<!-------------------------- BUTTONS -------------------------------->
-
-<div class="sample-buttons">
-
-
-  <!-- Small Sized Buttons (Undo, Redo, Ok)-->
-
-  <button id="undoButton" type="button" class="btn btn-secondary"> <span class="fas fa-undo-alt"></span></button>
-  
-
-  <button id="redoButton" type="button"  class="btn btn-secondary"> <span class="fas fa-redo-alt"></span></button>
-
-
-  <button id="ok" type="button" class="btn btn-success">OK</button>
   <br>
   <br>
 
-  <!-- Medium Sized Buttons (Cancel, Save, Clear Data, Add Item, Export, Undo, Redo)-->
+  <!-------------------------- BUTTONS -------------------------------->
 
-  <button id="save" type="button" class="btn btn-success"> <span class="fas fa-save"></span>    SAVE</button>
+  <div class="sample-buttons">
+    <!-- Small Sized Buttons (Undo, Redo, Ok)-->
 
+    <button id="undoButton" type="button" class="btn btn-secondary"> <span class="fas fa-undo-alt"></span></button>
+    <button id="redoButton" type="button" class="btn btn-secondary"> <span class="fas fa-redo-alt"></span></button>
+
+
+    <button id="okButton" type="button" class="btn btn-success p-2 px-3 my-1 text-uppercase text-lg-center">Ok</button>
+    <br>
+    <br>
+
+    <!-- Medium Sized Buttons (Cancel, Save, Clear Data, Add Item, Export, Undo, Redo)-->
+
+    <button id="saveButton" type="button" class="btn btn-success p-2 px-3 my-1 text-uppercase text-lg-center">
+      <span class="fas fa-save" style="padding-right: 5px"></span>Save
+    </button>
+
+
+    <button id="cancelButton" type="button" class="btn btn-danger p-2 px-3 my-1 text-uppercase text-lg-center">Cancel</button>
  
-  <button id="cancel" type="button" class="btn btn-danger">CANCEL</button>
-
-  <button id="clearData" type="button" class="btn btn-danger">CLEAR DATA</button>
+    <button id="clearDataButton" type="button" class="btn btn-danger p-2 px-3 my-1 text-uppercase text-lg-center">Clear Data</button>
 
 
-  <button id="addItem" type="button" class="btn btn-info"> <span class="fas fa-plus"></span>    ADD ITEM</button>
- 
-
-  <button id="mediumButtons" type="button"  class="btn btn-info">EXPORT  <span class="fas fa-caret-down"></span>  </button>
+    <button id="addItemButton" type="button" class="btn btn-info p-2 px-3 my-1 text-uppercase text-lg-center">
+      <span class="fas fa-plus" style="padding-right: 5px"></span>Add Item</button>
 
 
-  <button id="undo" type="button" class="btn btn-secondary"> <span class="fas fa-undo-alt"></span>    UNDO</button>
- 
-
-  <button id="redo" type="button" class="btn btn-secondary"> <span class="fas fa-redo-alt"></span>    REDO</button>
-  <br>
-  <br>
-
-  <!-- Large Sized Buttons (Add Associate, Build a PC, Import CSV, Issue Item, Reissue Item, Edit Table)-->
-  
-  <button id="addAssociate" type="button" class="btn btn-success"> <span class="fas fa-plus"></span>    ADD ASSOCIATE</button>
- 
-
-  <button id="buildAPc" type="button" class="btn btn-secondary"> <span class="fas fa-desktop"></span>    BUILD A PC</button>
-  
-
-  <button id="importCsv" type="button" class="btn btn-info"> <span class="fas fa-file-csv"></span>    IMPORT CSV</button>
- 
-
-  <button id="editTable" type="button"  class="btn btn-info"> <span class="fas fa-edit"></span>    EDIT TABLE</button>
-
-  
-  <button id="issue" type="button"  class="btn btn-warning"> <span class="fas fa-angle-right"></span>    ISSUE ITEM</button>
-  
-
-  <button id="reissue" type="button"  class="btn btn-warning"> <span class="fas fa-angle-double-right"></span>    REISSUE ITEM</button>
-
-</div>
+    <button id="mediumButtonsButton" type="button" class="btn btn-info p-2 px-3 my-1 text-uppercase text-lg-center">
+      <span class="fas fa-caret-down" style="padding-right: 5px"></span>Export</button>
 
 
+    <button id="undoButton" type="button" class="btn btn-secondary p-2 px-3 my-1 text-uppercase text-lg-center">
+      <span class="fas fa-undo-alt" style="padding-right: 5px"></span>Undo</button>
 
-    <!-- Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-    <script src="../../js/bootstrap.min.js"></script>
+
+    <button id="redoButton" type="button" class="btn btn-secondary p-2 px-3 my-1 text-uppercase text-lg-center">
+      <span class="fas fa-redo-alt" style="padding-right: 5px"></span>Redo</button>
+
+    <!-- Large Sized Buttons (Add Associate, Build a PC, Import CSV, Issue Item, Reissue Item, Edit Table)-->
+
+    <button id="addAssociateButton" type="button" class="btn btn-success p-2 px-3 my-1 text-uppercase text-lg-center">
+      <span class="fas fa-plus" style="padding-right: 5px"></span>Add Associate</button>
+
+
+    <button id="buildAPcButton" type="button" class="btn btn-secondary p-2 px-3 my-1 text-uppercase text-lg-center">
+      <span class="fas fa-desktop" style="padding-right: 5px"></span>Build A Pc</button>
+
+
+    <button id="importCsvButton" type="button" class="btn btn-info p-2 px-3 my-1 text-uppercase text-lg-center">
+      <span class="fas fa-file-csv" style="padding-right: 5px"></span>Import CSV</button>
+
+
+    <button id="editTableButton" type="button" class="btn btn-info p-2 px-3 my-1 text-uppercase text-lg-center">
+      <span class="fas fa-edit" style="padding-right: 5px"></span>Edit Table</button>
+
+
+      <button id="issueButton" type="button" class="btn btn-warning p-2 px-3 my-1 text-uppercase text-lg-center">
+        <span class="fas fa-angle-right" style="padding-right: 5px"></span>Issue Item</button>
+
+
+      <button id="reissueButton" type="button" class="btn btn-warning p-2 px-3 my-1 text-uppercase text-lg-center"> <span class="
+    fas fa-angle-double-right" style="padding-right: 5px"></span>Reissue Item</button>
+
+  </div>
+
+  <!-- JQuery Core -->
+  <script type="text/javascript" src="../../lib/dist/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="../../lib/dist/popper/popper.min.js"></script>
+  <!-- Bootstrap -->
+  <script type="text/javascript" src="../../lib/dist/bootstrap/js/bootstrap.js"></script>
 </body>
+
 </html>
