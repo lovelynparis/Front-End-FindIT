@@ -222,22 +222,30 @@
                             <div class="col col-sm-12 col-xs-12 col-lg-3">
                                 <div class="card">
                                     <div class="card-header text-white mb-3" id="card-header">Most Issued Items</div>
-                                    <div class="row height">
-                                        <div class="col-6 p">
-                                            <p>Computer Units</p>
-                                            <p>Mouse</p>
-                                            <p>iPhone X</p>
-                                            <p>Mac Book Air</p>
-                                            <p>Keyboard</p>
-                                        </div>
-                                        <div class="col-6">
-                                            <p>Available:15</p>
-                                            <p>Available:25</p>
-                                            <p>Available:15</p>
-                                            <p>Available:10</p>
-                                            <p>Available:25</p>
-                                        </div>
-                                    </div>
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <td>Computer Units</td>
+                                                <td>Available</td>
+                                                <td>15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mouse</td>
+                                                <td>Available</td>
+                                                <td>25</td>
+                                            </tr>
+                                            <tr>
+                                                <td>iPhone</td>
+                                                <td>Available</td>
+                                                <td>15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mac Book Air</td>
+                                                <td>Available</td>
+                                                <td>10</td>
+                                            </tr>
+                                        </tbody>
+                                      </table>
                                 </div>
                             </div>
                             <div class="col col-lg-5 col-sm-12 col-xs-12">
@@ -275,7 +283,7 @@
                                                     27 ASUS Hard Drives
                                                 </div>
                                                 <div class="w-100"></div>
-                                                <div class="col view2 d-flex justify-content-center">View All</div>
+                                                <button class="col view1 d-flex justify-content-center">View All</button>
                                             </div>
                                         </div>
                                     </div>
@@ -284,12 +292,24 @@
                                     <div class="card">
           <!--Third card-->             <div class="card-header text-white mb-3" id="card-header">Recent Associate Activity</div>
                                         <div class="card-body height">
-                                            <p>Chris issued item PC002 to jane a few minutes ago</p>
-                                            <p>Chris added associate John 10 hours ago</p>
-                                            <p>Chris issued item PC001 to John 5 minutes ago</p>
-                                            <p>Chris added associate John 10 hours ago</p>
-                                            <p>Chris issued item PC001 to John 5 minutes ago</p>
-                                            <div class="row view2 justify-content-center">View All</div>
+                                            <table class="table table-borderless third-card">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Chris issued item PC002 to jane a few minutes ago</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chris added associate John 10 hours ago</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chris issued item PC001 to John 5 minutes ago</td>
+                                                    </tr>
+                                                </tbody>
+                                                <tfoot>
+                                                    <tr>
+                                                        <td><button class="row view2 justify-content-center center-block">View All</button></td>
+                                                    </tr>
+                                                </tfoot>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -300,29 +320,30 @@
                                     <div class="card">
                                         <div class="card-header text-white mb-3" id="card-header">Employees Prone to Destruction of Company Equipment</div>
                                         <div class="card-body">
-                                            <div class="row">
-                                                <div class="col col-7">
-                                                    <p>Employee 1</p>
-                                                    <p>Employee 2</p>
-                                                    <p>Employee 3</p>
-                                                    <p>Employee 4</p>
-                                                    <p>Employee 5</p>
-                                                </div>
-                                                <div class="col col-3.8">
-                                                    <p>Available:</p>
-                                                    <p>Available:</p>
-                                                    <p>Available:</p>
-                                                    <p>Available:</p>
-                                                    <p>Available:</p>
-                                                </div>
-                                                <div class="col col-1.2">
-                                                    <p>150</p>
-                                                    <p>25</p>
-                                                    <p>25</p>
-                                                    <p>10</p>
-                                                    <p>25</p>
-                                                </div>
-                                            </div>
+                                          <table class="table table-borderless">
+                                              <tbody>
+                                                  <tr>
+                                                      <td>Employee 1</td>
+                                                      <td>Available:</td>
+                                                      <td>150</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>Employee 2</td>
+                                                      <td>Available:</td>
+                                                      <td>25</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>Employee 3</td>
+                                                      <td>Available:</td>
+                                                      <td>25</td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td>Employee 4</td>
+                                                      <td>Available:</td>
+                                                      <td>10</td>
+                                                  </tr>
+                                              </tbody>
+                                            </table>
                                         </div>
                                     </div>
                                 </div>
@@ -335,11 +356,15 @@
                                             <div class="col view">Equipment Due for Return</div>
                                         </div>
                                         <div class="col card background">
-                                            <div class="card-body">
-                                                <p>98721 Biday Manang , iPhoneX</p>
-                                                <p>98721 Biday Manang , iPhoneX</p>
-                                            </div>
-                                            <div class="row view4 d-flex justify-content-center">View All</div>
+                                            <table class="table table-borderless">
+                                                <tr>
+                                                    <td>98721 Biday Manang , iPhoneX</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>98721 Biday Manang , iPhoneX</td>
+                                                </tr>
+                                            </table>
+                                            <button class="row view4 d-flex justify-content-center">View All</button>
                                         </div>
                                     </div>
                                     <div class="row margin">
@@ -350,11 +375,15 @@
                                             <div class="col view">Low in Stock</div>
                                         </div>
                                         <div class="col card background">
-                                            <div class="card-body">
-                                                <p>Office Supplies , Markers, 2</p>
-                                                <p>Office Supplies , Markers, 2</p>
-                                            </div>
-                                            <div class="row view5 d-flex justify-content-center">View All</div>
+                                          <table class="table table-borderless">
+                                              <tr>
+                                                  <td>Office Supplies , Markers, 2</td>
+                                              </tr>
+                                              <tr>
+                                                  <td>Office Supplies , Markers, 2</td>
+                                              </tr>
+                                          </table>
+                                            <button class="row view5 d-flex justify-content-center">View All</button>
                                         </div>
                                     </div>
                                 </div>
