@@ -600,7 +600,7 @@ ul ul a {
     #sidebarCollapse span {
         display: none;
     }
-}
+} 
 
 
 /*  +---------------------------------------+
@@ -884,6 +884,6 @@ td {
 }
 
 div.card-body {
-  align: center!important;
+  align-content: center!important;
   display: block!important;
 }
