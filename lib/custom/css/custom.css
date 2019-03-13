@@ -600,7 +600,7 @@ ul ul a {
     #sidebarCollapse span {
         display: none;
     }
-} 
+}
 
 
 /*  +---------------------------------------+
@@ -886,4 +886,53 @@ td {
 div.card-body {
   align-content: center!important;
   display: block!important;
+}
+
+/** Add page - 03/13/19 **/
+div.add {
+    border-color: #CCCCCC;
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 7px;
+}
+
+.form-control {
+    max-width: 15rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+    border-radius: 0;
+}
+
+.exampleFormControlSelect1 {
+    width: 12.5rem;
+    height: 1.8rem;
+}
+
+.bulk {
+    max-width: 85%;
+}
+
+.model {
+    margin-top: 6rem;
+}
+
+.screen {
+    margin-top: 10rem;
+}
+
+button.b {
+  height: 1.9rem;
+}
+
+#buttons{
+  font-size: 12px;
+  border-radius: 5px;
+  width: 6rem;
+  margin-top: 5rem;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.20);
+}
+
+.position-right {
+    margin-left: 40rem;
 }
