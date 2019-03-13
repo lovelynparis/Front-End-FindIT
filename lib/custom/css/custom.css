@@ -4,8 +4,11 @@
             - 1.1. Body
             - 1.2. Font Styles
 
+        - 2. Button Styles
+        
         - 2. Containers Styles
             - 2.1. Card Styles
+            - 2.2. Modals
 
         - 3. Header Styles
             - 3.1. Breadcrumbs
@@ -78,6 +81,49 @@ i{
 
 a[data-toggle="collapse"] {
     position: relative;
+}
+
+/*================================================
+                2. BUTTON STYLES
+================================================== */
+.btn:focus, .btn:active{
+   outline: none !important;
+   box-shadow: none;
+}
+
+#okSuccessButton{
+    margin-right: 25%;
+    width: 50%;
+    text-align: center;
+}
+
+#retryFailedButton{
+    width: 50%;
+    text-align: center;
+}
+
+#okFailedButton{
+    width: 50%;
+    text-align: center;
+}
+
+
+#failedHeader{
+  background-color: #d9534f;
+}
+
+#failedIcon{
+    width: 100%;
+    color: #d9534f;
+    text-align: center;
+}
+
+#failedText{
+    padding: 50px 100px; 
+    color: #d9534f;
+    font-style: sans-serif;
+    font-weight: bold;
+    text-align: center;
 }
 
 /*================================================
@@ -160,6 +206,65 @@ box-shadow: 0 5px 18px rgba(0,0,0,0.10);
 
 .card-counter{
     font-size: 24px;
+}
+
+/*  +---------------------------------------+
+       2.2 MODAL STYLE
+    +---------------------------------------+ */
+
+.modal-content, .modal-header, .modal-footer{
+    border-radius: 0 !important;
+}
+.modal-footer > button {
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 12px 16px; /* Some padding */
+  font-family: sans-serif;
+  font-size: 15px; /* Set a font size */
+  cursor: pointer; /* Mouse pointer on hover */
+  width:50%;
+  height:50px;
+  position:relative;
+}
+
+.modal-footer{
+  background-color: white;
+}
+.modal-header{
+    background-color: #757575;
+    color: white;
+}
+
+.modal-title{
+  color: white;
+  padding-top: 80px;
+  font-family: sans-serif; 
+  /* font-weight: bold; */
+  /* text-transform: uppercase; */
+  font-size: 1.3rem;
+}
+
+.close{
+  color: white;
+}
+
+.close:hover{
+	background-color: #FFC107;
+}
+
+.modal-content{
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.modal-dialog{
+    overflow-y: initial !important;
+}
+
+.modal-body{
+    height: 332px;
+    overflow-y: auto;
+    text-align: justify;
 }
 
 /* ================================================
