@@ -910,7 +910,10 @@ div.add {
 }
 
 .bulk {
-    max-width: 85%;
+    max-width: 100%;
+    padding: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .model {
@@ -929,10 +932,20 @@ button.b {
   font-size: 12px;
   border-radius: 5px;
   width: 6rem;
-  margin-top: 5rem;
+  margin-top: 2rem;
   box-shadow: 0 3px 3px rgba(0,0,0,0.20);
 }
 
 .position-right {
-    margin-left: 40rem;
+    margin-left: 80%;
+}
+
+.quantity {
+    width: 18rem;
+}
+
+.computer-peripheral {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
