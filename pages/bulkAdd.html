@@ -218,7 +218,7 @@
                     <div class="card bulk" id="inputType1">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-sm-5">
+                                <div class="col-sm-3">
                                     <p class="card-title">Category</p>
                                     <select class="form-control">
                                         <option selected>Item 1</option>
@@ -227,9 +227,9 @@
                                         <option value="3">Item 4</option>
                                     </select>
                                 </div>
-                                <div class="col-sm-5">
+                                <div class="col-sm-3">
                                     <p class="card-title">Quantity</p>
-                                    <select class="custom-select">
+                                    <select class="form-control">
                                         <option selected>Item 1</option>
                                         <option value="1">Item 2</option>
                                         <option value="2">Item 3</option>
@@ -243,10 +243,10 @@
                                         <p class="card-title">Row Values</p>
                                     </div>
                                     <div class="col-1">
-                                        <span class="fas fa-sort-down"></span>
+                                        <span class="fas fa-sort-down" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></span>
                                     </div>
                                 </div>
-                                    <div class="row">
+                                    <div class="row collapse" id="collapseExample">
                                         <div class="col-sm-4">
                                             <p class="card-title">Offcial Receipt Number</p>
                                             <div class="form-group">
@@ -300,6 +300,62 @@
                                           <button type="button" class="btn btn-success b" id="buttons">Add Item</button>
                                         </div>
                                     </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card computer-peripheral" id="inputType1">
+                        <div class="card-body">
+                            <p class="card-title">Computer Peripheral (50)</p>
+                            <hr style="border: 1px solid #ffbb33;">
+                            <div class="row">
+                                <div class="col col-3">
+                                    <table class="table table-borderless third-card">
+                                        <tbody>
+                                          <tr>
+                                            <td>Type:</td>
+                                            <td>Monitor</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Status:</td>
+                                            <td>In stock</td>
+                                          </tr>
+                                          <tr>
+                                            <td>Serial Number:</td>
+                                            <td>Missing Data</td>
+                                          </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col col-4">
+                                </div>
+                                <div class="col col-4">
+                                  <table class="table table-borderless third-card">
+                                      <tbody>
+                                        <tr>
+                                          <td>Brand:</td>
+                                          <td>BenQ</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Model:</td>
+                                          <td>IR-98263W</td>
+                                        </tr>
+                                        <tr>
+                                          <td>Screen Resolution:</td>
+                                          <td>1280x720</td>
+                                        </tr>
+                                      </tbody>
+                                  </table>
+                                </div>
+                            </div>
+                            <div class="dropdown">
+                              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Dropdown
+                              </button>
+                              <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                <button class="dropdown-item" type="button">Action</button>
+                                <button class="dropdown-item" type="button">Another action</button>
+                                <button class="dropdown-item" type="button">Something else here</button>
+                              </div>
                             </div>
                         </div>
                     </div>
