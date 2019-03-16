@@ -937,7 +937,7 @@ button.b {
 }
 
 .position-right {
-    margin-left: 80%;
+    margin-left: 75%;
 }
 
 .quantity {
@@ -948,4 +948,21 @@ button.b {
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+.collapse-dropdown {
+    margin-left: 85%;
+}
+
+.button-collapse {
+    margin-left: 85%;
+}
+
+.p-2 {
+    margin-left: 5px;
+}
+
+.save {
+  background-color: #CCCCCC;
+  color: white;
 }
