@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/all.css">
+    <link rel="stylesheet" href="./../css/animate.min.css">
+    <!-- Your custom css goes here -->
+    <link rel="stylesheet" href="../../css/custom-kim.css">
+
+
+    <title></title>
+
+</head>
+<body>
+ 
+<br>  
+
+<!------------------- Add Associate Design -------------------------->
+  
+  <!-- Modal Trigger Button-->
+  <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addAssociate"> <span class="fas fa-plus"></span>    ADD ASSOCIATE</button>
+
+  <!-- Modal -->
+    <div class="modal fade" id="addAssociate" tabindex="-1" role="dialog" aria-labelledby="addAssociateTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "addAssociateHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle">Add Associate</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        
+         <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-save"></span>    SAVE</button>
+
+         <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!-- Modal Associate successfully added!-->
+    <div class="modal fade" id="successAssociate" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "successAssociate" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <i id=  "successIcon" class="far fa-check-circle fa-10x"></i>
+        <p id= "successText">Associate successfully added!</p>
+      </div>
+
+      <div class="modal-footer">
+        <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  <!------- Failed Modal Design ------->
+
+  <!-- Modal -->
+    <div class="modal fade" id="failedModal" tabindex="-1" role="dialog" aria-labelledby="failedModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "failedHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <i id=  "failedIcon" class="far fa-times-circle fa-10x"></i>
+        <p id= "failedText">Failed to add Associate!</p>
+      </div>
+
+      <div class="modal-footer">
+        <button id="retryFailedButton" type="button" class="btn btn-danger" data-dismiss="modal">RETRY</button>
+
+        <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------------- Issue Item Modal Design ---------------------->
+
+  <!-- Modal Trigger Button-->
+  <button id="issue" type="button"  class="btn btn-warning" data-toggle="modal" data-target="#issueItem"> <span class="fas fa-angle-right"></span>    ISSUE ITEM</button>
+
+  <!-- Modal -->
+    <div class="modal fade" id="issueItem" tabindex="-1" role="dialog" aria-labelledby="issueItemTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "issueItem" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle">Issue Item</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+         <div class="row">
+          <div class="col">
+
+          <label class="label">Type</label>
+
+       
+          </div>
+          <div class="col">
+            <div class="form-group">
+                <select class="FormControlSelect1">
+                  <option>Computer Units</option>
+                  <option>Mouse</option>
+                  <option>iPhone X</option>
+                  <option>Mac Book Air</option>
+                  <option>Keyboard</option>
+                </select>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="col">Serial No.</div>
+          <div class="col">
+            <div class="form-group">
+            <textarea class="form-control" id="FormControlTextarea1" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <div class="col">Item Code</div>
+          <div class="col">PC 198</div>
+          <div class="w-100"></div>
+          <br>
+          <div class="col">Issue To</div>
+          <div class="col">
+            <div class="form-group">
+            <textarea class="form-control" id="FormControlTextarea2" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <br>
+          <div class="col">
+          </div>
+          <div class="col">
+          <button id="issue" type="button"  class="btn btn-warning"data-dismiss="modal" data-toggle="modal" href="#issueMore"> <span class="fas fa-plus"></span>    ISSUE MORE</button>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+   
+         <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successIssueItem"> <span class="fas fa-save"></span>    SAVE</button>
+
+         <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<!-- Modal Successfully Issued Item --->
+      <div class="modal fade" id="successIssueItem" tabindex="-1" role="dialog" aria-labelledby="successIssueItemTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "successIssueItem" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle">Issue Items</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <i id=  "successIcon" class="far fa-check-circle fa-10x"></i>
+        <p id= "successText">Successfully Issued the Item!</p>
+      </div>
+
+      <div class="modal-footer">
+        <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--Issue More --->
+      <div class="modal fade" id="issueMore" tabindex="-1" role="dialog" aria-labelledby="issueMoreTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id ="issueMore" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        
+          <div class="row">
+             <div class="col-sm-3">Issue To:
+                <div class="form-group">
+                <textarea class="form-control" id="issueToForm" rows="1"></textarea>
+                </div>
+             </div>
+          
+             <div class="col-sm-2">Type:
+              <div class="form-group" id="multipleSelect">
+                <select class="computer-units">
+                  <option>Mouse</option>
+                  <option>iPhone X</option>
+                  <option>Mac Book Air</option>
+                  <option>Keyboard</option>
+                  <option>Computer Units</option>
+                </select>
+              </div>
+             </div>
+             
+             <div class="col-sm-2">Quantity:
+              <div class="form-group">
+                <select class="FormControlSelect3">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+             </div>
+
+             <div class="col-sm-3">Serial No.:
+              <div class="form-group">
+                <textarea class="form-control" id="issueToForm" rows="1"></textarea>
+              </div>
+             </div>
+
+             <div class="col-sm-2">Code:
+              PC 198
+             </div>
+             </div>
+
+
+          <div class="row"> 
+             <div class="col-sm-3"></div>
+             <div class="col-sm-2">
+              <div class="form-group" id="multipleSelect">
+                <select class="computer-units">
+                  <option>Keyboard</option>
+                  <option>iPhone X</option>
+                  <option>Mac Book Air</option>
+                  <option>Mouse</option>
+                  <option>Computer Units</option>
+                </select>
+              </div>
+             </div>
+             
+             <div class="col-sm-2">
+              <div class="form-group">
+                <select class="FormControlSelect4">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                </select>
+              </div>
+             </div>
+
+             <div class="col-sm-3">
+              <div class="form-group">
+                <textarea class="form-control" id="issueToForm" rows="1"></textarea>
+              </div>
+             </div>
+
+             <div class="col-sm-2">
+              PC 195
+             </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm-3">
+                <button id="addMore" type="button"  class="btn btn-warning btn-xs"data-dismiss="modal" data-toggle="modal" href="#issueMore"> <span class="fas fa-plus"></span>     ADD MORE</button>
+              </div>
+              <div class="col-sm-3">
+                <button id="addMore" type="button"  class="btn btn-warning btn-xs"data-dismiss="modal" data-toggle="modal" href="#issueMore"> <span class="fas fa-plus"></span>     ADD MORE</button>
+              </div>
+
+            </div>
+        </div>
+
+      <div class="modal-footer">
+        <button id="save" type="button" class="btn btn-success"> <span class="fas fa-save"></span>    SAVE</button>
+
+        <button id="clearData" type="button" class="btn btn-danger">CLEAR DATA</button>
+
+        <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------------- ReIssue Item Modal Design --------------------->
+
+  <!-- Modal Trigger Button-->
+  <button id="reissue" type="button"  class="btn btn-warning" data-toggle="modal" data-target="#reissueItem"> <span class="fas fa-angle-double-right"></span>    REISSUE ITEM</button>
+
+  <!-- Modal -->
+    <div class="modal fade" id="reissueItem" tabindex="-1" role="dialog" aria-labelledby="reissueItemTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "reissueHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle">Reissue Item</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+         
+          <div class="row">
+          <div class="col">Serial No.</div>
+          <div class="col">
+            <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+            </div>
+          </div>
+        </div>
+        
+          <div class="row">
+          <div class="col">
+            <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">Reissue To</div>
+          <div class="col">
+            <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+            </div>
+          </div>
+          <div class="w-100"></div>
+          <br>
+          <div class="col">
+          </div>
+          <div class="col">
+          <button id="reissue" type="button"  class="btn btn-warning" data-dismiss="modal" data-toggle="modal" href="#reissueMore"> <span class="fas fa-angle-double-right"></span>    REISSUE MORE</button>
+          </div>
+          <div class="col">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+   
+         <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successIssueItem"> <span class="fas fa-save"></span>    SAVE</button>
+
+         <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+<!--ReIssue More --->
+      <div class="modal fade" id="reissueMore" tabindex="-1" role="dialog" aria-labelledby="reissueMoreTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id ="reissueMore" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        
+          <div class="row">
+             <div class="col-sm-3">Reissue To:
+             </div>   
+             
+             <div class="col-sm-3">Serial No.:
+             </div>
+
+             <div class="col-sm-3">Type:</div>
+             <div class="col-sm-3">Issued To:</div>
+          </div>
+
+            <div class="row details">
+              <div class="col-sm-3">
+                <div class="form-group">
+                <textarea class="form-control" id="issueToForm" rows="1"></textarea>
+                </div>
+              </div>
+              <div class="col-sm-3"
+                <div class="form-group">
+                  <textarea class="form-control" id="issueToForm" rows="1"></textarea>
+              </div>
+              <div class="col-sm-3">
+                <p>Computer Units</p>
+              </div>  
+              <div class="col-sm-3">
+                <p>Bruce Wayne</p>
+              </div>
+            </div>
+
+            <div class="row details">
+              <div class="col-sm-3"></div>   
+             
+              <div class="col-sm-3">
+                <div class="form-group"><textarea class="form-control" id="issueToForm" rows="1"></textarea></div>
+              </div>
+
+              <div class="col-sm-3">Computer Peripheral</div>
+              <div class="col-sm-3"></div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-sm-3">
+              </div>
+              <div class="col-sm-3">
+                <button id="addMore" type="button"  class="btn btn-warning btn-xs"data-dismiss="modal" data-toggle="modal" href="#"> <span class="fas fa-plus"></span>     ADD MORE</button>
+              </div>
+            </div>
+
+
+                      <div class="row">
+             <div class="col-sm-3">Reissue To:
+             </div>   
+             
+             <div class="col-sm-3">Serial No.:
+             </div>
+
+             <div class="col-sm-3">Type:</div>
+             <div class="col-sm-3">Issued To:</div>
+          </div>
+
+            <div class="row details">
+              <div class="col-sm-3">
+                <div class="form-group">
+                <textarea class="form-control" id="issueToForm" rows="1"></textarea>
+                </div>
+              </div>
+              <div class="col-sm-3"
+                <div class="form-group">
+                  <textarea class="form-control" id="issueToForm" rows="1"></textarea>
+              </div>
+              <div class="col-sm-3">
+                <p>Computer Units</p>
+              </div>  
+              <div class="col-sm-3">
+                <p>Bruce Banner</p>
+              </div>
+            </div>
+
+            <div class="row details">
+              <div class="col-sm-3"></div>   
+             
+              <div class="col-sm-3">
+                <div class="form-group"><textarea class="form-control" id="issueToForm" rows="1"></textarea></div>
+              </div>
+
+              <div class="col-sm-3">Computer Parts</div>
+              <div class="col-sm-3"></div>
+
+            </div>
+
+            <div class="row">
+              <div class="col-sm-3">
+              </div>
+              <div class="col-sm-3">
+                <button id="addMore" type="button"  class="btn btn-warning btn-xs"data-dismiss="modal" data-toggle="modal" href="#"> <span class="fas fa-plus"></span>     ADD MORE</button>
+              </div>
+            </div>
+        </div>
+
+      <div class="modal-footer">
+        <button id="save" type="button" class="btn btn-success"> <span class="fas fa-save"></span>    SAVE</button>
+
+        <button id="clearData" type="button" class="btn btn-danger">CLEAR DATA</button>
+
+        <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------------- Save Prompt Modal Design --------------------->
+
+<!-- Modal Trigger Button-->
+  <button id="save" type="button" class="btn btn-success" data-toggle="modal" data-target="#successModal"> <span class="fas fa-save"></span>    SAVE</button>
+
+
+  <!-- Modal -->
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "failedHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="warning-content">
+          <p>Warning!</p>
+          <p>Are you sure you want to save changes?</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+
+        <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!------------------- Return Modal Design --------------------->
+
+<!-- Modal Trigger Button-->
+  <button id="return" type="button" class="btn btn-success" data-toggle="modal" data-target="#returnModal"><span class="fas fa-exchange-alt">      RETURN</span></button>
+
+
+  <!-- Modal -->
+    <div class="modal fade" id="returnModal" tabindex="-1" role="dialog" aria-labelledby="returnModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "failedHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="warning-content">
+          <p>Warning!</p>
+          <p>Are you sure you want to return the item?</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+
+        <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!------------------- Repair Modal Design --------------------->
+
+<!-- Modal Trigger Button-->
+  <button id="repair" type="button" class="btn btn-success" data-toggle="modal" data-target="#repairModal"><span class="fas fa-tools">      REPAIR</span></button>
+
+
+  <!-- Modal -->
+    <div class="modal fade" id="repairModal" tabindex="-1" role="dialog" aria-labelledby="repairModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "failedHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="warning-content">
+          <p>Warning!</p>
+          <p>Are you sure you want to repair the item?</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+
+        <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!------------------- Dispose Modal Design --------------------->
+
+<!-- Modal Trigger Button-->
+  <button id="dispose" type="button" class="btn btn-success" data-toggle="modal" data-target="#disposeModal"><span class="fas fa-trash-alt">    DISPOSE</span></button>
+
+
+  <!-- Modal -->
+    <div class="modal fade" id="disposeModal" tabindex="-1" role="dialog" aria-labelledby="disposeModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "failedHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="warning-content">
+          <p>Warning!</p>
+          <p>Are you sure you want to dispose the item?</p>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+
+        <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!------------------- View Item Modal Design --------------------->
+
+<!-- Modal Trigger Button-->
+ <button id="view" type="button" class="btn btn-danger" data-toggle="modal" data-target="#viewItemModal">View</button>
+
+
+  <!-- Modal -->
+    <div class="modal fade" id="viewItemModal" tabindex="-1" role="dialog" aria-labelledby="viewItemModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+       <div id ="viewItem" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle">PC NO. 001</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <div class="pc-details">
+          <div class="row">
+            <div class="col-sm-6">Processor: i5-6600 – 3.30 GHz</div>
+            <div class="col-sm-6">Storage:SEAGATE ST3220613AS 1TB</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">RAM:4 GB DDR4 4133+ MHz</div>
+            <div class="col-sm-6"> Video Card:VGA GeForce GTX 1060</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">Motherboard:Asus  Code Z390</div>
+            <div class="col-sm-6">OS:Windows 10</div>
+          </div>
+
+        </div>
+
+        <div class="former-issuers">
+
+          <div class="row">
+            <div class="col-sm-4">Former Issuers</div>
+            <div class="col-sm-4">Date Issued</div>
+            <div class="col-sm-4">Date Returned</div>
+          </div>  
+          <div class="row">
+            <div class="col-sm-4">Peter Parker</div>
+            <div class="col-sm-4">02-02-2017</div>
+            <div class="col-sm-4">25-03-2017</div>
+          </div>  
+          <div class="row">
+            <div class="col-sm-4">Bruce Wayne  </div>
+            <div class="col-sm-4">25-05-2017</div>
+            <div class="col-sm-4">29-06-2017</div>
+          </div>  
+          <div class="row">
+            <div class="col-sm-4">Tony Stark</div>
+            <div class="col-sm-4">30-11-2017</div>
+            <div class="col-sm-4">18-12-2017</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">Bruce Banner</div>
+            <div class="col-sm-4">10-07-2017</div>
+            <div class="col-sm-4">20-08-2017</div>
+          </div>
+          <div class="row">
+            <div class="col-sm-4">Jayson Todd</div>
+            <div class="col-sm-4">10-07-2017</div>
+            <div class="col-sm-4">20-08-2017</div>
+          </div>
+
+      </div>
+    </div>
+
+      <div class="modal-footer">
+        <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+
+        <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+</body>
+</html>
