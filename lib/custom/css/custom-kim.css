@@ -46,6 +46,21 @@ body{
     overflow-y: initial !important;
 }
 
+.issue-more-modal-content{
+ width: 150%;
+    background-color: white;
+
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.issue-more-modal-body{
+     height: 332px;
+
+
+    text-align: justify;
+}
+
 .modal-body{
     height: 332px;
     overflow-y: auto;
@@ -53,17 +68,17 @@ body{
 }
 
 
-.successHeader{
+#successHeader{
   background-color: #5cb85c;
 }
 
-.successIcon{
+#successIcon{
     width: 100%;
     color: #5cb85c;
     text-align: center;
 }
 
-.successText{
+#successText{
     padding: 50px 100px; 
     color: #5cb85c;
     font-style: sans-serif;
@@ -130,10 +145,112 @@ body{
 
 }
 
+.btn{
+  font-family: sans-serif;
+
+}
+
 #reissue{
 	border-color: purple;
   background-color: purple;
   color: white;
 }
 
+
+/* Login */
+
+.main-sign-in-card{
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+.card-signin , .custom-card-sign-in{
+  max-width: 435px;
+  max-height: 576px;
+}
+
+.custom-card-sign-in{
+  padding-bottom: 120px;
+}
+
+#newMedia {
+  margin-top: -20%;
+  margin-bottom: 5rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  font-family: sans-serif;
+  color: #CCCCCC;
+  
+}
+
+.yellow-divider{
+  border-top: 5px solid #eba133;
+}
+
+#signInTitle {
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  font-size: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+  color: #555555;
+}
+
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.btn-google {
+  color: white;
+  background-color: #F0AD4E;
+}
+
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.custom-footer{
+  background-color: #EEEEEE;
+}
+
+
+.form-group .computer-units{
+  width: 150%;
+  
+}
+
+
+.warning-content > p{
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.modal-body .pc-details{
+  font-size: 0.8em;
+  
+}
+
+.modal-body .former-issuers{
+  padding-top:10px;
+  padding-left: 10px;
+  padding-bottom: 100px; 
+
+  border: 2px solid;
+  border-color: black;
+  font-size: 0.9em;
+}
+
+#addMore{
+    font-size: 0.5em;
+}
+
+.details .col-sm-3 > p{
+   font-size: 0.9em;
+}
 
