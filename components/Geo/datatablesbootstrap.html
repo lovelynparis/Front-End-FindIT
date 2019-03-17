@@ -574,7 +574,7 @@
 
 
     <script type="text/javascript">
-        $(document).ready(function () {
+        $(document).ready(function() {
             $('#myDataTable').DataTable({
                 scrollY: '50vh',
                 scrollCollapse: true,
@@ -597,14 +597,14 @@
                 }
             }
 
-            jQuery(document).ready(function () {
+            jQuery(document).ready(function() {
 
                 my_table = $('#myDataTable').DataTable();
 
 
                 jQuery('#toggle_column').multipleSelect({
                     width: 200,
-                    onClick: function (view) {
+                    onClick: function(view) {
                         var selectedItems = jQuery('#toggle_column').multipleSelect("getSelects");
                         hideAllColumns();
                         for (var i = 0; i < selectedItems.length; i++) {
@@ -613,20 +613,22 @@
                         }
                         jQuery('#myDataTable').css('width', '100%');
                     },
-                    onCheckAll: function () {
+                    onCheckAll: function() {
                         showAllColumns();
                         jQuery('#myDataTable').css('width', '100%');
                     },
-                    onUncheckAll: function () {
+                    onUncheckAll: function() {
                         hideAllColumns();
                     }
                 });
 
             });
-            //tooltip initialisation
-            $(function () {
-                $('[data-toggle="tooltip"]').tooltip()
-            })
+        });
+        //tooltip initialisation
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
+
     </script>
 
 </body>
