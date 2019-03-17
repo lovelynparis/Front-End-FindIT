@@ -890,10 +890,8 @@ div.card-body {
 
 /** Add page - 03/13/19 **/
 div.add {
-    border-color: #CCCCCC;
     margin-top: 2rem;
     padding: 1rem;
-    border-radius: 7px;
 }
 
 .form-control {
@@ -916,14 +914,6 @@ div.add {
     margin-right: 1rem;
 }
 
-.model {
-    margin-top: 6rem;
-}
-
-.screen {
-    margin-top: 10rem;
-}
-
 button.b {
   height: 1.9rem;
 }
@@ -936,8 +926,8 @@ button.b {
   box-shadow: 0 3px 3px rgba(0,0,0,0.20);
 }
 
-.position-right {
-    margin-left: 75%;
+div.position-right {
+    margin-left: 70%;
 }
 
 .quantity {
@@ -965,4 +955,33 @@ button.b {
 .save {
   background-color: #CCCCCC;
   color: white;
+}
+
+select.custom-select {
+  max-width: 15rem;
+  border: none;
+  border-bottom: 2px solid #333333;
+  border-radius: 0;
+}
+
+#button2{
+  font-size: 15px;
+  border-radius: 0;
+  width: 10rem;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.20);
+}
+
+#button3{
+  font-size: 15px;
+  border-radius: 0;
+  width: 13rem;
+  border-bottom: 2px solid #333333;
+}
+
+.font {
+  font-size: 14px;
+}
+
+button.dropdown-toggle {
+    width: 15rem;
 }
