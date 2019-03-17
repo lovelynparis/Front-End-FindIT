@@ -22,6 +22,12 @@
     <link rel="stylesheet" href="../../lib/custom/css/custom.css">
     <link rel="stylesheet" href="../../lib/custom/css/custom-table.css">
 
+    <!--    add-->
+    <link rel="stylesheet" href="../../lib/dist/datatable/select.dataTables.min.css">
+    <link rel="stylesheet" href="../../lib/dist/font/font-awesome.min.css">
+    <link rel="stylesheet" href="../../lib/dist/bootstrap/css/awesome-bootstrap-checkbox.css">
+    <link rel="stylesheet" href="../../lib/dist/datatable/dataTables.checkboxes.min.js">
+
     <title>Datatable Bootstrap</title>
 </head>
 
@@ -564,6 +570,8 @@
     <script type="text/javascript" src="../../lib/dist/popper/popper.min.js"></script>
     <!-- Bootstrap -->
     <script type="text/javascript" src="../../lib/dist/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../../lib/dist/bootstrap/js/bootstrap.min.js"></script>
+
 
     <!-- Datatable -->
     <script type="text/javascript" src="../../lib/dist/datatable/jquery.dataTables.min.js"></script>
@@ -571,6 +579,10 @@
 
     <!-- Multiple Select -->
     <script src="../../lib/dist/multiple-select/multiple-select.js"></script>
+
+    <!-- add   -->
+    <script type="text/javascript" src="../../lib/dist/datatable/dataTables.select.min.js"></script>
+    <script type="text/javascript" src="../../lib/dist/datatable/dataTables.checkboxes.min.js"></script>
 
 
     <script type="text/javascript">
@@ -581,7 +593,25 @@
                 scrollX: '50vw',
                 fixedColumns: {
                     leftColumns: 2
-                }
+                },
+                'select': 'multi',
+                'order': [
+                    [1, 'asc']
+                ],
+                'columnDefs': [{
+                    'targets': 0,
+                    'render': function(data, type, row, meta) {
+                        if (type === 'display') {
+                            data = '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>';
+                        }
+
+                        return data;
+                    },
+                    'checkboxes': {
+                        'selectRow': true,
+                        'selectAllRender': '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>'
+                    }
+                }]
 
             });
 
