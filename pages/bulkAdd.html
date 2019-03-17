@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="../lib/dist/animate/animate.css">
     <!-- Your custom css goes here -->
     <link rel="stylesheet" href="../lib/custom/css/custom.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
-
     <title>Bulk Add</title>
 </head>
 
@@ -219,217 +217,292 @@
                     <div class="card bulk" id="inputType1">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-sm-3">
+                              <div class="col col-lg-3 col-md col-sm col-xs">
+                              <p class="card-title">Category</p>
+                              <div class="dropdown">
+                                  <button class="btn dropdown-toggle" type="button" id="button3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                      Category
+                                  </button>
+                                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                      <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo2">Computer Peripherals</button>
+                                      <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo3">Mobile Devices</button>
+                                      <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo4">Option 3</button>
+                                      <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo5">Option 4</button>
+                                  </div>
+                              </div></div>
+                                <!--
+                                <div class="col col-lg-4 col-md col-sm col-xs">
                                     <p class="card-title">Category</p>
                                     <select class="form-control">
-                                        <option selected>Computer Peripheral</option>
-                                        <option value="1">Mobile Devices</option>
-                                        <option value="2">Item 3</option>
-                                        <option value="3">Item 4</option>
+                                        <option data-toggle="collapse" data-target="#demo2">Computer Peripheral</option>
+                                        <option data-toggle="collapse" data-target="#demo2">Mobile Devices</option>
+                                        <option >Option 3</option>
+                                        <option value="4">Option 4</option>
                                     </select>
-                                </div>
-                                <div class="col-sm-3">
+                                </div>-->
+                                <div class="col col-lg-6 col-md col-sm col-xs">
                                     <p class="card-title">Quantity</p>
-                                    <select class="form-control">
-                                        <option selected>50</option>
-                                        <option value="1">Item 2</option>
-                                        <option value="2">Item 3</option>
-                                        <option value="3">Item 4</option>
+                                    <select class="custom-select">
+                                        <option selected class="option">50</option>
+                                        <option class="option" value="1">60</option>
+                                        <option class="option" value="2">70</option>
+                                        <option class="option" value="3">80</option>
+                                        <option class="option" value="3">90</option>
                                     </select>
                                 </div>
                             </div>
                             <div class="card add">
                                 <div class="row">
-                                    <div class="col-11">
+                                    <div class="col col-lg-11 col-md-11 col-sm-11 col-xs">
                                         <p class="card-title">Row Values</p>
                                     </div>
-                                    <div class="col-1">
+                                    <!-- <div class="col col-lg-1 col-md col-sm col-xs">
                                         <span class="fas fa-sort-down" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></span>
+                                    </div> -->
+                                </div>
+                                <div class="card add collapse" id="demo2">
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Offcial Receipt Number</p>
+                                                <div class="form-group">
+                                                    <input id="text" type="text">
+                                                    <button id="lock-unlock-button" onclick="lock()"><span id="lock-unlock" class="fas fa-lock-open"></span></button>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Status</p>
+                                                <div class="form-group">
+                                                    <select class="exampleFormControlSelect1" id="text2">
+                                                        <option>In Stock</option>
+                                                        <option>In Stock</option>
+                                                        <option>In Stock</option>
+                                                    </select>
+                                                    <button id="lock-unlock-button2" onclick="lock2()"><span id="lock-unlock2" class="fas fa-lock-open"></span></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Type</p>
+                                                <div class="form-group">
+                                                    <select class="exampleFormControlSelect1">
+                                                        <option>Monitor</option>
+                                                        <option>Monitor</option>
+                                                        <option>Monitor</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Brand</p>
+                                                <div class="form-group">
+                                                    <select class="exampleFormControlSelect1">
+                                                        <option>BenQ</option>
+                                                        <option>BenQ</option>
+                                                        <option>BenQ</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Model</p>
+                                                <div class="form-group">
+                                                    <select class="exampleFormControlSelect1">
+                                                        <option>IR-98263</option>
+                                                        <option>IR-98263</option>
+                                                        <option>IR-98263</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Screen Resolution</p>
+                                                <div class="form-group">
+                                                    <select class="exampleFormControlSelect1">
+                                                        <option>1280x720 Resolution</option>
+                                                        <option>1280x720 Resolution</option>
+                                                        <option>1280x720 Resolution</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                                    <div class="row collapse" id="collapseExample">
-                                        <div class="col-sm-4">
-                                            <p class="card-title">Offcial Receipt Number</p>
-                                            <div class="form-group">
-                                                <input id="text" type="text">
-                                                <button id="lock-unlock-button" onclick="lock()"><span id="lock-unlock" class="fas fa-lock-open"></span></button>
+                                <!--Mobile Devices-->
+                                <div class="card add collapse" id="demo3">
+                                    <div class="">
+                                        <div class="row">
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Offcial Receipt Number</p>
+                                                <div class="form-group">
+                                                    <input id="text" type="text">
+                                                    <button id="lock-unlock-button" onclick="lock()"><span id="lock-unlock" class="fas fa-lock-open"></span></button>
+                                                </div>
                                             </div>
-                                            <p class="card-title">Type</p>
-                                            <div class="form-group">
-                                                <select class="exampleFormControlSelect1">
-                                                    <option>Monitor</option>
-                                                    <option>Monitor</option>
-                                                    <option>Monitor</option>
-                                                </select>
-                                            </div>
-                                            <p class="card-title">Brand</p>
-                                            <div class="form-group">
-                                                <select class="exampleFormControlSelect1">
-                                                    <option>BenQ</option>
-                                                    <option>BenQ</option>
-                                                    <option>BenQ</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-4">
-                                            <p class="card-title">Status</p>
-                                            <div class="form-group">
-                                                <select class="exampleFormControlSelect1">
-                                                    <option>In Stock</option>
-                                                    <option>In Stock</option>
-                                                    <option>In Stock</option>
-                                                </select>
-                                                <button id="lock-unlock-button2" onclick="lock2()"><span id="lock-unlock2" class="fas fa-lock-open"></span></button>
-                                            </div>
-                                            <p class="card-title model">Model</p>
-                                            <div class="form-group">
-                                                <select class="exampleFormControlSelect1">
-                                                    <option>IR-98263</option>
-                                                    <option>IR-98263</option>
-                                                    <option>IR-98263</option>
-                                                </select>
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Status</p>
+                                                <div class="form-group">
+                                                    <select class="exampleFormControlSelect1" id="text2">
+                                                        <option>In Stock</option>
+                                                        <option>In Stock</option>
+                                                        <option>In Stock</option>
+                                                    </select>
+                                                    <button id="lock-unlock-button2" onclick="lock2()"><span id="lock-unlock2" class="fas fa-lock-open"></span></button>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="col-sm-4">
-                                          <p class="card-title screen">Screen Resolution</p>
-                                          <div class="form-group">
-                                              <select class="exampleFormControlSelect1">
-                                                  <option>1280x720 Resolution</option>
-                                                  <option>1280x720 Resolution</option>
-                                                  <option>1280x720 Resolution</option>
-                                              </select>
-                                          </div>
+                                        <div class="row">
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Initial Serial Number</p>
+                                                <div class="form-group">
+                                                    <input id="text" type="text">
+                                                </div>
+                                            </div>
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Type</p>
+                                                <div class="form-group">
+                                                    <select class="exampleFormControlSelect1">
+                                                        <option>Phone</option>
+                                                        <option>Phone</option>
+                                                        <option>Phone</option>
+                                                    </select>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="position-right">
-                                          <button type="button" class="btn btn-danger b" id="buttons">Clear Data</button>
-                                          <button type="button" class="btn btn-success b" id="buttons">Add Item</button>
+                                        <div class="row">
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">OS</p>
+                                                <div class="form-group">
+                                                    <select class="exampleFormControlSelect1">
+                                                        <option>Android Marshmallow</option>
+                                                        <option>Android Marshmallow</option>
+                                                        <option>Android Marshmallow</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col col-lg-4 col-md col-sm col-xs">
+                                                <p class="card-title">Brand</p>
+                                                <div class="form-group">
+                                                    <select class="exampleFormControlSelect1">
+                                                        <option>Samsung</option>
+                                                        <option>Samsung</option>
+                                                        <option>Samsung</option>
+                                                    </select>
+                                                </div>
+                                              </div>
+                                              <div class="col col-lg-4 col-md col-sm col-xs">
+                                                  <p class="card-title">Model</p>
+                                                  <div class="form-group">
+                                                      <select class="exampleFormControlSelect1">
+                                                          <option>IR-98263</option>
+                                                          <option>IR-98263</option>
+                                                          <option>IR-98263</option>
+                                                      </select>
+                                                  </div>
+                                              </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col col-lg-4 col-md col-sm col-xs">
+                                                    <p class="card-title">Processor</p>
+                                                    <div class="form-group">
+                                                        <input id="text" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col col-lg-4 col-md col-sm col-xs">
+                                                    <p class="card-title">RAM</p>
+                                                    <div class="form-group">
+                                                        <input id="text" type="text">
+                                                    </div>
+                                                </div>
+                                                <div class="col col-lg-4 col-md col-sm col-xs">
+                                                    <p class="card-title">Internal Storage</p>
+                                                    <div class="form-group">
+                                                        <input id="text" type="text">
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
+                                    <div class="row position-right">
+                                        <div class="col col-lg-5 col-md col-sm col-xs">
+                                            <button type="button" class="btn btn-danger b" id="buttons">Clear Data</button>
+                                        </div>
+                                        <div class="col col-lg-5 col-md col-sm col-xs">
+                                            <button type="button" class="btn btn-success b" id="buttons">Add Item</button>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="card computer-peripheral" id="inputType1">
-                        <div class="card-body">
-                            <p class="card-title">Computer Peripheral (50)</p>
-                            <hr style="border: 1px solid #ffbb33;">
-                            <div class="row">
-                                <div class="col col-3">
-                                    <table class="table table-borderless third-card">
-                                        <tbody>
-                                          <tr>
-                                            <td>Type:</td>
-                                            <td>Monitor</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Status:</td>
-                                            <td>In stock</td>
-                                          </tr>
-                                          <tr>
-                                            <td>Serial Number:</td>
-                                            <td>Missing Data</td>
-                                          </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-                                <div class="col col-4">
-                                </div>
-                                <div class="col col-4">
-                                  <table class="table table-borderless third-card">
-                                      <tbody>
-                                        <tr>
-                                          <td>Brand:</td>
-                                          <td>BenQ</td>
-                                        </tr>
-                                        <tr>
-                                          <td>Model:</td>
-                                          <td>IR-98263W</td>
-                                        </tr>
-                                        <tr>
-                                          <td>Screen Resolution:</td>
-                                          <td>1280x720</td>
-                                        </tr>
-                                      </tbody>
-                                  </table>
-                                </div>
-                            </div>
-                            <p class="button-collapse">
-                                <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Display Table
-                                <span class="fas fa-sort-down" data-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1"></span></a>
-                            </p>
-                            <div class="collapse multi-collapse" id="multiCollapseExample1">
-                                <div class="card card-body">
-                                    <div class="d-flex flex-row-reverse">
-                                        <button id="okButton" type="button" class="btn btn-success p-2 text-uppercase text-lg-center">Save Changes</button>
-                                        <button id="redoButton" type="button" class="btn btn-secondary p-2"> <span class="fas fa-redo-alt"></span></button>
-                                        <button id="undoButton" type="button" class="btn btn-secondary p-2"> <span class="fas fa-undo-alt"></span></button>
+                            <div class="card add">
+                                <div class="card-body">
+                                    <p class="card-title">Computer Peripheral (50)</p>
+                                    <hr style="border: 1px solid #ffbb33;">
+                                    <div class="row">
+                                        <div class="col col-lg-4">
+                                            <table class="table table-borderless third-card">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Type:</td>
+                                                        <td>Monitor</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Status:</td>
+                                                        <td>In stock</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Serial Number:</td>
+                                                        <td>Missing Data</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col col-lg-4">
+                                        </div>
+                                        <div class="col col-lg-4">
+                                            <table class="table table-borderless third-card">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Brand:</td>
+                                                        <td>BenQ</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Model:</td>
+                                                        <td>IR-98263W</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Screen Resolution:</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
-                                    <div class="container">
-                                        <table class="table table-hover" id="mydatatable">
-                                            <thead>
-                                                <tr>
-                                                    <th>Firstname</th>
-                                                    <th>Lastname</th>
-                                                    <th>Email</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                 <tr>
-                                                    <td>July</td>
-                                                    <td>Dooley</td>
-                                                    <td>july@example.com</td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>July</td>
-                                                    <td>Dooley</td>
-                                                    <td>july@example.com</td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>July</td>
-                                                    <td>Dooley</td>
-                                                    <td>july@example.com</td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>July</td>
-                                                    <td>Dooley</td>
-                                                    <td>july@example.com</td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>July</td>
-                                                    <td>Dooley</td>
-                                                    <td>july@example.com</td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>July</td>
-                                                    <td>Dooley</td>
-                                                    <td>july@example.com</td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>July</td>
-                                                    <td>Dooley</td>
-                                                    <td>july@example.com</td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>July</td>
-                                                    <td>Dooley</td>
-                                                    <td>july@example.com</td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>July</td>
-                                                    <td>Dooley</td>
-                                                    <td>july@example.com</td>
-                                                </tr>
-                                                 <tr>
-                                                    <td>July</td>
-                                                    <td>Dooley</td>
-                                                    <td>july@example.com</td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
+                                    <div class="dropdown text-right">
+                                        <button class="btn btn-primary dropdown-toggle" type="button" id="button2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Display Table
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">10 Rows</button>
+                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">25 Rows</button>
+                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">50 Rows</button>
+                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">All</button>
+                                        </div>
                                     </div>
-                                    <div class="position-right">
-                                        <button type="button" class="btn btn-danger b" id="buttons">Cancel</button>
-                                        <button type="button" class="btn b save" id="buttons">Save All</button>
+                                    <div class="card add collapse" id="demo1">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row-reverse">
+                                                <button id="okButton" type="button" class="btn btn-success p-2 text-lg-center">Save Changes</button>
+                                                <button id="redoButton" type="button" class="btn btn-secondary p-2"> <span class="fas fa-redo-alt"></span></button>
+                                                <button id="undoButton" type="button" class="btn btn-secondary p-2"> <span class="fas fa-undo-alt"></span></button>
+                                            </div>
+                                            <p>INSERT SAMPLE TABLE HERE</p>
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-danger b" id="buttons">Cancel</button>
+                                                <button type="button" class="btn b save" id="buttons">Save All</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -438,6 +511,7 @@
                 </div>
             </div>
 
+
     <!-- JQuery Core -->
     <script type="text/javascript" src="../lib/dist/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/popper/popper.min.js"></script>
@@ -445,7 +519,7 @@
     <script type="text/javascript" src="../lib/dist/bootstrap/js/bootstrap.js"></script>
     <!--Custom-->
     <script type="text/javascript" src="../lib/custom/js/custom-Mehanie.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
     <script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {
