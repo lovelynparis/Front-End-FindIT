@@ -214,22 +214,40 @@
 
                 <!-- Page Content -->
                 <div class="container p-2">
+                    <div class="text-right build">
+                        <button id="buttons1" type="button" class="btn btn-secondary p-2 px-3 my-1 text-uppercase text-lg-center">
+                            <span class="fas fa-desktop" style="padding-right: 5px"></span>Build A Pc</button>
+                        <button id="buttons1" type="button" class="btn btn-info p-2 px-3 my-1 text-uppercase text-lg-center">
+                            <span class="fas fa-file-csv" style="padding-right: 5px"></span>Import CSV</button>
+                    </div>
                     <div class="card bulk" id="inputType1">
                         <div class="card-body">
                             <div class="row">
                               <div class="col col-lg-3 col-md col-sm col-xs">
-                              <p class="card-title">Category</p>
-                              <div class="dropdown">
-                                  <button class="btn dropdown-toggle" type="button" id="button3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                      Category
-                                  </button>
-                                  <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                      <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo2">Computer Peripherals</button>
-                                      <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo3">Mobile Devices</button>
-                                      <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo4">Option 3</button>
-                                      <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo5">Option 4</button>
-                                  </div>
-                              </div></div>
+                                <p class="card-title">Category</p>
+                                <select id="category-select" class="custom-select">
+                                    <option id="initial-category-value">Category</option>
+                                    <option class="option" value="Computer Peripherals">Computer Peripherals</option>
+                                    <option class="option" value="Mobile Devices">Mobile Devices</option>
+                                    <option class="option" value="3">Option 3</option>
+                                    <option class="option" value="4">Option 4</option>
+                                </select>
+
+
+                                <!--
+                                <div class="dropdown">
+                                    <button class="btn dropdown-toggle" type="button" id="button3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Category
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                        <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo2">Computer Peripherals</button>
+                                        <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo3">Mobile Devices</button>
+                                        <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo4">Option 3</button>
+                                        <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo5">Option 4</button>
+                                    </div>
+                                </div>
+                                -->
+                              </div>
                                 <!--
                                 <div class="col col-lg-4 col-md col-sm col-xs">
                                     <p class="card-title">Category</p>
@@ -242,7 +260,7 @@
                                 </div>-->
                                 <div class="col col-lg-6 col-md col-sm col-xs">
                                     <p class="card-title">Quantity</p>
-                                    <select class="custom-select">
+                                    <select id="quantity-select" class="custom-select">
                                         <option selected class="option">50</option>
                                         <option class="option" value="1">60</option>
                                         <option class="option" value="2">70</option>
@@ -261,19 +279,19 @@
                                     </div> -->
                                 </div>
                                 <div class="card add collapse" id="demo2">
-                                    <div class="">
+                                    <form onsubmit="return return();" method="post" action="">
                                         <div class="row">
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Offcial Receipt Number</p>
                                                 <div class="form-group">
-                                                    <input id="text" type="text">
+                                                    <input id="official-receipt-number" type="text">
                                                     <button id="lock-unlock-button" onclick="lock()"><span id="lock-unlock" class="fas fa-lock-open"></span></button>
                                                 </div>
                                             </div>
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Status</p>
                                                 <div class="form-group">
-                                                    <select class="exampleFormControlSelect1" id="text2">
+                                                    <select id="status" class="exampleFormControlSelect1">
                                                         <option>In Stock</option>
                                                         <option>In Stock</option>
                                                         <option>In Stock</option>
@@ -286,10 +304,10 @@
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Type</p>
                                                 <div class="form-group">
-                                                    <select class="exampleFormControlSelect1">
-                                                        <option>Monitor</option>
-                                                        <option>Monitor</option>
-                                                        <option>Monitor</option>
+                                                    <select id="monitor" class="exampleFormControlSelect1">
+                                                        <option value="monitor">Monitor</option>
+                                                        <option value="monitor">Monitor</option>
+                                                        <option value="monitor">Monitor</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -298,36 +316,40 @@
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Brand</p>
                                                 <div class="form-group">
-                                                    <select class="exampleFormControlSelect1">
-                                                        <option>BenQ</option>
-                                                        <option>BenQ</option>
-                                                        <option>BenQ</option>
+                                                    <select id="brand" class="exampleFormControlSelect1">
+                                                        <option value="BenQ">BenQ</option>
+                                                        <option value="BenQ">BenQ</option>
+                                                        <option value="BenQ">BenQ</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Model</p>
                                                 <div class="form-group">
-                                                    <select class="exampleFormControlSelect1">
-                                                        <option>IR-98263</option>
-                                                        <option>IR-98263</option>
-                                                        <option>IR-98263</option>
+                                                    <select id="model" class="exampleFormControlSelect1">
+                                                        <option value="IR-98263">IR-98263</option>
+                                                        <option value="IR-98263">IR-98263</option>
+                                                        <option value="IR-98263">IR-98263</option>
                                                     </select>
                                                 </div>
                                             </div>
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Screen Resolution</p>
                                                 <div class="form-group">
-                                                    <select class="exampleFormControlSelect1">
-                                                        <option>1280x720 Resolution</option>
-                                                        <option>1280x720 Resolution</option>
-                                                        <option>1280x720 Resolution</option>
+                                                    <select id="screen-resolution" class="exampleFormControlSelect1">
+                                                        <option value="1280x720 Resolution">1280x720 Resolution</option>
+                                                        <option value="1280x720 Resolution">1280x720 Resolution</option>
+                                                        <option value="1280x720 Resolution">1280x720 Resolution</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="text-right">
+                                            <button type="button" class="btn btn-danger b" id="buttons">Clear Data</button>
+                                            <button id="add-button" type="button" class="btn btn-success b">Add Item</button>
+                                        </div>
                                     </div>
-                                </div>
+
                                 <!--Mobile Devices-->
                                 <div class="card add collapse" id="demo3">
                                     <div class="">
@@ -423,21 +445,18 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-danger b" id="buttons">Clear Data</button>
+                                                <button id="add-button" type="button" class="btn btn-success b">Add Item</button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="row position-right">
-                                        <div class="col col-lg-5 col-md col-sm col-xs">
-                                            <button type="button" class="btn btn-danger b" id="buttons">Clear Data</button>
-                                        </div>
-                                        <div class="col col-lg-5 col-md col-sm col-xs">
-                                            <button type="button" class="btn btn-success b" id="buttons">Add Item</button>
-                                        </div>
-                                    </div>
+                                  </div>
                                 </div>
                             </div>
-                            <div class="card add">
+                            <div class="card bulk add" id="">
                                 <div class="card-body">
-                                    <p class="card-title">Computer Peripheral (50)</p>
+                                    <p class="card-title">Computer Peripheral</p>
                                     <hr style="border: 1px solid #ffbb33;">
                                     <div class="row">
                                         <div class="col col-lg-4">
@@ -445,11 +464,11 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>Type:</td>
-                                                        <td>Monitor</td>
+                                                        <td id="type-comp-per"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Status:</td>
-                                                        <td>In stock</td>
+                                                        <td id="status-comp-per"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Serial Number:</td>
@@ -465,20 +484,21 @@
                                                 <tbody>
                                                     <tr>
                                                         <td>Brand:</td>
-                                                        <td>BenQ</td>
+                                                        <td id="brand-comp-per"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Model:</td>
-                                                        <td>IR-98263W</td>
+                                                        <td id="model-comp-per"></td>
                                                     </tr>
                                                     <tr>
                                                         <td>Screen Resolution:</td>
-                                                        <td>1280x720</td>
+                                                        <td id="screen-res-comp-per"></td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
                                     </div>
+
                                     <div class="dropdown text-right">
                                         <button class="btn btn-primary dropdown-toggle" type="button" id="button2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             Display Table
@@ -493,11 +513,405 @@
                                     <div class="card add collapse" id="demo1">
                                         <div class="card-body">
                                             <div class="d-flex flex-row-reverse">
-                                                <button id="okButton" type="button" class="btn btn-success p-2 text-lg-center">Save Changes</button>
-                                                <button id="redoButton" type="button" class="btn btn-secondary p-2"> <span class="fas fa-redo-alt"></span></button>
-                                                <button id="undoButton" type="button" class="btn btn-secondary p-2"> <span class="fas fa-undo-alt"></span></button>
+                                                <button id="buttons2" type="button" class="btn btn-success p-2 text-lg-center">Save Changes</button>
+                                                <button id="buttons2" type="button" class="btn btn-secondary p-2"> <span class="fas fa-redo-alt"></span></button>
+                                                <button id="buttons2" type="button" class="btn btn-secondary p-2"> <span class="fas fa-undo-alt"></span></button>
                                             </div>
-                                            <p>INSERT SAMPLE TABLE HERE</p>
+                                            <table class="table table-bordered table-hover">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col"></th>
+                                                        <th scope="col">Serial Number</th>
+                                                        <th scope="col">Type</th>
+                                                        <th scope="col">Category</th>
+                                                        <th scope="col">Brand</th>
+                                                        <th scope="col">Model</th>
+                                                        <th scope="col">Specs</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                </tbody>
+                                              </table>
+                                              <div class="row">
+                                                  <div class="col col-3">
+                                                      <p>Selected Items:</p>
+                                                      <p>Showing 10 out of 50 items</p>
+                                                  </div>
+                                              </div>
+                                            <div class="text-right">
+                                                <button type="button" class="btn btn-danger b" id="buttons">Cancel</button>
+                                                <button type="button" class="btn b save" id="buttons">Save All</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--Mobile devices summary-->
+                            <div class="card bulk add" id="">
+                                <div class="card-body">
+                                    <p class="card-title">Mobile Device</p>
+                                    <hr style="border: 1px solid #ffbb33;">
+                                    <div class="row">
+                                        <div class="col col-lg-4">
+                                            <table class="table table-borderless third-card">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Type:</td>
+                                                        <td id="type-comp-per"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Status:</td>
+                                                        <td id="status-comp-per"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Serial Number:</td>
+                                                        <td>Missing Data</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div class="col col-lg-4">
+                                        </div>
+                                        <div class="col col-lg-4">
+                                            <table class="table table-borderless third-card">
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Brand:</td>
+                                                        <td id="brand-comp-per"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Model:</td>
+                                                        <td id="model-comp-per"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Screen Resolution:</td>
+                                                        <td id="screen-res-comp-per"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+
+                                    <div class="dropdown text-right">
+                                        <button class="btn btn-primary dropdown-toggle" type="button" id="button2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            Display Table
+                                        </button>
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">10 Rows</button>
+                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">25 Rows</button>
+                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">50 Rows</button>
+                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">All</button>
+                                        </div>
+                                    </div>
+                                    <div class="card add collapse" id="demo1">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row-reverse">
+                                                <button id="buttons2" type="button" class="btn btn-success p-2 text-lg-center">Save Changes</button>
+                                                <button id="buttons2" type="button" class="btn btn-secondary p-2"> <span class="fas fa-redo-alt"></span></button>
+                                                <button id="buttons2" type="button" class="btn btn-secondary p-2"> <span class="fas fa-undo-alt"></span></button>
+                                            </div>
+                                            <table class="table table-bordered table-hover">
+                                                <thead class="thead-dark">
+                                                    <tr>
+                                                        <th scope="col"></th>
+                                                        <th scope="col">Serial Number</th>
+                                                        <th scope="col">Type</th>
+                                                        <th scope="col">Category</th>
+                                                        <th scope="col">Brand</th>
+                                                        <th scope="col">Model</th>
+                                                        <th scope="col">Specs</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row"></th>
+                                                        <td>
+                                                            <div class="form-group">
+                                                                IR-98263W
+                                                                <input id="table-form" type="text">
+                                                            </div>
+                                                        </td>
+                                                        <td>Monitor</td>
+                                                        <td>Computer Peripheral</td>
+                                                        <td>BenQ</td>
+                                                        <td>IR-98263W</td>
+                                                        <td>1280x720</td>
+                                                    </tr>
+                                                </tbody>
+                                              </table>
+                                              <div class="row">
+                                                  <div class="col col-3">
+                                                      <p>Selected Items:</p>
+                                                      <p>Showing 10 out of 50 items</p>
+                                                  </div>
+                                              </div>
                                             <div class="text-right">
                                                 <button type="button" class="btn btn-danger b" id="buttons">Cancel</button>
                                                 <button type="button" class="btn b save" id="buttons">Save All</button>
@@ -513,6 +927,7 @@
 
 
     <!-- JQuery Core -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/popper/popper.min.js"></script>
     <!-- Bootstrap -->
@@ -526,6 +941,48 @@
                 $('#sidebar').toggleClass('active');
             });
         });
+    </script>
+
+    <script type="text/javascript">
+        $("#category-select").on('click', function() {
+            $("#initial-category-value").hide();
+            //alert($("#category-select").val());
+        });
+
+        $("#category-select").on('change', function() {
+            var category = $("#category-select").val();
+            switch (category) {
+                case "Computer Peripherals":
+                    $("#demo2").show();
+                    $("#demo3").hide();
+                    break;
+                case "Mobile Devices":
+                    $("#demo2").hide();
+                    $("#demo3").show();
+                    break;
+                    default:
+            }
+        });
+    </script>
+
+    <script>
+      $(document).ready(function(){
+          $("#add-button").on('click', function(){
+              var officialReceiptNumber = $("#official-receipt-number").val();
+              var status = $("#status").val();
+              var type = $("#monitor").val();
+              var brand = $("#brand").val();
+              var model = $("#model").val();
+              var screenResolution = $("#screen-resolution").val();
+
+              $("#monitor-comp-per").replaceWith(officialReceiptNumber);
+              $("#status-comp-per").replaceWith(status);
+              $("#type-comp-per").replaceWith(type);
+              $("#brand-comp-per").replaceWith(brand);
+              $("#model-comp-per").replaceWith(model);
+              $("#screen-res-comp-per").replaceWith(screenResolution);
+          });
+      });
     </script>
 </body>
 </html>
