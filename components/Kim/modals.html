@@ -10,20 +10,29 @@
     <link rel="stylesheet" href="../../css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="../../css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/all.css">
-    <link rel="stylesheet" href="./../css/animate.min.css">
+    <link rel="stylesheet" href="../../css/animate.min.css">
     <!-- Your custom css goes here -->
-    <link rel="stylesheet" href="../../css/custom-kim.css">
+    <link rel="stylesheet" href="../../lib/custom/css/custom-kim.css">
 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../../lib/dist/bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="../../lib/dist/bootstrap/css/bootstrap.min.css">
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="../../lib/custom/css/all.css">
+    <link rel="stylesheet" href="../../lib/dist/animate/animate.css">
+    <!-- Your custom css goes here -->
+    <link rel="stylesheet" href="../../lib/custom/css/custom.css">
 
     <title></title>
 
 </head>
 <body>
- 
-<br>  
+
+<br>
 
 <!------------------- Add Associate Design -------------------------->
-  
+
   <!-- Modal Trigger Button-->
   <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addAssociate"> <span class="fas fa-plus"></span>    ADD ASSOCIATE</button>
 
@@ -48,7 +57,7 @@
       </div>
 
       <div class="modal-footer">
-        
+
          <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-save"></span>    SAVE</button>
 
          <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
@@ -139,7 +148,7 @@
 
           <label class="label">Type</label>
 
-       
+
           </div>
           <div class="col">
             <div class="form-group">
@@ -182,7 +191,7 @@
         </div>
       </div>
       <div class="modal-footer">
-   
+
          <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successIssueItem"> <span class="fas fa-save"></span>    SAVE</button>
 
          <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
@@ -233,14 +242,14 @@
       </div>
 
       <div class="modal-body">
-        
+
           <div class="row">
              <div class="col-sm-3">Issue To:
                 <div class="form-group">
                 <textarea class="form-control" id="issueToForm" rows="1"></textarea>
                 </div>
              </div>
-          
+
              <div class="col-sm-2">Type:
               <div class="form-group" id="multipleSelect">
                 <select class="computer-units">
@@ -252,7 +261,7 @@
                 </select>
               </div>
              </div>
-             
+
              <div class="col-sm-2">Quantity:
               <div class="form-group">
                 <select class="FormControlSelect3">
@@ -277,7 +286,7 @@
              </div>
 
 
-          <div class="row"> 
+          <div class="row">
              <div class="col-sm-3"></div>
              <div class="col-sm-2">
               <div class="form-group" id="multipleSelect">
@@ -290,7 +299,7 @@
                 </select>
               </div>
              </div>
-             
+
              <div class="col-sm-2">
               <div class="form-group">
                 <select class="FormControlSelect4">
@@ -355,7 +364,7 @@
       </div>
 
       <div class="modal-body">
-         
+
           <div class="row">
           <div class="col">Serial No.</div>
           <div class="col">
@@ -364,7 +373,7 @@
             </div>
           </div>
         </div>
-        
+
           <div class="row">
           <div class="col">
             <div class="form-group">
@@ -391,7 +400,7 @@
         </div>
       </div>
       <div class="modal-footer">
-   
+
          <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successIssueItem"> <span class="fas fa-save"></span>    SAVE</button>
 
          <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
@@ -416,11 +425,11 @@
       </div>
 
       <div class="modal-body">
-        
+
           <div class="row">
              <div class="col-sm-3">Reissue To:
-             </div>   
-             
+             </div>
+
              <div class="col-sm-3">Serial No.:
              </div>
 
@@ -440,15 +449,15 @@
               </div>
               <div class="col-sm-3">
                 <p>Computer Units</p>
-              </div>  
+              </div>
               <div class="col-sm-3">
                 <p>Bruce Wayne</p>
               </div>
             </div>
 
             <div class="row details">
-              <div class="col-sm-3"></div>   
-             
+              <div class="col-sm-3"></div>
+
               <div class="col-sm-3">
                 <div class="form-group"><textarea class="form-control" id="issueToForm" rows="1"></textarea></div>
               </div>
@@ -469,8 +478,8 @@
 
                       <div class="row">
              <div class="col-sm-3">Reissue To:
-             </div>   
-             
+             </div>
+
              <div class="col-sm-3">Serial No.:
              </div>
 
@@ -490,15 +499,15 @@
               </div>
               <div class="col-sm-3">
                 <p>Computer Units</p>
-              </div>  
+              </div>
               <div class="col-sm-3">
                 <p>Bruce Banner</p>
               </div>
             </div>
 
             <div class="row details">
-              <div class="col-sm-3"></div>   
-             
+              <div class="col-sm-3"></div>
+
               <div class="col-sm-3">
                 <div class="form-group"><textarea class="form-control" id="issueToForm" rows="1"></textarea></div>
               </div>
@@ -717,17 +726,17 @@
             <div class="col-sm-4">Former Issuers</div>
             <div class="col-sm-4">Date Issued</div>
             <div class="col-sm-4">Date Returned</div>
-          </div>  
+          </div>
           <div class="row">
             <div class="col-sm-4">Peter Parker</div>
             <div class="col-sm-4">02-02-2017</div>
             <div class="col-sm-4">25-03-2017</div>
-          </div>  
+          </div>
           <div class="row">
             <div class="col-sm-4">Bruce Wayne  </div>
             <div class="col-sm-4">25-05-2017</div>
             <div class="col-sm-4">29-06-2017</div>
-          </div>  
+          </div>
           <div class="row">
             <div class="col-sm-4">Tony Stark</div>
             <div class="col-sm-4">30-11-2017</div>
@@ -762,6 +771,6 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
-    <script src="../../js/bootstrap.min.js"></script>
+    <script src="../../lib/dist/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>
