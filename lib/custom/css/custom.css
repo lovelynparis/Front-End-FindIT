@@ -918,7 +918,7 @@ button.b {
   height: 1.9rem;
 }
 
-#buttons, #add-button{
+#buttons, .add-button{
   font-size: 12px;
   border-radius: 5px;
   width: 6rem;
@@ -1013,4 +1013,8 @@ button.dropdown-toggle {
 #table-form {
   width: 10rem;
   margin-left: 5px;
+}
+
+.fa-minus {
+  border-radius: 3px;
 }
