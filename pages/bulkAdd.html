@@ -13,6 +13,10 @@
     <!-- Font Awesome JS -->
     <link rel="stylesheet" href="../lib/custom/css/all.css">
     <link rel="stylesheet" href="../lib/dist/animate/animate.css">
+
+    <!-- DataTables -->
+	  <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
+
     <!-- Your custom css goes here -->
     <link rel="stylesheet" href="../lib/custom/css/custom.css">
     <title>Bulk Add</title>
@@ -232,40 +236,15 @@
                                     <option class="option" value="3">Option 3</option>
                                     <option class="option" value="4">Option 4</option>
                                 </select>
-
-
-                                <!--
-                                <div class="dropdown">
-                                    <button class="btn dropdown-toggle" type="button" id="button3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        Category
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                        <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo2">Computer Peripherals</button>
-                                        <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo3">Mobile Devices</button>
-                                        <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo4">Option 3</button>
-                                        <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo5">Option 4</button>
-                                    </div>
-                                </div>
-                                -->
                               </div>
-                                <!--
-                                <div class="col col-lg-4 col-md col-sm col-xs">
-                                    <p class="card-title">Category</p>
-                                    <select class="form-control">
-                                        <option data-toggle="collapse" data-target="#demo2">Computer Peripheral</option>
-                                        <option data-toggle="collapse" data-target="#demo2">Mobile Devices</option>
-                                        <option >Option 3</option>
-                                        <option value="4">Option 4</option>
-                                    </select>
-                                </div>-->
                                 <div class="col col-lg-6 col-md col-sm col-xs">
                                     <p class="card-title">Quantity</p>
                                     <select id="quantity-select" class="custom-select">
-                                        <option selected class="option">50</option>
-                                        <option class="option" value="1">60</option>
-                                        <option class="option" value="2">70</option>
-                                        <option class="option" value="3">80</option>
-                                        <option class="option" value="3">90</option>
+                                        <option selected class="option" value="50">50</option>
+                                        <option class="option" value="60">60</option>
+                                        <option class="option" value="70">70</option>
+                                        <option class="option" value="80">80</option>
+                                        <option class="option" value="90">90</option>
                                     </select>
                                 </div>
                             </div>
@@ -274,11 +253,8 @@
                                     <div class="col col-lg-11 col-md-11 col-sm-11 col-xs">
                                         <p class="card-title">Row Values</p>
                                     </div>
-                                    <!-- <div class="col col-lg-1 col-md col-sm col-xs">
-                                        <span class="fas fa-sort-down" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample"></span>
-                                    </div> -->
                                 </div>
-                                <div class="card add collapse" id="demo2">
+                                <div class="card add collapse" id="computer-peripheral">
                                     <form onsubmit="return return();" method="post" action="">
                                         <div class="row">
                                             <div class="col col-lg-4 col-md col-sm col-xs">
@@ -292,9 +268,9 @@
                                                 <p class="card-title">Status</p>
                                                 <div class="form-group">
                                                     <select id="status" class="exampleFormControlSelect1">
-                                                        <option>In Stock</option>
-                                                        <option>In Stock</option>
-                                                        <option>In Stock</option>
+                                                      <option value="In Stock">In Stock</option>
+                                                      <option value="Repair">Repair</option>
+                                                      <option value="Return">Return</option>
                                                     </select>
                                                     <button id="lock-unlock-button2" onclick="lock2()"><span id="lock-unlock2" class="fas fa-lock-open"></span></button>
                                                 </div>
@@ -305,9 +281,10 @@
                                                 <p class="card-title">Type</p>
                                                 <div class="form-group">
                                                     <select id="monitor" class="exampleFormControlSelect1">
-                                                        <option value="monitor">Monitor</option>
-                                                        <option value="monitor">Monitor</option>
-                                                        <option value="monitor">Monitor</option>
+                                                      <option value="Monitor">Monitor</option>
+                                                      <option value="Mouse">Mouse</option>
+                                                      <option value="Keyboard">Keyboard</option>
+                                                      <option value="Printer">Printer</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -317,9 +294,10 @@
                                                 <p class="card-title">Brand</p>
                                                 <div class="form-group">
                                                     <select id="brand" class="exampleFormControlSelect1">
-                                                        <option value="BenQ">BenQ</option>
-                                                        <option value="BenQ">BenQ</option>
-                                                        <option value="BenQ">BenQ</option>
+                                                      <option value="BenQ">BenQ</option>
+                                                      <option value="HP">HP</option>
+                                                      <option value="Dell">Dell</option>
+                                                      <option value="ASUS">ASUS</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -327,9 +305,9 @@
                                                 <p class="card-title">Model</p>
                                                 <div class="form-group">
                                                     <select id="model" class="exampleFormControlSelect1">
-                                                        <option value="IR-98263">IR-98263</option>
-                                                        <option value="IR-98263">IR-98263</option>
-                                                        <option value="IR-98263">IR-98263</option>
+                                                      <option value="IR-98263">IR-98263</option>
+                                                      <option value="LG Flatron W3261VG">LG Flatron W3261VG</option>
+                                                      <option value="HPEESVPRE">HPEESVPRE</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -337,21 +315,22 @@
                                                 <p class="card-title">Screen Resolution</p>
                                                 <div class="form-group">
                                                     <select id="screen-resolution" class="exampleFormControlSelect1">
-                                                        <option value="1280x720 Resolution">1280x720 Resolution</option>
-                                                        <option value="1280x720 Resolution">1280x720 Resolution</option>
-                                                        <option value="1280x720 Resolution">1280x720 Resolution</option>
+                                                      <option value="1280x720">1280x720</option>
+                                                      <option value="1920x1080">1920x1080</option>
+                                                      <option value="1024x768">1024x768</option>
                                                     </select>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="text-right">
                                             <button type="button" class="btn btn-danger b" id="buttons">Clear Data</button>
-                                            <button id="add-button" type="button" class="btn btn-success b">Add Item</button>
+                                            <button id="comp-per-add-button" type="button" class="btn btn-success b add-button">Add Item</button>
                                         </div>
+                                      </form>
                                     </div>
 
                                 <!--Mobile Devices-->
-                                <div class="card add collapse" id="demo3">
+                                <div class="card add collapse" id="mobile-device">
                                     <div class="">
                                         <div class="row">
                                             <div class="col col-lg-4 col-md col-sm col-xs">
@@ -365,9 +344,9 @@
                                                 <p class="card-title">Status</p>
                                                 <div class="form-group">
                                                     <select class="exampleFormControlSelect1" id="text2">
-                                                        <option>In Stock</option>
-                                                        <option>In Stock</option>
-                                                        <option>In Stock</option>
+                                                      <option value="In Stock">In Stock</option>
+                                                      <option value="Repair">Repair</option>
+                                                      <option value="Return">Return</option>
                                                     </select>
                                                     <button id="lock-unlock-button2" onclick="lock2()"><span id="lock-unlock2" class="fas fa-lock-open"></span></button>
                                                 </div>
@@ -384,9 +363,9 @@
                                                 <p class="card-title">Type</p>
                                                 <div class="form-group">
                                                     <select class="exampleFormControlSelect1">
-                                                        <option>Phone</option>
-                                                        <option>Phone</option>
-                                                        <option>Phone</option>
+                                                      <option value="Phone">Phone</option>
+                                                      <option value="Tablet">Tablet</option>
+                                                      <option value="iPad">iPad</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -396,9 +375,9 @@
                                                 <p class="card-title">OS</p>
                                                 <div class="form-group">
                                                     <select class="exampleFormControlSelect1">
-                                                        <option>Android Marshmallow</option>
-                                                        <option>Android Marshmallow</option>
-                                                        <option>Android Marshmallow</option>
+                                                      <option value="Android Marshmallow">Android Marshmallow</option>
+                                                      <option value="iOS">iOS</option>
+                                                      <option value="webOS">webOS</option>
                                                     </select>
                                                 </div>
                                             </div>
@@ -408,9 +387,9 @@
                                                 <p class="card-title">Brand</p>
                                                 <div class="form-group">
                                                     <select class="exampleFormControlSelect1">
-                                                        <option>Samsung</option>
-                                                        <option>Samsung</option>
-                                                        <option>Samsung</option>
+                                                      <option value="Samsung">Samsung</option>
+                                                      <option value="Nokia">Nokia</option>
+                                                      <option value="Apple">Apple</option>
                                                     </select>
                                                 </div>
                                               </div>
@@ -418,9 +397,9 @@
                                                   <p class="card-title">Model</p>
                                                   <div class="form-group">
                                                       <select class="exampleFormControlSelect1">
-                                                          <option>IR-98263</option>
-                                                          <option>IR-98263</option>
-                                                          <option>IR-98263</option>
+                                                        <option value="Samsung Galaxy J3 Pro">Samsung Galaxy J3 Pro</option>
+                                                        <option value="Nokia 7 plus">Nokia 7 plus</option>
+                                                        <option value="iPhone 8 plus">iPhone 8 plus</option>
                                                       </select>
                                                   </div>
                                               </div>
@@ -447,16 +426,23 @@
                                             </div>
                                             <div class="text-right">
                                                 <button type="button" class="btn btn-danger b" id="buttons">Clear Data</button>
-                                                <button id="add-button" type="button" class="btn btn-success b">Add Item</button>
+                                                <button id="mob-dev-add-button" type="button" class="btn btn-success b add-button">Add Item</button>
                                             </div>
                                         </div>
                                     </div>
                                   </div>
                                 </div>
                             </div>
-                            <div class="card bulk add" id="">
+                            <div class="card bulk add panel-collapse collapse show" id="cp">
                                 <div class="card-body">
-                                    <p class="card-title">Computer Peripheral</p>
+                                  <div class="row">
+                                    <div class="col col-11">
+                                        <p class="card-title">Computer Peripheral</p>
+                                    </div>
+                                    <div class="col col-1 text-right">
+                                        <span class="fas fa-minus btn btn-danger" data-toggle="collapse" data-target="#cp"></span>
+                                    </div>
+                                  </div>
                                     <hr style="border: 1px solid #ffbb33;">
                                     <div class="row">
                                         <div class="col col-lg-4">
@@ -499,16 +485,8 @@
                                         </div>
                                     </div>
 
-                                    <div class="dropdown text-right">
-                                        <button class="btn btn-primary dropdown-toggle" type="button" id="button2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Display Table
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">10 Rows</button>
-                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">25 Rows</button>
-                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">50 Rows</button>
-                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">All</button>
-                                        </div>
+                                    <div class="text-right">
+                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#demo1" aria-haspopup="true" aria-expanded="false">Display Table</button>
                                     </div>
                                     <div class="card add collapse" id="demo1">
                                         <div class="card-body">
@@ -517,7 +495,7 @@
                                                 <button id="buttons2" type="button" class="btn btn-secondary p-2"> <span class="fas fa-redo-alt"></span></button>
                                                 <button id="buttons2" type="button" class="btn btn-secondary p-2"> <span class="fas fa-undo-alt"></span></button>
                                             </div>
-                                            <table class="table table-bordered table-hover">
+                                            <table id="comp-per-edit-table" class="table table-bordered table-hover">
                                                 <thead class="thead-dark">
                                                     <tr>
                                                         <th scope="col"></th>
@@ -529,155 +507,9 @@
                                                         <th scope="col">Specs</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
+                                                <tbody id="comp-per-table-body">
                                                 </tbody>
                                               </table>
-                                              <div class="row">
-                                                  <div class="col col-3">
-                                                      <p>Selected Items:</p>
-                                                      <p>Showing 10 out of 50 items</p>
-                                                  </div>
-                                              </div>
                                             <div class="text-right">
                                                 <button type="button" class="btn btn-danger b" id="buttons">Cancel</button>
                                                 <button type="button" class="btn b save" id="buttons">Save All</button>
@@ -688,9 +520,16 @@
                             </div>
 
                             <!--Mobile devices summary-->
-                            <div class="card bulk add" id="">
+                            <div class="card bulk add panel-collapse collapse show" id="md">
                                 <div class="card-body">
-                                    <p class="card-title">Mobile Device</p>
+                                  <div class="row">
+                                  <div class="col col-11">
+                                      <p class="card-title">Mobile Device</p>
+                                  </div>
+                                  <div class="col col-1 text-right">
+                                      <span class="fas fa-minus btn btn-danger" data-toggle="collapse" data-target="#md"></span>
+                                  </div>
+                                  </div>
                                     <hr style="border: 1px solid #ffbb33;">
                                     <div class="row">
                                         <div class="col col-lg-4">
@@ -733,25 +572,17 @@
                                         </div>
                                     </div>
 
-                                    <div class="dropdown text-right">
-                                        <button class="btn btn-primary dropdown-toggle" type="button" id="button2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            Display Table
-                                        </button>
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">10 Rows</button>
-                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">25 Rows</button>
-                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">50 Rows</button>
-                                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#demo1">All</button>
-                                        </div>
+                                    <div class="text-right">
+                                        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#demo3" aria-haspopup="true" aria-expanded="false">Display Table</button>
                                     </div>
-                                    <div class="card add collapse" id="demo1">
+                                    <div class="card add collapse" id="demo3">
                                         <div class="card-body">
                                             <div class="d-flex flex-row-reverse">
                                                 <button id="buttons2" type="button" class="btn btn-success p-2 text-lg-center">Save Changes</button>
                                                 <button id="buttons2" type="button" class="btn btn-secondary p-2"> <span class="fas fa-redo-alt"></span></button>
                                                 <button id="buttons2" type="button" class="btn btn-secondary p-2"> <span class="fas fa-undo-alt"></span></button>
                                             </div>
-                                            <table class="table table-bordered table-hover">
+                                            <table  id="mob-dev-edit-table" class="table table-bordered table-hover">
                                                 <thead class="thead-dark">
                                                     <tr>
                                                         <th scope="col"></th>
@@ -763,147 +594,7 @@
                                                         <th scope="col">Specs</th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row"></th>
-                                                        <td>
-                                                            <div class="form-group">
-                                                                IR-98263W
-                                                                <input id="table-form" type="text">
-                                                            </div>
-                                                        </td>
-                                                        <td>Monitor</td>
-                                                        <td>Computer Peripheral</td>
-                                                        <td>BenQ</td>
-                                                        <td>IR-98263W</td>
-                                                        <td>1280x720</td>
-                                                    </tr>
+                                                <tbody id="#mob-dev-table-body">
                                                 </tbody>
                                               </table>
                                               <div class="row">
@@ -927,11 +618,18 @@
 
 
     <!-- JQuery Core -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/popper/popper.min.js"></script>
     <!-- Bootstrap -->
     <script type="text/javascript" src="../lib/dist/bootstrap/js/bootstrap.js"></script>
+
+    <!-- DataTables -->
+	  <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
+
+	  <script src="../lib/dist/datatable/jquery.dataTables.min.js"></script>
+	  <script src="../lib/dist/datatable/dataTables.bootstrap4.min.js"></script>
+
     <!--Custom-->
     <script type="text/javascript" src="../lib/custom/js/custom-Mehanie.js"></script>
 
@@ -941,33 +639,34 @@
                 $('#sidebar').toggleClass('active');
             });
         });
-    </script>
 
-    <script type="text/javascript">
+      // Category Selection
+      $(document).ready(function(){
         $("#category-select").on('click', function() {
             $("#initial-category-value").hide();
-            //alert($("#category-select").val());
         });
 
         $("#category-select").on('change', function() {
             var category = $("#category-select").val();
             switch (category) {
                 case "Computer Peripherals":
-                    $("#demo2").show();
-                    $("#demo3").hide();
+                    $("#computer-peripheral").show();
+                    $("#mobile-device").hide();
                     break;
                 case "Mobile Devices":
-                    $("#demo2").hide();
-                    $("#demo3").show();
+                    $("#computer-peripheral").hide();
+                    $("#mobile-device").show();
                     break;
                     default:
             }
         });
-    </script>
+      });
 
-    <script>
+      // Comp Per Add Function
       $(document).ready(function(){
-          $("#add-button").on('click', function(){
+          $("#comp-per-add-button").click(function(){
+          		var category = $("#category-select").val();
+          		var quantity = $("#quantity-select").val();
               var officialReceiptNumber = $("#official-receipt-number").val();
               var status = $("#status").val();
               var type = $("#monitor").val();
@@ -981,8 +680,94 @@
               $("#brand-comp-per").replaceWith(brand);
               $("#model-comp-per").replaceWith(model);
               $("#screen-res-comp-per").replaceWith(screenResolution);
+
+          		var tableRowString = "                                                    <tr>" +
+                                                        "<th scope=\"row\"></th>" +
+                                                        "<td>" +
+                                                            "<div class=\"form-group\">" +
+                                                                model +
+                                                                "<input id=\"table-form\" type=\"text\">" +
+                                                            "</div>" +
+                                                        "</td>" +
+                                                        "<td> " + type + "</td>" +
+                                                        "<td>" + category + "</td>" +
+                                                        "<td>" + brand + "</td>" +
+                                                        "<td>" + model + "</td>" +
+                                                        "<td>" + screenResolution.substring(0, screenResolution.lastIndexOf(" ")) + "</td>" +
+                                                    "</tr>";
+
+              $("#comp-per-table-body").empty();
+              for(var i = 0; i < quantity; i++) {
+              	$("#comp-per-table-body").append(tableRowString);
+              }
+
+              // DataTables
+							$(document).ready(function() {
+							    $('#comp-per-edit-table').DataTable({
+							    	"ordering": false,
+							        "searching": false,
+							        "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ]
+							    });
+							} );
           });
       });
+
+
+      // Mob Dev Add Function
+      $(document).ready(function(){
+          $("#mob-dev-add-button").click(function(){
+          		var category = $("#category-select").val();
+          		var quantity = $("#quantity-select").val();
+              var officialReceiptNumber = $("#official-receipt-number").val();
+              var status = $("#status").val();
+              var type = $("#monitor").val();
+              var brand = $("#brand").val();
+              var model = $("#model").val();
+              var screenResolution = $("#screen-resolution").val();
+
+              $("#monitor-comp-per").replaceWith(officialReceiptNumber);
+              $("#status-comp-per").replaceWith(status);
+              $("#type-comp-per").replaceWith(type);
+              $("#brand-comp-per").replaceWith(brand);
+              $("#model-comp-per").replaceWith(model);
+              $("#screen-res-comp-per").replaceWith(screenResolution);
+
+          		var tableRowString = "                                                    <tr>" +
+                                                        "<th scope=\"row\"></th>" +
+                                                        "<td>" +
+                                                            "<div class=\"form-group\">" +
+                                                                model +
+                                                                "<input id=\"table-form\" type=\"text\">" +
+                                                            "</div>" +
+                                                        "</td>" +
+                                                        "<td> " + type + "</td>" +
+                                                        "<td>" + category + "</td>" +
+                                                        "<td>" + brand + "</td>" +
+                                                        "<td>" + model + "</td>" +
+                                                        "<td>" + screenResolution.substring(0, screenResolution.lastIndexOf(" ")) + "</td>" +
+                                                    "</tr>";
+
+              $("#mob-dev--table-body").empty();
+              for(var i = 0; i < quantity; i++) {
+              	$("#mob-dev-table-body").append(tableRowString);
+              }
+
+              // DataTables
+							$(document).ready(function() {
+							    $('#mob-dev-edit-table').DataTable({
+							    	"ordering": false,
+							        "searching": false,
+							        "lengthMenu": [ [10, 25, 50, -1], [10, 25, 50, "All"] ]
+							    });
+							} );
+          });
+      });
+
+      // $(document).ready(function(){
+      //   $('#computer-peripheral').
+      // });
+
+
     </script>
 </body>
 </html>
