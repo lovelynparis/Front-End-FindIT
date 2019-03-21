@@ -45,7 +45,7 @@
 
 
     <div class="container">
-        
+
         <form action="" id="form1">
             <select name="toggle_column" id="toggle_column">
                 <option value="0">Name</option>
@@ -56,7 +56,7 @@
                 <option value="5">Salary</option>
             </select>
 
-<!--
+            <!--
         <form id="myform" method="post">
             <p><b>Selected rows data</b></p>
             <pre id="view-rows"></pre>
@@ -72,81 +72,58 @@
             <!-- Toolbox -->
             <div class="d-flex flex-row-reverse">
                 <div class="p-2">
-                    <span>
-                        <a id="multiple_select" href="#" data-toggle="tooltip"  title="Multiple Select">
-                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/checkbox-icon.png">
-                        </a>
-                        </span>
 
-                    <span>
-                        <a href="#" data-toggle="tooltip" title="Edit">
-                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/edit-icon.png">
-                        </a>
-                    </span>
-                    <span data-toggle="tooltip" title="Add">
-                        <a href="#"   data-toggle="modal" data-target="#exampleModalLong">
-                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/add-icon.png">
-                        </a>
-                    </span>
-                                 <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
 
-                                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                              <div class="modal-content">
-                                                <div class="modal-header">
-                                                  <h5 class="modal-title" id="ModalTitle">Modal title</h5>
-                                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="ModalTitle">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                   </button>
-                                                </div>
+                                </div>
 
-                                                <div class="modal-body">
-                                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                                  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                                  est laborum."
-                                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                                  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                                  est laborum."
-                                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                                                  magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                                  pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                                  est laborum."
-                                                </div>
+                                <div class="modal-body">
+                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                </div>
 
-                                                <div class="modal-footer">
-                                                  <button type="button" class="btn btn-info"> <span class="fas fa-plus"></span> ADD ITEM</button>
-                                                  <button type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-info"> <span class="fas fa-plus"></span> ADD ITEM</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
 
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                    <span>
-                        <a href="#" data-toggle="tooltip" title="Hide/Unhide Columns">
-                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/view.png">
-                        </a>
 
-                    </span>
-                    <span>
-                        <a href="#" data-toggle="tooltip" title="Delete Row(s)">
-                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/delete-icon.png">
-                        </a>
-                    </span>
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <button type="button" class="btn"><a href="#" data-toggle="tooltip" title="Multi Select"><img class="tool-item" src="../../assets/icons/table-toolbar-icons/checkbox-icon.png"></a></button>
+                        <button type="button" class="btn"><a href="#" data-toggle="tooltip" title="Edit"><img class="tool-item" src="../../assets/icons/table-toolbar-icons/edit-icon.png"></a></button>
+                        <button type="button" class="btn"><a href="#" data-toggle="tooltip" title="Hide/Unhide"><img class="tool-item"  src="../../assets/icons/table-toolbar-icons/view.png"></a></button>
+                        <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href="#" data-toggle="tooltip" title="Add"><img class="tool-item"  src="../../assets/icons/table-toolbar-icons/add-icon.png"></a>
+                      </button>
+                        <button type="button" class="btn"><a href="#" data-toggle="tooltip" title="delete"> <img class="tool-item"  src="../../assets/icons/table-toolbar-icons/delete-icon.png"></a></button>
+                        <button type="button" class="btn"><a href="#" data-toggle="tooltip" title="sort"><img class="tool-item"  src="../../assets/icons/table-toolbar-icons/sort-icon.png"></a></button>
 
-                    <span>
-                        <a href="#" data-toggle="tooltip" title="Sort by Column">
-                            <img class="tool-item" src="../../assets/icons/table-toolbar-icons/sort-icon.png">
-                        </a>
-                    </span>
+
+
+
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Add (5 items or Less)</a>
+                            <a class="dropdown-item" href="#">Bulk Add</a>
+                           
+                        </div>
+                    </div>
+
+
 
                 </div>
             </div>
-            <h3><a target="_blank" href="https://www.gyrocode.com/projects/jquery-datatables-checkboxes/">jQuery DataTables Checkboxes:</a> <a target="_blank" href="https://www.gyrocode.com/projects/jquery-datatables-checkboxes/examples/styling/awesome-bootstrap-checkbox/">Awesome Bootstrap Checkbox</a></h3>
+
             <table id="myDataTable" class="table table-bordered table-striped" cellspacing="0" style="width:100%">
                 <thead class="thead-dark">
                     <tr>
@@ -647,106 +624,106 @@
 
     <script type="text/javascript">
         $(document).ready(function() {
-                    $('#myDataTable').DataTable({
+            $('#myDataTable').DataTable({
 
 
-//                        'ajax': 'https://api.myjson.com/bins/1us28',
-//                        'columnDefs': [{
-//                            targets: 0,
-//                            checkboxes: {
-//                                seletRow: true
-//                            }
-//                        }],
-//                        'select': 'multi',
-//                        order: [
-//                            [1, 'asc']
-//                        ]
-//                    })
-//                    $("#myform").on('submit', function(e) {
-//                        var form = this
-//                        var rowsel = mytable.column(0).checkboxes.selected();
-//                        $.each(rowsel, function(index, rowId) {
-//                            $(form).append(
-//                                $('<input>').attr('type', 'hidden').attr('name', 'id[]').val(rowId)
-//                            )
-//                        })
-//                        $("#view-rows").text(rowsel.join(","))
-//                        $("#view-form").text($(form).serialize())
-//                        $('input[name="id\[\]"]', form).remove()
-//                        e.preventDefault()
-//                    })
-                                    scrollY: '50vh',
-                                    scrollCollapse: true,
-                                    scrollX: '50vw',
-                                    fixedColumns: {
-                                        leftColumns: 2
-                                    },
-                                    'ajax': 'https://api.myjson.com/bins/1us28',
-                                    'select': 'multi',
-                                    'order': [
-                                        [1, 'asc']
-                                    ],
-                                    'columnDefs': [{
-                                        'targets': 0,
-                                        'render': function(data, type, row, meta) {
-                                            if (type === 'display') {
-                                                data = '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>';
-                                            }
-                    
-                                            return data;
-                                        },
-                                        'checkboxes': {
-                                            'selectRow': true,
-                                            'selectAllRender': '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>'
-                                        }
-                                    }]
-                    
-                                });
+                //                        'ajax': 'https://api.myjson.com/bins/1us28',
+                //                        'columnDefs': [{
+                //                            targets: 0,
+                //                            checkboxes: {
+                //                                seletRow: true
+                //                            }
+                //                        }],
+                //                        'select': 'multi',
+                //                        order: [
+                //                            [1, 'asc']
+                //                        ]
+                //                    })
+                //                    $("#myform").on('submit', function(e) {
+                //                        var form = this
+                //                        var rowsel = mytable.column(0).checkboxes.selected();
+                //                        $.each(rowsel, function(index, rowId) {
+                //                            $(form).append(
+                //                                $('<input>').attr('type', 'hidden').attr('name', 'id[]').val(rowId)
+                //                            )
+                //                        })
+                //                        $("#view-rows").text(rowsel.join(","))
+                //                        $("#view-form").text($(form).serialize())
+                //                        $('input[name="id\[\]"]', form).remove()
+                //                        e.preventDefault()
+                //                    })
+                scrollY: '50vh',
+                scrollCollapse: true,
+                scrollX: '50vw',
+                fixedColumns: {
+                    leftColumns: 2
+                },
+                'ajax': 'https://api.myjson.com/bins/1us28',
+                'select': 'multi',
+                'order': [
+                    [1, 'asc']
+                ],
+                'columnDefs': [{
+                    'targets': 0,
+                    'render': function(data, type, row, meta) {
+                        if (type === 'display') {
+                            data = '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>';
+                        }
 
-                                function hideAllColumns() {
-                                    for (var i = 0; i < 6; i++) {
-                                        columns = my_table.column(i).visible(0);
-                                    }
-                                };
-                    
-                                function showAllColumns() {
-                                    for (var i = 0; i < 5; i++) {
-                                        my_table.column(i).visible(1);
-                                    }
-                                }
-                    
-                                jQuery(document).ready(function() {
-                    
-                                    my_table = $('#myDataTable').DataTable();
-                    
-                    
-                                    jQuery('#toggle_column').multipleSelect({
-                                        width: 200,
-                                        onClick: function(view) {
-                                            var selectedItems = jQuery('#toggle_column').multipleSelect("getSelects");
-                                            hideAllColumns();
-                                            for (var i = 0; i < selectedItems.length; i++) {
-                                                var s = selectedItems[i];
-                                                my_table.column(s).visible(1);
-                                            }
-                                            jQuery('#myDataTable').css('width', '100%');
-                                        },
-                                        onCheckAll: function() {
-                                            showAllColumns();
-                                            jQuery('#myDataTable').css('width', '100%');
-                                        },
-                                        onUncheckAll: function() {
-                                            hideAllColumns();
-                                        }
-                                    });
-                    
-                                });
-                            });
-//        });
-                    //tooltip initialisation
-                    $(function() {
-                        $('[data-toggle="tooltip"]').tooltip()
-                    });
+                        return data;
+                    },
+                    'checkboxes': {
+                        'selectRow': true,
+                        'selectAllRender': '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>'
+                    }
+                }]
+
+            });
+
+            function hideAllColumns() {
+                for (var i = 0; i < 6; i++) {
+                    columns = my_table.column(i).visible(0);
+                }
+            };
+
+            function showAllColumns() {
+                for (var i = 0; i < 5; i++) {
+                    my_table.column(i).visible(1);
+                }
+            }
+
+            jQuery(document).ready(function() {
+
+                my_table = $('#myDataTable').DataTable();
+
+
+                jQuery('#toggle_column').multipleSelect({
+                    width: 200,
+                    onClick: function(view) {
+                        var selectedItems = jQuery('#toggle_column').multipleSelect("getSelects");
+                        hideAllColumns();
+                        for (var i = 0; i < selectedItems.length; i++) {
+                            var s = selectedItems[i];
+                            my_table.column(s).visible(1);
+                        }
+                        jQuery('#myDataTable').css('width', '100%');
+                    },
+                    onCheckAll: function() {
+                        showAllColumns();
+                        jQuery('#myDataTable').css('width', '100%');
+                    },
+                    onUncheckAll: function() {
+                        hideAllColumns();
+                    }
+                });
+
+            });
+        });
+        //        });
+        //tooltip initialisation
+        $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        });
 
     </script>
 

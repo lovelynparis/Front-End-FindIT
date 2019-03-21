@@ -31,5 +31,10 @@
 
     height: 20px;
     width: 20px;
-    margin: 5px;
+  
+}
+
+.btn{
+    
+    padding: none;
 }
