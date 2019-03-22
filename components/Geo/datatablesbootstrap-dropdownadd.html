@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="../../lib/custom/css/custom.css">
     <link rel="stylesheet" href="../../lib/custom/css/custom-table.css">
 
+    <link rel="stylesheet" href="../../lib/dist/datatable/dataTables.responsive.min.js">
 
 
 
@@ -127,7 +128,7 @@
             <table id="myDataTable" class="table table-bordered table-striped" cellspacing="0" style="width:100%">
                 <thead class="thead-dark">
                     <tr>
-                        <th></th>
+                    
                         <th>Name</th>
                         <th>Position</th>
                         <th>Office</th>
@@ -621,6 +622,8 @@
     <script type="text/javascript" src="../../lib/dist/datatable/dataTables.select.min.js"></script>
     <script type="text/javascript" src="../../lib/dist/datatable/dataTables.checkboxes.min.js"></script>
 
+    
+    <script type="text/javascript" src="../../lib/dist/datatable/dataTables.responsive.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -652,32 +655,44 @@
                 //                        $('input[name="id\[\]"]', form).remove()
                 //                        e.preventDefault()
                 //                    })
-                scrollY: '50vh',
-                scrollCollapse: true,
-                scrollX: '50vw',
-                fixedColumns: {
-                    leftColumns: 2
-                },
+//                scrollY: '50vh',
+//                scrollCollapse: true,
+//                scrollX: '50vw',
+//                fixedColumns: {
+//                    leftColumns: 2
+//                },
                 'ajax': 'https://api.myjson.com/bins/1us28',
-                'select': 'multi',
-                'order': [
-                    [1, 'asc']
-                ],
-                'columnDefs': [{
-                    'targets': 0,
-                    'render': function(data, type, row, meta) {
-                        if (type === 'display') {
-                            data = '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>';
-                        }
-
-                        return data;
-                    },
-                    'checkboxes': {
-                        'selectRow': true,
-                        'selectAllRender': '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>'
+//                'select': 'multi',
+//                'order': [
+//                    [1, 'asc']
+//                ],
+//                'columnDefs': [{
+//                    'targets': 0,
+//                    'render': function(data, type, row, meta) {
+//                        if (type === 'display') {
+//                            data = '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>';
+//                        }
+//
+//                        return data;
+//                    },
+//                    'checkboxes': {
+//                        'selectRow': true,
+//                        'selectAllRender': '<div class="checkbox"><input type="checkbox" class="dt-checkboxes"><label></label></div>'
+//                    }
+//                }]
+                
+                  responsive: {
+            details: {
+                display: $.fn.dataTable.Responsive.display.modal( {
+                    header: function ( row ) {
+                        var data = row.data();
+                        return 'Details for '+data[0]+' '+data[1];
                     }
-                }]
-
+                } ),
+                renderer: $.fn.dataTable.Responsive.renderer.tableAll()
+            }
+        }
+//
             });
 
             function hideAllColumns() {

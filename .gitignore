@@ -5,3 +5,5 @@ slnx.sqlite
 .suo
 .vs
 .gitignore
+lib/dist/datatable/dataTables.responsive.min.js
+lib/dist/datatable/responsive.dataTables.min.css
