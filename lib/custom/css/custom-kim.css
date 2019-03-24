@@ -62,7 +62,6 @@ body{
 }
 
 .modal-body{
-    height: 332px;
     overflow-y: auto;
     text-align: justify;
 }
@@ -165,7 +164,7 @@ body{
 
 .card-signin , .custom-card-sign-in{
   max-width: 435px;
-  max-height: 576px;
+  max-height: 520px;
 }
 
 .custom-card-sign-in{
@@ -174,7 +173,7 @@ body{
 
 #newMedia {
   margin-top: -20%;
-  margin-bottom: 5rem;
+  margin-bottom: 2rem;
   font-weight: bold;
   font-size: 1.5rem;
   font-family: sans-serif;
@@ -205,11 +204,6 @@ body{
   transition: all 0.2s;
 }
 
-.btn-google {
-  color: white;
-  background-color: #F0AD4E;
-}
-
 .responsive {
   width: 100%;
   height: auto;
@@ -219,11 +213,6 @@ body{
   background-color: #EEEEEE;
 }
 
-
-.form-group .computer-units{
-  width: 150%;
-  
-}
 
 
 .warning-content > p{
@@ -252,5 +241,41 @@ body{
 
 .details .col-sm-3 > p{
    font-size: 0.9em;
+}
+
+.modal-body .form-group .email{
+  font-weight: bold;
+}
+
+select.custom-select{
+      height: 2.4rem;
+      border: none;
+      border-bottom: 2px solid black;
+      border-radius: 0;
+      font-size: 1rem;
+      padding: 0px 20px;
+}
+
+
+input.form-control{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  padding: 0px 20px;
+}
+
+.input-text:focus{outline:none;}
+
+div.reissue{
+  border-width: 1px;
+  border-style: solid;
+  border-color: black;
+  padding: 25px 30px;
+  margin-left: 3%;
+}
+
+
+input:focus{
+outline: none !important; 
 }
 
