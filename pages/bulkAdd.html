@@ -17,6 +17,12 @@
     <!-- DataTables -->
 	  <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
 
+    <!-- jquery validation -->
+    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+
+    <!-- jquery editable dropdown plugin -->
+    <link href="https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.css" rel="stylesheet">
+
     <!-- Your custom css goes here -->
     <link rel="stylesheet" href="../lib/custom/css/custom.css">
     <title>Bulk Add</title>
@@ -240,11 +246,17 @@
                                 <div class="col col-lg-6 col-md col-sm col-xs">
                                     <p class="card-title">Quantity</p>
                                     <select id="quantity-select" class="custom-select">
-                                        <option selected class="option" value="50">50</option>
+                                        <option></option>
+                                        <option class="option" value="10">10</option>
+                                        <option class="option" value="20">20</option>
+                                        <option class="option" value="30">30</option>
+                                        <option class="option" value="40">40</option>
+                                        <option class="option" value="50">50</option>
                                         <option class="option" value="60">60</option>
                                         <option class="option" value="70">70</option>
                                         <option class="option" value="80">80</option>
                                         <option class="option" value="90">90</option>
+                                        <option class="option" value="100">100</option>
                                     </select>
                                 </div>
                             </div>
@@ -255,19 +267,20 @@
                                     </div>
                                 </div>
                                 <div class="card add collapse" id="computer-peripheral">
-                                    <form onsubmit="return return();" method="post" action="">
+                                    <form id="myform">
                                         <div class="row">
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Offcial Receipt Number</p>
                                                 <div class="form-group">
-                                                    <input id="official-receipt-number" type="text">
+                                                    <input id="official-receipt-number" name="field" type="text">
                                                     <button id="lock-unlock-button" onclick="lock()"><span id="lock-unlock" class="fas fa-lock-open"></span></button>
                                                 </div>
                                             </div>
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Status</p>
                                                 <div class="form-group">
-                                                    <select id="status" class="exampleFormControlSelect1">
+                                                    <select id="status" class="exampleFormControlSelect1" name="status">
+                                                      <option></option>
                                                       <option value="In Stock">In Stock</option>
                                                       <option value="Repair">Repair</option>
                                                       <option value="Return">Return</option>
@@ -280,7 +293,8 @@
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Type</p>
                                                 <div class="form-group">
-                                                    <select id="monitor" class="exampleFormControlSelect1">
+                                                    <select id="monitor" class="exampleFormControlSelect1" name="type">
+                                                      <option></option>
                                                       <option value="Monitor">Monitor</option>
                                                       <option value="Mouse">Mouse</option>
                                                       <option value="Keyboard">Keyboard</option>
@@ -293,7 +307,8 @@
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Brand</p>
                                                 <div class="form-group">
-                                                    <select id="brand" class="exampleFormControlSelect1">
+                                                    <select id="brand" class="exampleFormControlSelect1" name="brand">
+                                                      <option></option>
                                                       <option value="BenQ">BenQ</option>
                                                       <option value="HP">HP</option>
                                                       <option value="Dell">Dell</option>
@@ -304,7 +319,8 @@
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Model</p>
                                                 <div class="form-group">
-                                                    <select id="model" class="exampleFormControlSelect1">
+                                                    <select id="model" class="exampleFormControlSelect1" name="model">
+                                                      <option></option>
                                                       <option value="IR-98263">IR-98263</option>
                                                       <option value="LG Flatron W3261VG">LG Flatron W3261VG</option>
                                                       <option value="HPEESVPRE">HPEESVPRE</option>
@@ -314,7 +330,8 @@
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Screen Resolution</p>
                                                 <div class="form-group">
-                                                    <select id="screen-resolution" class="exampleFormControlSelect1">
+                                                    <select id="screen-resolution" class="exampleFormControlSelect1" name="resolution">
+                                                      <option></option>
                                                       <option value="1280x720">1280x720</option>
                                                       <option value="1920x1080">1920x1080</option>
                                                       <option value="1024x768">1024x768</option>
@@ -324,26 +341,27 @@
                                         </div>
                                         <div class="text-right">
                                             <button type="button" class="btn btn-danger b" id="buttons">Clear Data</button>
-                                            <button id="comp-per-add-button" type="button" class="btn btn-success b add-button">Add Item</button>
+                                            <button id="comp-per-add-button" type="submit" class="btn btn-success b add-button">Add Item</button>
                                         </div>
                                       </form>
                                     </div>
 
                                 <!--Mobile Devices-->
                                 <div class="card add collapse" id="mobile-device">
-                                    <div class="">
+                                    <form id="myform2">
                                         <div class="row">
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Offcial Receipt Number</p>
                                                 <div class="form-group">
-                                                    <input id="text" type="text">
+                                                    <input id="text" type="text" name="or">
                                                     <button id="lock-unlock-button" onclick="lock()"><span id="lock-unlock" class="fas fa-lock-open"></span></button>
                                                 </div>
                                             </div>
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Status</p>
                                                 <div class="form-group">
-                                                    <select class="exampleFormControlSelect1" id="text2">
+                                                    <select class="exampleFormControlSelect1" id="status2" name="status">
+                                                      <option></option>
                                                       <option value="In Stock">In Stock</option>
                                                       <option value="Repair">Repair</option>
                                                       <option value="Return">Return</option>
@@ -356,13 +374,14 @@
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Initial Serial Number</p>
                                                 <div class="form-group">
-                                                    <input id="text" type="text">
+                                                    <input id="serial-number" name="serial">
                                                 </div>
                                             </div>
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Type</p>
                                                 <div class="form-group">
-                                                    <select class="exampleFormControlSelect1">
+                                                    <select class="exampleFormControlSelect1" id="monitor2" name="type">
+                                                      <option></option>
                                                       <option value="Phone">Phone</option>
                                                       <option value="Tablet">Tablet</option>
                                                       <option value="iPad">iPad</option>
@@ -374,7 +393,8 @@
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">OS</p>
                                                 <div class="form-group">
-                                                    <select class="exampleFormControlSelect1">
+                                                    <select class="exampleFormControlSelect1" name="os" id="os">
+                                                      <option></option>
                                                       <option value="Android Marshmallow">Android Marshmallow</option>
                                                       <option value="iOS">iOS</option>
                                                       <option value="webOS">webOS</option>
@@ -386,7 +406,8 @@
                                             <div class="col col-lg-4 col-md col-sm col-xs">
                                                 <p class="card-title">Brand</p>
                                                 <div class="form-group">
-                                                    <select class="exampleFormControlSelect1">
+                                                    <select class="exampleFormControlSelect1" id="brand2" name="brand">
+                                                      <option></option>
                                                       <option value="Samsung">Samsung</option>
                                                       <option value="Nokia">Nokia</option>
                                                       <option value="Apple">Apple</option>
@@ -396,7 +417,8 @@
                                               <div class="col col-lg-4 col-md col-sm col-xs">
                                                   <p class="card-title">Model</p>
                                                   <div class="form-group">
-                                                      <select class="exampleFormControlSelect1">
+                                                      <select class="exampleFormControlSelect1" id="model2" name="model">
+                                                        <option></option>
                                                         <option value="Samsung Galaxy J3 Pro">Samsung Galaxy J3 Pro</option>
                                                         <option value="Nokia 7 plus">Nokia 7 plus</option>
                                                         <option value="iPhone 8 plus">iPhone 8 plus</option>
@@ -408,27 +430,27 @@
                                                 <div class="col col-lg-4 col-md col-sm col-xs">
                                                     <p class="card-title">Processor</p>
                                                     <div class="form-group">
-                                                        <input id="text" type="text">
+                                                        <input id="processor" type="text" name="processor">
                                                     </div>
                                                 </div>
                                                 <div class="col col-lg-4 col-md col-sm col-xs">
                                                     <p class="card-title">RAM</p>
                                                     <div class="form-group">
-                                                        <input id="text" type="text">
+                                                        <input id="ram" type="text" name="ram">
                                                     </div>
                                                 </div>
                                                 <div class="col col-lg-4 col-md col-sm col-xs">
                                                     <p class="card-title">Internal Storage</p>
                                                     <div class="form-group">
-                                                        <input id="text" type="text">
+                                                        <input id="internal-storage" type="text" name="storage">
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="text-right">
                                                 <button type="button" class="btn btn-danger b" id="buttons">Clear Data</button>
-                                                <button id="mob-dev-add-button" type="button" class="btn btn-success b add-button">Add Item</button>
+                                                <button id="mob-dev-add-button" type="submit" class="btn btn-success b add-button">Add Item</button>
                                             </div>
-                                        </div>
+                                        </form>
                                     </div>
                                   </div>
                                 </div>
@@ -620,6 +642,12 @@
     <!-- JQuery Core -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/jquery/dist/jquery.min.js"></script>
+    <!--JQuery form validation plugin-->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <!--JQuery editable table plugin-->
+    <script src="https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.js"></script>
     <script type="text/javascript" src="../lib/dist/popper/popper.min.js"></script>
     <!-- Bootstrap -->
     <script type="text/javascript" src="../lib/dist/bootstrap/js/bootstrap.js"></script>
@@ -681,20 +709,20 @@
               $("#model-comp-per").replaceWith(model);
               $("#screen-res-comp-per").replaceWith(screenResolution);
 
-          		var tableRowString = "                                                    <tr>" +
-                                                        "<th scope=\"row\"></th>" +
-                                                        "<td>" +
-                                                            "<div class=\"form-group\">" +
-                                                                model +
-                                                                "<input id=\"table-form\" type=\"text\">" +
-                                                            "</div>" +
-                                                        "</td>" +
-                                                        "<td> " + type + "</td>" +
-                                                        "<td>" + category + "</td>" +
-                                                        "<td>" + brand + "</td>" +
-                                                        "<td>" + model + "</td>" +
-                                                        "<td>" + screenResolution.substring(0, screenResolution.lastIndexOf(" ")) + "</td>" +
-                                                    "</tr>";
+          		var tableRowString = "<tr>" +
+                                      "<th scope=\"row\"></th>" +
+                                      "<td>" +
+                                          "<div class=\"form-group\">" +
+                                              model +
+                                              "<input id=\"table-form\" type=\"text\">" +
+                                          "</div>" +
+                                      "</td>" +
+                                      "<td> " + type + "</td>" +
+                                      "<td>" + category + "</td>" +
+                                      "<td>" + brand + "</td>" +
+                                      "<td>" + model + "</td>" +
+                                      "<td>" + screenResolution.substring(0, screenResolution.lastIndexOf(" ")) + "</td>" +
+                                    "</tr>";
 
               $("#comp-per-table-body").empty();
               for(var i = 0; i < quantity; i++) {
@@ -732,20 +760,20 @@
               $("#model-comp-per").replaceWith(model);
               $("#screen-res-comp-per").replaceWith(screenResolution);
 
-          		var tableRowString = "                                                    <tr>" +
-                                                        "<th scope=\"row\"></th>" +
-                                                        "<td>" +
-                                                            "<div class=\"form-group\">" +
-                                                                model +
-                                                                "<input id=\"table-form\" type=\"text\">" +
-                                                            "</div>" +
-                                                        "</td>" +
-                                                        "<td> " + type + "</td>" +
-                                                        "<td>" + category + "</td>" +
-                                                        "<td>" + brand + "</td>" +
-                                                        "<td>" + model + "</td>" +
-                                                        "<td>" + screenResolution.substring(0, screenResolution.lastIndexOf(" ")) + "</td>" +
-                                                    "</tr>";
+          		var tableRowString = "<tr>" +
+                                      "<th scope=\"row\"></th>" +
+                                      "<td>" +
+                                          "<div class=\"form-group\">" +
+                                              model +
+                                              "<input id=\"table-form\" type=\"text\">" +
+                                          "</div>" +
+                                      "</td>" +
+                                      "<td> " + type + "</td>" +
+                                      "<td>" + category + "</td>" +
+                                      "<td>" + brand + "</td>" +
+                                      "<td>" + model + "</td>" +
+                                      "<td>" + screenResolution.substring(0, screenResolution.lastIndexOf(" ")) + "</td>" +
+                                    "</tr>";
 
               $("#mob-dev--table-body").empty();
               for(var i = 0; i < quantity; i++) {
@@ -762,12 +790,65 @@
 							} );
           });
       });
+</script>
 
-      // $(document).ready(function(){
-      //   $('#computer-peripheral').
-      // });
+    <script>
+        jQuery.validator.setDefaults({
+          debug: true,
+          success: "valid"
+        });
+        jQuery.validator.addMethod("fieldcheck", function(value, element) {
+          return this.optional( element ) || /^[a-z0-9A-Z0-9_-]{1,15}$/.test( value );
+        }, 'Invalid input.');
+        $( "#myform" ).validate({
+          rules: {
+            /** TRIMS WHITESPACES
+            // field: {
+            //   required: {
+            //       depends:function(){
+            //           $(this).val($.trim($(this).val()));
+            //           return true;
+            //       }
+            //   },
+            //   field: true
+            // },**/
+            field: {required: true, maxlength: 15, nowhitespace: true, fieldcheck: true},
+            status: {required: true},
+            type: {required: true},
+            brand: {required: true},
+            model: {required: true},
+            resolution: {required: true},
+          },
+        });
+        $( "#myform2" ).validate({
+          rules: {
+            or: {required: true, maxlength: 50, nowhitespace: true, fieldcheck: true},
+            status: {required: true},
+            serial: {required: true, maxlength: 50, nowhitespace: true, fieldcheck: true},
+            type: {required: true},
+            os: {required: true},
+            brand: {required: true},
+            model: {required: true},
+            processor: {required: true, maxlength: 50},
+            ram: {required: true, maxlength: 50},
+            storage: {required: true, maxlength: 50}
+          }
+        });
+    </script>
 
-
+    <script>
+      $('#status').editableSelect({ filter: false });
+      $('#status2').editableSelect({ filter: false });
+      $('#monitor').editableSelect({ filter: false });
+      $('#monitor2').editableSelect({ filter: false });
+      $('#brand').editableSelect({ filter: false });
+      $('#brand2').editableSelect({ filter: false });
+      $('#model').editableSelect({ filter: false });
+      $('#model2').editableSelect({ filter: false });
+      $('#screen-resolution').editableSelect({ filter: false });
+      $('#os').editableSelect({ filter: false });
+      $('#internal-storage').editableSelect({ filter: false });
+      $('#quantity-select').editableSelect({ filter: false });
     </script>
 </body>
 </html>
