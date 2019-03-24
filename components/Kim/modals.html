@@ -50,9 +50,14 @@
       </div>
 
       <div class="modal-body">
+        
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+          <label class="email" for="inputEmail">Email Address:</label>
+          <div class="row">
+            <div class="col">
+              <input type="email">
+            </div>
+          </div>
         </div>
       </div>
 
@@ -94,7 +99,7 @@
 </div>
 
 
-  <!------- Failed Modal Design ------->
+  <!------- Failed To Add Associate Modal Design ------->
 
   <!-- Modal -->
     <div class="modal fade" id="failedModal" tabindex="-1" role="dialog" aria-labelledby="failedModalTitle" aria-hidden="true">
@@ -144,47 +149,51 @@
 
       <div class="modal-body">
          <div class="row">
-          <div class="col">
-
-          <label class="label">Type</label>
-
-
+          <div class="col-sm-6">Type</div>
+          <div class="col-sm-6">
+            <select id="category-select" class="custom-select">
+                <option id="initial-category-value">Computer Units</option>
+                <option class="option">Mouse</option>
+                <option class="option">Iphone</option>
+                <option class="option">Macboom Air</option>
+                <option class="option">Keyboard</option>
+            </select>
           </div>
-          <div class="col">
+        </div>
+        <br>
+        <div class="row">
+          <div class="col-sm-6">Issue To</div>
+          <div class="col-sm-6">
+            <select id="category-select" class="custom-select">
+                <option id="initial-category-value">Bruce Banner</option>
+                <option class="option">Bruce Wayne</option>
+                <option class="option" >Tony Stark</option>
+                <option class="option">Peter Parker</option>
+                <option class="option">Jayson Todd</option>
+              </select>
+          </div>
+        </div>
+
+        <br>
+        <div class="row">
+          <div class="col-sm-6">Serial No.</div>
+          <div class="col-sm-6">
             <div class="form-group">
-                <select class="FormControlSelect1">
-                  <option>Computer Units</option>
-                  <option>Mouse</option>
-                  <option>iPhone X</option>
-                  <option>Mac Book Air</option>
-                  <option>Keyboard</option>
-                </select>
+            <input type="serial">
             </div>
           </div>
-          <div class="w-100"></div>
-          <div class="col">Serial No.</div>
-          <div class="col">
-            <div class="form-group">
-            <textarea class="form-control" id="FormControlTextarea1" rows="1"></textarea>
-            </div>
-          </div>
-          <div class="w-100"></div>
-          <div class="col">Item Code</div>
-          <div class="col">PC 198</div>
-          <div class="w-100"></div>
-          <br>
-          <div class="col">Issue To</div>
-          <div class="col">
-            <div class="form-group">
-            <textarea class="form-control" id="FormControlTextarea2" rows="1"></textarea>
-            </div>
-          </div>
-          <div class="w-100"></div>
-          <br>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">Item Code</div>
+          <div class="col-sm-6">PC 198</div>
+        </div>
+        <br>
+        <div class="row">
           <div class="col">
           </div>
           <div class="col">
-          <button id="issue" type="button"  class="btn btn-warning"data-dismiss="modal" data-toggle="modal" href="#issueMore"> <span class="fas fa-plus"></span>    ISSUE MORE</button>
+          <button id="issue" type="button"  class="btn btn-warning btn-sm" data-dismiss="modal" data-toggle="modal" href="#issueMore"> <span class="fas fa-plus"></span>    ISSUE MORE</button>
           </div>
           <div class="col">
           </div>
@@ -227,11 +236,40 @@
   </div>
 </div>
 
+ <!------- Failed To Issue Item Modal Design ------->
 
-<!--Issue More --->
-      <div class="modal fade" id="issueMore" tabindex="-1" role="dialog" aria-labelledby="issueMoreTitle" aria-hidden="true">
+  <!-- Modal -->
+    <div class="modal fade" id="failedModal" tabindex="-1" role="dialog" aria-labelledby="failedModalTitle" aria-hidden="true">
 
     <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "failedHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <i id=  "failedIcon" class="far fa-times-circle fa-10x"></i>
+        <p id= "failedText">Failed to Issue the Item!</p>
+      </div>
+
+      <div class="modal-footer">
+        <button id="retryFailedButton" type="button" class="btn btn-danger" data-dismiss="modal">RETRY</button>
+
+        <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Issue More --->
+  <div class="modal fade bd-example-modal-lg" id="issueMore" tabindex="-1" role="dialog" aria-labelledby="issueMoreTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-lg" role="document">
 
     <div class="modal-content">
       <div id ="issueMore" class="modal-header">
@@ -244,77 +282,88 @@
       <div class="modal-body">
 
           <div class="row">
-             <div class="col-sm-3">Issue To:
-                <div class="form-group">
-                <textarea class="form-control" id="issueToForm" rows="1"></textarea>
-                </div>
-             </div>
+             <div class="col-sm-3">Issue To:</div>
 
-             <div class="col-sm-2">Type:
-              <div class="form-group" id="multipleSelect">
-                <select class="computer-units">
-                  <option>Mouse</option>
-                  <option>iPhone X</option>
-                  <option>Mac Book Air</option>
-                  <option>Keyboard</option>
-                  <option>Computer Units</option>
-                </select>
-              </div>
-             </div>
 
-             <div class="col-sm-2">Quantity:
-              <div class="form-group">
-                <select class="FormControlSelect3">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-             </div>
+             <div class="col-sm-3">Type:</div>
 
-             <div class="col-sm-3">Serial No.:
-              <div class="form-group">
-                <textarea class="form-control" id="issueToForm" rows="1"></textarea>
-              </div>
-             </div>
+             <div class="col-sm-2">Quantity:</div>
 
-             <div class="col-sm-2">Code:
-              PC 198
-             </div>
-             </div>
+             <div class="col-sm-2">Serial No.:</div>
+
+             <div class="col-sm-2">Code:</div>
+            </div>
 
 
           <div class="row">
-             <div class="col-sm-3"></div>
-             <div class="col-sm-2">
-              <div class="form-group" id="multipleSelect">
-                <select class="computer-units">
-                  <option>Keyboard</option>
-                  <option>iPhone X</option>
-                  <option>Mac Book Air</option>
-                  <option>Mouse</option>
-                  <option>Computer Units</option>
+             <div class="col-sm-3">
+                <select id="category-select" class="custom-select">
+                    <option id="initial-category-value">Bruce Banner</option>
+                    <option class="option">Bruce Wayne</option>
+                    <option class="option" >Tony Stark</option>
+                    <option class="option">Peter Parker</option>
+                    <option class="option">Jayson Todd</option>
                 </select>
-              </div>
+             </div>
+
+
+             <div class="col-sm-3">
+                <select id="category-select" class="custom-select">
+                    <option id="initial-category-value">Computer Units</option>
+                    <option class="option">Mouse</option>
+                    <option class="option">Iphone</option>
+                    <option class="option">Macboom Air</option>
+                    <option class="option">Keyboard</option>
+                </select>
+             </div>
+
+             <div class="col-sm-2">
+               <select id="category-select" class="custom-select">
+                    <option id="initial-category-value">1</option>
+                    <option class="option">2</option>
+                    <option class="option">3</option>
+                    <option class="option">4</option>
+               </select>
              </div>
 
              <div class="col-sm-2">
               <div class="form-group">
-                <select class="FormControlSelect4">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
+                <input class="form-control" type="serial1">
               </div>
+             </div>
+
+             <div class="col-sm-2">
+              PC 199
+             </div>
+            </div>
+
+
+          <div class="row">
+             <div class="col-sm-3">
              </div>
 
              <div class="col-sm-3">
+                <select id="category-select" class="custom-select">
+                    <option id="initial-category-value">Mouse</option>
+                    <option class="option">Computer Units</option>
+                    <option class="option">Iphone</option>
+                    <option class="option">Macbook Air</option>
+                    <option class="option">Keyboard</option>
+                </select>
+             </div>
+
+             <div class="col-sm-2">
+               <select id="category-select" class="custom-select">
+                    <option id="initial-category-value">1</option>
+                    <option class="option">2</option>
+                    <option class="option">3</option>
+                    <option class="option">4</option>
+               </select>
+             </div>
+
+             <div class="col-sm-2">
               <div class="form-group">
-                <textarea class="form-control" id="issueToForm" rows="1"></textarea>
+                <input class="form-control" type="serial1">
               </div>
              </div>
 
@@ -369,39 +418,48 @@
           <div class="col">Serial No.</div>
           <div class="col">
             <div class="form-group">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+            <input type="serial3">
             </div>
           </div>
         </div>
 
-          <div class="row">
-          <div class="col">
-            <div class="form-group">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
+        <div class="row ">
+            <div class="row reissue">
+              <div class="col-sm-6">Issued To:</div>
+              <div class="col-sm-6">Bruce Banner</div>
+              <div class="col-sm-6">Department:</div>
+              <div class="col-sm-6">PDD</div>
             </div>
-          </div>
         </div>
+
+        <br>
+
         <div class="row">
-          <div class="col">Reissue To</div>
-          <div class="col">
-            <div class="form-group">
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
-            </div>
-          </div>
-          <div class="w-100"></div>
-          <br>
-          <div class="col">
-          </div>
-          <div class="col">
-          <button id="reissue" type="button"  class="btn btn-warning" data-dismiss="modal" data-toggle="modal" href="#reissueMore"> <span class="fas fa-angle-double-right"></span>    REISSUE MORE</button>
-          </div>
-          <div class="col">
+          <div class="col-sm-6">Reissue To</div>
+          <div class="col-sm-6">
+            <select id="category-select" class="custom-select">
+                <option id="initial-category-value">Bruce Banner</option>
+                <option class="option">Bruce Wayne</option>
+                <option class="option" >Tony Stark</option>
+                <option class="option">Peter Parker</option>
+                <option class="option">Jayson Todd</option>
+            </select>
           </div>
         </div>
+        <br>
+        <div class="row">
+          <div class="col">
+          </div>
+          <div class="col">
+          <button id="reissue" type="button"  class="btn btn-warning btn-sm" data-dismiss="modal" data-toggle="modal" href="#reissueMore"> <span class="fas fa-angle-double-right"></span>    REISSUE MORE</button>
+          </div>
+          <div class="col">
+          </div>
+        </div>     
       </div>
       <div class="modal-footer">
 
-         <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successIssueItem"> <span class="fas fa-save"></span>    SAVE</button>
+         <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successreIssueItem"> <span class="fas fa-save"></span>    SAVE</button>
 
          <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
     </div>
@@ -411,10 +469,66 @@
 
 
 
+<!-- Modal Successfully ReIssued Item --->
+      <div class="modal fade" id="successreIssueItem" tabindex="-1" role="dialog" aria-labelledby="successreIssueItemTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "successreIssueItem" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle">Issue Items</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <i id=  "successIcon" class="far fa-check-circle fa-10x"></i>
+        <p id= "successText">Successfully Reissued the Item!</p>
+      </div>
+
+      <div class="modal-footer">
+        <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!------- Failed To ReIssue Item Modal Design ------->
+
+  <!-- Modal -->
+    <div class="modal fade" id="failedreIssueItemModal" tabindex="-1" role="dialog" aria-labelledby="failedreIssueItemModalTitle" aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+    <div class="modal-content">
+      <div id = "failedHeader" class="modal-header">
+        <h5 class="modal-title" id="ModalTitle"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <i id=  "failedIcon" class="far fa-times-circle fa-10x"></i>
+        <p id= "failedText">Failed to reissue the Item!</p>
+      </div>
+
+      <div class="modal-footer">
+        <button id="retryFailedButton" type="button" class="btn btn-danger" data-dismiss="modal">RETRY</button>
+
+        <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 <!--ReIssue More --->
       <div class="modal fade" id="reissueMore" tabindex="-1" role="dialog" aria-labelledby="reissueMoreTitle" aria-hidden="true">
 
-    <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-dialog modal-lg" role="document">
 
     <div class="modal-content">
       <div id ="reissueMore" class="modal-header">
@@ -427,44 +541,41 @@
       <div class="modal-body">
 
           <div class="row">
-             <div class="col-sm-3">Reissue To:
-             </div>
-
-             <div class="col-sm-3">Serial No.:
-             </div>
-
+             <div class="col-sm-3">Reissue To:</div>
+             <div class="col-sm-3">Serial No.:</div>
              <div class="col-sm-3">Type:</div>
              <div class="col-sm-3">Issued To:</div>
           </div>
 
             <div class="row details">
               <div class="col-sm-3">
-                <div class="form-group">
-                <textarea class="form-control" id="issueToForm" rows="1"></textarea>
-                </div>
+                <select id="category-select" class="custom-select">
+                  <option id="initial-category-value">Bruce Banner</option>
+                  <option class="option">Bruce Wayne</option>
+                  <option class="option" >Tony Stark</option>
+                  <option class="option">Peter Parker</option>
+                  <option class="option">Jayson Todd</option>
+                </select>
               </div>
               <div class="col-sm-3"
                 <div class="form-group">
-                  <textarea class="form-control" id="issueToForm" rows="1"></textarea>
+                <input class="form-control" type="serial1">
               </div>
-              <div class="col-sm-3">
-                <p>Computer Units</p>
-              </div>
-              <div class="col-sm-3">
-                <p>Bruce Wayne</p>
-              </div>
+              
+              <div class="col-sm-3">Computer Units</div>
+              <div class="col-sm-3">Bruce Banner</div>
             </div>
 
+            <br>
             <div class="row details">
               <div class="col-sm-3"></div>
-
               <div class="col-sm-3">
-                <div class="form-group"><textarea class="form-control" id="issueToForm" rows="1"></textarea></div>
+                <div class="form-group">
+                <input class="form-control" type="serial1">
+                </div>
               </div>
-
               <div class="col-sm-3">Computer Peripheral</div>
               <div class="col-sm-3"></div>
-
             </div>
 
             <div class="row">
@@ -476,45 +587,42 @@
             </div>
 
 
-                      <div class="row">
-             <div class="col-sm-3">Reissue To:
-             </div>
-
-             <div class="col-sm-3">Serial No.:
-             </div>
-
-             <div class="col-sm-3">Type:</div>
-             <div class="col-sm-3">Issued To:</div>
+                   <div class="row">
+             <div class="col-sm-3">Reissue To:</div>
+             <div class="col-sm-3"></div>
+             <div class="col-sm-3"></div>
+             <div class="col-sm-3">:</div>
           </div>
 
             <div class="row details">
               <div class="col-sm-3">
-                <div class="form-group">
-                <textarea class="form-control" id="issueToForm" rows="1"></textarea>
-                </div>
+                <select id="category-select" class="custom-select">
+                  <option id="initial-category-value">Peter Parker</option>
+                  <option class="option">Bruce Wayne</option>
+                  <option class="option" >Tony Stark</option>
+                  <option class="option">Peter Parker</option>
+                  <option class="option">Jayson Todd</option>
+                </select>
               </div>
               <div class="col-sm-3"
                 <div class="form-group">
-                  <textarea class="form-control" id="issueToForm" rows="1"></textarea>
+                <input class="form-control" type="serial1">
               </div>
-              <div class="col-sm-3">
-                <p>Computer Units</p>
-              </div>
-              <div class="col-sm-3">
-                <p>Bruce Banner</p>
-              </div>
+              
+              <div class="col-sm-3">Computer Units</div>
+              <div class="col-sm-3">Peter Parker</div>
             </div>
 
+            <br>
             <div class="row details">
               <div class="col-sm-3"></div>
-
               <div class="col-sm-3">
-                <div class="form-group"><textarea class="form-control" id="issueToForm" rows="1"></textarea></div>
+                <div class="form-group">
+                <input class="form-control" type="serial1">
+                </div>
               </div>
-
-              <div class="col-sm-3">Computer Parts</div>
+              <div class="col-sm-3">Computer Peripheral</div>
               <div class="col-sm-3"></div>
-
             </div>
 
             <div class="row">
@@ -527,11 +635,11 @@
         </div>
 
       <div class="modal-footer">
-        <button id="save" type="button" class="btn btn-success"> <span class="fas fa-save"></span>    SAVE</button>
+        <button id="save" type="button" class="btn btn-success btn-xs"> <span class="fas fa-save"></span>    SAVE</button>
 
-        <button id="clearData" type="button" class="btn btn-danger">CLEAR DATA</button>
+        <button id="clearData" type="button" class="btn btn-danger btn-xs">CLEAR DATA</button>
 
-        <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+        <button id="cancel" type="button" class="btn btn-danger btn-xs" data-dismiss="modal">CANCEL</button>
       </div>
     </div>
   </div>
