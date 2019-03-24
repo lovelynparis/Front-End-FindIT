@@ -246,11 +246,17 @@
                                 <div class="col col-lg-6 col-md col-sm col-xs">
                                     <p class="card-title">Quantity</p>
                                     <select id="quantity-select" class="custom-select">
-                                        <option selected class="option" value="50">50</option>
+                                        <option></option>
+                                        <option class="option" value="10">10</option>
+                                        <option class="option" value="20">20</option>
+                                        <option class="option" value="30">30</option>
+                                        <option class="option" value="40">40</option>
+                                        <option class="option" value="50">50</option>
                                         <option class="option" value="60">60</option>
                                         <option class="option" value="70">70</option>
                                         <option class="option" value="80">80</option>
                                         <option class="option" value="90">90</option>
+                                        <option class="option" value="100">100</option>
                                     </select>
                                 </div>
                             </div>
@@ -703,20 +709,20 @@
               $("#model-comp-per").replaceWith(model);
               $("#screen-res-comp-per").replaceWith(screenResolution);
 
-          		var tableRowString = "                                                    <tr>" +
-                                                        "<th scope=\"row\"></th>" +
-                                                        "<td>" +
-                                                            "<div class=\"form-group\">" +
-                                                                model +
-                                                                "<input id=\"table-form\" type=\"text\">" +
-                                                            "</div>" +
-                                                        "</td>" +
-                                                        "<td> " + type + "</td>" +
-                                                        "<td>" + category + "</td>" +
-                                                        "<td>" + brand + "</td>" +
-                                                        "<td>" + model + "</td>" +
-                                                        "<td>" + screenResolution.substring(0, screenResolution.lastIndexOf(" ")) + "</td>" +
-                                                    "</tr>";
+          		var tableRowString = "<tr>" +
+                                      "<th scope=\"row\"></th>" +
+                                      "<td>" +
+                                          "<div class=\"form-group\">" +
+                                              model +
+                                              "<input id=\"table-form\" type=\"text\">" +
+                                          "</div>" +
+                                      "</td>" +
+                                      "<td> " + type + "</td>" +
+                                      "<td>" + category + "</td>" +
+                                      "<td>" + brand + "</td>" +
+                                      "<td>" + model + "</td>" +
+                                      "<td>" + screenResolution.substring(0, screenResolution.lastIndexOf(" ")) + "</td>" +
+                                    "</tr>";
 
               $("#comp-per-table-body").empty();
               for(var i = 0; i < quantity; i++) {
@@ -754,20 +760,20 @@
               $("#model-comp-per").replaceWith(model);
               $("#screen-res-comp-per").replaceWith(screenResolution);
 
-          		var tableRowString = "                                                    <tr>" +
-                                                        "<th scope=\"row\"></th>" +
-                                                        "<td>" +
-                                                            "<div class=\"form-group\">" +
-                                                                model +
-                                                                "<input id=\"table-form\" type=\"text\">" +
-                                                            "</div>" +
-                                                        "</td>" +
-                                                        "<td> " + type + "</td>" +
-                                                        "<td>" + category + "</td>" +
-                                                        "<td>" + brand + "</td>" +
-                                                        "<td>" + model + "</td>" +
-                                                        "<td>" + screenResolution.substring(0, screenResolution.lastIndexOf(" ")) + "</td>" +
-                                                    "</tr>";
+          		var tableRowString = "<tr>" +
+                                      "<th scope=\"row\"></th>" +
+                                      "<td>" +
+                                          "<div class=\"form-group\">" +
+                                              model +
+                                              "<input id=\"table-form\" type=\"text\">" +
+                                          "</div>" +
+                                      "</td>" +
+                                      "<td> " + type + "</td>" +
+                                      "<td>" + category + "</td>" +
+                                      "<td>" + brand + "</td>" +
+                                      "<td>" + model + "</td>" +
+                                      "<td>" + screenResolution.substring(0, screenResolution.lastIndexOf(" ")) + "</td>" +
+                                    "</tr>";
 
               $("#mob-dev--table-body").empty();
               for(var i = 0; i < quantity; i++) {
@@ -818,7 +824,7 @@
           rules: {
             or: {required: true, maxlength: 50, nowhitespace: true, fieldcheck: true},
             status: {required: true},
-            serial: {required: true, maxlength: 50, nowhitespace: true},
+            serial: {required: true, maxlength: 50, nowhitespace: true, fieldcheck: true},
             type: {required: true},
             os: {required: true},
             brand: {required: true},
@@ -842,6 +848,7 @@
       $('#screen-resolution').editableSelect({ filter: false });
       $('#os').editableSelect({ filter: false });
       $('#internal-storage').editableSelect({ filter: false });
+      $('#quantity-select').editableSelect({ filter: false });
     </script>
 </body>
 </html>
