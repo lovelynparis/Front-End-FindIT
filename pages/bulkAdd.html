@@ -768,7 +768,7 @@
                                               "<input id=\"table-form\" type=\"text\">" +
                                           "</div>" +
                                       "</td>" +
-                                      "<td> " + type + "</td>" +
+                                      "<td>" + type + "</td>" +
                                       "<td>" + category + "</td>" +
                                       "<td>" + brand + "</td>" +
                                       "<td>" + model + "</td>" +
@@ -797,9 +797,12 @@
           debug: true,
           success: "valid"
         });
+
         jQuery.validator.addMethod("fieldcheck", function(value, element) {
           return this.optional( element ) || /^[a-z0-9A-Z0-9_-]{1,15}$/.test( value );
-        }, 'Invalid input.');
+        },
+        'Please check your input.');
+
         $( "#myform" ).validate({
           rules: {
             /** TRIMS WHITESPACES
@@ -812,30 +815,89 @@
             //   },
             //   field: true
             // },**/
-            field: {required: true, maxlength: 15, nowhitespace: true, fieldcheck: true},
-            status: {required: true},
-            type: {required: true},
-            brand: {required: true},
-            model: {required: true},
-            resolution: {required: true},
+            field: {
+              required: true,
+              maxlength: 15,
+              nowhitespace: true,
+              fieldcheck: true
+            },
+
+            status: {
+              required: true
+            },
+
+            type: {
+              required: true
+            },
+
+            brand: {
+              required: true
+            },
+
+            model: {
+              required: true
+            },
+
+            resolution: {
+              required: true
+            },
           },
         });
         $( "#myform2" ).validate({
           rules: {
-            or: {required: true, maxlength: 50, nowhitespace: true, fieldcheck: true},
-            status: {required: true},
-            serial: {required: true, maxlength: 50, nowhitespace: true, fieldcheck: true},
-            type: {required: true},
-            os: {required: true},
-            brand: {required: true},
-            model: {required: true},
-            processor: {required: true, maxlength: 50},
-            ram: {required: true, maxlength: 50},
-            storage: {required: true, maxlength: 50}
+            or: {
+              required: true,
+              maxlength: 50,
+              nowhitespace: true,
+              fieldcheck: true
+            },
+
+            status: {
+              required: true
+            },
+
+            serial: {
+              required: true,
+              maxlength: 50,
+              nowhitespace: true,
+              fieldcheck: true
+            },
+
+            type: {
+              required: true
+            },
+
+            os: {
+              required: true
+            },
+
+            brand: {
+              required: true
+            },
+
+            model: {
+              required: true
+            },
+
+            processor: {
+              required: true,
+              maxlength: 50
+            },
+
+            ram: {
+              required: true,
+              maxlength: 50
+            },
+
+            storage: {
+              required: true,
+              maxlength: 50
+            }
           }
         });
     </script>
 
+<!--editble dropdowns-->
     <script>
       $('#status').editableSelect({ filter: false });
       $('#status2').editableSelect({ filter: false });
