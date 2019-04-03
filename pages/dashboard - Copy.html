@@ -2,17 +2,27 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../lib/dist/bootstrap/css/bootstrap-reboot.min.css">
-    <link rel="stylesheet" href="../lib/dist/bootstrap/css/bootstrap.min.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="../lib/dist/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="../lib/dist/bootstrap/css/bootstrap.min.css">
 
-    <!-- Font Awesome JS -->
-    <link rel="stylesheet" href="../lib/custom/css/all.css">
-    <link rel="stylesheet" href="../lib/dist/animate/animate.css">
+  <!-- Font Awesome JS -->
+  <link rel="stylesheet" href="../lib/custom/css/all.css">
+  <link rel="stylesheet" href="../lib/dist/animate/animate.css">
+
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
+
+  <!-- jquery validation -->
+  <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+
+  <!-- jquery editable dropdown plugin -->
+  <link href="https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.css" rel="stylesheet">
+
     <!-- Your custom css goes here -->
     <link rel="stylesheet" href="../lib/custom/css/custom.css">
 
@@ -177,17 +187,165 @@
 
                     <ul class="navbar-nav my-lg-0">
                         <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle navbar-toggler-right dropdown-custom" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            </a>
-
+                            <a class="nav-link dropdown-toggle navbar-toggler-right dropdown-custom" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                             <!-- Dropdown Menu -->
                             <div class="dropdown-menu dropdown-menu-right animated flipInY">
-                                <a class="dropdown-item dropdown-item-custom" href="#">Settings</a>
-                                <a class="dropdown-item dropdown-item-custom" href="#">Log Out</a>
+                                <a class="dropdown-item dropdown-item-custom" href="#" data-toggle="modal" data-target="#profile-modal2" style="color: gray;"><span class="fas fa-user-circle" style="margin-right: 1rem; color: gray;"></span>View Profile</a>
+                                <a class="dropdown-item dropdown-item-custom" href="#" data-toggle="modal" data-target="#profile-modal1" style="color: gray;"><span class="fas fa-cog" style="margin-right: 1rem; color: gray;"></span>Account Settings</a>
+                                <a class="dropdown-item dropdown-item-custom" href="#" style="color: gray;"><span class="fas fa-sign-out-alt" style="margin-right: 1rem; color: gray;"></span>Logout</a>
                             </div>
                         </li>
                     </ul>
                 </nav>
+
+                <!--View Profile Modal-->
+                <div class="modal fade bd-example-modal-lg" id="profile-modal2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header" style="height: 4rem; background: #000d1a;">
+                        <h5 class="navbar-brand" id="exampleModalCenterTitle" style="color: white;"><span class="fas fa-user" style="margin-right: 1rem;"></span>My Profile</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body" style="height: 30rem;">
+                        <div class="row">
+                          <div class="col col-4">
+                            <div class="text-center">
+                              <img src="../assets/images/user/user.png" class="img-avatar" alt="" srcset="" style="width: 8rem; height: 8rem;">
+                            </div>
+                            <div class="text-center">
+                              <hr style="width: 13rem; color: #f2e809; background: #f2e809;">
+                              <h5 style="font-size: 12px; margin-top: 1rem; font-weight: bold;">John Doe</h5>
+                              <h5 style="color: #000d1a; font-size: 10px;">Admin</h5>
+                              <hr style="width: 13rem; color: #f2e809; background: #f2e809;">
+                            </div>
+                          </div>
+                          <div class="col col-8">
+                            <div class="head" style="font-size: 8px; background: #f2e809; height: 3rem; font-style: openSans; margin-bottom: 1rem; padding: 5px;">
+                              <br><p>Update your personal information</p><br>
+                            </div>
+                            <form id="view-profile">
+                              <div class="row">
+                                <div class="col col-4">
+                                <div>
+                                <div class="col col-8">
+                                <div>
+                              </div>
+                              <div class="row">
+                                <div class="col col-4">
+                                <div>
+                                <div class="col col-8">
+                                <div>
+                              </div>
+                              <div class="row">
+                                <div class="col col-4">
+                                <div>
+                                <div class="col col-8">
+                                <div>
+                              </div>
+                              <div class="row">
+                                <div class="col col-4">
+                                <div>
+                                <div class="col col-8">
+                                <div>
+                              </div>
+                              <div class="row">
+                                <div class="col col-4">
+                                <div>
+                                <div class="col col-8">
+                                <div>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!--Account Settings Modal-->
+                <div class="modal fade bd-example-modal-lg" id="profile-modal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header" style="height: 4rem; background: #000d1a;">
+                        <h5 class="navbar-brand" id="exampleModalCenterTitle" style="color: white;"><span class="fas fa-user" style="margin-right: 1rem;"></span>Account Settings</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body" style="height: 30rem;">
+                        <div class="row">
+                          <div class="col col-4">
+                            <div class="text-center">
+                              <img src="../assets/images/user/user.png" class="img-avatar" alt="" srcset="" style="width: 8rem; height: 8rem;">
+                            </div>
+                            <div class="text-center">
+                              <hr style="width: 13rem; color: #f2e809; background: #f2e809;">
+                              <h5 style="font-size: 12px; margin-top: 1rem; font-weight: bold;">John Doe</h5>
+                              <h5 style="color: #000d1a; font-size: 10px;">Admin</h5>
+                              <hr style="width: 13rem; color: #f2e809; background: #f2e809;">
+                            </div>
+                          </div>
+                          <div class="col col-8">
+                            <div class="head" style="font-size: 8px; background: #f2e809; height: 3rem; font-style: openSans; margin-bottom: 1rem; padding: 5px;">
+                              <br><p>Update your personal information</p><br>
+                            </div>
+                            <form id="profile-form">
+                              <div class="form-group row">
+                                <label for="staticEmail" class="col col-3 col-form-label" style="font-size: 12px;">Email Address</label>
+                                <div class="col col-9">
+                                  <input type="email" class="form-inline" id="inputEmail" name="email" style="width: 15rem;">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="staticEmail" class="col col-3 col-form-label" style="font-size: 12px;">Department</label>
+                                <div class="col col-9">
+                                  <div class="form-group">
+                                      <select class="exampleFormControlSelect1" style="width: 15rem;">
+                                        <option></option>
+                                        <option value="dept1">IT Department</option>
+                                        <option value="dept2">Department 2</option>
+                                        <option value="dept3">Department 3</option>
+                                        <option value="dept4">Department 4</option>
+                                      </select>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="staticEmail" class="col col-3 col-form-label" style="font-size: 12px;">First Name</label>
+                                <div class="col col-9">
+                                  <input type="text" class="form-inline" id="" style="width: 15rem;">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="staticEmail" class="col col-3 col-form-label" style="font-size: 12px;">Last Name</label>
+                                <div class="col col-9">
+                                  <input type="text" class="form-inline" id="" style="width: 15rem;">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="inputPassword" class="col col-3 col-form-label"  style="font-size: 12px;">New Password</label>
+                                <div class="col col-9">
+                                  <input type="password" class="form-inline my-md-0" id=""  name="password" style="width: 15rem;">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="inputPassword" class="col col-3 col-form-label" style="font-size: 12px;">Repeat Password</label>
+                                <div class="col col-9">
+                                  <input type="password" class="form-inline my-md-0" id="" name="repeat" style="width: 15rem;">
+                                </div>
+                              </div>
+                              <div class="text-center" style="margin-top: 2rem;">
+                                <button type="submit" class="text-center btn btn-sm b" id="profile-button" style="">Save Changes</button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
                 <!-- Breadcrumbs -->
                 <div class="breadcrumbs">
@@ -462,10 +620,24 @@
 
 
     <!-- JQuery Core -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/jquery/dist/jquery.min.js"></script>
+    <!--JQuery form validation plugin-->
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <!--JQuery editable table plugin-->
+    <script src="https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.js"></script>
     <script type="text/javascript" src="../lib/dist/popper/popper.min.js"></script>
     <!-- Bootstrap -->
     <script type="text/javascript" src="../lib/dist/bootstrap/js/bootstrap.js"></script>
+
+    <!-- DataTables -->
+	  <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
+
+	  <script src="../lib/dist/datatable/jquery.dataTables.min.js"></script>
+	  <script src="../lib/dist/datatable/dataTables.bootstrap4.min.js"></script>
+
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -473,7 +645,40 @@
                 $('#sidebar').toggleClass('active');
             });
         });
+    </script>
+    <script>
+        jQuery.validator.setDefaults({
+          debug: true,
+          success: "valid"
+        });
 
+        $.validator.addMethod("passwordcheck", function(value) {
+           return /^[A-Za-z0-9\d=!\-@._*]*$/.test(value) // consists of only these
+               && /[a-z]/.test(value) // has a lowercase letter
+               && /\d/.test(value) // has a digit
+        },
+        'Password must consist of uppercase, lowercase, number, and a special character ()');
+
+        $( "#profile-form" ).validate({
+          rules: {
+            password: {
+              required: true,
+              passwordcheck: true,
+              maxlength: 15,
+
+            },
+            repeat: {
+              required: true,
+              equalTo: "password",
+            },
+
+            email: {
+              email: true,
+              maxlength: 50,
+              minlength: 6,
+            }
+          },
+        });
     </script>
 </body>
 
