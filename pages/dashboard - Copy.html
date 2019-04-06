@@ -23,44 +23,26 @@
   <!-- jquery editable dropdown plugin -->
   <link href="https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.css" rel="stylesheet">
 
-    <!-- Your custom css goes here -->
-    <link rel="stylesheet" href="../lib/custom/css/custom.css">
+  <!-- Your custom css goes here -->
+  <link rel="stylesheet" href="../lib/custom/css/custom.css">
 
-    <title>Dashboard</title>
+  <title>Dashboard</title>
 </head>
 
 <body>
     <div class="fluid-container">
         <div class="wrapper">
-            <!-- Sidebar  -->
             <nav id="sidebar">
                 <!-- Sidebar Toggle Button -->
-                <div class="sidebar-header">
+                <div class="sidebar-header sidebar-sticky">
                     <button type="button" id="sidebarCollapse" class="btn btn-info float-right">
-                        <i class="fas fa-align-left"></i>
+                        <i class="fas fa-chevron-left"></i>
                         <span></span>
                     </button>
                 </div>
 
-                <!-- <div class="card-header yellow-divider"></div> -->
-
                 <!-- Sidebar User Info -->
-                <div class="sidebar-user">
-                    <img src="../assets/images/user/squidward.jpg" class="img-avatar" alt="" srcset="">
-                    <span class="hide-menu">
-                        <ul class="list-unstyled avatar">
-                            <li class="list-email"><small>john_doe@nms.ph</small></li>
-                            <li><small>Admin</small></li>
-                        </ul>
-                    </span>
-                    <a class="nav-link dropdown-toggle navbar-toggler-right dropdown-avatar" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    </a>
-                    <!-- Dropdown Menu -->
-                    <div class="dropdown-menu dropdown-menu-right animated flipInY">
-                        <a class="dropdown-item dropdown-item-avatar" href="#">Settings</a>
-                        <a class="dropdown-item dropdown-item-avatar" href="#">Log Out</a>
-                    </div>
-                </div>
+                <div class="sidebar-user"></div>
 
                 <!-- Menu List -->
                 <ul class="list-unstyled components">
@@ -161,7 +143,6 @@
                             </li> -->
                 </ul>
             </nav>
-
             <div id="content">
                 <!-- Top Navigation Bar -->
                 <nav class="navbar sticky-top navbar-expand-lg navbar-custom">
@@ -174,162 +155,165 @@
                         </li>
                     </ul>
 
-
                     <ul class="navbar-nav mr-auto">
-                        <!-- Searchbar -->
                         <li class="nav-item">
-                            <form class="form-inline my-1 my-lg-0">
-                                <input class="form-control mr-sm-3-n4 searchbar" type="search" placeholder="Search" aria-label="Search">
-                            </form>
                         </li>
                     </ul>
 
-
-                    <ul class="navbar-nav my-lg-0">
-                        <li class="nav-item dropdown u-pro">
-                            <a class="nav-link dropdown-toggle navbar-toggler-right dropdown-custom" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-                            <!-- Dropdown Menu -->
-                            <div class="dropdown-menu dropdown-menu-right animated flipInY">
-                                <a class="dropdown-item dropdown-item-custom" href="#" data-toggle="modal" data-target="#profile-modal2" style="color: gray;"><span class="fas fa-user-circle" style="margin-right: 1rem; color: gray;"></span>View Profile</a>
-                                <a class="dropdown-item dropdown-item-custom" href="#" data-toggle="modal" data-target="#profile-modal1" style="color: gray;"><span class="fas fa-cog" style="margin-right: 1rem; color: gray;"></span>Account Settings</a>
-                                <a class="dropdown-item dropdown-item-custom" href="#" style="color: gray;"><span class="fas fa-sign-out-alt" style="margin-right: 1rem; color: gray;"></span>Logout</a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-
-                <!--View Profile Modal-->
-                <div class="modal fade bd-example-modal-lg" id="profile-modal2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-                  <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                      <div class="modal-header" style="height: 4rem; background: #000d1a;">
-                        <h5 class="navbar-brand" id="exampleModalCenterTitle" style="color: white;"><span class="fas fa-user" style="margin-right: 1rem;"></span>My Profile</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
+                    <div class="d-flex flex-row-reverse bd-highlight">
+                      <div class="p-2 bd-highlight" style="margin-right: 1.5rem; margin-top: 5px;">
+                        <a class="fas fa-ellipsis-v" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                        <!-- Dropdown Menu -->
+                        <div class="dropdown-menu dropdown-menu-right animated flipInY">
+                            <button class="dropdown-item dropdown-item-custom" data-toggle="modal" data-target="#profile-modal" style="color: gray;"><span class="fas fa-user-circle" style="margin-right: 1rem; color: gray;"></span>View Profile</button>
+                            <button class="dropdown-item dropdown-item-custom" style="color: gray;"><span class="fas fa-sign-out-alt" style="margin-right: 1rem; color: gray;"></span>Logout</button>
+                        </div>
                       </div>
-                      <div class="modal-body" style="height: 30rem;">
-                        <div class="row">
-                          <div class="col col-4">
-                            <div class="text-center">
-                              <img src="../assets/images/user/user.png" class="img-avatar" alt="" srcset="" style="width: 8rem; height: 8rem;">
-                            </div>
-                            <div class="text-center">
-                              <hr style="width: 13rem; color: #f2e809; background: #f2e809;">
-                              <h5 style="font-size: 12px; margin-top: 1rem; font-weight: bold;">John Doe</h5>
-                              <h5 style="color: #000d1a; font-size: 10px;">Admin</h5>
-                              <hr style="width: 13rem; color: #f2e809; background: #f2e809;">
-                            </div>
-                          </div>
-                          <div class="col col-8">
-                            <div class="head" style="font-size: 12px; background: #f2e809; height: 3rem; font-style: openSans; margin-bottom: 1rem; padding: 5px;">
-                              <br><p>Details About You</p><br>
-                            </div>
-                            <hr style="width: 31rem; color: #f2e809; background: #f2e809;">
-                            <div class="view-profile" style="font-size: 12px;">
-                              <div class="row" style="padding-top: 1rem; padding-bottom: 1rem; ">
-                                <div class="col col-6" style="font-weight: bold; margin-left: 1rem;">Name</div>
-                                <div class="col col-4" style="color: gray;">John Doe</div>
-                              </div>
-                              <div class="row" style="padding-top: 1rem; padding-bottom: 1rem;">
-                                <div class="col col-6" style="font-weight: bold; margin-left: 1rem;">Department</div>
-                                <div class="col col-4" style="color: gray;">IT Department</div>
-                              </div>
-                              <div class="row" style="padding-top: 1rem; padding-bottom: 1rem;">
-                                <div class="col col-6" style="font-weight: bold; margin-left: 1rem;">Email</div>
-                                <div class="col col-4" style="color: gray;">john_doe@nms.ph</div>
-                              </div>
-                              <div class="row" style="padding-top: 1rem; padding-bottom: 1rem;">
-                                <div class="col col-6" style="font-weight: bold; margin-left: 1rem;">Password</div>
-                                <div class="col col-4" style="color: gray;">***********</div>
-                              </div>
-                              <hr style="width: 31rem; color: #f2e809; background: #f2e809;">
-                            </div>
-                          </div>
+                      <div class="p-2 bd-highlight" style="margin-top: 10px; margin-right: 15px; font-size: 12px;">JOHN DOE</div>
+                      <div class="p-2 bd-highlight">
+                        <div class="profile-pic">
+                            <img src="../assets/images/user/user.png" class="img-avatar" alt="avatar" srcset="" style="border-radius: 50%; width: 2rem; height: 2rem;">
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
+                </nav>
 
-                <!--Account Settings Modal-->
-                <div class="modal fade bd-example-modal-lg" id="profile-modal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <!--View Profile-->
+                <div class="modal fade bd-example-modal-lg" id="profile-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="modal-header" style="height: 4rem; background: #000d1a;">
-                        <h5 class="navbar-brand" id="exampleModalCenterTitle" style="color: white;"><span class="fas fa-user" style="margin-right: 1rem;"></span>Account Settings</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body" style="height: 30rem;">
-                        <div class="row">
-                          <div class="col col-4">
-                            <div class="text-center">
-                              <img src="../assets/images/user/user.png" class="img-avatar" alt="" srcset="" style="width: 8rem; height: 8rem;">
-                            </div>
-                            <div class="text-center">
-                              <hr style="width: 13rem; color: #f2e809; background: #f2e809;">
-                              <h5 style="font-size: 12px; margin-top: 1rem; font-weight: bold;">John Doe</h5>
-                              <h5 style="color: #000d1a; font-size: 10px;">Admin</h5>
-                              <hr style="width: 13rem; color: #f2e809; background: #f2e809;">
-                            </div>
-                          </div>
-                          <div class="col col-8">
-                            <div class="head" style="font-size: 8px; background: #f2e809; height: 3rem; font-style: openSans; margin-bottom: 1rem; padding: 5px;">
-                              <br><p>Update your personal information</p><br>
-                            </div>
-                            <form id="profile-form">
-                              <div class="form-group row">
-                                <label for="staticEmail" class="col col-3 col-form-label" style="font-size: 12px;">Email Address</label>
-                                <div class="col col-9">
-                                  <input type="email" class="form-inline" id="inputEmail" name="email" style="width: 15rem;">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="staticEmail" class="col col-3 col-form-label" style="font-size: 12px;">Department</label>
-                                <div class="col col-9">
-                                  <div class="form-group">
-                                      <select class="exampleFormControlSelect1" style="width: 15rem;">
-                                        <option></option>
-                                        <option value="dept1">IT Department</option>
-                                        <option value="dept2">Department 2</option>
-                                        <option value="dept3">Department 3</option>
-                                        <option value="dept4">Department 4</option>
-                                      </select>
-                                  </div>
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="staticEmail" class="col col-3 col-form-label" style="font-size: 12px;">First Name</label>
-                                <div class="col col-9">
-                                  <input type="text" class="form-inline" id="" style="width: 15rem;">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="staticEmail" class="col col-3 col-form-label" style="font-size: 12px;">Last Name</label>
-                                <div class="col col-9">
-                                  <input type="text" class="form-inline" id="" style="width: 15rem;">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="inputPassword" class="col col-3 col-form-label"  style="font-size: 12px;">New Password</label>
-                                <div class="col col-9">
-                                  <input type="password" class="form-inline my-md-0" id=""  name="password" style="width: 15rem;">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="inputPassword" class="col col-3 col-form-label" style="font-size: 12px;">Repeat Password</label>
-                                <div class="col col-9">
-                                  <input type="password" class="form-inline my-md-0" id="" name="repeat" style="width: 15rem;">
-                                </div>
-                              </div>
-                              <div class="text-center" style="margin-top: 2rem;">
-                                <button type="submit" class="text-center btn btn-sm b" id="profile-button" style="">Save Changes</button>
-                              </div>
-                            </form>
-                          </div>
+                      <div class="modal-body" style="height: 34rem; margin-top: 1rem; margin-left: 1rem; margin-right: 1rem;">
+                        <span class="fas fa-times-circle float-right" data-dismiss="modal" aria-label="Close" aria-hidden="true"></span>
+                        <div class="" style="color: #333333; font-size: 12px; font-weight: bold;">ACCOUNT SETTINGS</div>
+
+                        <div class="text-center">
+                          <hr style="width: 46rem; height: 2px; color: #FDAD4E; background: #FDAD4E">
                         </div>
+
+                        <div class="text-center" style="margin: auto; background: #333333; height: 12rem;">
+                          <img src="../assets/images/user/user.png" class="img-avatar" alt="avatar" srcset="" style="border-radius: 50%; width: 7rem; height: 7rem; margin-top: 2rem;">
+                          <h5 style="font-size: 12px; margin-top: 1rem; font-weight: bold; margin-bottom: 2rem; color: white;">JOHN DOE</h5>
+                        </div>
+
+                        <form class="profile-form" id="profile-form" style="Margin-top: 2rem; margin-left: 2rem; margin-right:2rem;">
+                          <!--name-->
+                          <div class="row" style="padding-top: 1rem; padding-bottom: 1rem; font-size: 12px;">
+                            <div class="col col-3" style="font-size: 11px; font-weight: bold; color: #333333;">NAME</div>
+                            <div class="col col-8" id="fullname" style="color: gray; font-size: 11px; font-weight: bold;">John Doe</div>
+                            <div class="col col-1" id="name-edit" style="font-size: 11px;"><u>Edit</u></div>
+                          </div>
+                          <!--name collapse-->
+                          <div class="collapse text-center" id="name" style="display:none;">
+                            <div class="" style="margin-left: 25%; margin-right: 2rem;">
+                              <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">First</label>
+                                <div class="col col-9">
+                                  <input type="text" class="form-inline" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Middle</label>
+                                <div class="col col-9">
+                                  <input type="text" class="form-inline" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
+                                </div>
+                              </div>
+                              <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Last</label>
+                                <div class="col col-9">
+                                  <input type="text" class="form-inline" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
+                                </div>
+                              </div>
+                            </div>
+                              <div class="text-center">
+                                  <button type="button" class="btn btn-danger b name-cancel" id="buttons" name="" style="width: 4rem;">Cancel</button>
+                                  <button type="button" class="btn btn-success b" id="buttons" style="width: 4rem;">Save</button>
+                              </div>
+                          </div>
+                          <!--Department-->
+                          <div class="row" style="padding-top: 1rem; padding-bottom: 1rem; font-size: 12px;">
+                            <div class="col col-3" style="font-size: 11px; font-weight: bold; color: #333333;">DEPARTMENT</div>
+                            <div class="col col-8" id="department-info" style="color: gray; font-size: 11px; font-weight: bold;">IT Department</div>
+                            <div class="col col-1" id="department-edit" style="font-size: 11px;"><u>Edit</u></div>
+                          </div>
+                          <!--department collapse-->
+                          <div class="" id="department" style="display: none;">
+                            <div class="" style="margin-left: 25%; margin-right:2rem;">
+                              <div class="form-group row">
+                                <label for="" class="text-center col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Department</label>
+                                <div class="col col-9">
+                                  <select class="exampleFormControlSelect1" style="width: 10rem;">
+                                    <option></option>
+                                    <option value="dept1">IT Department</option>
+                                    <option value="dept2">Department 2</option>
+                                    <option value="dept3">Department 3</option>
+                                    <option value="dept4">Department 4</option>
+                                  </select>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger b department-cancel" id="buttons" name="" style="width: 4rem;">Cancel</button>
+                                <button type="button" class="btn btn-success b" id="buttons" style="width: 4rem;">Save</button>
+                            </div>
+                          </div>
+                          <!--Email-->
+                          <div class="row" style="padding-top: 1rem; padding-bottom: 1rem; font-size: 12px;">
+                            <div class="col col-3" style="font-size: 11px; font-weight: bold; color: #333333;">EMAIL</div>
+                            <div class="col col-8" id="email-add" style="color: gray; font-size: 11px;">john_doe@nms.ph</div>
+                            <div class="col col-1" id="email-edit" style="font-size: 11px;"><u>Edit</u></div>
+                          </div>
+                          <!--email collapse-->
+                          <div class="text-center" id="email" style="display: none;">
+                            <div class="" style="margin-left: 25%; margin-right:2rem;">
+                              <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Email</label>
+                                <div class="col col-9">
+                                  <input type="email" class="form-inline" id="inputEmail" name="email" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger b email-cancel" id="buttons" style="width: 4rem;">Cancel</button>
+                                <button type="button" class="btn btn-success b" id="buttons" style="width: 4rem;">Save</button>
+                            </div>
+                          </div>
+                          <!--password-->
+                          <div class="row" style="padding-top: 1rem; padding-bottom: 1rem; font-size: 12px;">
+                            <div class="col col-3" style="font-size: 11px; font-weight: bold; color: #333333;">PASSWORD</div>
+                            <div class="col col-8" id="password-info" style="color: gray; font-size: 11px;">***********</div>
+                            <div class="col col-1" id="password-edit" style="font-size: 11px;"><u>Edit</u></div>
+                          </div>
+                          <!--password modal-->
+                          <div class="text-center" id="password" style="display: none;">
+                            <div class="" style="margin-left: 25%; margin-right:2rem;">
+                              <div class="form-group row">
+                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Old Password</label>
+                                <div class="col col-9">
+                                  <input type="password" class="form-inline" id="inputOld" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
+                                </div>
+                              </div>
+                              <div class="form-group row" style="margin-left: 25%; margin-right:2rem;">
+                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">New Password</label>
+                                <div class="col col-9">
+                                  <input type="password" class="form-inline" id="inputNew" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
+                                </div>
+                              </div>
+                              <div class="form-group row" style="margin-left: 25%; margin-right:2rem;">
+                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Repeat Password</label>
+                                <div class="col col-9">
+                                  <input type="password" class="form-inline" id="repeat" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-danger b password-cancel" id="buttons" name="" style="width: 4rem;">Cancel</button>
+                                <button type="button" class="btn btn-success b" id="buttons" style="width: 4rem;">Save</button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="text-center">
+                        <hr style="width: 46rem; height: 2px; color: #FDAD4E; background: #FDAD4E; margin-bottom: 2rem;">
                       </div>
                     </div>
                   </div>
@@ -341,25 +325,12 @@
                         <span class="navbar-brand mb-0 h2 title">
                             <i class="fas fa-chart-line"></i>Dashboard
                         </span>
-                        <nav class="mb-0" aria-label="breadcrumb">
-                            <ol class="breadcrumb arr-right">
-                                <li class="breadcrumb-item ">
-                                    <a href="#" class="text-warning">Dashboard</a>
-                                </li>
-                                <li class="breadcrumb-item ">
-                                    <a href="#" class="text-warning">Item1</a>
-                                </li>
-                                <li class="breadcrumb-item text-dark active" aria-current="page">Current</li>
-                            </ol>
-                        </nav>
                     </nav>
                 </div>
 
                 <!-- Page Content -->
                 <div class="container p-lg-2 p-md-1 p-sm-0">
-                    <!-- Cards -->
                     <div class="cards-component">
-                        <!-- first card -->
                         <div class="row card-row">
                             <div class="col col-sm-12 col-xs-12 col-lg-6">
                                 <div class="card">
@@ -391,7 +362,7 @@
                                 </div>
                             </div>
                             <div class="col col-lg-6 col-sm-12 col-xs-12">
-                                <div class="card">
+                                <div class="card inventory-concern">
                                     <!--Second card-->
                                     <div class="card-header text-white mb-3" id="card-header">Inventory Concerns</div>
                                     <div class="card-body">
@@ -401,42 +372,24 @@
                                                     <span class="fas fa-tools fa-lg">
                                                     </span>20<br>To be Repaired
                                                 </div>
-                                                <div class="col view">View Details</div>
                                             </div>
                                             <div class="disposed">
                                                 <div class="box col">
                                                     <span class="fas fa-trash-alt fa-lg">
                                                     </span>15<br>To be Disposed
                                                 </div>
-                                                <div class="col view">View Details</div>
                                             </div>
                                             <div class="returned">
                                                 <div class="box col">
                                                     <span class="fas fa-undo-alt fa-lg">
                                                     </span>200<br>To be Returned
                                                 </div>
-                                                <div class="col view">View Details</div>
                                             </div>
                                         </div>
-
-                                        <!--
-                                        <div class="row d-flex justify-content-center">
-                                            <div class="col box2 d-flex justify-content-center">
-                                                50 Mac Desktop Computers <br>
-                                                4 BenQ Speakers<br>
-                                                27 ASUS Hard Drives
-                                            </div>
-                                            <div class="w-100"></div>
-                                            <button class="col view1 d-flex justify-content-center">View All</button>
-                                        </div>
--->
                                     </div>
                                 </div>
                             </div>
-
                         </div>
-
-                        <!--First card-->
                         <div class="row card-row">
                             <div class="col col-lg-6 col-sm-12 col-xs-12">
                                 <div class="card">
@@ -497,49 +450,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <!--Second-->
-                            <!--
-                            <div class="col col-lg-5 col-sm-12 col-xs-12">
-                                <div class="row margin">
-                                    <div class="return-equipment">
-                                        <div class="box col">
-                                            <span class="fas fa-desktop fa-2x"> </span>
-                                        </div>
-                                        <div class="col view">Equipment Due for Return</div>
-                                    </div>
-                                    <div class="col card background">
-                                        <table class="table table-borderless">
-                                            <tr>
-                                                <td>98721 Biday Manang , iPhoneX</td>
-                                            </tr>
-                                            <tr>
-                                                <td>98721 Biday Manang , iPhoneX</td>
-                                            </tr>
-                                        </table>
-                                        <button class="row view4 d-flex justify-content-center">View All</button>
-                                    </div>
-                                </div>
-                                <div class="row margin">
-                                    <div class="low-stock">
-                                        <div class="box col">
-                                            <span class="fas fa-arrow-alt-circle-down fa-2x"> </span>
-                                        </div>
-                                        <div class="col view">Low in Stock</div>
-                                    </div>
-                                    <div class="col card background">
-                                        <table class="table table-borderless">
-                                            <tr>
-                                                <td>Office Supplies , Markers, 2</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Office Supplies , Markers, 2</td>
-                                            </tr>
-                                        </table>
-                                        <button class="row view5 d-flex justify-content-center">View All</button>
-                                    </div>
-                                </div>
-                            </div>
--->
                             <div class="row card-row">
                                 <div class="col col-lg-4 col-sm-12 col-xs-12">
                                     <div class="card">
@@ -606,7 +516,6 @@
         </div>
     </div>
 
-
     <!-- JQuery Core -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/jquery/dist/jquery.min.js"></script>
@@ -619,18 +528,20 @@
     <script type="text/javascript" src="../lib/dist/popper/popper.min.js"></script>
     <!-- Bootstrap -->
     <script type="text/javascript" src="../lib/dist/bootstrap/js/bootstrap.js"></script>
-
     <!-- DataTables -->
 	  <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
-
 	  <script src="../lib/dist/datatable/jquery.dataTables.min.js"></script>
 	  <script src="../lib/dist/datatable/dataTables.bootstrap4.min.js"></script>
-
 
     <script type="text/javascript">
         $(document).ready(function() {
             $('#sidebarCollapse').on('click', function() {
                 $('#sidebar').toggleClass('active');
+                var icon = $(this).parent().find(".fas")
+                if (icon.hasClass('fas fa-chevron-left'))
+                    icon.removeClass('fas fa-chevron-left').addClass("fas fa-chevron-right");
+                else
+                    icon.removeClass('fas fa-chevron-right').addClass("fas fa-chevron-left");
             });
         });
     </script>
@@ -647,27 +558,83 @@
         },
         'Password must consist of uppercase, lowercase, number, and a special character ()');
 
-        $( "#profile-form" ).validate({
+        $("#profile-form" ).validate({
           rules: {
-            password: {
+            inputOld: {
               required: true,
               passwordcheck: true,
               maxlength: 15,
-
             },
+
+            inputNew: {
+              required: true,
+              passwordcheck: true,
+              maxlength: 15,
+            },
+
             repeat: {
               required: true,
-              equalTo: "password",
+              equalTo: "inputNew",
             },
 
-            email: {
+            inputEmail: {
               email: true,
-              maxlength: 50,
-              minlength: 6,
-            }
+              maxlength: 30,
+              minlength: 11,
+            },
           },
         });
     </script>
-</body>
+    <script>
+      $(document).ready(function(){
+        //name
+        $("#name-edit").click(function(){
+          $("#fullname").hide();
+          $("#name-edit").hide();
+          $("#name").show();
+        });
+        $(".name-cancel").click(function(){
+          $("#name").hide();
+          $("#fullname").show();
+          $("#name-edit").show();
+        });
 
+        //department
+        $("#department-edit").click(function(){
+          $("#department-info").hide();
+          $("#department-edit").hide();
+          $("#department").show();
+        });
+        $(".department-cancel").click(function(){
+          $("#department").hide();
+          $("#department-info").show();
+          $("#department-edit").show();
+        });
+
+        //email
+        $("#email-edit").click(function(){
+          $("#email-add").hide();
+          $("#email-edit").hide();
+          $("#email").show();
+        });
+        $(".email-cancel").click(function(){
+          $("#email").hide();
+          $("#email-add").show();
+          $("#email-edit").show();
+        });
+
+          //password
+        $("#password-edit").click(function(){
+          $("#password-info").hide();
+          $("#password-edit").hide();
+          $("#password").show();
+        });
+        $(".password-cancel").click(function(){
+          $("#password").hide();
+          $("#password-info").show();
+          $("#password-edit").show();
+        });
+      });
+    </script>
+</body>
 </html>

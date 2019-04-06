@@ -423,6 +423,7 @@ a.article, a.article:hover {
 
 #sidebar ul.components {
     padding: 20px 0;
+    margin-top: 2.5rem;
 }
 
 #sidebar ul li a {
@@ -500,19 +501,14 @@ ul ul a {
 /* 4.2.4.1. User Avatar Image */
 .sidebar-user {
     border-top: 5px solid #eba133;
-    height: 130px;
-    background: #757575;
-    position: relative;
-    padding-top: 10px;
-    padding-left: 10px;
 }
 
 #sidebar.active .sidebar-user {
-    height: 90px;
+    /* height: 90px;
     background: #757575;
     position: relative;
     padding-top: 5px;
-    padding-left: 1px;
+    padding-left: 1px; */
 }
 
 .img-avatar {
@@ -693,8 +689,8 @@ div.p {
 }
 
 div.box {
-    width: 6rem;
-    height: 5rem;
+    width: 7rem;
+    height: 6rem;
     background-color: #757575;
     padding: 0;
     margin-left: 3px;
@@ -709,8 +705,6 @@ div.box2 {
     margin-top: 10px;
     margin-right: 9%;
     margin-left: 9%;
-
-
 }
 
 div.view {
@@ -1006,14 +1000,8 @@ button.dropdown-toggle {
   border-radius: 3px;
 }
 
-
-
-
 /****************************Mehanie*******************************/
-
-
 /* inputTypeDesign - SWITCHES - TOGGLE */
-
     #inputType1 {
       max-width: 27rem;
       box-shadow: 0 5px 20px rgba(0,0,0,0.23);
@@ -1056,15 +1044,8 @@ button.dropdown-toggle {
       border-bottom: 2px solid #333333;
       margin-bottom: 8rem;
     }
-
-
-
-
   /* The switch - the box around the slider */
-
   /* cardStyle */
-
-
     #btnGroupAddon1 {
       background: #555555;
       font-weight:  bold;
@@ -1077,24 +1058,12 @@ button.dropdown-toggle {
     }
 
     /*sample card*/
-
-
     .button {
       height: 1.9rem;
     }
 
-
-
-
-
 /***Kim*****************************************************/
-
-
 /* MODAL */
-
-
-
-
 #successHeader{
   background-color: #5cb85c;
 }
@@ -1114,42 +1083,29 @@ button.dropdown-toggle {
 }
 
 /* Buttons */
-
-
-
-
-
 * {
   border-radius: 0 !important;
 }
 
-
 .sample-buttons > button{
   font-family: sans-serif;
-
 }
 
 .btn{
   font-family: sans-serif;
-
 }
 
 #reissue{
-    border-color: purple;
+  border-color: purple;
   background-color: purple;
   color: white;
 }
 
-
 /* Login */
-
-
-
 .card-signin , .custom-card-sign-in{
   max-width: 435px;
   max-height: 520px;
 }
-
 
 #newMedia {
   margin-top: -20%;
@@ -1158,13 +1114,11 @@ button.dropdown-toggle {
   font-size: 1.5rem;
   font-family: sans-serif;
   color: #CCCCCC;
-
 }
 
 .yellow-divider{
   border-top: 5px solid #eba133;
 }
-
 
 .warning-content > p{
   text-align: center;
@@ -1173,14 +1127,12 @@ button.dropdown-toggle {
 
 .modal-body .pc-details{
   font-size: 0.8em;
-
 }
 
 .modal-body .former-issuers{
   padding-top:10px;
   padding-left: 10px;
   padding-bottom: 100px;
-
   border: 2px solid;
   border-color: black;
   font-size: 0.9em;
@@ -1199,14 +1151,13 @@ button.dropdown-toggle {
 }
 
 select.custom-select{
-      height: 2.4rem;
-      border: none;
-      border-bottom: 2px solid black;
-      border-radius: 0;
-      font-size: 1rem;
-      padding: 0px 20px;
+  height: 2.4rem;
+  border: none;
+  border-bottom: 2px solid black;
+  border-radius: 0;
+  font-size: 1rem;
+  padding: 0px 20px;
 }
-
 
 input.form-control{
   border-width: 1px;
@@ -1215,7 +1166,9 @@ input.form-control{
   padding: 0px 20px;
 }
 
-.input-text:focus{outline:none;}
+.input-text:focus{
+  outline:none;
+}
 
 div.reissue{
   border-width: 1px;
@@ -1225,14 +1178,21 @@ div.reissue{
   margin-left: 3%;
 }
 
-
 input:focus{
-outline: none !important;
+  outline: none !important;
 }
 
 #profile-button{
   background: #f2e809;
   border-color: white;
   color: white;
-    box-shadow: 0 3px 3px rgba(0,0,0,0.20);
+  box-shadow: 0 3px 3px rgba(0,0,0,0.20);
+}
+
+img {
+  border-radius: 50%;
+}
+
+.form-group {
+  margin: 0 !important;
 }
