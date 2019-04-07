@@ -160,19 +160,19 @@
                         </li>
                     </ul>
 
-                    <div class="d-flex flex-row-reverse bd-highlight">
-                      <div class="p-2 bd-highlight" style="margin-right: 1.5rem; margin-top: 5px;">
+                    <div class="d-flex flex-row-reverse bd-highlight settings">
+                      <div class="p-2 bd-highlight">
                         <a class="fas fa-ellipsis-v" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
                         <!-- Dropdown Menu -->
                         <div class="dropdown-menu dropdown-menu-right animated flipInY">
-                            <button class="dropdown-item dropdown-item-custom" data-toggle="modal" data-target="#profile-modal" style="color: gray;"><span class="fas fa-user-circle" style="margin-right: 1rem; color: gray;"></span>View Profile</button>
-                            <button class="dropdown-item dropdown-item-custom" style="color: gray;"><span class="fas fa-sign-out-alt" style="margin-right: 1rem; color: gray;"></span>Logout</button>
+                            <button class="dropdown-item dropdown-item-custom" data-toggle="modal" data-target="#profile-modal"><span class="fas fa-user-circle icon"></span>View Profile</button>
+                            <button class="dropdown-item dropdown-item-custom"><span class="fas fa-sign-out-alt icon"></span>Logout</button>
                         </div>
                       </div>
-                      <div class="p-2 bd-highlight" style="margin-top: 10px; margin-right: 15px; font-size: 12px;">JOHN DOE</div>
+                      <div class="p-2 bd-highlight name">JOHN DOE</div>
                       <div class="p-2 bd-highlight">
                         <div class="profile-pic">
-                            <img src="../assets/images/user/user.png" class="img-avatar" alt="avatar" srcset="" style="border-radius: 50%; width: 2rem; height: 2rem;">
+                            <img src="../assets/images/user/user.png" class="img-avatar" alt="avatar" srcset="">
                         </div>
                       </div>
                     </div>
@@ -182,139 +182,137 @@
                 <div class="modal fade bd-example-modal-lg" id="profile-modal" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                   <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="modal-body" style="height: 34rem; margin-top: 1rem; margin-left: 1rem; margin-right: 1rem;">
+                      <div class="modal-body profile-modal">
                         <span class="fas fa-times-circle float-right" data-dismiss="modal" aria-label="Close" aria-hidden="true"></span>
-                        <div class="" style="color: #333333; font-size: 12px; font-weight: bold;">ACCOUNT SETTINGS</div>
-
+                        <div class="account-settings">ACCOUNT SETTINGS</div>
                         <div class="text-center">
                           <hr style="width: 46rem; height: 2px; color: #FDAD4E; background: #FDAD4E">
                         </div>
 
-                        <div class="text-center" style="margin: auto; background: #333333; height: 12rem;">
-                          <img src="../assets/images/user/user.png" class="img-avatar" alt="avatar" srcset="" style="border-radius: 50%; width: 7rem; height: 7rem; margin-top: 2rem;">
-                          <h5 style="font-size: 12px; margin-top: 1rem; font-weight: bold; margin-bottom: 2rem; color: white;">JOHN DOE</h5>
+                        <div class="text-center div-profile">
+                          <img src="../assets/images/user/user.png" class="img-avatar profile-pic2" alt="avatar" srcset="">
+                          <h5 class="profile-name">JOHN DOE</h5>
                         </div>
 
-                        <form class="profile-form" id="profile-form" style="Margin-top: 2rem; margin-left: 2rem; margin-right:2rem;">
+                        <form class="profile-form" id="profile-form">
                           <!--name-->
-                          <div class="row" style="padding-top: 1rem; padding-bottom: 1rem; font-size: 12px;">
-                            <div class="col col-3" style="font-size: 11px; font-weight: bold; color: #333333;">NAME</div>
-                            <div class="col col-8" id="fullname" style="color: gray; font-size: 11px; font-weight: bold;">John Doe</div>
-                            <div class="col col-1" id="name-edit" style="font-size: 11px;"><u>Edit</u></div>
+                          <div class="row row-details">
+                            <div class="col col-3 detail-header">NAME</div>
+                            <div class="col col-8 details" id="fullname">John Doe</div>
+                            <div class="col col-1 edit" id="name-edit"><u>Edit</u></div>
                           </div>
-                          <!--name collapse-->
-                          <div class="collapse text-center" id="name" style="display:none;">
-                            <div class="" style="margin-left: 25%; margin-right: 2rem;">
-                              <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">First</label>
-                                <div class="col col-9">
-                                  <input type="text" class="form-inline" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
+                            <div class="text-center display" id="name">
+                              <div class="margin">
+                                <div class="form-group row">
+                                  <label for="label" class="col-sm-3 col-form-label label">First</label>
+                                  <div class="col col-9">
+                                    <input type="text" class="form-inline input">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="" class="col-sm-3 col-form-label label">Middle</label>
+                                  <div class="col col-9">
+                                    <input type="text" class="form-inline input">
+                                  </div>
+                                </div>
+                                <div class="form-group row">
+                                  <label for="" class="col-sm-3 col-form-label label">Last</label>
+                                  <div class="col col-9">
+                                    <input type="text" class="form-inline input">
+                                  </div>
                                 </div>
                               </div>
-                              <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Middle</label>
-                                <div class="col col-9">
-                                  <input type="text" class="form-inline" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
-                                </div>
-                              </div>
-                              <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Last</label>
-                                <div class="col col-9">
-                                  <input type="text" class="form-inline" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
-                                </div>
-                              </div>
-                            </div>
                               <div class="text-center">
-                                  <button type="button" class="btn btn-danger b name-cancel" id="buttons" name="" style="width: 4rem;">Cancel</button>
-                                  <button type="button" class="btn btn-success b" id="buttons" style="width: 4rem;">Save</button>
+                                  <button type="button" class="btn btn-danger b name-cancel cancel" id="buttons" name="">Cancel</button>
+                                  <button type="button" class="btn btn-success b cancel" id="buttons">Save</button>
                               </div>
-                          </div>
-                          <!--Department-->
-                          <div class="row" style="padding-top: 1rem; padding-bottom: 1rem; font-size: 12px;">
-                            <div class="col col-3" style="font-size: 11px; font-weight: bold; color: #333333;">DEPARTMENT</div>
-                            <div class="col col-8" id="department-info" style="color: gray; font-size: 11px; font-weight: bold;">IT Department</div>
-                            <div class="col col-1" id="department-edit" style="font-size: 11px;"><u>Edit</u></div>
-                          </div>
-                          <!--department collapse-->
-                          <div class="" id="department" style="display: none;">
-                            <div class="" style="margin-left: 25%; margin-right:2rem;">
-                              <div class="form-group row">
-                                <label for="" class="text-center col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Department</label>
-                                <div class="col col-9">
-                                  <select class="exampleFormControlSelect1" style="width: 10rem;">
-                                    <option></option>
-                                    <option value="dept1">IT Department</option>
-                                    <option value="dept2">Department 2</option>
-                                    <option value="dept3">Department 3</option>
-                                    <option value="dept4">Department 4</option>
-                                  </select>
+                            </div>
+                            <!--Department-->
+                            <div class="row row-details">
+                              <div class="col col-3 detail-header">DEPARTMENT</div>
+                              <div class="col col-8 details" id="department-info">IT Department</div>
+                              <div class="col col-1 edit" id="department-edit"><u>Edit</u></div>
+                            </div>
+                            <!--department collapse-->
+                            <div class="display" id="department">
+                              <div class="margin">
+                                <div class="form-group row">
+                                  <label for="" class="text-center col-sm-3 col-form-label label">Department</label>
+                                  <div class="col col-9">
+                                    <select class="exampleFormControlSelect1 select">
+                                      <option></option>
+                                      <option value="dept1">IT Department</option>
+                                      <option value="dept2">Department 2</option>
+                                      <option value="dept3">Department 3</option>
+                                      <option value="dept4">Department 4</option>
+                                    </select>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-danger b department-cancel" id="buttons" name="" style="width: 4rem;">Cancel</button>
-                                <button type="button" class="btn btn-success b" id="buttons" style="width: 4rem;">Save</button>
-                            </div>
-                          </div>
-                          <!--Email-->
-                          <div class="row" style="padding-top: 1rem; padding-bottom: 1rem; font-size: 12px;">
-                            <div class="col col-3" style="font-size: 11px; font-weight: bold; color: #333333;">EMAIL</div>
-                            <div class="col col-8" id="email-add" style="color: gray; font-size: 11px;">john_doe@nms.ph</div>
-                            <div class="col col-1" id="email-edit" style="font-size: 11px;"><u>Edit</u></div>
-                          </div>
-                          <!--email collapse-->
-                          <div class="text-center" id="email" style="display: none;">
-                            <div class="" style="margin-left: 25%; margin-right:2rem;">
-                              <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Email</label>
-                                <div class="col col-9">
-                                  <input type="email" class="form-inline" id="inputEmail" name="email" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
-                                </div>
+                              <div class="text-center">
+                                  <button type="button" class="btn btn-danger b department-cancel cancel" id="buttons" name="">Cancel</button>
+                                  <button type="button" class="btn btn-success b" id="buttons">Save</button>
                               </div>
                             </div>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-danger b email-cancel" id="buttons" style="width: 4rem;">Cancel</button>
-                                <button type="button" class="btn btn-success b" id="buttons" style="width: 4rem;">Save</button>
+                            <!--Email-->
+                            <div class="row row-details">
+                              <div class="col col-3 detail-header">EMAIL</div>
+                              <div class="col col-8 details" id="email-add">john_doe@nms.ph</div>
+                              <div class="col col-1 edit" id="email-edit"><u>Edit</u></div>
                             </div>
-                          </div>
-                          <!--password-->
-                          <div class="row" style="padding-top: 1rem; padding-bottom: 1rem; font-size: 12px;">
-                            <div class="col col-3" style="font-size: 11px; font-weight: bold; color: #333333;">PASSWORD</div>
-                            <div class="col col-8" id="password-info" style="color: gray; font-size: 11px;">***********</div>
-                            <div class="col col-1" id="password-edit" style="font-size: 11px;"><u>Edit</u></div>
-                          </div>
-                          <!--password modal-->
-                          <div class="text-center" id="password" style="display: none;">
-                            <div class="" style="margin-left: 25%; margin-right:2rem;">
-                              <div class="form-group row">
-                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Old Password</label>
-                                <div class="col col-9">
-                                  <input type="password" class="form-inline" id="inputOld" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
+                            <!--email collapse-->
+                            <div class="text-center display" id="email">
+                              <div class="margin">
+                                <div class="form-group row">
+                                  <label for="" class="col-sm-3 col-form-label label">Email</label>
+                                  <div class="col col-9">
+                                    <input type="email" class="form-inline input" id="inputEmail" name="email">
+                                  </div>
                                 </div>
                               </div>
-                              <div class="form-group row" style="margin-left: 25%; margin-right:2rem;">
-                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">New Password</label>
-                                <div class="col col-9">
-                                  <input type="password" class="form-inline" id="inputNew" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
-                                </div>
-                              </div>
-                              <div class="form-group row" style="margin-left: 25%; margin-right:2rem;">
-                                <label for="" class="col-sm-3 col-form-label" style="font-size: 11px; font-weight: bold; color: #333333;">Repeat Password</label>
-                                <div class="col col-9">
-                                  <input type="password" class="form-inline" id="repeat" style="width: 10rem; height: 1.5rem; margin-bottom: 0;">
-                                </div>
+                              <div class="text-center">
+                                  <button type="button" class="btn btn-danger b email-cancel cancel" id="buttons">Cancel</button>
+                                  <button type="button" class="btn btn-success b cancel" id="buttons">Save</button>
                               </div>
                             </div>
-                            <div class="text-center">
-                                <button type="button" class="btn btn-danger b password-cancel" id="buttons" name="" style="width: 4rem;">Cancel</button>
-                                <button type="button" class="btn btn-success b" id="buttons" style="width: 4rem;">Save</button>
+                            <!--password-->
+                            <div class="row row-details">
+                              <div class="col col-3 detail-header">PASSWORD</div>
+                              <div class="col col-8 details" id="password-info">***********</div>
+                              <div class="col col-1 edit" id="password-edit"><u>Edit</u></div>
                             </div>
-                          </div>
-                        </form>
-                      </div>
-                      <div class="text-center">
-                        <hr style="width: 46rem; height: 2px; color: #FDAD4E; background: #FDAD4E; margin-bottom: 2rem;">
-                      </div>
+                            <!--password modal-->
+                            <div class="text-center display" id="password">
+                              <div class="margin">
+                                <div class="form-group row">
+                                  <label for="" class="col-sm-3 col-form-label label">Old Password</label>
+                                  <div class="col col-9">
+                                    <input type="password" class="form-inline input" id="" name="oldPassword">
+                                  </div>
+                                </div>
+                                <div class="form-group row margin">
+                                  <label for="" class="col-sm-3 col-form-label label">New Password</label>
+                                  <div class="col col-9">
+                                    <input type="password" class="form-inline input" id="" name="newPassword">
+                                  </div>
+                                </div>
+                                <div class="form-group row margin">
+                                  <label for="" class="col-sm-3 col-form-label label">Repeat Password</label>
+                                  <div class="col col-9">
+                                    <input type="password" class="form-inline input" id="" name="repeat">
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="text-center">
+                                  <button type="button" class="btn btn-danger b password-cancel cancel" id="buttons" name="">Cancel</button>
+                                  <button type="button" class="btn btn-success b cancel" id="buttons">Save</button>
+                              </div>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="text-center">
+                          <hr style="width: 46rem; height: 2px; color: #FDAD4E; background: #FDAD4E; margin-bottom: 2rem;">
+                        </div>
                     </div>
                   </div>
                 </div>
@@ -560,21 +558,23 @@
 
         $("#profile-form" ).validate({
           rules: {
-            inputOld: {
+            oldPassword: {
               required: true,
               passwordcheck: true,
               maxlength: 15,
             },
 
-            inputNew: {
+            newPassword: {
               required: true,
               passwordcheck: true,
               maxlength: 15,
+              minlength: 8,
             },
 
             repeat: {
               required: true,
               equalTo: "inputNew",
+              minlength: 8,
             },
 
             inputEmail: {

@@ -1196,3 +1196,117 @@ img {
 .form-group {
   margin: 0 !important;
 }
+
+/**Dashboard - Settings dropdown**/
+.settings {
+  margin-right: 1.5rem;
+  margin-top: 5px;
+}
+
+button.dropdown-item-custom {
+  color: gray;
+}
+
+span.icon {
+  margin-right: 1rem;
+  color: gray;
+}
+
+.name {
+   margin-top: 10px;
+   margin-right: 15px;
+   font-size: 12px;
+}
+
+.img-avatar {
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+}
+
+.profile-modal {
+  height: 34rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.account-settings {
+  color: #333333;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.div-profile {
+  margin: auto;
+  background: #333333;
+  height: 12rem;
+}
+
+.profile-pic2 {
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  margin-top: 2rem;
+}
+
+form.profile-form {
+  Margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.row-details {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 12px;
+}
+
+.detail-header {
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.details {
+  color: gray;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.edit {
+  font-size: 11px;
+}
+
+.display {
+  display:none;
+}
+
+div.margin {
+  margin-left: 25%;
+  margin-right: 2rem;
+}
+
+h5.profile-name {
+  font-size: 12px;
+  margin-top: 1rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  color: white;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: bold;
+  color: #333333;
+}
+
+.input, select.select {
+  width: 10rem;
+  height: 1.5rem;
+  margin-bottom: 0;
+}
+
+button.cancel {
+  width: 4rem;
+}
