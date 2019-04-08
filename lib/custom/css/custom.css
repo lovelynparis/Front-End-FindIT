@@ -789,7 +789,6 @@ div.recent-height{
 
 
 div.margin {
-    margin: auto;
     margin-bottom: 7px;
     margin-top: 1px;
 }
@@ -1233,8 +1232,7 @@ span.icon {
 
 .account-settings {
   color: #333333;
-  font-size: 12px;
-  font-weight: bold;
+  font-size: 24px;
 }
 
 .div-profile {
@@ -1263,9 +1261,9 @@ form.profile-form {
 }
 
 .detail-header {
-  font-size: 11px;
-  font-weight: bold;
   color: #333333;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .details {
@@ -1280,11 +1278,12 @@ form.profile-form {
 
 .display {
   display:none;
+  margin-bottom: 1rem;
 }
 
 div.margin {
-  margin-left: 25%;
-  margin-right: 2rem;
+  /* margin-left: 25%;
+  margin-right: 2rem; */
 }
 
 h5.profile-name {
@@ -1298,15 +1297,35 @@ h5.profile-name {
 .label {
   font-size: 11px;
   font-weight: bold;
-  color: #333333;
+  color: #555555;
 }
 
 .input, select.select {
   width: 10rem;
   height: 1.5rem;
   margin-bottom: 0;
+  font-size: 14px;
+  color: #555555;
 }
 
 button.cancel {
   width: 4rem;
+}
+
+div.column {
+  background: #555555;
+  background-color: #555555;
+}
+
+.remove-padding {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  padding-left: 0 !important;
+}
+
+.fa-times-circle {
+  float: right;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
 }
