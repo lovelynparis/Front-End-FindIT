@@ -46,7 +46,7 @@
 
                 <!-- Menu List -->
                 <ul class="list-unstyled components">
-                    <li class="active">
+                    <li >
                         <a href="#">
                             <i class="fas fa-chart-line"></i>
                             <span class="hide-menu">Dashboard</span>
@@ -60,7 +60,7 @@
                         </a>
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href="#">
                             <i class="fas fa-users"></i>
                             <span class="hide-menu">Associates</span>
@@ -337,25 +337,28 @@
 
 
 
-                                    <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-
+                                    <div class="modal fade" id="addAssociate" tabindex="-1" role="dialog" aria-labelledby="addAssociateTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="ModalTitle">Modal title</h5>
+                                                <div id="addAssociateHeader" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle">Add Associate</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                    <span aria-hidden="true">&times;</span>
-                                                  </button>
+          <span aria-hidden="true">&times;</span>
+        </button>
                                                 </div>
-
                                                 <div class="modal-body">
-                                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                                    <div class="form-group">
+                                                        <label class="email" for="inputEmail">Email Address:</label>
+                                                        <div class="row">
+                                                            <div class="col">
+                                                                <input type="email">
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-
                                                 <div class="modal-footer">
-                                                    <button type="button" class="btn btn-info"> <span class="fas fa-plus"></span> ADD ITEM</button>
-                                                    <button type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
-
+                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-save"></span>    SAVE</button>
+                                                    <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -363,13 +366,18 @@
 
 
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn"><a href="#" data-toggle="tooltip" title="Multi Select"><span class="fas fa-user-plus"></span></a></button>
-                                        <button type="button" class="btn"><a href="#" data-toggle="tooltip" title="Edit"><img class="tool-item" src="../../assets/icons/table-toolbar-icons/edit-icon.png"></a></button>
-                                        <button type="button" class="btn"><a href="#" data-toggle="tooltip" title="Hide/Unhide"><img class="tool-item"  src="../../assets/icons/table-toolbar-icons/view.png"></a></button>
-                                        <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><a href="#" data-toggle="tooltip" title="Add"><img class="tool-item"  src="../../assets/icons/table-toolbar-icons/add-icon.png"></a>
-                      </button>
-                                        <button type="button" class="btn"><a href="#" data-toggle="tooltip" title="delete"> <img class="tool-item"  src="../../assets/icons/table-toolbar-icons/delete-icon.png"></a></button>
-                                        <button type="button" class="btn"><a href="#" data-toggle="tooltip" title="sort"><img class="tool-item"  src="../../assets/icons/table-toolbar-icons/sort-icon.png"></a></button>
+                                        <button type="button" class="btn" data-toggle="modal" data-target="#addAssociate" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span></button>
+                                        <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-edit" data-toggle="tooltip" title="Edit Associate"></span></button>
+                                         <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span></button>
+                                        
+                                      
+<!--
+                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding:5px; margin: auto;   "></span>Add Associate</button>
+                                        
+                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding-right: 5px; padding-left: 5; "></span>Add Associate</button>
+                                        
+                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding-right: 5px"></span>Add Associate</button>
+-->
 
 
 
@@ -617,6 +625,10 @@
             }]
 
         });
+        
+         $(function() {
+            $('[data-toggle="tooltip"]').tooltip()
+        }); 
 
     </script>
 </body>
