@@ -350,7 +350,7 @@
                                                             <form>
                                                                 <label class="label">Name: </label>
                                                                 <br>
-                                                                <input type="text" name="name" size="35"><br>
+                                                                <input type="text" name="search_employee" id="search_employee" placeholder="search by employee name" size="35"><br>
                                                             </form>
                                                         </div>
 
@@ -386,21 +386,8 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <div id="result_search"></div>
 
-
-
-                                                    <!--
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                            <input type="text" class="form-control " id="recipient-name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="message-text" class="col-form-label">Message:</label>
-                                                            <textarea class="form-control" id="message-text"></textarea>
-                                                        </div>
-                                                    </form>
--->
 
 
 
@@ -464,11 +451,6 @@
                                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addAssociate" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span>Add Associate</button>
                                         <!--   <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-edit" data-toggle="tooltip" title="Edit Associate"></span></button>-->
                                         <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span>Remove Associate</button>
-
-
-
-
-                                      
                                     </div>
 
 
@@ -553,6 +535,7 @@
                     icon.removeClass('fas fa-chevron-right').addClass("fas fa-chevron-left");
             });
         });
+
     </script>
     <script>
         jQuery.validator.setDefaults({
@@ -597,6 +580,7 @@
                 },
             },
         });
+
     </script>
     <script>
         $(document).ready(function() {
@@ -691,6 +675,7 @@
         //     $("#password-edit").show();
         //   });
         // });
+
     </script>
     <script>
         var table = $('table').DataTable({
@@ -717,6 +702,33 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         });
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $('search_employee').keyup(function() {
+                var txt = $(this).val();
+                if(txt != '')
+                    {
+                        
+                    }
+                else
+                    {
+                        $('#result').html('');
+                        $.ajax({
+                            url: "fetch.php",
+                            method: "post",
+                            data:{search:txt},
+                            dataType:"text",
+                            success:function(data)
+                            {
+                                $('#result').html(data);
+                            }
+                        });
+                    }
+            });
+        });
+
     </script>
 </body>
 
