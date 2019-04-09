@@ -26,7 +26,7 @@
     <!-- Your custom css goes here -->
     <link rel="stylesheet" href="../lib/custom/css/custom.css">
 
-    <title>Dashboard</title>
+    <title>Associates</title>
 </head>
 
 <body>
@@ -358,20 +358,9 @@
 
 
                                                     <div class="row">
-                                                        <div class="col-sm-6">
+                                                        <div class="col">
                                                             <label class="label">Department: </label>
-                                                            <br>
-                                                            <div class="form">
-                                                                <div class="form-group">
-                                                                    <select class="exampleFormControlSelect1">
-                                                                      <option>Information Technology Development Department</option>
-                                                                      <option>Department2</option>
-                                                                      <option>Department3</option>
-                                                                      <option>Department4</option>
-                                                                      <option>Department5</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
+                                                            <br> Information Technology Development Department
                                                         </div>
                                                     </div>
                                                     <br>
@@ -380,16 +369,7 @@
                                                             <label class="label">Details </label>
                                                             <br>
                                                             <div class="container">
-                                                                <!--
-                                                                <div class="row">
-                                                                    <div class="col">
-                                                                        First Name:
-                                                                    </div>
-                                                                    <div class="col">
-                                                                       Geovelle Andres
-                                                                    </div>
-                                                                </div>
--->
+
                                                                 <table style="width:100%">
                                                                     <tr>
                                                                         <th>Firstname</th>
@@ -401,7 +381,7 @@
                                                                         <td>Null</td>
                                                                         <td>Null</td>
                                                                     </tr>
-                                                                   
+
                                                                 </table>
                                                             </div>
                                                         </div>
@@ -481,27 +461,14 @@
 
                                     <!-- Associate tools ADD EDIT DELETE-->
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn" data-toggle="modal" data-target="#addAssociate" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span></button>
-                                        <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-edit" data-toggle="tooltip" title="Edit Associate"></span></button>
-                                        <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span></button>
-
-
-                                        <!--
-                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding:5px; margin: auto;   "></span>Add Associate</button>
-                                        
-                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding-right: 5px; padding-left: 5; "></span>Add Associate</button>
-                                        
-                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding-right: 5px"></span>Add Associate</button>
--->
+                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addAssociate" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span>Add Associate</button>
+                                        <!--   <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-edit" data-toggle="tooltip" title="Edit Associate"></span></button>-->
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span>Remove Associate</button>
 
 
 
 
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Add (5 items or Less)</a>
-                                            <a class="dropdown-item" href="#">Bulk Add</a>
-
-                                        </div>
+                                      
                                     </div>
 
 
@@ -539,9 +506,9 @@
                                         <td>Gavin Roy Ferrer</td>
                                         <td>gavinroy@gmail.com</td>
                                         <td>Information Technology Development Department</td>
-                                        <td>active</td>
+                                        <td>inactive</td>
                                         <td>
-                                            <button class="btn btn-secondary" id="deactivate">Deactivate</button>
+                                            <button class="btn btn-secondary" id="deactivate">Activate</button>
                                         </td>
                                     </tr>
 
