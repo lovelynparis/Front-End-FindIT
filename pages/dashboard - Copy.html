@@ -210,7 +210,7 @@
                               <div class="col col-7 details" id="fullname">John Doe</div>
                               <div class="col col-1 edit" id="name-edit"><u>Edit</u></div>
                             </div>
-                              <div class="display" id="name" style="background: #CCCCCC; padding: 1rem;">
+                              <div class="display" id="name">
                                 <div class="margin row">
                                   <div class="form-group col col-6">
                                     <label for="label" class="col-form-label label">First Name</label>
@@ -231,7 +231,7 @@
                                 <div class="col col-1 edit" id="department-edit"><u>Edit</u></div>
                               </div>
                               <!--department collapse-->
-                              <div class="display" id="department" style="background: #CCCCCC; padding: 1rem;">
+                              <div class="display" id="department">
                                 <div class="margin">
                                   <div class="form-group row">
                                       <select class="exampleFormControlSelect1 select">
@@ -245,15 +245,36 @@
                                 </div>
                               </div>
                             </div>
-                            <!--Email-->
+                            <!--User Type-->
                             <div id="divemail">
+                              <div class="row row-details">
+                                <div class="col col-4 detail-header">USER TYPE</div>
+                                <div class="col col-7 details" id="typet-info">Admin</div>
+                                <div class="col col-1 edit" id="type-edit"><u>Edit</u></div>
+                              </div>
+                              <!--email collapse-->
+                              <div class="text-center display remove-padding" id="type">
+                                <div class="margin">
+                                  <div class="form-group row">
+                                    <div class="col col-3">
+                                      <label for="label" class="col-form-label label">User Type</label>
+                                    </div>
+                                    <div class="col col-9">
+                                      <input type="email" name="type" class="form-inline input">
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--Email-->
+                            <div id="divtype">
                               <div class="row row-details">
                                 <div class="col col-4 detail-header">EMAIL</div>
                                 <div class="col col-7 details" id="email-add">john_doe@nms.ph</div>
                                 <div class="col col-1 edit" id="email-edit"><u>Edit</u></div>
                               </div>
                               <!--email collapse-->
-                              <div class="text-center display remove-padding" id="email" style="background: #CCCCCC; padding: 1rem;">
+                              <div class="text-center display remove-padding" id="email">
                                 <div class="margin">
                                   <div class="form-group row">
                                     <div class="col col-2">
@@ -274,7 +295,7 @@
                                 <div class="col col-1 edit" id="password-edit"><u>Edit</u></div>
                               </div>
                               <!--password modal-->
-                              <div class="text-center display remove-padding" id="password" style="background: #CCCCCC; padding: 1rem;">
+                              <div class="text-center display remove-padding" id="password">
                                 <div class="margin">
                                   <div class="form-group row">
                                     <div class="col col-4">
@@ -450,9 +471,9 @@
                                     </div>
                                 </div>
                             </div>
-							
-							
-							
+
+
+
                             <div class="row card-row mx-auto">
                                 <div class="col col-lg-4 col-sm-12 col-xs-12">
                                     <div class="card">
@@ -614,7 +635,7 @@
           }
 
           $("#divname .edit").click(function(){
-              $.fn.showInfo("divname", ["divdepartment", "divemail", "divpassword"]);
+              $.fn.showInfo("divname", ["divdepartment", "divemail", "divtype", "divpassword"]);
               $("#cancel-save").show();
               $(".password-cancel").click(function(){
                   $("#name").hide();
@@ -623,7 +644,7 @@
           });
 
           $("#divdepartment .edit").click(function(){
-              $.fn.showInfo("divdepartment", ["divname", "divemail", "divpassword"]);
+              $.fn.showInfo("divdepartment", ["divname", "divemail", "divtype", "divpassword"]);
               $("#cancel-save").show();
               $(".password-cancel").click(function(){
                   $("#department").hide();
@@ -631,8 +652,17 @@
               });
           });
 
+          $("#divtype .edit").click(function(){
+              $.fn.showInfo("divtype", ["divname", "divdepartment", "divemail", "divpassword"]);
+              $("#cancel-save").show();
+              $(".password-cancel").click(function(){
+                  $("#type").hide();
+                  $("#cancel-save").hide();
+              });
+          });
+
           $("#divemail .edit").click(function(){
-              $.fn.showInfo("divemail", ["divname", "divdepartment", "divpassword"]);
+              $.fn.showInfo("divemail", ["divname", "divdepartment", "divtype", "divpassword"]);
               $("#cancel-save").show();
               $(".password-cancel").click(function(){
                   $("#email").hide();
@@ -641,7 +671,7 @@
           });
 
           $("#divpassword .edit").click(function(){
-              $.fn.showInfo("divpassword", ["divname", "divdepartment", "divemail"]);
+              $.fn.showInfo("divpassword", ["divname", "divdepartment", "divemail", "divtype"]);
               $("#cancel-save").show();
               $(".password-cancel").click(function(){
                   $("#password").hide();
