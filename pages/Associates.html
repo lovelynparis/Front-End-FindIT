@@ -434,8 +434,109 @@
 
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-save"></span>    ADD</button>
-                                                    <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-plus"></span>    ADD</button>
+                                                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            
+                                    
+                                    
+                                    <!-- Remove Associate Modal -->
+                                    <div class="modal fade" id="removeAssociate" tabindex="-1" role="dialog" aria-labelledby="removeAssociateTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered " role="document">
+                                            <div class="modal-content">
+                                                <div id="removeAssociateHeader" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-user-minus"></i>&nbsp;Remove Associate</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+
+                                                        <div class="col">
+                                                            <form>
+                                                                <label class="label">Name: </label>
+                                                                <br>
+                                                                <input type="text" name="name" size="35"><br>
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <!--
+                                                        <div class="col">
+                                                            <label class="label">Department: </label>
+                                                            <br> Information Technology Development Department
+                                                        </div>
+-->
+                                                    </div>
+                                                    <br>
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label class="label">Details </label>
+                                                            <br>
+                                                            <div class="container">
+
+                                                                
+                                                                <table style="width:100%">
+                                                                    <tr>
+                                                                        <th>Firstname</th>
+                                                                        <th>Lastname</th>
+                                                                        <th>Email</th>
+                                                                        <th>Department</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Null</td>
+                                                                        <td>Null</td>
+                                                                        <td>Null</td>
+                                                                        <td>Null</td>
+                                                                    </tr>
+
+                                                                </table>
+
+
+
+<!--
+                                                                <table id="myDataTable" class="table table-borderless table-striped table-hover" style="width:100%">
+                                                                    <thead class="">
+                                                                        <tr>
+
+                                                                            <th>First Name</th>
+                                                                            <th>Last Name</th>
+                                                                            <th>Email</th>
+                                                                            <th>Department</th>
+                                                                            
+                                                                        </tr>
+                                                                    </thead>
+
+                                                                    <tbody>
+
+                                                                        <tr>
+                                                                            <td>Jon Paulo</td>
+                                                                            <td>Faypon</td>
+                                                                            <td>twistafries@gmail.com</td>
+                                                                            <td>Information Technology Development Department</td>
+                                                                            
+                                                                        </tr>
+                                                                    </tbody>
+
+                                                                </table>
+-->
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button id="save" type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" href="#successRemoveAssociate"> <span class="fas fa-minus"></span> REMOVE</button>
+                                                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -443,8 +544,32 @@
 
 
 
+
+
                                     <!-- Modal Associate successfully added!-->
                                     <div class="modal fade" id="successAssociate" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div id="successAssociate" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle"></h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <i id="successIcon" class="far fa-check-circle fa-10x"></i>
+                                                    <p id="successText">Associate successfully added!</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    
+                                    <!-- Modal Associate successfully removed!-->
+                                    <div class="modal fade" id="successRemoveAssociate" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
                                                 <div id="successAssociate" class="modal-header">
@@ -491,7 +616,7 @@
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addAssociate" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span>Add Associate</button>
                                         <!--   <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-edit" data-toggle="tooltip" title="Edit Associate"></span></button>-->
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span>Remove Associate</button>
+                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#removeAssociate"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span>Remove Associate</button>
 
 
 
