@@ -344,7 +344,7 @@
 
                                     <!-- Add Associate Modal -->
                                     <div class="modal fade" id="addAssociate" tabindex="-1" role="dialog" aria-labelledby="addAssociateTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                        <div class="modal-dialog modal-dialog-centered " role="document">
                                             <div class="modal-content">
                                                 <div id="addAssociateHeader" class="modal-header">
                                                     <h5 class="modal-title" id="ModalTitle"><i class="fas fa-user-plus"></i>&nbsp;Add Associate</h5>
@@ -365,10 +365,12 @@
 
 
                                                     <div class="row">
+                                                        <!--
                                                         <div class="col">
                                                             <label class="label">Department: </label>
                                                             <br> Information Technology Development Department
                                                         </div>
+-->
                                                     </div>
                                                     <br>
                                                     <div class="row">
@@ -377,43 +379,62 @@
                                                             <br>
                                                             <div class="container">
 
+                                                                
                                                                 <table style="width:100%">
                                                                     <tr>
                                                                         <th>Firstname</th>
                                                                         <th>Lastname</th>
                                                                         <th>Email</th>
+                                                                        <th>Department</th>
                                                                     </tr>
                                                                     <tr>
+                                                                        <td>Null</td>
                                                                         <td>Null</td>
                                                                         <td>Null</td>
                                                                         <td>Null</td>
                                                                     </tr>
 
                                                                 </table>
+
+
+
+<!--
+                                                                <table id="myDataTable" class="table table-borderless table-striped table-hover" style="width:100%">
+                                                                    <thead class="">
+                                                                        <tr>
+
+                                                                            <th>First Name</th>
+                                                                            <th>Last Name</th>
+                                                                            <th>Email</th>
+                                                                            <th>Department</th>
+                                                                            
+                                                                        </tr>
+                                                                    </thead>
+
+                                                                    <tbody>
+
+                                                                        <tr>
+                                                                            <td>Jon Paulo</td>
+                                                                            <td>Faypon</td>
+                                                                            <td>twistafries@gmail.com</td>
+                                                                            <td>Information Technology Development Department</td>
+                                                                            
+                                                                        </tr>
+                                                                    </tbody>
+
+                                                                </table>
+-->
+
                                                             </div>
                                                         </div>
                                                     </div>
 
 
 
-                                                    <!--
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                            <input type="text" class="form-control " id="recipient-name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="message-text" class="col-form-label">Message:</label>
-                                                            <textarea class="form-control" id="message-text"></textarea>
-                                                        </div>
-                                                    </form>
--->
-
-
 
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-save"></span>    SAVE</button>
+                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-save"></span>    ADD</button>
                                                     <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
                                                 </div>
                                             </div>
@@ -560,6 +581,7 @@
                     icon.removeClass('fas fa-chevron-right').addClass("fas fa-chevron-left");
             });
         });
+
     </script>
     <script>
         jQuery.validator.setDefaults({
@@ -604,6 +626,7 @@
                 },
             },
         });
+
     </script>
     <script>
         $(document).ready(function() {
@@ -698,6 +721,7 @@
         //     $("#password-edit").show();
         //   });
         // });
+
     </script>
     <script>
         var table = $('table').DataTable({
@@ -724,6 +748,7 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         });
+
     </script>
 </body>
 
