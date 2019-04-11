@@ -59,10 +59,18 @@
                             <span class="hide-menu">Inventory</span>
                         </a>
                     </li>
+                    
+                    
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-users"></i>
+                            <span class="hide-menu">Employees</span>
+                        </a>
+                    </li>
 
                     <li class="active">
                         <a href="#">
-                            <i class="fas fa-users"></i>
+                            <i class="fas fa-user-tie"></i>
                             <span class="hide-menu">Associates</span>
                         </a>
                     </li>
@@ -345,30 +353,43 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <label class="label">Name: </label>
-                                                            <div class="form-group">
-                                                                <input type="email" class="form-box">
-                                                            </div>
+                                                        <div class="col">
+                                                            <form>
+                                                                <label class="label">Name: </label>
+                                                                <br>
+                                                                <input type="text" name="name" size="35"><br>
+                                                            </form>
                                                         </div>
 
                                                     </div>
 
 
                                                     <div class="row">
-                                                        <div class="col-sm-6">
-                                                            <label class="label">Department: </label>
-                                                            <div class="form-group">
-                                                                <select class="exampleFormControlSelect1">
-                                                                      <option>Information Technology Development Department</option>
-                                                                      <option>Department2</option>
-                                                                      <option>Department3</option>
-                                                                      <option>Department4</option>
-                                                                      <option>Department5</option>
-                                                                    </select>
+                                                        <div class="col">
+                                                            <label class="label">Details </label>
+                                                            <br>
+                                                            <div class="container">
+
+
+                                                                <table style="width:100%">
+                                                                    <tr>
+                                                                        <th>Firstname</th>
+                                                                        <th>Lastname</th>
+                                                                        <th>Email</th>
+                                                                        <th>Department</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Null</td>
+                                                                        <td>Null</td>
+                                                                        <td>Null</td>
+                                                                        <td>Null</td>
+                                                                    </tr>
+
+                                                                </table>
+
+
+
                                                             </div>
-
-
                                                         </div>
                                                     </div>
 
@@ -389,8 +410,83 @@
 
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-save"></span>    SAVE</button>
-                                                    <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-plus"></span>    ADD</button>
+                                                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    <!-- Remove Associate Modal -->
+                                    <div class="modal fade" id="removeAssociate" tabindex="-1" role="dialog" aria-labelledby="removeAssociateTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div id="removeAssociateHeader" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-user-plus"></i>&nbsp;Remove Associate</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <form>
+                                                                <label class="label">Name: </label>
+                                                                <br>
+                                                                <input type="text" name="name" size="35"><br>
+                                                            </form>
+                                                        </div>
+
+                                                    </div>
+
+
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <label class="label">Details </label>
+                                                            <br>
+                                                            <div class="container">
+
+
+                                                                <table style="width:100%">
+                                                                    <tr>
+                                                                        <th>Firstname</th>
+                                                                        <th>Lastname</th>
+                                                                        <th>Email</th>
+                                                                        <th>Department</th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>Null</td>
+                                                                        <td>Null</td>
+                                                                        <td>Null</td>
+                                                                        <td>Null</td>
+                                                                    </tr>
+
+                                                                </table>
+
+
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!--
+                                                    <form>
+                                                        <div class="form-group">
+                                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                                            <input type="text" class="form-control " id="recipient-name">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <label for="message-text" class="col-form-label">Message:</label>
+                                                            <textarea class="form-control" id="message-text"></textarea>
+                                                        </div>
+                                                    </form>
+-->
+
+
+
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button id="save" type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" href="#successRemoveAssociate"> <span class="fas fa-minus"></span>    REMOVE</button>
+                                                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -408,7 +504,26 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <i id="successIcon" class="far fa-check-circle fa-10x"></i>
-                                                    <p id="successText">Associate successfully added!</p>
+                                                    <p id="successText">Associate  ($Name) successfully added!</p>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Modal Associate successfully removed!-->
+                                    <div class="modal fade" id="successRemoveAssociate" tabindex="-1" role="dialog" aria-labelledby="successRemoveModalTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div id="successRemoveAssociate" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle"></h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <i id="successIcon" class="far fa-check-circle fa-10x"></i>       
+                                                    <p id="successText">Associate ($Name) successfully removed!</p>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
@@ -428,7 +543,7 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <i id="failedIcon" class="far fa-times-circle fa-10x"></i>
-                                                    <p id="failedText">Failed to add Associate!</p>
+                                                    <p id="failedText">Failed to add  ($Name) Associate!</p>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button id="retryFailedButton" type="button" class="btn btn-danger" data-dismiss="modal">RETRY</button>
@@ -444,9 +559,9 @@
 
                                     <!-- Associate tools ADD EDIT DELETE-->
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn" data-toggle="modal" data-target="#addAssociate" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span></button>
-                                        <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-edit" data-toggle="tooltip" title="Edit Associate"></span></button>
-                                        <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span></button>
+                                        <button type="button" class="btn " data-toggle="modal" data-target="#addAssociate" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span>Add </button>
+                                        <!--                                        <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-edit" data-toggle="tooltip" title="Edit Associate"></span></button>-->
+                                        <button type="button" class="btn " data-toggle="modal" data-target="#removeAssociate"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span>Remove</button>
 
 
                                         <!--
@@ -459,12 +574,6 @@
 
 
 
-
-                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">Add (5 items or Less)</a>
-                                            <a class="dropdown-item" href="#">Bulk Add</a>
-
-                                        </div>
                                     </div>
 
 
@@ -689,7 +798,7 @@
         // });
     </script>
     <script>
-        var table = $('table').DataTable({
+        var table = $('#myDataTable').DataTable({
             scrollY: '50vh',
             scrollCollapse: true,
             // scrollX: '100vw',        
