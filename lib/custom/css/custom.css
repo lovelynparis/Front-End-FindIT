@@ -1335,3 +1335,60 @@ div.column {
   background: #CCCCCC;
   padding: 2rem;
 }
+
+.right {
+  float: right;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+
+.icons {
+  margin-top: 2rem;
+  margin-right: 3rem;
+}
+
+#export, #print{
+  font-size: 12px;
+  border-radius: 5px;
+  width: 6.5rem;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.20);
+  height: 32px;
+}
+
+select.filter{
+  height: 2rem;
+  width: 12rem;
+  border-radius: 0;
+  font-size: 1rem;
+  padding: 0px 20px;
+}
+
+.input-date {
+  border-color: #CCCCCC;
+  width: 10rem;
+  height: 2rem;
+}
+
+.input-date2 {
+  border-color: #CCCCCC;
+  width: 12rem;
+  height: 1.9rem;
+  font-size: 14px;
+}
+
+.label-date {
+  margin-right: 1rem;
+  margin-top: 5px;
+}
+
+#category-select2{
+  max-width: 15rem !important;
+  border-radius: 2px;
+}
+
+.inventory {
+  height: 2rem;;
+  background: yellow;
+  padding-left: 1rem;
+  padding-top: 5px
+}
