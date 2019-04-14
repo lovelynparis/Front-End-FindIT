@@ -26,10 +26,10 @@
     <!-- Your custom css goes here -->
     <link rel="stylesheet" href="../lib/custom/css/custom.css">
 
-    <!--    select-->
+    <!-- Bootrap select -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/css/bootstrap-select.min.css">
 
-    <title>Dashboard</title>
+    <title>Associates</title>
 </head>
 
 <body>
@@ -358,28 +358,33 @@
                                                     <div class="row">
                                                         <div class="col">
                                                             <form>
-                                                                <label class="label">Name: </label>
+                                                                <label class="label">Employee Name: </label>
                                                                 <br>
-<!--                                                                <input type="text" name="name" size="35"><br>-->
-                                                                 <select class="selectpicker" data-live-search="true" size="35">
-                                                                  <option data-tokens="ketchup mustard">Justine Garcia</option>
-                                                                  <option data-tokens="mustard">Lovelyn Paris</option>
-                                                                  <option data-tokens="frosting">Kim Willy </option>
+                                                                <!--<input type="text" name="name" size="35"><br>-->
+                                                                <!--Bootstrap-select name-->
+                                                                <select class="selectpicker" data-live-search="true" size="35">
+                                                                <!--Add key words to options to improve their searchability using data-tokens.-->
+                                                                    <option data-tokens="">Justine Garcia</option>
+                                                                    <option data-tokens="">Lovelyn	Paris</option>
+                                                                    <option data-tokens="">Aika Vien</option>
+                                                                    <option data-tokens="">Jon Paulo</option>
+                                                                    <option data-tokens="">Gavin Roy</option>
+                                                                    <option data-tokens="">Mehanie Lonogan</option>
+                                                                    <option data-tokens="">Kim	Willy</option>
+                                                                    <option data-tokens="">Amy	Santiago</option>
+                                                                    <option data-tokens="">Raymond	Holt</option>        
                                                                 </select>
-
                                                             </form>
                                                         </div>
-
                                                     </div>
 
-
+                                                    <br>
+                                                    <!--Employee Details Table-->
                                                     <div class="row">
                                                         <div class="col">
-                                                            <label class="label">Details </label>
+                                                            <label class="label">Details</label>
                                                             <br>
                                                             <div class="container">
-
-
                                                                 <table style="width:100%">
                                                                     <tr>
                                                                         <th>Firstname</th>
@@ -393,33 +398,14 @@
                                                                         <td>Null</td>
                                                                         <td>Null</td>
                                                                     </tr>
-
                                                                 </table>
-
-
-
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <!--
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                            <input type="text" class="form-control " id="recipient-name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="message-text" class="col-form-label">Message:</label>
-                                                            <textarea class="form-control" id="message-text"></textarea>
-                                                        </div>
-                                                    </form>
--->
-
-
-
                                                 </div>
+
                                                 <div class="modal-footer">
-                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-plus"></span>    ADD</button>
+                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-plus"></span>ADD</button>
                                                     <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
                                                 </div>
                                             </div>
@@ -439,28 +425,32 @@
                                                     <div class="row">
                                                         <div class="col">
                                                             <form>
-                                                                <label class="label">Name: </label>
+                                                                <label class="label">Employee Name: </label>
                                                                 <br>
-                                                                <input type="text" name="name" size="35"><br>
-                                                                 <select class="selectpicker" data-live-search="true">
-                                                                  <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
-                                                                  <option data-tokens="mustard">Burger, Shake and a Smile</option>
-                                                                  <option data-tokens="frosting">Sugar, Spice and all things nice</option>
+                                                                <!--<input type="text" name="name" size="35"><br>-->
+                                                                <!--Bootstrap-select name-->
+                                                                <select class="selectpicker" data-live-search="true" size="35">
+                                                                    <option data-tokens="">Justine Garcia</option>
+                                                                    <option data-tokens="">Lovelyn	Paris</option>
+                                                                    <option data-tokens="">Aika Vien</option>
+                                                                    <option data-tokens="">Jon Paulo</option>
+                                                                    <option data-tokens="">Gavin Roy</option>
+                                                                    <option data-tokens="">Mehanie Lonogan</option>
+                                                                    <option data-tokens="">Kim	Willy</option>
+                                                                    <option data-tokens="">Amy	Santiago</option>
+                                                                    <option data-tokens="">Raymond	Holt</option>   
                                                                 </select>
-
                                                             </form>
                                                         </div>
-
                                                     </div>
 
-
+                                                    <br>
+                                                    <!--Employee Details Table-->
                                                     <div class="row">
                                                         <div class="col">
-                                                            <label class="label">Details </label>
+                                                            <label class="label">Details</label>
                                                             <br>
                                                             <div class="container">
-
-
                                                                 <table style="width:100%">
                                                                     <tr>
                                                                         <th>Firstname</th>
@@ -474,29 +464,10 @@
                                                                         <td>Null</td>
                                                                         <td>Null</td>
                                                                     </tr>
-
                                                                 </table>
-
-                                                               
                                                             </div>
                                                         </div>
                                                     </div>
-
-                                                    <!--
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                            <input type="text" class="form-control " id="recipient-name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="message-text" class="col-form-label">Message:</label>
-                                                            <textarea class="form-control" id="message-text"></textarea>
-                                                        </div>
-                                                    </form>
--->
-
-
-
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button id="save" type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" href="#successRemoveAssociate"> <span class="fas fa-minus"></span>    REMOVE</button>
@@ -660,7 +631,7 @@
     <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
     <script src="../lib/dist/datatable/jquery.dataTables.min.js"></script>
     <script src="../lib/dist/datatable/dataTables.bootstrap4.min.js"></script>
-<!--        select-->
+    <!-- Boostrap-select-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/js/bootstrap-select.min.js"></script>
 
     <script type="text/javascript">
