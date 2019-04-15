@@ -26,9 +26,6 @@
     <!-- Your custom css goes here -->
     <link rel="stylesheet" href="../lib/custom/css/custom.css">
 
-    <!--    select-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/css/bootstrap-select.min.css">
-
     <title>Dashboard</title>
 </head>
 
@@ -62,8 +59,8 @@
                             <span class="hide-menu">Inventory</span>
                         </a>
                     </li>
-
-
+                    
+                    
                     <li>
                         <a href="#">
                             <i class="fas fa-users"></i>
@@ -360,13 +357,7 @@
                                                             <form>
                                                                 <label class="label">Name: </label>
                                                                 <br>
-<!--                                                                <input type="text" name="name" size="35"><br>-->
-                                                                 <select class="selectpicker" data-live-search="true" size="35">
-                                                                  <option data-tokens="ketchup mustard">Justine Garcia</option>
-                                                                  <option data-tokens="mustard">Lovelyn Paris</option>
-                                                                  <option data-tokens="frosting">Kim Willy </option>
-                                                                </select>
-
+                                                                <input type="text" name="name" size="35"><br>
                                                             </form>
                                                         </div>
 
@@ -425,8 +416,8 @@
                                             </div>
                                         </div>
                                     </div>
-
-
+                                    
+                                    
                                     <!-- Remove Associate Modal -->
                                     <div class="modal fade" id="removeAssociate" tabindex="-1" role="dialog" aria-labelledby="removeAssociateTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -442,12 +433,6 @@
                                                                 <label class="label">Name: </label>
                                                                 <br>
                                                                 <input type="text" name="name" size="35"><br>
-                                                                 <select class="selectpicker" data-live-search="true">
-                                                                  <option data-tokens="ketchup mustard">Hot Dog, Fries and a Soda</option>
-                                                                  <option data-tokens="mustard">Burger, Shake and a Smile</option>
-                                                                  <option data-tokens="frosting">Sugar, Spice and all things nice</option>
-                                                                </select>
-
                                                             </form>
                                                         </div>
 
@@ -477,7 +462,8 @@
 
                                                                 </table>
 
-                                                               
+
+
                                                             </div>
                                                         </div>
                                                     </div>
@@ -518,7 +504,7 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <i id="successIcon" class="far fa-check-circle fa-10x"></i>
-                                                    <p id="successText">Associate ($Name) successfully added!</p>
+                                                    <p id="successText">Associate  ($Name) successfully added!</p>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
@@ -526,7 +512,7 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    
                                     <!-- Modal Associate successfully removed!-->
                                     <div class="modal fade" id="successRemoveAssociate" tabindex="-1" role="dialog" aria-labelledby="successRemoveModalTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -536,7 +522,7 @@
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <i id="successIcon" class="far fa-check-circle fa-10x"></i>
+                                                    <i id="successIcon" class="far fa-check-circle fa-10x"></i>       
                                                     <p id="successText">Associate ($Name) successfully removed!</p>
                                                 </div>
                                                 <div class="modal-footer">
@@ -557,7 +543,7 @@
                                                 </div>
                                                 <div class="modal-body">
                                                     <i id="failedIcon" class="far fa-times-circle fa-10x"></i>
-                                                    <p id="failedText">Failed to add ($Name) Associate!</p>
+                                                    <p id="failedText">Failed to add  ($Name) Associate!</p>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button id="retryFailedButton" type="button" class="btn btn-danger" data-dismiss="modal">RETRY</button>
@@ -660,8 +646,6 @@
     <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
     <script src="../lib/dist/datatable/jquery.dataTables.min.js"></script>
     <script src="../lib/dist/datatable/dataTables.bootstrap4.min.js"></script>
-<!--        select-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/js/bootstrap-select.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -674,7 +658,6 @@
                     icon.removeClass('fas fa-chevron-right').addClass("fas fa-chevron-left");
             });
         });
-
     </script>
     <script>
         jQuery.validator.setDefaults({
@@ -719,7 +702,6 @@
                 },
             },
         });
-
     </script>
     <script>
         $(document).ready(function() {
@@ -814,7 +796,6 @@
         //     $("#password-edit").show();
         //   });
         // });
-
     </script>
     <script>
         var table = $('#myDataTable').DataTable({
@@ -841,14 +822,6 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         });
-
-    </script>
-
-    <script>
-        $(function() {
-            $('select').selectpicker();
-        });
-
     </script>
 </body>
 

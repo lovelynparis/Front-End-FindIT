@@ -26,7 +26,11 @@
     <!-- Your custom css goes here -->
     <link rel="stylesheet" href="../lib/custom/css/custom.css">
 
-    <title>Associates</title>
+    <!-- Bootrap select -->
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/css/bootstrap-select.min.css">-->
+    <link rel="stylesheet" href="../lib/dist/bootstrap-select/dist/css/bootstrap-select.min.css">
+
+    <title>Inventory Concerns</title>
 </head>
 
 <body>
@@ -60,9 +64,17 @@
                         </a>
                     </li>
 
-                    <li class="active">
+
+                    <li>
                         <a href="#">
                             <i class="fas fa-users"></i>
+                            <span class="hide-menu">Employees</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user-tie"></i>
                             <span class="hide-menu">Associates</span>
                         </a>
                     </li>
@@ -81,7 +93,7 @@
                         </a>
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href="#">
                             <i class="fas fa-exclamation-circle"></i>
                             <span class="hide-menu">Inventory Concerns</span>
@@ -335,93 +347,104 @@
                             <div class="d-flex flex-row-reverse">
                                 <div class="p-2">
 
-                                    <!-- Add Associate Modal -->
-                                    <div class="modal fade" id="addAssociate" tabindex="-1" role="dialog" aria-labelledby="addAssociateTitle" aria-hidden="true">
+                                    <!-- Add Concern Modal -->
+                                    <div class="modal fade" id="addConcern" tabindex="-1" role="dialog" aria-labelledby="addConcernTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
-                                                <div id="addAssociateHeader" class="modal-header">
-                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-user-plus"></i>&nbsp;Add Associate</h5>
+                                                <div id="addConcernHeader" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-plus"></i>&nbsp;Add Concern</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 </div>
                                                 <div class="modal-body">
                                                     <div class="row">
-
                                                         <div class="col">
                                                             <form>
-                                                                <label class="label">Name: </label>
+                                                                <label class="label">Equipment Name: </label>
                                                                 <br>
-                                                                <input type="text" name="search_employee" id="search_employee" placeholder="search by employee name" size="35"><br>
+                                                                <!--<input type="text" name="name" size="35"><br>-->
+                                                                <!--Bootstrap-select name-->
+                                                                <select class="selectpicker" data-live-search="true" size="35">
+                                                                <!--Add key words to options to improve their searchability using data-tokens.-->
+                                                                <option data-tokens=""></option>
+                                                                </select>
                                                             </form>
                                                         </div>
 
-
-
                                                     </div>
 
-
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <label class="label">Department: </label>
-                                                            <br> Information Technology Development Department
-                                                        </div>
-                                                    </div>
                                                     <br>
+
                                                     <div class="row">
-                                                        <div class="col">
-                                                            <label class="label">Details </label>
+                                                        <div class="col-6">
+                                                            <label class="label">Equipment Type:</label>
                                                             <br>
-                                                            <div class="container">
+                                                            <div class="form-group">
+                                                                <select class="exampleFormControlSelect1">
+                                                                  <option>Computer Component</option>
+                                                                  <option>Computer Peripheral</option>
+                                                                  <option>Mobile Device</option>
+                                                                  <option>ITEM 4</option>
+                                                                  
+                                                                </select>
+                                                            </div>
 
-                                                              
-                                       <input type="hidden" name="hidden_name" id="hidden_name" />
-                                                                <div style="clear:both"></div>
-                                                                <br>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <label class="label">Equipment Sub-type:</label>
+                                                            <br>
+                                                            <div class="form-group">
+                                                                <select class="exampleFormControlSelect1">
+                                                                  <option></option>
+                                                                  <option></option>
+                                                                  <option></option>
+                                                                  <option></option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
 
-                                                                <div class="table-responsive">
-                                                                    <table class="table table-striped table-bordered">
-                                                                        <thead>
-                                                                            <tr>
-                                                                                <th>Family Name</th>
-                                                                                <th>Last Name</th>
-                                                                                <th>Email</th>
-                                                                               
-                                                                            </tr>
-                                                                        </thead>
-                                                                        <tbody id="tbodyname">
-                                                                            
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
+                                                    </div>
 
+                                                    <br>
 
+                                                    <div class="row">
 
-                                                                <!--
-                                                                <table style="width:100%">
-                                                                    <tr>
-                                                                        <th>Firstname</th>
-                                                                        <th>Lastname</th>
-                                                                        <th>Email</th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Null</td>
-                                                                        <td>Null</td>
-                                                                        <td>Null</td>
-                                                                    </tr>
-
-                                                                </table>
--->
+                                                        <div class="col-6">
+                                                            <label class="label">System Unit:</label>
+                                                            <br>
+                                                            <div class="form-group border">
+                                                                <input type="text" class="form-box" style="border: none;">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6 pb-3">
+                                                            <label class="label">Id:</label>
+                                                            <br>
+                                                            <div class="form-group border">
+                                                                <input type="text" class="form-box" style="border: none;">
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div id="result"></div>
+                                              
+                                                    <div class="row">
 
+                                                        <div class="col">
+                                                            <label class="label">Remarks:</label>
+                                                            <br>
+                                                            <form>
+                                                                <textarea name="remarks" rows="5" cols="50"></textarea>
+                                                                <br>
+
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
 
 
 
                                                 </div>
+
                                                 <div class="modal-footer">
-                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-save"></span>    SAVE</button>
-                                                    <button id="cancel" type="button" class="btn btn-danger" data-dismiss="modal">CANCEL</button>
+                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-plus"></span>ADD</button>
+                                                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -429,55 +452,11 @@
 
 
 
-                                    <!-- Modal Associate successfully added!-->
-                                    <div class="modal fade" id="successAssociate" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div id="successAssociate" class="modal-header">
-                                                    <h5 class="modal-title" id="ModalTitle"></h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <i id="successIcon" class="far fa-check-circle fa-10x"></i>
-                                                    <p id="successText">Associate successfully added!</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--- Failed To Add Associate Modal Design --->
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="failedModal" tabindex="-1" role="dialog" aria-labelledby="failedModalTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div id="failedHeader" class="modal-header">
-                                                    <h5 class="modal-title" id="ModalTitle"></h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <i id="failedIcon" class="far fa-times-circle fa-10x"></i>
-                                                    <p id="failedText">Failed to add Associate!</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button id="retryFailedButton" type="button" class="btn btn-danger" data-dismiss="modal">RETRY</button>
-                                                    <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-                                    <!-- Associate tools ADD EDIT DELETE-->
+                                    <!-- Add Concern Button-->
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addAssociate" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span>Add Associate</button>
-                                        <!--   <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-edit" data-toggle="tooltip" title="Edit Associate"></span></button>-->
-                                        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span>Remove Associate</button>
+                                        <button type="button" class="btn btn-success" data-toggle="modal" data-target="#addConcern" style="padding-left: 15px;"><span class="fas fa-plus" data-toggle="tooltip" title="Add Concern" ></span>Add Concern</button>
+
+
                                     </div>
 
 
@@ -487,44 +466,7 @@
 
 
 
-                            <table id="myDataTable" class="table table-borderless table-striped table-hover table-responsive" style="width:100%">
-                                <thead class="thead-dark">
-                                    <tr>
-
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Department</th>
-                                        <th>Status</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-
-                                    <tr>
-                                        <td>Jon Paulo Faypon</td>
-                                        <td>twistafries@gmail.com</td>
-                                        <td>Information Technology Development Department</td>
-                                        <td>active</td>
-                                        <td>
-                                            <button class="btn btn-secondary" id="deactivate">Deactivate</button>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Gavin Roy Ferrer</td>
-                                        <td>gavinroy@gmail.com</td>
-                                        <td>Information Technology Development Department</td>
-                                        <td>inactive</td>
-                                        <td>
-                                            <button class="btn btn-secondary" id="deactivate">Activate</button>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-
-                            </table>
-
+                          
 
 
 
@@ -550,6 +492,9 @@
     <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
     <script src="../lib/dist/datatable/jquery.dataTables.min.js"></script>
     <script src="../lib/dist/datatable/dataTables.bootstrap4.min.js"></script>
+    <!-- Boostrap-select-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/js/bootstrap-select.min.js"></script>-->
+    <script src="../lib/dist/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -705,7 +650,7 @@
 
     </script>
     <script>
-        var table = $('table').DataTable({
+        var table = $('#myDataTable').DataTable({
             scrollY: '50vh',
             scrollCollapse: true,
             // scrollX: '100vw',        
@@ -731,26 +676,10 @@
         });
 
     </script>
+
     <script>
-        $(document).ready(function() {
-
-            load_data();
-
-            function load_data(query = '') {
-                $.ajax({
-                    url: "fetch.php",
-                    method: "POST",
-                    data: {
-                        query: query
-                    },
-                    success: function(data) {
-                        $('tbodyname').html(data);
-                    }
-                })
-            }
-
-          
-
+        $(function() {
+            $('select').selectpicker();
         });
 
     </script>
