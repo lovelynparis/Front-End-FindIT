@@ -384,7 +384,7 @@
                                                                   <option>Computer Peripheral</option>
                                                                   <option>Mobile Device</option>
                                                                   <option>ITEM 4</option>
-                                                                  
+
                                                                 </select>
                                                             </div>
 
@@ -423,7 +423,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                              
+
                                                     <div class="row">
 
                                                         <div class="col">
@@ -466,7 +466,7 @@
 
 
 
-                          
+
 
 
 
@@ -554,6 +554,7 @@
         });
 
     </script>
+    <!--user profile save/cancel button-->
     <script>
         $(document).ready(function() {
             $.fn.showInfo = function(elementsHideID, elementsShowID) {
@@ -563,97 +564,42 @@
                 });
             }
 
+            $.fn.hideInfo = function(elementsHide) {
+                $.each(elementsHide, function(index, value) {
+                    $("#" + value + " > .display").hide();
+                });
+            }
+
             $("#divname .edit").click(function() {
                 $.fn.showInfo("divname", ["divdepartment", "divemail", "divpassword"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#name").hide();
-                    $("#cancel-save").hide();
-                });
             });
 
             $("#divdepartment .edit").click(function() {
                 $.fn.showInfo("divdepartment", ["divname", "divemail", "divpassword"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#department").hide();
-                    $("#cancel-save").hide();
-                });
             });
 
             $("#divemail .edit").click(function() {
                 $.fn.showInfo("divemail", ["divname", "divdepartment", "divpassword"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#email").hide();
-                    $("#cancel-save").hide();
-                });
             });
 
             $("#divpassword .edit").click(function() {
                 $.fn.showInfo("divpassword", ["divname", "divdepartment", "divemail"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#password").hide();
-                    $("#cancel-save").hide();
-                });
+            });
+
+            $(".password-cancel").click(function() {
+                $.fn.hideInfo(["divname", "divdepartment", "divemail", "divpassword"]);
             });
         });
-        //   //name
-        //   $("#name-edit").click(function(){
-        //     $("#fullname").hide();
-        //     $("#name-edit").hide();
-        //     $("#name").show();
-        //   });
-        //   $(".name-cancel").click(function(){
-        //     $("#name").hide();
-        //     $("#fullname").show();
-        //     $("#name-edit").show();
-        //   });
-        //
-        //   //department
-        //   $("#department-edit").click(function(){
-        //     $("#department-info").hide();
-        //     $("#department-edit").hide();
-        //     $("#department").show();
-        //   });
-        //   $(".department-cancel").click(function(){
-        //     $("#department").hide();
-        //     $("#department-info").show();
-        //     $("#department-edit").show();
-        //   });
-        //
-        //   //email
-        //   $("#email-edit").click(function(){
-        //     $("#email-add").hide();
-        //     $("#email-edit").hide();
-        //     $("#email").show();
-        //   });
-        //   $(".email-cancel").click(function(){
-        //     $("#email").hide();
-        //     $("#email-add").show();
-        //     $("#email-edit").show();
-        //   });
-        //
-        //     //password
-        //   $("#password-edit").click(function(){
-        //     $("#password-info").hide();
-        //     $("#password-edit").hide();
-        //     $("#password").show();
-        //   });
-        //   $(".password-cancel").click(function(){
-        //     $("#password").hide();
-        //     $("#password-info").show();
-        //     $("#password-edit").show();
-        //   });
-        // });
-
     </script>
     <script>
         var table = $('#myDataTable').DataTable({
             scrollY: '50vh',
             scrollCollapse: true,
-            // scrollX: '100vw',        
+            // scrollX: '100vw',
 
             'ajax': '',
             'select': 'multi',
