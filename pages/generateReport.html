@@ -298,6 +298,7 @@
                         <option value="Inventory Equipment Type">Inventory Equipment Type</option>
                         <option value="Inventory Equipment Status">Inventory Equipment Status</option>
                         <option value="Office Supplies">Office Supplies</option>
+                        <option value="Issuance">Issuance</option>
                       </select>
                       <select class="selectpicker input-date2 collapse" id="category-select5" data-container="body">
                         <option disabled selected hidden>type</option>
@@ -306,6 +307,30 @@
                         <option value="To Be Returned">To be Returned</option>
                         <option value="Decommissioned">Decommissioned</option>
                         <option value="Pending">Pending</option>
+                      </select>
+                      <select class="selectpicker input-date2 collapse" id="category-select6" data-container="body">
+                        <option disabled selected hidden>type</option>
+                        <option value="All2">All</option>
+                        <option value="Items Added">Items Added</option>
+                        <option value="Items Edited">Items Edited</option>
+                        <option value="Items Deleted">Items Deleted</option>
+                      </select>
+                      <select class="selectpicker input-date2 collapse" id="category-select7" data-container="body">
+                        <option disabled selected hidden>type</option>
+                        <option value="All3">All</option>
+                        <option value="Computer Components">Computer Components</option>
+                        <option value="Computer Peripherals">Computer peripherals</option>
+                        <option value="Mobile Devices">Mobile Devices</option>
+                      </select>
+                      <select class="selectpicker input-date2 collapse" id="category-select8" data-container="body">
+                        <option disabled selected hidden>type</option>
+                        <option value="All4">All</option>
+                        <option value="Associates">Associates</option>
+                        <option value="Admin">Admin</option>
+                        <option value="Admin and Associates">Admin and Associates</option>
+                        <option value="User">User</option>
+                        <option value="Date">Date</option>
+                        <option value="Item Category">Item Category</option>
                       </select>
                     </div>
                     <!--Export/Print-->
@@ -396,7 +421,7 @@
                     </div>
                     <div class="card add" id="" style="margin-left: 2rem; margin-right: 2rem;">
                       <div class="" style=" margin-top: 1rem;">
-                        <p class="card-title text-right">Date: 4/16/2019</p>
+                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory Concerns Report as of January 2019</p>
                       </div>
@@ -422,46 +447,15 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>MSI B450-A Pro</td>
-                              <td>Computer Component</td>
-                              <td>Motherboard</td>
-                              <td>"Socket: AM4
-                                  Chipset: AMD B450
-                                  Size: ATX
-                                  RAM: 4 Slots, DDR4
-                                  PCIe: x16, PCIe 3.0
-                                  Ports: USB 3.1, SATA 6Gb/s"</td>
-                              <td>601-7577-010B0903273465</td>
-                              <td>Available</td>
-                              <td>Mehanie Lonogan</td>
                               <td></td>
-                              <td>2019-01-18</td>
                               <td></td>
-                            </tr>
-                            <tr>
-                              <td>R5 1500X</td>
-                              <td>Computer Component</td>
-                              <td>CPU</td>
-                              <td>"Socket: AM4
-                                  4-core 8-thread 3.5GHz-3.7GHz
-                                  TDP: 65W"</td>
-                              <td>YD170XBCM88AE</td>
-                              <td>Available</td>
-                              <td>Kim Willy</td>
                               <td></td>
-                              <td>2019-01-25</td>
                               <td></td>
-                            </tr>
-                            <tr>
-                              <td>HDD 1TB</td>
-                              <td>Computer Component</td>
-                              <td>Motherboard</td>
-                              <td>Seagate 1TB Harddisk Drive</td>
-                              <td>YST-657A-DATSDC</td>
-                              <td>Available</td>
-                              <td>Geovelle Andres</td>
                               <td></td>
-                              <td>2019-02-12</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
                               <td></td>
                             </tr>
                           </tbody>
@@ -489,46 +483,15 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>MSI B450-A Pro</td>
-                              <td>Computer Component</td>
-                              <td>Motherboard</td>
-                              <td>"Socket: AM4
-                                  Chipset: AMD B450
-                                  Size: ATX
-                                  RAM: 4 Slots, DDR4
-                                  PCIe: x16, PCIe 3.0
-                                  Ports: USB 3.1, SATA 6Gb/s"</td>
-                              <td>601-7577-010B0903273465</td>
-                              <td>Available</td>
-                              <td>Mehanie Lonogan</td>
                               <td></td>
-                              <td>2019-01-18</td>
                               <td></td>
-                            </tr>
-                            <tr>
-                              <td>R5 1500X</td>
-                              <td>Computer Component</td>
-                              <td>CPU</td>
-                              <td>"Socket: AM4
-                                  4-core 8-thread 3.5GHz-3.7GHz
-                                  TDP: 65W"</td>
-                              <td>YD170XBCM88AE</td>
-                              <td>Available</td>
-                              <td>Kim Willy</td>
                               <td></td>
-                              <td>2019-01-25</td>
                               <td></td>
-                            </tr>
-                            <tr>
-                              <td>HDD 1TB</td>
-                              <td>Computer Component</td>
-                              <td>Motherboard</td>
-                              <td>Seagate 1TB Harddisk Drive</td>
-                              <td>YST-657A-DATSDC</td>
-                              <td>Available</td>
-                              <td>Geovelle Andres</td>
                               <td></td>
-                              <td>2019-02-12</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
                               <td></td>
                             </tr>
                           </tbody>
@@ -556,46 +519,15 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>MSI B450-A Pro</td>
-                              <td>Computer Component</td>
-                              <td>Motherboard</td>
-                              <td>"Socket: AM4
-                                  Chipset: AMD B450
-                                  Size: ATX
-                                  RAM: 4 Slots, DDR4
-                                  PCIe: x16, PCIe 3.0
-                                  Ports: USB 3.1, SATA 6Gb/s"</td>
-                              <td>601-7577-010B0903273465</td>
-                              <td>Available</td>
-                              <td>Mehanie Lonogan</td>
                               <td></td>
-                              <td>2019-01-18</td>
                               <td></td>
-                            </tr>
-                            <tr>
-                              <td>R5 1500X</td>
-                              <td>Computer Component</td>
-                              <td>CPU</td>
-                              <td>"Socket: AM4
-                                  4-core 8-thread 3.5GHz-3.7GHz
-                                  TDP: 65W"</td>
-                              <td>YD170XBCM88AE</td>
-                              <td>Available</td>
-                              <td>Kim Willy</td>
                               <td></td>
-                              <td>2019-01-25</td>
                               <td></td>
-                            </tr>
-                            <tr>
-                              <td>HDD 1TB</td>
-                              <td>Computer Component</td>
-                              <td>Motherboard</td>
-                              <td>Seagate 1TB Harddisk Drive</td>
-                              <td>YST-657A-DATSDC</td>
-                              <td>Available</td>
-                              <td>Geovelle Andres</td>
                               <td></td>
-                              <td>2019-02-12</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
                               <td></td>
                             </tr>
                           </tbody>
@@ -623,46 +555,15 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td>MSI B450-A Pro</td>
-                              <td>Computer Component</td>
-                              <td>Motherboard</td>
-                              <td>"Socket: AM4
-                                  Chipset: AMD B450
-                                  Size: ATX
-                                  RAM: 4 Slots, DDR4
-                                  PCIe: x16, PCIe 3.0
-                                  Ports: USB 3.1, SATA 6Gb/s"</td>
-                              <td>601-7577-010B0903273465</td>
-                              <td>Available</td>
-                              <td>Mehanie Lonogan</td>
                               <td></td>
-                              <td>2019-01-18</td>
                               <td></td>
-                            </tr>
-                            <tr>
-                              <td>R5 1500X</td>
-                              <td>Computer Component</td>
-                              <td>CPU</td>
-                              <td>"Socket: AM4
-                                  4-core 8-thread 3.5GHz-3.7GHz
-                                  TDP: 65W"</td>
-                              <td>YD170XBCM88AE</td>
-                              <td>Available</td>
-                              <td>Kim Willy</td>
                               <td></td>
-                              <td>2019-01-25</td>
                               <td></td>
-                            </tr>
-                            <tr>
-                              <td>HDD 1TB</td>
-                              <td>Computer Component</td>
-                              <td>Motherboard</td>
-                              <td>Seagate 1TB Harddisk Drive</td>
-                              <td>YST-657A-DATSDC</td>
-                              <td>Available</td>
-                              <td>Geovelle Andres</td>
                               <td></td>
-                              <td>2019-02-12</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
                               <td></td>
                             </tr>
                           </tbody>
@@ -746,9 +647,107 @@
                     </div>
                     <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
                       <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
-                        <p class="card-title text-right">Date: 4/16/2019</p>
+                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory Operations Report as of January 2019</p>
+                      </div>
+                      <!--Items Added-->
+                      <div class="collapse all" id="add">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Items Added</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Item Name </th>
+                              <th scope="col">Type</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">Serial No.</th>
+                              <th scope="col">OR No.</th>
+                              <th scope="col">Added At</th>
+                              <th scope="col">Added By</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--Items Edited-->
+                      <div class="collapse all" id="edit">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Items Edited</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Item Name </th>
+                              <th scope="col">Type</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">Serial No.</th>
+                              <th scope="col">OR No.</th>
+                              <th scope="col">Added At</th>
+                              <th scope="col">Edited At</th>
+                              <th scope="col">Added By</th>
+                              <th scope="col">Edited By</th>
+                              <th scope="col">Remarks</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--Items Deleted-->
+                      <div class="collapse all" id="delete">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Items Deleted</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Item Name </th>
+                              <th scope="col">Type</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">Serial No.</th>
+                              <th scope="col">OR No.</th>
+                              <th scope="col">Added At</th>
+                              <th scope="col">Added By</th>
+                              <th scope="col">Deleted By</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </div>
                   </div>
@@ -828,19 +827,551 @@
                     </div>
                     <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
                       <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
-                        <p class="card-title text-right">Date: 4/16/2019</p>
+                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory Equipment Type Report as of January 2019</p>
                       </div>
+                      <!--Computer Components-->
+                      <div class="collapse all" id="components">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Computer Components</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Item Name </th>
+                              <th scope="col">Details</th>
+                              <th scope="col">Serial No.</th>
+                              <th scope="col">OR No.</th>
+                              <th scope="col">Added At</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Date</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--Computer Peripherals-->
+                      <div class="collapse all" id="peripherals">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Computer Peripherals</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Item Name </th>
+                              <th scope="col">Details</th>
+                              <th scope="col">Serial No.</th>
+                              <th scope="col">OR No.</th>
+                              <th scope="col">Added At</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Date</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--Mobile Devices-->
+                      <div class="collapse all" id="mobile">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Mobile Devices</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Item Name </th>
+                              <th scope="col">Details</th>
+                              <th scope="col">Serial No.</th>
+                              <th scope="col">OR No.</th>
+                              <th scope="col">Added At</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Date</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
                     </div>
                   </div>
+                  <!--inventory equipment Status-->
+                  <div class="card add collapse" id="inventoryEquipmentStatusFilter" style="padding-top: 3rem; padding-bottom: 2rem;">
+                    <!--filter-->
+                    <div class="row">
+                      <div class="col col-lg-4 input-date2" style="margin-left: 2rem;">
+                        <label class="label-date" style="margin-right: 1rem;">Components Added</label>
+                        <select class="category-select4" id="category-select4" class="" style="width: 10rem; height: 1.9rem;">
+                          <option id="initial-category-value"></option>
+                          <option value="Time Unit">For the (time unit) of</option>
+                          <option value="Month">For the Month of</option>
+                          <option value="Year">For the Year of</option>
+                          <option value="Day">For the Day of</option>
+                        </select>
+                      </div>
+                      <!--For the Time Value Collapse-->
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue1" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
+                        </div>
+                        <p class="collapse" id="to">To</p>
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2" style="padding-right: 0!important; padding-left: 1.5rem;">
+                          <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
+                        </div>
+                      <!--For the mmonth of-->
+                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                          </select>
+                        </div>
+                        <div class="col col-lg-2 input-date2 collapse" id="selectYear" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Year</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                          </select>
+                        </div>
+                      <!--For the year of-->
+                        <div class="col col-lg-2 input-date2 collapse" id="selectYear2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Year</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                          </select>
+                        </div>
+                      <!--For the day of-->
+                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                          </select>
+                        </div>
+                        <div class="col col-lg-2 input-date2 collapse" id="selectDay" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </div>
+                        <div class="col col-lg-2 input-date2 collapse" id="selectYear3" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden> Year</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
+                      <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
+                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
+                        <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
+                        <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory Equipment Status Report as of January 2019</p>
+                      </div>
+                      <!--table-->
+                      <div class="all" id="">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Equipment Status</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Item Name </th>
+                              <th scope="col">Type</th>
+                              <th scope="col">Subtype</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">OR No.</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Remarks</th>
+                              <th scope="col">Date</th>
+                              <th scope="col">Issued By</th>
+                              <th scope="col">Issued To</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!--Office Supplies-->
+                  <div class="card add collapse" id="officeSupplies" style="padding-top: 3rem; padding-bottom: 2rem;">
+                    <!--filter-->
+                    <div class="row">
+                      <div class="col col-lg-4 input-date2" style="margin-left: 2rem;">
+                        <label class="label-date" style="margin-right: 1rem;">Components Added</label>
+                        <select class="category-select4" id="category-select4" class="" style="width: 10rem; height: 1.9rem;">
+                          <option id="initial-category-value"></option>
+                          <option value="Time Unit">For the (time unit) of</option>
+                          <option value="Month">For the Month of</option>
+                          <option value="Year">For the Year of</option>
+                          <option value="Day">For the Day of</option>
+                        </select>
+                      </div>
+                      <!--For the Time Value Collapse-->
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue1" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
+                        </div>
+                        <p class="collapse" id="to">To</p>
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2" style="padding-right: 0!important; padding-left: 1.5rem;">
+                          <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
+                        </div>
+                      <!--For the mmonth of-->
+                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                          </select>
+                        </div>
+                        <div class="col col-lg-2 input-date2 collapse" id="selectYear" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Year</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                          </select>
+                        </div>
+                      <!--For the year of-->
+                        <div class="col col-lg-2 input-date2 collapse" id="selectYear2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Year</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                          </select>
+                        </div>
+                      <!--For the day of-->
+                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                          </select>
+                        </div>
+                        <div class="col col-lg-2 input-date2 collapse" id="selectDay" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </div>
+                        <div class="col col-lg-2 input-date2 collapse" id="selectYear3" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden> Year</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
+                      <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
+                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
+                        <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
+                        <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory of Office Supplies Report as of January 2019</p>
+                      </div>
+                      <!--table-->
+                      <div class="all" id="">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Office Supplies</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Item Name</th>
+                              <th scope="col">Description</th>
+                              <th scope="col">Status</th>
+                              <th scope="col">Remarks</th>
+                              <th scope="col">Date Purchased</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <!--issuance-->
+                  <div class="card add collapse" id="Issuance" style="padding-top: 3rem; padding-bottom: 2rem;">
+                    <!--filter-->
+                    <div class="row">
+                      <div class="col col-lg-4 input-date2" style="margin-left: 2rem;">
+                        <label class="label-date" style="margin-right: 1rem;">Components Added</label>
+                        <select class="category-select4" id="category-select4" class="" style="width: 10rem; height: 1.9rem;">
+                          <option id="initial-category-value"></option>
+                          <option value="Time Unit">For the (time unit) of</option>
+                          <option value="Month">For the Month of</option>
+                          <option value="Year">For the Year of</option>
+                          <option value="Day">For the Day of</option>
+                        </select>
+                      </div>
+                      <!--For the Time Value Collapse-->
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue1" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
+                        </div>
+                        <p class="collapse" id="to">To</p>
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2" style="padding-right: 0!important; padding-left: 1.5rem;">
+                          <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
+                        </div>
+                      <!--For the mmonth of-->
+                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                          </select>
+                        </div>
+                        <div class="col col-lg-2 input-date2 collapse" id="selectYear" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Year</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                          </select>
+                        </div>
+                      <!--For the year of-->
+                        <div class="col col-lg-2 input-date2 collapse" id="selectYear2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Year</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                          </select>
+                        </div>
+                      <!--For the day of-->
+                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Month</option>
+                            <option value="1">January</option>
+                            <option value="2">February</option>
+                            <option value="3">March</option>
+                          </select>
+                        </div>
+                        <div class="col col-lg-2 input-date2 collapse" id="selectDay" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden>Day</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </div>
+                        <div class="col col-lg-2 input-date2 collapse" id="selectYear3" style="padding-right: 0!important; padding-left: 3.5rem;">
+                          <select id="" class="" style="width: 10rem; height: 1.9rem;">
+                            <option disabled selected hidden> Year</option>
+                            <option value="1">2017</option>
+                            <option value="2">2018</option>
+                            <option value="3">2019</option>
+                          </select>
+                        </div>
+                    </div>
+                    <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
+                      <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
+                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
+                        <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
+                        <p class="card-title text-center" style="font-size: 20px; color: #555555;">Issuance Report as of January 2019</p>
+                      </div>
+                      <!--Admin-->
+                      <div class="collapse all" id="admin">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Admin</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col"></th>
+                              <th scope="col"></th>
+                              <th scope="col"></th>
+                              <th scope="col"></th>
+                              <th scope="col"></th>
+                              <th scope="col"></th>
+                              <th scope="col"></th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--Associates-->
+                      <div class="collapse all" id="associates">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Associates</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Equipment Status</th>
+                              <th scope="col">Issued to </th>
+                              <th scope="col">Issued Until</th>
+                              <th scope="col">Returned At</th>
+                              <th scope="col">Updated at</th>
+                              <th scope="col">Remarks</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--Admin and Associate-->
+                      <div class="collapse all" id="AdminAndAssociate">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Admin and Associates</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">User Type</th>
+                              <th scope="col">Issued by (UserName)</th>
+                              <th scope="col">Item Name</th>
+                              <th scope="col">Item Type</th>
+                              <th scope="col">Serial No.</th>
+                              <th scope="col">Or No.</th>
+                              <th scope="col">Equipment Status</th>
+                              <th scope="col">Issued to</th>
+                              <th scope="col">Issued At</th>
+                              <th scope="col">Issued Until</th>
+                              <th scope="col">Returned At</th>
+                              <th scope="col">Updated at</th>
+                              <th scope="col">Remarks</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--Users-->
+                      <div class="collapse all" id="users">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Users</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Item Type</th>
+                              <th scope="col">Serial No.</th>
+                              <th scope="col">Or No.</th>
+                              <th scope="col">Equipment Status</th>
+                              <th scope="col">Issued to</th>
+                              <th scope="col">Issued by (UserName)</th>
+                              <th scope="col">Issued At</th>
+                              <th scope="col">Issued Until</th>
+                              <th scope="col">Returned At</th>
+                              <th scope="col">Updated at</th>
+                              <th scope="col">Remarks</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div></div></div>
                   <!--Graph-->
                   <div class="row">
                     <div class="col col-6 collapse" id="container2" style="height: 300px; margin-top: 2rem;"></div>
                     <div class="col col-6 collapse" id="container3" style="height: 300px; margin-top: 2rem;"></div>
                   </div>
-                </div>
-
     <!-- JQuery Core -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/jquery/dist/jquery.min.js"></script>
@@ -1007,22 +1538,82 @@
                     $("#category-select5").show();
                     $("#inventoryOperationsFilter").hide();
                     $("#inventoryEquipmentTypeFilter").hide();
+                    $("#inventoryEquipmentStatusFilter").hide();
+                    $("#officeSupplies").hide();
+                    $("#Issuance").hide();
+                    $("#category-select6").hide();
+                    $("#category-select7").hide();
+                    $("#category-select8").hide();
                     break;
                 case "Inventory Operations":
                     $("#inventoryOperationsFilter").show();
                     $("#container2").show();
                     $("#container3").show();
+                    $("#category-select6").show();
                     $("#inventoryConcernsFilter").hide();
                     $("#inventoryEquipmentTypeFilter").hide();
+                    $("#inventoryEquipmentStatusFilter").hide();
+                    $("#officeSupplies").hide();
+                    $("#Issuance").hide();
                     $("#category-select5").hide();
+                    $("#category-select7").hide();
+                    $("#category-select8").hide();
                     break;
                 case "Inventory Equipment Type":
                     $("#inventoryEquipmentTypeFilter").show();
                     $("#container2").show();
                     $("#container3").show();
+                    $("#category-select7").show();
                     $("#inventoryConcernsFilter").hide();
                     $("#inventoryOperationsFilter").hide();
+                    $("#inventoryEquipmentStatusFilter").hide();
+                    $("#officeSupplies").hide();
+                    $("#Issuance").hide();
                     $("#category-select5").hide();
+                    $("#category-select6").hide();
+                    $("#category-select8").hide();
+                    break;
+                case "Inventory Equipment Status":
+                    $("#inventoryEquipmentStatusFilter").show();
+                    $("#container2").show();
+                    $("#container3").show();
+                    $("#inventoryConcernsFilter").hide();
+                    $("#inventoryOperationsFilter").hide();
+                    $("#inventoryEquipmentTypeFilter").hide();
+                    $("#officeSupplies").hide();
+                    $("#Issuance").hide();
+                    $("#category-select5").hide();
+                    $("#category-select6").hide();
+                    $("#category-select7").hide();
+                    $("#category-select8").hide();
+                    break;
+                case "Office Supplies":
+                    $("#officeSupplies").show();
+                    $("#container2").show();
+                    $("#container3").show();
+                    $("#inventoryConcernsFilter").hide();
+                    $("#inventoryOperationsFilter").hide();
+                    $("#inventoryEquipmentTypeFilter").hide();
+                    $("#inventoryEquipmentStatusFilter").hide();
+                    $("#Issuance").hide();
+                    $("#category-select5").hide();
+                    $("#category-select6").hide();
+                    $("#category-select7").hide();
+                    $("#category-select8").hide();
+                    break;
+                case "Issuance":
+                    $("#Issuance").show();
+                    $("#container2").show();
+                    $("#container3").show();
+                    $("#category-select8").show();
+                    $("#inventoryConcernsFilter").hide();
+                    $("#inventoryOperationsFilter").hide();
+                    $("#inventoryEquipmentTypeFilter").hide();
+                    $("#inventoryEquipmentStatusFilter").hide();
+                    $("#officeSupplies").hide();
+                    $("#category-select5").hide();
+                    $("#category-select6").hide();
+                    $("#category-select7").hide();
                     break;
                 default:
             }
@@ -1049,16 +1640,6 @@
                     $("#selectYear2").hide();
                     $("#selectDay").hide();
                     break;
-                    case "Time Unit2":
-                        $("#timeValue1").show();
-                        $("#to").show();
-                        $("#timeValue2").show();
-                        $("#selectMonth").hide();
-                        $("#selectMonth2").hide();
-                        $("#selectYear").hide();
-                        $("#selectYear2").hide();
-                        $("#selectDay").hide();
-                        break;
                 case "Month":
                     $("#selectMonth").show();
                     $("#selectYear").show();
@@ -1243,7 +1824,6 @@
                     $("#inventoryTable3").hide();
                     break;
                 case "All":
-                    // $(".all").show();
                     $("#inventoryTable1").show();
                     $("#inventoryTable2").show();
                     $("#inventoryTable3").show();
@@ -1252,7 +1832,71 @@
                 default:
             }
         });
+        $("#category-select6").on('change', function() {
+            var category = $("#category-select6").val();
+            switch (category) {
+                case "Items Added":
+                    $("#add").show();
+                    $("#edit").hide();
+                    $("#delete").hide();
+                    break;
+                case "Items Edited":
+                    $("#edit").show();
+                    $("#add").hide();
+                    $("#delete").hide();
+                    break;
+                case "Items Deleted":
+                    $("#delete").show();
+                    $("#add").hide();
+                    $("#edit").hide();
+                    break;
+                case "All2":
+                    $("#add").show();
+                    $("#edit").show();
+                    $("#delete").show();
+                    break;
+                default:
+            }
+        });
+        $("#category-select7").on('change', function() {
+            var category = $("#category-select7").val();
+            switch (category) {
+                case "Computer Components":
+                    $("#components").show();
+                    $("#peripherals").hide();
+                    $("#mobile").hide();
+                    break;
+                case "Computer Peripherals":
+                    $("#peripherals").show();
+                    $("#components").hide();
+                    $("#mobile").hide();
+                    break;
+                case "Mobile Devices":
+                    $("#mobile").show();
+                    $("#components").hide();
+                    $("#peripherals").hide();
+                    break;
+                case "All3":
+                    $("#components").show();
+                    $("#peripherals").show();
+                    $("#mobile").show();
+                    break;
+                default:
+            }
+        });
       });
+    </script>
+    <!-- date -->
+    <script>
+      function ShowLocalDate(){
+        var dNow = new Date();
+        var localdate = ("Date:" + dNow.getMonth()+1) + '/'
+                        + dNow.getDate() + '/'
+                        + dNow.getFullYear() + ' '
+                        + dNow.getHours() + ':'
+                        + dNow.getMinutes();
+        $('.date').text(localdate)
+      }
     </script>
 </body>
 
