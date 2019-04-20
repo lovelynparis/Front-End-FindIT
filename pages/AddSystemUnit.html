@@ -26,7 +26,11 @@
     <!-- Your custom css goes here -->
     <link rel="stylesheet" href="../lib/custom/css/custom.css">
 
-    <title>Dashboard</title>
+    <!-- Bootrap select -->
+    <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/css/bootstrap-select.min.css">-->
+    <link rel="stylesheet" href="../lib/dist/bootstrap-select/dist/css/bootstrap-select.min.css">
+
+    <title>Add System Unit</title>
 </head>
 
 <body>
@@ -68,7 +72,7 @@
                         </a>
                     </li>
 
-                    <li class="active">
+                    <li>
                         <a href="#">
                             <i class="fas fa-user-tie"></i>
                             <span class="hide-menu">Associates</span>
@@ -89,7 +93,7 @@
                         </a>
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href="#">
                             <i class="fas fa-exclamation-circle"></i>
                             <span class="hide-menu">Inventory Concerns</span>
@@ -343,291 +347,260 @@
                             <div class="d-flex flex-row-reverse">
                                 <div class="p-2">
 
-                                    <!-- Add Associate Modal -->
-                                    <div class="modal fade" id="addAssociate" tabindex="-1" role="dialog" aria-labelledby="addAssociateTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <!-- Add System Unit -->
+
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add System Unit </button>
+
+                                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                        <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
-                                                <div id="addAssociateHeader" class="modal-header">
-                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-user-plus"></i>&nbsp;Add Associate</h5>
+
+                                                <div id="addSystemUnit" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle"><i class=""></i>&nbsp;Add System Unit</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 </div>
-                                                <div class="modal-body">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <form>
-                                                                <label class="label">Name: </label>
-                                                                <br>
-                                                                <input type="text" name="name" size="35"><br>
-                                                            </form>
-                                                        </div>
-
-                                                    </div>
+                                                <div class="container" style="padding:2rem">
 
 
                                                     <div class="row">
-                                                        <div class="col">
-                                                            <label class="label">Details </label>
-                                                            <br>
-                                                            <div class="container">
+                                                        <div class="col-sm">
+
+                                                            <table class="table table-borderless table-striped table-hover table-responsive table-condensed" style="width:100%; ">
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Supplier</th>
+                                                                        <th>Warranty</th>
+                                                                        <th>OR no.</th>
 
 
-                                                                <table style="width:100%">
-                                                                    <tr>
-                                                                        <th>Firstname</th>
-                                                                        <th>Lastname</th>
-                                                                        <th>Email</th>
-                                                                        <th>Department</th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Null</td>
-                                                                        <td>Null</td>
-                                                                        <td>Null</td>
-                                                                        <td>Null</td>
+
                                                                     </tr>
 
-                                                                </table>
-
-
-
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!--
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                            <input type="text" class="form-control " id="recipient-name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="message-text" class="col-form-label">Message:</label>
-                                                            <textarea class="form-control" id="message-text"></textarea>
-                                                        </div>
-                                                    </form>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <form>
+                                                                                <!--
+                                                                        <label class="label">Supplier: </label>
+                                                                        <br>
 -->
+                                                                                <input type="text" name="supplier"><br>
+                                                                            </form>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <form>
+                                                                                <!--
+                                                                        <label class="label">Warranty Details: </label>
+                                                                        <br>
+-->
+                                                                                <label for="start">Start date:</label>
+                                                                                <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                                                                                <br>
+                                                                                <label for="start">End date:</label>
+                                                                                <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+
+                                                                            </form>
+                                                                        </td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                    </tr>
+                                                                </tbody>
 
 
 
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-plus"></span>    ADD</button>
-                                                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <table class="table table-borderless table-striped table-hover table-responsive" style="width:100%">
+                                                                <thead class="">
+                                                                    <tr>
+                                                                        <th>Component</th>
+                                                                        <th>Name</th>
+                                                                        <th>Mac Address</th>
+                                                                        <th>Serial no.</th>
+                                                                        <th>Details</th>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Motherboard</td>
+                                                                        <td> <input type="text" name="name"></td>
+                                                                        <td> <input type="text" name="name"></td>
+                                                                        <td> <input type="text" name="name"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
 
 
-                                    <!-- Remove Associate Modal -->
-                                    <div class="modal fade" id="removeAssociate" tabindex="-1" role="dialog" aria-labelledby="removeAssociateTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div id="removeAssociateHeader" class="modal-header">
-                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-user-plus"></i>&nbsp;Remove Associate</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <form>
-                                                                <label class="label">Name: </label>
-                                                                <br>
-                                                                <input type="text" name="name" size="35"><br>
-                                                            </form>
+                                                                    </tr>
+
+
+                                                                    <tr>
+                                                                        <td>CPU</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Storage</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>RAM</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>GPU</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+                                                                    </tr>
+
+
+
+                                                                    <tr>
+                                                                        <td>Case</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Heat Sink Fan</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                         <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Sound Card</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                         <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Optical Disk</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                         <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+                                                                    </tr>
+
+
+
+
+
+
+
+                                                                </tbody>
+
+                                                            </table>
                                                         </div>
 
                                                     </div>
 
 
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <label class="label">Details </label>
-                                                            <br>
-                                                            <div class="container">
-
-
-                                                                <table style="width:100%">
-                                                                    <tr>
-                                                                        <th>Firstname</th>
-                                                                        <th>Lastname</th>
-                                                                        <th>Email</th>
-                                                                        <th>Department</th>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td>Null</td>
-                                                                        <td>Null</td>
-                                                                        <td>Null</td>
-                                                                        <td>Null</td>
-                                                                    </tr>
-
-                                                                </table>
 
 
 
-                                                            </div>
-                                                        </div>
+
+                                                    <div class="modal-footer">
+                                                        <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-wrench"></span>Add System Unit</button>
+                                                        <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
                                                     </div>
 
-                                                    <!--
-                                                    <form>
-                                                        <div class="form-group">
-                                                            <label for="recipient-name" class="col-form-label">Recipient:</label>
-                                                            <input type="text" class="form-control " id="recipient-name">
-                                                        </div>
-                                                        <div class="form-group">
-                                                            <label for="message-text" class="col-form-label">Message:</label>
-                                                            <textarea class="form-control" id="message-text"></textarea>
-                                                        </div>
-                                                    </form>
--->
 
-
-
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button id="save" type="button" class="btn btn-danger" data-dismiss="modal" data-toggle="modal" href="#successRemoveAssociate"> <span class="fas fa-minus"></span>    REMOVE</button>
-                                                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-
-
-
-                                    <!-- Modal Associate successfully added!-->
-                                    <div class="modal fade" id="successAssociate" tabindex="-1" role="dialog" aria-labelledby="successModalTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div id="successAssociate" class="modal-header">
-                                                    <h5 class="modal-title" id="ModalTitle"></h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <i id="successIcon" class="far fa-check-circle fa-10x"></i>
-                                                    <p id="successText">Associate  ($Name) successfully added!</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Modal Associate successfully removed!-->
-                                    <div class="modal fade" id="successRemoveAssociate" tabindex="-1" role="dialog" aria-labelledby="successRemoveModalTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div id="successRemoveAssociate" class="modal-header">
-                                                    <h5 class="modal-title" id="ModalTitle"></h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <i id="successIcon" class="far fa-check-circle fa-10x"></i>
-                                                    <p id="successText">Associate ($Name) successfully removed!</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button id="okSuccessButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!--- Failed To Add Associate Modal Design --->
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="failedModal" tabindex="-1" role="dialog" aria-labelledby="failedModalTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div id="failedHeader" class="modal-header">
-                                                    <h5 class="modal-title" id="ModalTitle"></h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <i id="failedIcon" class="far fa-times-circle fa-10x"></i>
-                                                    <p id="failedText">Failed to add  ($Name) Associate!</p>
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button id="retryFailedButton" type="button" class="btn btn-danger" data-dismiss="modal">RETRY</button>
-                                                    <button id="okFailedButton" type="button" class="btn btn-success" data-dismiss="modal">OK</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-
-
-
-                                    <!-- Associate tools ADD EDIT DELETE-->
-                                    <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn " data-toggle="modal" data-target="#addAssociate" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span>Add </button>
-                                        <!--                                        <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-edit" data-toggle="tooltip" title="Edit Associate"></span></button>-->
-                                        <button type="button" class="btn " data-toggle="modal" data-target="#removeAssociate"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span>Remove</button>
-
-
-                                        <!--
-                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding:5px; margin: auto;   "></span>Add Associate</button>
-
-                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding-right: 5px; padding-left: 5; "></span>Add Associate</button>
-
-                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding-right: 5px"></span>Add Associate</button>
--->
-
-
-
-                                    </div>
-
-
-
                                 </div>
+
+
+
+
+
+
+
+
                             </div>
-
-
-
-                            <table id="myDataTable" class="table table-borderless table-striped table-hover" style="width:100%">
-                                <thead class="thead-dark">
-                                    <tr>
-
-                                        <th>Name</th>
-                                        <th>Email</th>
-                                        <th>Department</th>
-                                        <th>Status</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-
-                                <tbody>
-
-                                    <tr>
-                                        <td>Jon Paulo Faypon</td>
-                                        <td>twistafries@gmail.com</td>
-                                        <td>Information Technology Development Department</td>
-                                        <td>active</td>
-                                        <td>
-                                            <button class="btn btn-secondary" id="deactivate">Deactivate</button>
-                                        </td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Gavin Roy Ferrer</td>
-                                        <td>gavinroy@gmail.com</td>
-                                        <td>Information Technology Development Department</td>
-                                        <td>active</td>
-                                        <td>
-                                            <button class="btn btn-secondary" id="deactivate">Deactivate</button>
-                                        </td>
-                                    </tr>
-
-                                </tbody>
-
-                            </table>
-
-
-
-
                         </div>
+
+
+
+
+
+
+
                     </div>
             </div>
         </div>
+    </div>
     </div>
 
     <!-- JQuery Core -->
@@ -646,6 +619,9 @@
     <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
     <script src="../lib/dist/datatable/jquery.dataTables.min.js"></script>
     <script src="../lib/dist/datatable/dataTables.bootstrap4.min.js"></script>
+    <!-- Boostrap-select-->
+    <!--    <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/js/bootstrap-select.min.js"></script>-->
+    <script src="../lib/dist/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
@@ -658,6 +634,7 @@
                     icon.removeClass('fas fa-chevron-right').addClass("fas fa-chevron-left");
             });
         });
+
     </script>
     <script>
         jQuery.validator.setDefaults({
@@ -702,8 +679,8 @@
                 },
             },
         });
+
     </script>
-    <!--user profile save/cancel button-->
     <script>
         $(document).ready(function() {
             $.fn.showInfo = function(elementsHideID, elementsShowID) {
@@ -713,42 +690,97 @@
                 });
             }
 
-            $.fn.hideInfo = function(elementsHide) {
-                $.each(elementsHide, function(index, value) {
-                    $("#" + value + " > .display").hide();
-                });
-            }
-
             $("#divname .edit").click(function() {
                 $.fn.showInfo("divname", ["divdepartment", "divemail", "divpassword"]);
                 $("#cancel-save").show();
+                $(".password-cancel").click(function() {
+                    $("#name").hide();
+                    $("#cancel-save").hide();
+                });
             });
 
             $("#divdepartment .edit").click(function() {
                 $.fn.showInfo("divdepartment", ["divname", "divemail", "divpassword"]);
                 $("#cancel-save").show();
+                $(".password-cancel").click(function() {
+                    $("#department").hide();
+                    $("#cancel-save").hide();
+                });
             });
 
             $("#divemail .edit").click(function() {
                 $.fn.showInfo("divemail", ["divname", "divdepartment", "divpassword"]);
                 $("#cancel-save").show();
+                $(".password-cancel").click(function() {
+                    $("#email").hide();
+                    $("#cancel-save").hide();
+                });
             });
 
             $("#divpassword .edit").click(function() {
                 $.fn.showInfo("divpassword", ["divname", "divdepartment", "divemail"]);
                 $("#cancel-save").show();
-            });
-
-            $(".password-cancel").click(function() {
-                $.fn.hideInfo(["divname", "divdepartment", "divemail", "divpassword"]);
+                $(".password-cancel").click(function() {
+                    $("#password").hide();
+                    $("#cancel-save").hide();
+                });
             });
         });
+        //   //name
+        //   $("#name-edit").click(function(){
+        //     $("#fullname").hide();
+        //     $("#name-edit").hide();
+        //     $("#name").show();
+        //   });
+        //   $(".name-cancel").click(function(){
+        //     $("#name").hide();
+        //     $("#fullname").show();
+        //     $("#name-edit").show();
+        //   });
+        //
+        //   //department
+        //   $("#department-edit").click(function(){
+        //     $("#department-info").hide();
+        //     $("#department-edit").hide();
+        //     $("#department").show();
+        //   });
+        //   $(".department-cancel").click(function(){
+        //     $("#department").hide();
+        //     $("#department-info").show();
+        //     $("#department-edit").show();
+        //   });
+        //
+        //   //email
+        //   $("#email-edit").click(function(){
+        //     $("#email-add").hide();
+        //     $("#email-edit").hide();
+        //     $("#email").show();
+        //   });
+        //   $(".email-cancel").click(function(){
+        //     $("#email").hide();
+        //     $("#email-add").show();
+        //     $("#email-edit").show();
+        //   });
+        //
+        //     //password
+        //   $("#password-edit").click(function(){
+        //     $("#password-info").hide();
+        //     $("#password-edit").hide();
+        //     $("#password").show();
+        //   });
+        //   $(".password-cancel").click(function(){
+        //     $("#password").hide();
+        //     $("#password-info").show();
+        //     $("#password-edit").show();
+        //   });
+        // });
+
     </script>
     <script>
         var table = $('#myDataTable').DataTable({
             scrollY: '50vh',
             scrollCollapse: true,
-            // scrollX: '100vw',
+            // scrollX: '100vw',        
 
             'ajax': '',
             'select': 'multi',
@@ -769,6 +801,14 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         });
+
+    </script>
+
+    <script>
+        $(function() {
+            $('select').selectpicker();
+        });
+
     </script>
 </body>
 

@@ -30,7 +30,7 @@
     <!--    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.7/dist/css/bootstrap-select.min.css">-->
     <link rel="stylesheet" href="../lib/dist/bootstrap-select/dist/css/bootstrap-select.min.css">
 
-    <title>Inventory Add System Unit</title>
+    <title>Build From Parts</title>
 </head>
 
 <body>
@@ -57,7 +57,7 @@
                         </a>
                     </li>
 
-                    <li>
+                    <li class="active">
                         <a href="#">
                             <i class="fas fa-warehouse"></i>
                             <span class="hide-menu">Inventory</span>
@@ -93,7 +93,7 @@
                         </a>
                     </li>
 
-                    <li class="active">
+                    <li>
                         <a href="#">
                             <i class="fas fa-exclamation-circle"></i>
                             <span class="hide-menu">Inventory Concerns</span>
@@ -347,42 +347,47 @@
                             <div class="d-flex flex-row-reverse">
                                 <div class="p-2">
 
-                                    <!-- Add System Unit -->
+                                    <!-- Build From Parts and Add System Unit Buttons-->
 
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Add System Unit</button>
+                                    <button type="button" class="btn" style="background-color:#2BBBAD; color: white;" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-wrench"></i>&nbsp;Build From Parts</button>
+                                    <button type="button" class="btn btn-primary" style="background-color:#00695c;" data-toggle="modal" data-target="#addSystemUnitModal"><i class="fas fa-plus-square"></i>&nbsp;Add System Unit </button>
 
+                                    <!--Build From Parts Modal-->
                                     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                         <div class="modal-dialog modal-lg">
                                             <div class="modal-content">
-                                                <div class="container" style="padding:3rem">
+                                                <div id="buildFromPartsHeader" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-wrench"></i>&nbsp;Build From Parts</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="container" style="padding:2rem">
 
 
 
-                                                    <h3>Build-A-PC</h3>
+
                                                     <table class="table table-borderless table-striped table-hover" style="width:100%">
                                                         <thead class="thead-dark">
                                                             <tr>
-
                                                                 <th>Quantity</th>
                                                                 <th>Component</th>
-																<th>Details</th>
-
+                                                                <th>Details</th>
+                                                                <th>OR no.</th>
+                                                                <th>Serial no.</th>
                                                             </tr>
                                                         </thead>
 
                                                         <tbody>
-
                                                             <tr>
                                                                 <td></td>
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Select Motherboard</option>
-                                              <optgroup label="Motherboard category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Select Motherboard</option>
+                                                                      <optgroup label="Motherboard category">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
                                                             </tr>
@@ -392,13 +397,13 @@
                                                                 <td></td>
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Select CPU</option>
-                                              <optgroup label="Cpu category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Select CPU</option>
+                                                                      <optgroup label="Cpu category">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
                                                             </tr>
@@ -408,13 +413,13 @@
 
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Select Storage</option>
-                                              <optgroup label="Storage category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Select Storage</option>
+                                                                      <optgroup label="Storage category">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
                                                             </tr>
@@ -423,13 +428,13 @@
                                                                 <td><input type="number" min="1" max="8" id="ramCount" class="form-control border" style="width:75px; max-width:75px; text-align: center;" value="1"></td>
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Select RAM</option>
-                                              <optgroup label="RAM category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Select RAM</option>
+                                                                      <optgroup label="RAM category">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
                                                             </tr>
@@ -438,13 +443,13 @@
                                                                 <td><input type="number" min="1" max="8" id="gpuCount" class="form-control border" style="width:75px; max-width:75px; text-align: center;" value="1"></td>
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Select GPU</option>
-                                              <optgroup label="GPU category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Select GPU</option>
+                                                                      <optgroup label="GPU category">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
                                                             </tr>
@@ -485,13 +490,13 @@
                                                                 <td></td>
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Select Power Supply</option>
-                                              <optgroup label="Select Power category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Select Power Supply</option>
+                                                                      <optgroup label="Select Power category">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
                                                             </tr>
@@ -500,13 +505,13 @@
                                                                 <td></td>
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Case</option>
-                                              <optgroup label="Case category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Case</option>
+                                                                      <optgroup label="Case category">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
                                                             </tr>
@@ -515,13 +520,13 @@
                                                                 <td></td>
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Heat Sink Fan</option>
-                                              <optgroup label="cpu category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Heat Sink Fan</option>
+                                                                      <optgroup label="Heat Sink Fan">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
                                                             </tr>
@@ -530,13 +535,13 @@
                                                                 <td></td>
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Mouse</option>
-                                              <optgroup label="Mouse category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Mouse</option>
+                                                                      <optgroup label="Mouse category">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
 
@@ -546,13 +551,13 @@
                                                                 <td></td>
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Keyboard</option>
-                                              <optgroup label="Keyboard category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Keyboard</option>
+                                                                      <optgroup label="Keyboard category">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
                                                             </tr>
@@ -562,13 +567,13 @@
                                                                 <td></td>
                                                                 <td>
                                                                     <select class="selectpicker">
-                                            <option>Monitor</option>
-                                              <optgroup label="Monitor category">
-                                                <option></option>
-                                                <option></option>
-                                                <option></option>
-                                              </optgroup>
-                                            </select>
+                                                                    <option>Monitor</option>
+                                                                      <optgroup label="Monitor category">
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                        <option></option>
+                                                                      </optgroup>
+                                                                    </select>
                                                                 </td>
 
                                                             </tr>
@@ -580,8 +585,244 @@
                                                         </tbody>
 
                                                     </table>
-                                                    <button type="submit" class="btn btn-primary float-right"><i class="fas fa-wrench">Build</i></button>
+                                                    <div class="modal-footer">
+                                                        <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-wrench"></span>Build</button>
+                                                        <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                                                    </div>
 
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+                                    <!-- Add System Unit Modal                                   -->
+
+                                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="addSystemUnitModal">
+                                        <div class="modal-dialog modal-lg">
+                                            <div class="modal-content">
+
+                                                <div id="addSystemUnit" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-plus-square"></i>&nbsp;Add System Unit</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="container" style="padding:2rem">
+
+
+                                                    <div class="row">
+                                                        <div class="col-sm">
+
+                                                            <table class="table table-borderless table-striped table-hover table-responsive table-condensed" style="width:100%; ">
+                                                                <thead>
+                                                                    <tr>
+
+                                                                        <th>Supplier</th>
+                                                                        <th>Warranty</th>
+                                                                        <th>OR no.</th>
+
+
+
+                                                                    </tr>
+
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                            <form>
+                                                                                <!--
+                                                                        <label class="label">Supplier: </label>
+                                                                        <br>
+-->
+                                                                                <input type="text" name="supplier"><br>
+                                                                            </form>
+                                                                        </td>
+
+                                                                        <td>
+                                                                            <form>
+                                                                                <!--
+                                                                        <label class="label">Warranty Details: </label>
+                                                                        <br>
+-->
+                                                                                <label for="start">Start date:</label>
+                                                                                <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+                                                                                <br>
+                                                                                <label for="start">End date:</label>
+                                                                                <input type="date" id="start" name="trip-start" value="2018-07-22" min="2018-01-01" max="2018-12-31">
+
+                                                                            </form>
+                                                                        </td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                    </tr>
+                                                                </tbody>
+
+
+
+                                                            </table>
+                                                        </div>
+                                                        <div class="col-sm">
+                                                            <table class="table table-borderless table-striped table-hover table-responsive" style="width:100%">
+                                                                <thead class="">
+                                                                    <tr>
+                                                                        <th>Component</th>
+                                                                        <th>Name</th>
+                                                                        <th>Mac Address</th>
+                                                                        <th>Serial no.</th>
+                                                                        <th>Details</th>
+                                                                    </tr>
+                                                                </thead>
+
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>Motherboard</td>
+                                                                        <td> <input type="text" name="name"></td>
+                                                                        <td> <input type="text" name="name"></td>
+                                                                        <td> <input type="text" name="name"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+                                                                    </tr>
+
+
+                                                                    <tr>
+                                                                        <td>CPU</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Storage</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>RAM</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>GPU</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+                                                                    </tr>
+
+
+
+                                                                    <tr>
+                                                                        <td>Case</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Heat Sink Fan</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Sound Card</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+                                                                    </tr>
+
+                                                                    <tr>
+                                                                        <td>Optical Disk</td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td> <input type="text" name="supplier"></td>
+                                                                        <td>
+                                                                            <textarea rows="2" cols="22">
+                                                                            </textarea>
+                                                                        </td>
+
+
+                                                                    </tr>
+
+
+
+
+
+
+
+                                                                </tbody>
+
+                                                            </table>
+                                                        </div>
+
+                                                    </div>
+
+
+
+
+
+
+                                                    <div class="modal-footer">
+                                                        <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-plus-square"></span>&nbsp;Add System Unit</button>
+                                                        <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                                                    </div>
 
 
                                                 </div>
@@ -593,7 +834,7 @@
 
 
 
-                             
+
 
 
 
