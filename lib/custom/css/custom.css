@@ -1388,7 +1388,7 @@ select.filter{
 
 .inventory {
   height: 2rem;;
-  background: yellow;
-  padding-left: 1rem;
+  /* background: yellow; */
+  /* padding-left: 1rem; */
   padding-top: 5px
 }

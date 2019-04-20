@@ -703,9 +703,33 @@
 
                                                                     </tr>
 
-                                                                    <tr>
-                                                                        <td>Storage</td>
-                                                                        <td> <input type="text" name="supplier"></td>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-plus"></span>    ADD</button>
+                                                    <button id="cancel" type="button" class="btn btn-secondary" data-dismiss="modal">CANCEL</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Remove Associate Modal -->
+                                    <div class="modal fade" id="removeAssociate" tabindex="-1" role="dialog" aria-labelledby="removeAssociateTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                                <div id="removeAssociateHeader" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-user-plus"></i>&nbsp;Remove Associate</h5>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <form>
+                                                                <label class="label">Name: </label>
+                                                                <br>
+                                                                <input type="text" name="name" size="35"><br>
+                                                            </form>
+                                                        </div>
 
                                                                         <td> <input type="text" name="supplier"></td>
                                                                         <td> <input type="text" name="supplier"></td>
@@ -803,6 +827,13 @@
 
 
 
+                                        <!--
+                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding:5px; margin: auto;   "></span>Add Associate</button>
+
+                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding-right: 5px; padding-left: 5; "></span>Add Associate</button>
+
+                                        <button  type="button" class="btn btn-secondary rounded-10 border-0" data-toggle="modal" data-target="#addAssociate"><span class="fas fa-user-plus" style="padding-right: 5px"></span>Add Associate</button>
+-->
 
 
 
@@ -931,6 +962,7 @@
         });
 
     </script>
+    <!--user profile save/cancel button-->
     <script>
         $(document).ready(function() {
             $.fn.showInfo = function(elementsHideID, elementsShowID) {
@@ -940,97 +972,42 @@
                 });
             }
 
+            $.fn.hideInfo = function(elementsHide) {
+                $.each(elementsHide, function(index, value) {
+                    $("#" + value + " > .display").hide();
+                });
+            }
+
             $("#divname .edit").click(function() {
                 $.fn.showInfo("divname", ["divdepartment", "divemail", "divpassword"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#name").hide();
-                    $("#cancel-save").hide();
-                });
             });
 
             $("#divdepartment .edit").click(function() {
                 $.fn.showInfo("divdepartment", ["divname", "divemail", "divpassword"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#department").hide();
-                    $("#cancel-save").hide();
-                });
             });
 
             $("#divemail .edit").click(function() {
                 $.fn.showInfo("divemail", ["divname", "divdepartment", "divpassword"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#email").hide();
-                    $("#cancel-save").hide();
-                });
             });
 
             $("#divpassword .edit").click(function() {
                 $.fn.showInfo("divpassword", ["divname", "divdepartment", "divemail"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#password").hide();
-                    $("#cancel-save").hide();
-                });
+            });
+
+            $(".password-cancel").click(function() {
+                $.fn.hideInfo(["divname", "divdepartment", "divemail", "divpassword"]);
             });
         });
-        //   //name
-        //   $("#name-edit").click(function(){
-        //     $("#fullname").hide();
-        //     $("#name-edit").hide();
-        //     $("#name").show();
-        //   });
-        //   $(".name-cancel").click(function(){
-        //     $("#name").hide();
-        //     $("#fullname").show();
-        //     $("#name-edit").show();
-        //   });
-        //
-        //   //department
-        //   $("#department-edit").click(function(){
-        //     $("#department-info").hide();
-        //     $("#department-edit").hide();
-        //     $("#department").show();
-        //   });
-        //   $(".department-cancel").click(function(){
-        //     $("#department").hide();
-        //     $("#department-info").show();
-        //     $("#department-edit").show();
-        //   });
-        //
-        //   //email
-        //   $("#email-edit").click(function(){
-        //     $("#email-add").hide();
-        //     $("#email-edit").hide();
-        //     $("#email").show();
-        //   });
-        //   $(".email-cancel").click(function(){
-        //     $("#email").hide();
-        //     $("#email-add").show();
-        //     $("#email-edit").show();
-        //   });
-        //
-        //     //password
-        //   $("#password-edit").click(function(){
-        //     $("#password-info").hide();
-        //     $("#password-edit").hide();
-        //     $("#password").show();
-        //   });
-        //   $(".password-cancel").click(function(){
-        //     $("#password").hide();
-        //     $("#password-info").show();
-        //     $("#password-edit").show();
-        //   });
-        // });
-
     </script>
     <script>
         var table = $('#myDataTable').DataTable({
             scrollY: '50vh',
             scrollCollapse: true,
-            // scrollX: '100vw',        
+            // scrollX: '100vw',
 
             'ajax': '',
             'select': 'multi',

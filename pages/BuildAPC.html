@@ -395,8 +395,13 @@
 
                                     </tr>
 
+<<<<<<< HEAD
+                                     <tr>
+                                      <td><input type="number" min="1" max="8" id="ramCount" class="form-control border" style="width:75px; max-width:75px; text-align: center;" value="1"></td>
+=======
                                     <tr>
                                         <td><input type="number" min="1" max="8" id="ramCount" class="form-control border" style="width:75px; max-width:75px; text-align: center;" value="1"></td>
+>>>>>>> 46cd96c14cdbbe15a8681156f0be0ae88798125d
 
                                         <td>
                                             <select class="selectpicker">
@@ -442,7 +447,11 @@
                                     </tr>
 
 
+<<<<<<< HEAD
+<!--optional
+=======
                                     <!--optional
+>>>>>>> 46cd96c14cdbbe15a8681156f0be0ae88798125d
                                     <tr>
                                         <td></td>
                                         <td>
@@ -473,7 +482,11 @@
                                     </tr>
 -->
 
+<<<<<<< HEAD
+                                     <tr>
+=======
                                     <tr>
+>>>>>>> 46cd96c14cdbbe15a8681156f0be0ae88798125d
                                         <td></td>
                                         <td>
                                             <select class="selectpicker">
@@ -488,7 +501,11 @@
 
                                     </tr>
 
+<<<<<<< HEAD
+                                     <tr>
+=======
                                     <tr>
+>>>>>>> 46cd96c14cdbbe15a8681156f0be0ae88798125d
                                         <td></td>
                                         <td>
                                             <select class="selectpicker">
@@ -503,7 +520,11 @@
 
                                     </tr>
 
+<<<<<<< HEAD
+                                     <tr>
+=======
                                     <tr>
+>>>>>>> 46cd96c14cdbbe15a8681156f0be0ae88798125d
                                         <td></td>
                                         <td>
                                             <select class="selectpicker">
@@ -518,7 +539,11 @@
 
                                     </tr>
 
+<<<<<<< HEAD
+                                      <tr>
+=======
                                     <tr>
+>>>>>>> 46cd96c14cdbbe15a8681156f0be0ae88798125d
                                         <td></td>
                                         <td>
                                             <select class="selectpicker">
@@ -658,6 +683,7 @@
             },
         });
     </script>
+    <!--user profile save/cancel button-->
     <script>
         $(document).ready(function() {
             $.fn.showInfo = function(elementsHideID, elementsShowID) {
@@ -667,41 +693,38 @@
                 });
             }
 
+            $.fn.hideInfo = function(elementsHide) {
+                $.each(elementsHide, function(index, value) {
+                    $("#" + value + " > .display").hide();
+                });
+            }
+
             $("#divname .edit").click(function() {
                 $.fn.showInfo("divname", ["divdepartment", "divemail", "divpassword"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#name").hide();
-                    $("#cancel-save").hide();
-                });
             });
 
             $("#divdepartment .edit").click(function() {
                 $.fn.showInfo("divdepartment", ["divname", "divemail", "divpassword"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#department").hide();
-                    $("#cancel-save").hide();
-                });
             });
 
             $("#divemail .edit").click(function() {
                 $.fn.showInfo("divemail", ["divname", "divdepartment", "divpassword"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#email").hide();
-                    $("#cancel-save").hide();
-                });
             });
 
             $("#divpassword .edit").click(function() {
                 $.fn.showInfo("divpassword", ["divname", "divdepartment", "divemail"]);
                 $("#cancel-save").show();
-                $(".password-cancel").click(function() {
-                    $("#password").hide();
-                    $("#cancel-save").hide();
-                });
             });
+<<<<<<< HEAD
+
+            $(".password-cancel").click(function() {
+                $.fn.hideInfo(["divname", "divdepartment", "divemail", "divpassword"]);
+            });
+        });
+=======
         });
         //   //name
         //   $("#name-edit").click(function(){
@@ -751,12 +774,13 @@
         //     $("#password-edit").show();
         //   });
         // });
+>>>>>>> 46cd96c14cdbbe15a8681156f0be0ae88798125d
     </script>
     <script>
         var table = $('#myDataTable').DataTable({
             scrollY: '50vh',
             scrollCollapse: true,
-            // scrollX: '100vw',        
+            // scrollX: '100vw',
 
             'ajax': '',
             'select': 'multi',
