@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
 
     <!-- jquery validation -->
-    <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+    <link rel="stylesheet" href="../lib/dist/jqueryvalidation/demo/site-demos.css">
 
     <!-- jquery editable dropdown plugin -->
     <link href="https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.css" rel="stylesheet">
@@ -291,7 +291,7 @@
                   <div class="container row build" >
                     <div class="col col-lg-9 col-sm-12 col-xs-12 col-md-6" style="overflow:hidden;">
                       <label class="label-date">Category</label>
-                      <select class="selectpicker input-date2" id="category-select2">
+                      <select class="selectpicker input-date2" id="category-select2" onchange="ShowLocalDate()">
                         <option id="initial-category-value"></option>
                         <option value="Inventory Concerns">Inventory Concerns</option>
                         <option value="Inventory Operations">Inventory Operations</option>
@@ -301,7 +301,7 @@
                         <option value="Issuance">Issuance</option>
                       </select>
                       <select class="selectpicker input-date2 collapse" id="category-select5" data-container="body">
-                        <option disabled selected hidden>type</option>
+                        <option disabled selected hidden>Status Type</option>
                         <option value="All">All</option>
                         <option value="For Repair">For Repair</option>
                         <option value="To Be Returned">To be Returned</option>
@@ -309,28 +309,33 @@
                         <option value="Pending">Pending</option>
                       </select>
                       <select class="selectpicker input-date2 collapse" id="category-select6" data-container="body">
-                        <option disabled selected hidden>type</option>
+                        <option disabled selected hidden>Type of Operations</option>
                         <option value="All2">All</option>
                         <option value="Items Added">Items Added</option>
                         <option value="Items Edited">Items Edited</option>
                         <option value="Items Deleted">Items Deleted</option>
                       </select>
                       <select class="selectpicker input-date2 collapse" id="category-select7" data-container="body">
-                        <option disabled selected hidden>type</option>
+                        <option disabled selected hidden>Type</option>
                         <option value="All3">All</option>
                         <option value="Computer Components">Computer Components</option>
                         <option value="Computer Peripherals">Computer peripherals</option>
                         <option value="Mobile Devices">Mobile Devices</option>
                       </select>
                       <select class="selectpicker input-date2 collapse" id="category-select8" data-container="body">
-                        <option disabled selected hidden>type</option>
+                        <option disabled selected hidden>Issuance Category</option>
                         <option value="All4">All</option>
                         <option value="Associates">Associates</option>
                         <option value="Admin">Admin</option>
                         <option value="Admin and Associates">Admin and Associates</option>
                         <option value="User">User</option>
-                        <option value="Date">Date</option>
-                        <option value="Item Category">Item Category</option>
+                      </select>
+                      <select class="selectpicker input-date2 collapse" id="category-select9" data-container="body">
+                        <option disabled selected hidden>Type</option>
+                        <option value="All5">All</option>
+                        <option value="Items">Items</option>
+                        <option value="Associate Issuance">Associate Issuance</option>
+                        <option value="Approved Users">Approved Users</option>
                       </select>
                     </div>
                     <!--Export/Print-->
@@ -1225,25 +1230,97 @@
                     </div>
                     <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
                       <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
-                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
+                        <p class="card-title text-right date">Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Issuance Report as of January 2019</p>
                       </div>
-                      <!--Admin-->
-                      <div class="collapse all" id="admin">
+                      <!--Admin - Items-->
+                      <div class="collapse allIsuance" id="items">
                         <div class="inventory">
-                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Admin</p>
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Admin - Issuance of Items</p>
                         </div>
                         <table class="table">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
-                              <th scope="col"></th>
+                              <th scope="col">Item Name</th>
+                              <th scope="col">Type</th>
+                              <th scope="col">Subtype</th>
+                              <th scope="col">Serial No.</th>
+                              <th scope="col">Or No.</th>
+                              <th scope="col">Equipment Status</th>
+                              <th scope="col">Issued to</th>
+                              <th scope="col">Issued By</th>
+                              <th scope="col">Issued at</th>
+                              <th scope="col">Issued Until </th>
+                              <th scope="col">Returned At</th>
+                              <th scope="col">Remarks</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--Admin - AssociateIssuance-->
+                      <div class="collapse allIsuance" id="associateIssuance">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Admin - Associate Issuance</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">Item Name</th>
+                              <th scope="col">Issued to</th>
+                              <th scope="col">Issued Until</th>
+                              <th scope="col">Equipment Status</th>
+                              <th scope="col">Returned At</th>
+                              <th scope="col">Updated at</th>
+                              <th scope="col">Remarks</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!--Admin - Approved Users-->
+                      <div class="collapse allIsuance" id="approvedUsers">
+                        <div class="inventory">
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Admin - Approved Users</p>
+                        </div>
+                        <table class="table">
+                          <thead class="thead-dark" style="font-size: 14px;">
+                            <tr>
+                              <th scope="col">Name</th>
+                              <th scope="col">First Name</th>
+                              <th scope="col">Last Name</th>
+                              <th scope="col">Department</th>
+                              <th scope="col">Email</th>
+                              <th scope="col">Approved/Created At</th>
+                              <th scope="col">Status(User)</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -1260,7 +1337,7 @@
                         </table>
                       </div>
                       <!--Associates-->
-                      <div class="collapse all" id="associates">
+                      <div class="collapse allIsuance" id="associates">
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Associates</p>
                         </div>
@@ -1288,7 +1365,7 @@
                         </table>
                       </div>
                       <!--Admin and Associate-->
-                      <div class="collapse all" id="AdminAndAssociate">
+                      <div class="collapse allIsuance" id="AdminAndAssociate">
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Admin and Associates</p>
                         </div>
@@ -1330,7 +1407,7 @@
                         </table>
                       </div>
                       <!--Users-->
-                      <div class="collapse all" id="users">
+                      <div class="collapse allIsuance" id="users">
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Users</p>
                         </div>
@@ -1375,19 +1452,23 @@
     <!-- JQuery Core -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/jquery/dist/jquery.min.js"></script>
+
     <!--JQuery graph plugin-->
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="../lib/dist/highcharts/code/highcharts.js"></script>
+    <script src="../lib/dist/highcharts/code/modules/exporting.js"></script>
+    <script src="../lib/dist/highcharts/code/modules/export-data.js"></script>
+
     <!--JQuery form validation plugin-->
-    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="../lib/dist/jqueryvalidation/dist/jquery.validate.min.js"></script>
+    <script src="../lib/dist/jqueryvalidation/dist/additional-methods.min.js"></script>
+
     <!--JQuery editable table plugin-->
     <script src="https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.js"></script>
     <script type="text/javascript" src="../lib/dist/popper/popper.min.js"></script>
+
     <!-- Bootstrap -->
     <script type="text/javascript" src="../lib/dist/bootstrap/js/bootstrap.js"></script>
+
     <!-- DataTables -->
     <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
     <script src="../lib/dist/datatable/jquery.dataTables.min.js"></script>
@@ -1654,6 +1735,7 @@
                     $("#selectYear2").show();
                     $("#selectMonth").hide();
                     $("#selectYear").hide();
+                    $("#selectYear3").hide();
                     $("#selectMonth2").hide();
                     $("#selectDay").hide();
                     $("#timeValue1").hide();
@@ -1807,24 +1889,24 @@
                     break;
                 case "To Be Returned":
                     $("#inventoryTable2").show();
-                    $("#inventoryTable1").hide();
+                    $("#inventoryTable").hide();
                     $("#inventoryTable3").hide();
                     $("#inventoryTable4").hide();
                     break;
                 case "Decommissioned":
                     $("#inventoryTable3").show();
-                    $("#inventoryTable1").hide();
+                    $("#inventoryTable").hide();
                     $("#inventoryTable2").hide();
                     $("#inventoryTable4").hide();
                     break;
                 case "Pending":
                     $("#inventoryTable4").show();
-                    $("#inventoryTable1").hide();
+                    $("#inventoryTable").hide();
                     $("#inventoryTable2").hide();
                     $("#inventoryTable3").hide();
                     break;
                 case "All":
-                    $("#inventoryTable1").show();
+                    $("#inventoryTable").show();
                     $("#inventoryTable2").show();
                     $("#inventoryTable3").show();
                     $("#inventoryTable4").show();
@@ -1880,6 +1962,69 @@
                     $("#components").show();
                     $("#peripherals").show();
                     $("#mobile").show();
+                    break;
+                default:
+            }
+        });
+        $("#category-select8").on('change', function() {
+            var category = $("#category-select8").val();
+            switch (category) {
+                case "Associates":
+                    $("#associates").show();
+                    $("#category-select9").hide();
+                    $("#AdminAndAssociate").hide();
+                    $("#users").hide();
+                    break;
+                case "Admin":
+                    $("#category-select9").show();
+                    $("#associates").hide();
+                    $("#AdminAndAssociate").hide();
+                    $("#users").hide();
+                    break;
+                case "Admin and Associates":
+                    $("#AdminAndAssociate").show();
+                    $("#associates").hide();
+                    $("#category-select9").hide();
+                    $("#users").hide();
+                    break;
+                case "User":
+                    $("#users").show();
+                    $("#associates").hide();
+                    $("#category-select9").hide();
+                    $("#AdminAndAssociate").hide();
+                    break;
+                case "All4":
+                    $("#associates").show();
+                    $("#category-select9").show();
+                    $("#AdminAndAssociate").show();
+                    $("#users").show();
+                    $("#category-select9").hide();
+                    break;
+                default:
+            }
+        });
+        $("#category-select9").on('change', function() {
+            var category = $("#category-select9").val();
+            switch (category) {
+                case "Items":
+                    $("#items").show();
+                    $("#associateIssuance").hide();
+                    $("#approvedUsers").hide();
+                    break;
+                case "Associate Issuance":
+                    $("#associateIssuance").show();
+                    $("#items").hide();
+                    $("#approvedUsers").hide();
+                    break;
+                case "Approved Users":
+                    $("#approvedUsers").show();
+                    $("#items").hide();
+                    $("#associateIssuance").hide();
+                    break;
+                case "All5":
+                    $("#items").show();
+                    $("#associateIssuance").show();
+                    $("#approvedUsers").show();
                     break;
                 default:
             }
