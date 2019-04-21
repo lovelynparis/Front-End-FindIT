@@ -16,6 +16,8 @@
 
     <!-- DataTables -->
     <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css"> -->
 
     <!-- jquery validation -->
     <link rel="stylesheet" href="../lib/dist/jqueryvalidation/demo/site-demos.css">
@@ -29,7 +31,7 @@
     <title>Generate Report</title>
 </head>
 
-<body>
+<body onpageshow="ShowLocalDate()">
     <div class="fluid-container">
         <div class="wrapper">
             <nav id="sidebar">
@@ -288,19 +290,19 @@
 
                 <!-- Page Content -->
                 <div class="container p-lg-3 p-md-1 p-sm-0">
-                  <div class="container row build" >
+                  <div class="container row build">
                     <div class="col col-lg-9 col-sm-12 col-xs-12 col-md-6" style="overflow:hidden;">
                       <label class="label-date">Category</label>
                       <select class="selectpicker input-date2" id="category-select2" onchange="ShowLocalDate()">
                         <option id="initial-category-value"></option>
-                        <option value="Inventory Concerns">Inventory Concerns</option>
+                        <option selected="selected" value="Inventory Concerns">Inventory Concerns</option>
                         <option value="Inventory Operations">Inventory Operations</option>
                         <option value="Inventory Equipment Type">Inventory Equipment Type</option>
                         <option value="Inventory Equipment Status">Inventory Equipment Status</option>
                         <option value="Office Supplies">Office Supplies</option>
                         <option value="Issuance">Issuance</option>
                       </select>
-                      <select class="selectpicker input-date2 collapse" id="category-select5" data-container="body">
+                      <select class="selectpicker input-date2" id="category-select5" data-container="body">
                         <option disabled selected hidden>Status Type</option>
                         <option value="All">All</option>
                         <option value="For Repair">For Repair</option>
@@ -351,7 +353,7 @@
                     </div>
                   </div>
                   <!--inventory concerns-->
-                  <div class="card add collapse" id="inventoryConcernsFilter" style="padding-top: 3rem; padding-bottom: 2rem;">
+                  <div class="card add" id="inventoryConcernsFilter" style="padding-top: 3rem; padding-bottom: 2rem;">
                     <!--Filter-->
                     <div class="row">
                       <div class="col col-lg-4 input-date2" style="margin-left: 2rem;">
@@ -426,7 +428,7 @@
                     </div>
                     <div class="card add" id="" style="margin-left: 2rem; margin-right: 2rem;">
                       <div class="" style=" margin-top: 1rem;">
-                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
+                        <p class="card-title text-right date">Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory Concerns Report as of January 2019</p>
                       </div>
@@ -435,7 +437,7 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">For Repair Items</p>
                         </div>
-                        <table class="table">
+                        <table class="table examples" id="example">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
                               <th scope="col">Item Name </th>
@@ -652,7 +654,7 @@
                     </div>
                     <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
                       <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
-                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
+                        <p class="card-title text-right date" >Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory Operations Report as of January 2019</p>
                       </div>
@@ -832,7 +834,7 @@
                     </div>
                     <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
                       <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
-                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
+                        <p class="card-title text-right date" >Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory Equipment Type Report as of January 2019</p>
                       </div>
@@ -1004,7 +1006,7 @@
                     </div>
                     <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
                       <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
-                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
+                        <p class="card-title text-right date" >Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory Equipment Status Report as of January 2019</p>
                       </div>
@@ -1122,7 +1124,7 @@
                     </div>
                     <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
                       <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
-                        <p class="card-title text-right date" onmouseover="ShowLocalDate()">Date:</p>
+                        <p class="card-title text-right date" >Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory of Office Supplies Report as of January 2019</p>
                       </div>
@@ -1446,8 +1448,8 @@
                       </div></div></div>
                   <!--Graph-->
                   <div class="row">
-                    <div class="col col-6 collapse" id="container2" style="height: 300px; margin-top: 2rem;"></div>
-                    <div class="col col-6 collapse" id="container3" style="height: 300px; margin-top: 2rem;"></div>
+                    <div class="col col-6" id="container2" style="height: 300px; margin-top: 2rem;"></div>
+                    <div class="col col-6" id="container3" style="height: 300px; margin-top: 2rem;"></div>
                   </div>
     <!-- JQuery Core -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -1473,6 +1475,15 @@
     <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
     <script src="../lib/dist/datatable/jquery.dataTables.min.js"></script>
     <script src="../lib/dist/datatable/dataTables.bootstrap4.min.js"></script>
+
+    <!-- <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.flash.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js"></script>
+    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script> -->
 
     <!--dashboard icon sidenav collapse-->
     <script type="text/javascript">
@@ -1605,96 +1616,32 @@
     <!--category select-->
     <script>
       $(document).ready(function(){
-        $("#category-select2").on('click', function() {
-            $("#initial-category-value").hide();
-        });
-
         $("#category-select2").on('change', function() {
             var category = $("#category-select2").val();
             switch (category) {
                 case "Inventory Concerns":
-                    $("#inventoryConcernsFilter").show();
-                    $("#container2").show();
-                    $("#container3").show();
-                    $("#category-select5").show();
-                    $("#inventoryOperationsFilter").hide();
-                    $("#inventoryEquipmentTypeFilter").hide();
-                    $("#inventoryEquipmentStatusFilter").hide();
-                    $("#officeSupplies").hide();
-                    $("#Issuance").hide();
-                    $("#category-select6").hide();
-                    $("#category-select7").hide();
-                    $("#category-select8").hide();
+                    $("#inventoryConcernsFilter, #container2, #container3, #category-select5").show();
+                    $("#inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #officeSupplies, #Issuance, #category-select6, #category-select7, #category-select8").hide();
                     break;
                 case "Inventory Operations":
-                    $("#inventoryOperationsFilter").show();
-                    $("#container2").show();
-                    $("#container3").show();
-                    $("#category-select6").show();
-                    $("#inventoryConcernsFilter").hide();
-                    $("#inventoryEquipmentTypeFilter").hide();
-                    $("#inventoryEquipmentStatusFilter").hide();
-                    $("#officeSupplies").hide();
-                    $("#Issuance").hide();
-                    $("#category-select5").hide();
-                    $("#category-select7").hide();
-                    $("#category-select8").hide();
+                    $("#inventoryOperationsFilter, #container2, #container3, #category-select6").show();
+                    $("#inventoryConcernsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #officeSupplies, #Issuance, #category-select5, #category-select7, #category-select8").hide();
                     break;
                 case "Inventory Equipment Type":
-                    $("#inventoryEquipmentTypeFilter").show();
-                    $("#container2").show();
-                    $("#container3").show();
-                    $("#category-select7").show();
-                    $("#inventoryConcernsFilter").hide();
-                    $("#inventoryOperationsFilter").hide();
-                    $("#inventoryEquipmentStatusFilter").hide();
-                    $("#officeSupplies").hide();
-                    $("#Issuance").hide();
-                    $("#category-select5").hide();
-                    $("#category-select6").hide();
-                    $("#category-select8").hide();
+                    $("#inventoryEquipmentTypeFilter, #container2, #container3, #category-select7").show();
+                    $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentStatusFilter, #officeSupplies, #Issuance, #category-select5, #category-select6, #category-select8").hide();
                     break;
                 case "Inventory Equipment Status":
-                    $("#inventoryEquipmentStatusFilter").show();
-                    $("#container2").show();
-                    $("#container3").show();
-                    $("#inventoryConcernsFilter").hide();
-                    $("#inventoryOperationsFilter").hide();
-                    $("#inventoryEquipmentTypeFilter").hide();
-                    $("#officeSupplies").hide();
-                    $("#Issuance").hide();
-                    $("#category-select5").hide();
-                    $("#category-select6").hide();
-                    $("#category-select7").hide();
-                    $("#category-select8").hide();
+                    $("#inventoryEquipmentStatusFilter, #container2, #container3").show();
+                    $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #officeSupplies, #Issuance, #category-select5, #category-select6, #category-select7, #category-select8").hide();
                     break;
                 case "Office Supplies":
-                    $("#officeSupplies").show();
-                    $("#container2").show();
-                    $("#container3").show();
-                    $("#inventoryConcernsFilter").hide();
-                    $("#inventoryOperationsFilter").hide();
-                    $("#inventoryEquipmentTypeFilter").hide();
-                    $("#inventoryEquipmentStatusFilter").hide();
-                    $("#Issuance").hide();
-                    $("#category-select5").hide();
-                    $("#category-select6").hide();
-                    $("#category-select7").hide();
-                    $("#category-select8").hide();
+                    $("#officeSupplies, #container2, #container3").show();
+                    $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #Issuance, #category-select5, #category-select6, #category-select7, #category-select8").hide();
                     break;
                 case "Issuance":
-                    $("#Issuance").show();
-                    $("#container2").show();
-                    $("#container3").show();
-                    $("#category-select8").show();
-                    $("#inventoryConcernsFilter").hide();
-                    $("#inventoryOperationsFilter").hide();
-                    $("#inventoryEquipmentTypeFilter").hide();
-                    $("#inventoryEquipmentStatusFilter").hide();
-                    $("#officeSupplies").hide();
-                    $("#category-select5").hide();
-                    $("#category-select6").hide();
-                    $("#category-select7").hide();
+                    $("#Issuance, #container2, #container3, #category-select8").show();
+                    $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #officeSupplies, #category-select5, #category-select6, #category-select7").hide();
                     break;
                 default:
             }
@@ -1704,54 +1651,24 @@
     <!--filter select-->
     <script>
       $(document).ready(function(){
-        $(".category-select4").on('click', function() {
-            $("#initial-category-value").hide();
-        });
-
         $(".category-select4").on('change', function() {
             var category = $(".category-select4").val();
             switch (category) {
                 case "Time Unit":
-                    $("#timeValue1").show();
-                    $("#to").show();
-                    $("#timeValue2").show();
-                    $("#selectMonth").hide();
-                    $("#selectMonth2").hide();
-                    $("#selectYear").hide();
-                    $("#selectYear2").hide();
-                    $("#selectDay").hide();
+                    $("#timeValue1, #to, #timeValue2").show();
+                    $("#selectMonth, #selectMonth2, #selectYear, #selectYear2, #selectDay").hide();
                     break;
                 case "Month":
-                    $("#selectMonth").show();
-                    $("#selectYear").show();
-                    $("#timeValue1").hide();
-                    $("#to").hide();
-                    $("#timeValue2").hide();
-                    $("#selectMonth2").hide();
-                    $("#selectYear2").hide();
-                    $("#selectDay").hide();
+                    $("#selectMonth, #selectYear").show();
+                    $("#timeValue1, #to, #timeValue2, #selectMonth2, #selectYear2, #selectDay").hide();
                     break;
                 case "Year":
                     $("#selectYear2").show();
-                    $("#selectMonth").hide();
-                    $("#selectYear").hide();
-                    $("#selectYear3").hide();
-                    $("#selectMonth2").hide();
-                    $("#selectDay").hide();
-                    $("#timeValue1").hide();
-                    $("#to").hide();
-                    $("#timeValue2").hide();
+                    $("#selectMonth, #selectYear, #selectYear3, #selectMonth2, #selectDay, #timeValue1, #to, #timeValue2").hide();
                     break;
                 case "Day":
-                    $("#selectMonth2").show();
-                    $("#selectDay").show();
-                    $("#selectYear3").show();
-                    $("#selectYear2").hide();
-                    $("#selectMonth").hide();
-                    $("#selectYear").hide();
-                    $("#timeValue1").hide();
-                    $("#to").hide();
-                    $("#timeValue2").hide();
+                    $("#selectMonth2, #selectDay, #selectYear3").show();
+                    $("#selectYear2, #selectMonth, #selectYear, #timeValue1, #to, #timeValue2").hide();
                     break;
                 default:
             }
@@ -1768,20 +1685,7 @@
           text: 'Inventory Concerns Report in January, 2019'
       },
       xAxis: {
-          categories: [
-              'Jan',
-              'Feb',
-              'Mar',
-              'Apr',
-              'May',
-              'Jun',
-              'Jul',
-              'Aug',
-              'Sep',
-              'Oct',
-              'Nov',
-              'Dec'
-          ],
+          categories: ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'],
           crosshair: true
       },
       yAxis: {
@@ -1792,8 +1696,7 @@
       },
       tooltip: {
           headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
-          pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' +
-              '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
+          pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' + '<td style="padding:0"><b>{point.y:.1f} mm</b></td></tr>',
           footerFormat: '</table>',
           shared: true,
           useHTML: true
@@ -1820,7 +1723,7 @@
           name: 'Pending',
           data: [42.4, 33.2, 34.5, 39.7, 52.6, 75.5, 57.4, 60.4, 47.6, 39.1, 46.8, 51.1]
 
-        }]
+         }]
       });
     </script>
     <script>
@@ -1874,42 +1777,27 @@
     <!--Table select-->
     <script>
       $(document).ready(function(){
-        $("#category-select5").on('click', function() {
-            $("#initial-category-value").hide();
-        });
-
         $("#category-select5").on('change', function() {
             var category = $("#category-select5").val();
             switch (category) {
                 case "For Repair":
                     $("#inventoryTable").show();
-                    $("#inventoryTable2").hide();
-                    $("#inventoryTable3").hide();
-                    $("#inventoryTable4").hide();
+                    $("#inventoryTable2, #inventoryTable3, #inventoryTable4").hide();
                     break;
                 case "To Be Returned":
                     $("#inventoryTable2").show();
-                    $("#inventoryTable").hide();
-                    $("#inventoryTable3").hide();
-                    $("#inventoryTable4").hide();
+                    $("#inventoryTable, #inventoryTable3, #inventoryTable4").hide();
                     break;
                 case "Decommissioned":
                     $("#inventoryTable3").show();
-                    $("#inventoryTable").hide();
-                    $("#inventoryTable2").hide();
-                    $("#inventoryTable4").hide();
+                    $("#inventoryTable, #inventoryTable2, #inventoryTable4").hide();
                     break;
                 case "Pending":
                     $("#inventoryTable4").show();
-                    $("#inventoryTable").hide();
-                    $("#inventoryTable2").hide();
-                    $("#inventoryTable3").hide();
+                    $("#inventoryTable, #inventoryTable2, #inventoryTable3").hide();
                     break;
                 case "All":
-                    $("#inventoryTable").show();
-                    $("#inventoryTable2").show();
-                    $("#inventoryTable3").show();
-                    $("#inventoryTable4").show();
+                    $("#inventoryTable, #inventoryTable2, #inventoryTable3, #inventoryTable4").show();
                     break;
                 default:
             }
@@ -1919,23 +1807,18 @@
             switch (category) {
                 case "Items Added":
                     $("#add").show();
-                    $("#edit").hide();
-                    $("#delete").hide();
+                    $("#edit, #delete").hide();
                     break;
                 case "Items Edited":
                     $("#edit").show();
-                    $("#add").hide();
-                    $("#delete").hide();
+                    $("#add, #delete").hide();
                     break;
                 case "Items Deleted":
                     $("#delete").show();
-                    $("#add").hide();
-                    $("#edit").hide();
+                    $("#add, #edit").hide();
                     break;
                 case "All2":
-                    $("#add").show();
-                    $("#edit").show();
-                    $("#delete").show();
+                    $("#add, #edit, #delete").show();
                     break;
                 default:
             }
@@ -1945,23 +1828,18 @@
             switch (category) {
                 case "Computer Components":
                     $("#components").show();
-                    $("#peripherals").hide();
-                    $("#mobile").hide();
+                    $("#peripherals, #mobile").hide();
                     break;
                 case "Computer Peripherals":
                     $("#peripherals").show();
-                    $("#components").hide();
-                    $("#mobile").hide();
+                    $("#components, #mobile").hide();
                     break;
                 case "Mobile Devices":
                     $("#mobile").show();
-                    $("#components").hide();
-                    $("#peripherals").hide();
+                    $("#components, #peripherals").hide();
                     break;
                 case "All3":
-                    $("#components").show();
-                    $("#peripherals").show();
-                    $("#mobile").show();
+                    $("#components, #peripherals, #mobile").show();
                     break;
                 default:
             }
@@ -1971,33 +1849,22 @@
             switch (category) {
                 case "Associates":
                     $("#associates").show();
-                    $("#category-select9").hide();
-                    $("#AdminAndAssociate").hide();
-                    $("#users").hide();
+                    $("#category-select9, #AdminAndAssociate, #users, #items, #associateIssuance, #approvedUsers").hide();
                     break;
                 case "Admin":
                     $("#category-select9").show();
-                    $("#associates").hide();
-                    $("#AdminAndAssociate").hide();
-                    $("#users").hide();
+                    $("#associates, #AdminAndAssociate, #users").hide();
                     break;
                 case "Admin and Associates":
                     $("#AdminAndAssociate").show();
-                    $("#associates").hide();
-                    $("#category-select9").hide();
-                    $("#users").hide();
+                    $("#associates, #category-select9, #users, #items, #associateIssuance, #approvedUsers").hide();
                     break;
                 case "User":
                     $("#users").show();
-                    $("#associates").hide();
-                    $("#category-select9").hide();
-                    $("#AdminAndAssociate").hide();
+                    $("#associates, #category-select9, #AdminAndAssociate, #items, #associateIssuance, #approvedUsers").hide();
                     break;
                 case "All4":
-                    $("#associates").show();
-                    $("#category-select9").show();
-                    $("#AdminAndAssociate").show();
-                    $("#users").show();
+                    $("#associates, #AdminAndAssociate, #users, #category-select9, #items, #associateIssuance, #approvedUsers").show();
                     $("#category-select9").hide();
                     break;
                 default:
@@ -2008,23 +1875,19 @@
             switch (category) {
                 case "Items":
                     $("#items").show();
-                    $("#associateIssuance").hide();
-                    $("#approvedUsers").hide();
+                    $("#associateIssuance, #approvedUsers").hide();
                     break;
                 case "Associate Issuance":
                     $("#associateIssuance").show();
-                    $("#items").hide();
-                    $("#approvedUsers").hide();
+                    $("#items, #approvedUsers").hide();
                     break;
                 case "Approved Users":
                     $("#approvedUsers").show();
-                    $("#items").hide();
-                    $("#associateIssuance").hide();
+                    $("#items, #associateIssuance").hide();
                     break;
                 case "All5":
-                    $("#items").show();
-                    $("#associateIssuance").show();
-                    $("#approvedUsers").show();
+                    $("#items, #associateIssuance, #approvedUsers").show();
+                    $("#associates, #AdminAndAssociate, #users#users").hide();
                     break;
                 default:
             }
@@ -2033,16 +1896,59 @@
     </script>
     <!-- date -->
     <script>
-      function ShowLocalDate(){
-        var dNow = new Date();
-        var localdate = 'Date:' + (dNow.getMonth()+1) + '/'
-                        + dNow.getDate() + '/'
-                        + dNow.getFullYear() + ' '
-                        + dNow.getHours() + ':'
-                        + dNow.getMinutes();
-        $('.date').text(localdate)
-      }
+    function ShowLocalDate(){
+      var dNow = new Date();
+      var localdate = 'Date:' + (dNow.getMonth()+1) + '/'
+                      + dNow.getDate() + '/'
+                      + dNow.getFullYear() + ' '
+                      + dNow.getHours() + ':'
+                      + dNow.getMinutes();
+      $('.date').text(localdate)
+    }
     </script>
+    <!--Export sample-->
+    <!-- <script type="text/javascript">
+      $(document).ready(function() {
+          var printCounter = 0;
+          var title = 'NEW MEDIA SERVICES';
+
+          $('#example').DataTable( {
+              "searching": false,
+              "paging": false,
+              "info": false,
+              "bSort":false,
+              dom: 'Bfrtip',
+              buttons: [
+                  'copy',
+                  {
+                      extend: 'excel',
+                      title: title,
+                      messageTop: 'The information in this table is copyright to Sirius Cybernetics Corp.'
+                  },
+                  {
+                      extend: 'pdf',
+                      title: title,
+                      messageTop: 'The information in this table is copyright to Sirius Cybernetics Corp.',
+                      messageBottom: null
+                  },
+                  {
+                      extend: 'print',
+                      messageTop: function () {
+                          printCounter++;
+
+                          if ( printCounter === 1 ) {
+                              return 'This is the first time you have printed this document.';
+                          }
+                          else {
+                              return 'You have printed this document '+printCounter+' times';
+                          }
+                      },
+                      messageBottom: null
+                  }
+              ]
+          } );
+      } );
+    </script> -->
 </body>
 
 </html>
