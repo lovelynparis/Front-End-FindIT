@@ -16,8 +16,8 @@
 
     <!-- DataTables -->
     <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.4/css/buttons.dataTables.min.css">
 
     <!-- jquery validation -->
     <link rel="stylesheet" href="../lib/dist/jqueryvalidation/demo/site-demos.css">
@@ -584,24 +584,24 @@
                     <div class="row">
                       <div class="col col-lg-4 input-date2" style="margin-left: 2rem;">
                         <label class="label-date" style="margin-right: 1rem;">Components Added</label>
-                        <select class="category-select4" id="category-select4" class="" style="width: 10rem; height: 1.9rem;">
+                        <select class="filter_InventoryOperation" id="" class="" style="width: 10rem; height: 1.9rem;">
                           <option class="initial-category-value" id="initial-category-value"></option>
-                          <option value="Time Unit2" class="Time Unit">For the (time unit) of</option>
-                          <option value="Month2" class="Month">For the Month of</option>
-                          <option value="Year2" class="Year">For the Year of</option>
-                          <option value="Day2" class="Day">For the Day of</option>
+                          <option value="Time Unit">For the (time unit) of</option>
+                          <option value="Month">For the Month of</option>
+                          <option value="Year">For the Year of</option>
+                          <option value="Day">For the Day of</option>
                         </select>
                       </div>
                       <!--For the Time Value Collapse-->
-                        <div class="col col-lg-3 input-date2 collapse timeValue1" id="" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-3 input-date2 collapse " id="timeValue-operations" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
                         </div>
-                        <p class="collapse to" id="">To</p>
-                        <div class="col col-lg-3 input-date2 collapse timeValue2" id="" style="padding-right: 0!important; padding-left: 1.5rem;">
+                        <p class="collapse " id="to-operations">To</p>
+                        <div class="col col-lg-3 input-date2 collapse " id="timeValue2-operations" style="padding-right: 0!important; padding-left: 1.5rem;">
                           <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
                         </div>
                       <!--For the mmonth of-->
-                        <div class="col col-lg-2 input-date2 collapse selectMonth" id="" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="month-operations" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Month</option>
                             <option value="1">January</option>
@@ -609,7 +609,7 @@
                             <option value="3">March</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse selectYear" id="" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year-operations" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Year</option>
                             <option value="1">2017</option>
@@ -618,7 +618,7 @@
                           </select>
                         </div>
                       <!--For the year of-->
-                        <div class="col col-lg-2 input-date2 collapse selectYear2" id="" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year2-operations" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Year</option>
                             <option value="1">2017</option>
@@ -627,7 +627,7 @@
                           </select>
                         </div>
                       <!--For the day of-->
-                        <div class="col col-lg-2 input-date2 collapse selectMonth2" id="" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="month2-operations" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Month</option>
                             <option value="1">January</option>
@@ -635,7 +635,7 @@
                             <option value="3">March</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectDay" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="day-operations" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Day</option>
                             <option value="1">1</option>
@@ -643,7 +643,7 @@
                             <option value="3">3</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear3" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year3-operations" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden> Year</option>
                             <option value="1">2017</option>
@@ -764,7 +764,7 @@
                     <div class="row">
                       <div class="col col-lg-4 input-date2" style="margin-left: 2rem;">
                         <label class="label-date" style="margin-right: 1rem;">Components Added</label>
-                        <select class="category-select4" id="category-select4" class="" style="width: 10rem; height: 1.9rem;">
+                        <select class="filter_EquipmentType" id="" class="" style="width: 10rem; height: 1.9rem;">
                           <option id="initial-category-value"></option>
                           <option value="Time Unit">For the (time unit) of</option>
                           <option value="Month">For the Month of</option>
@@ -773,15 +773,15 @@
                         </select>
                       </div>
                       <!--For the Time Value Collapse-->
-                        <div class="col col-lg-3 input-date2 collapse" id="timeValue1" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue-type" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
                         </div>
-                        <p class="collapse" id="to">To</p>
-                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2" style="padding-right: 0!important; padding-left: 1.5rem;">
+                        <p class="collapse" id="to-type">To</p>
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2-type" style="padding-right: 0!important; padding-left: 1.5rem;">
                           <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
                         </div>
                       <!--For the mmonth of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="month-type" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Month</option>
                             <option value="1">January</option>
@@ -789,7 +789,7 @@
                             <option value="3">March</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year-type" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Year</option>
                             <option value="1">2017</option>
@@ -798,7 +798,7 @@
                           </select>
                         </div>
                       <!--For the year of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year2-type" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Year</option>
                             <option value="1">2017</option>
@@ -807,7 +807,7 @@
                           </select>
                         </div>
                       <!--For the day of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="month2-type" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Month</option>
                             <option value="1">January</option>
@@ -815,7 +815,7 @@
                             <option value="3">March</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectDay" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="day-type" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Day</option>
                             <option value="1">1</option>
@@ -823,7 +823,7 @@
                             <option value="3">3</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear3" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year3-type" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden> Year</option>
                             <option value="1">2017</option>
@@ -936,7 +936,7 @@
                     <div class="row">
                       <div class="col col-lg-4 input-date2" style="margin-left: 2rem;">
                         <label class="label-date" style="margin-right: 1rem;">Components Added</label>
-                        <select class="category-select4" id="category-select4" class="" style="width: 10rem; height: 1.9rem;">
+                        <select class="filter_EquipmentStatus" id="" class="" style="width: 10rem; height: 1.9rem;">
                           <option id="initial-category-value"></option>
                           <option value="Time Unit">For the (time unit) of</option>
                           <option value="Month">For the Month of</option>
@@ -945,15 +945,15 @@
                         </select>
                       </div>
                       <!--For the Time Value Collapse-->
-                        <div class="col col-lg-3 input-date2 collapse" id="timeValue1" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue-status" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
                         </div>
-                        <p class="collapse" id="to">To</p>
-                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2" style="padding-right: 0!important; padding-left: 1.5rem;">
+                        <p class="collapse" id="to-status">To</p>
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2-status" style="padding-right: 0!important; padding-left: 1.5rem;">
                           <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
                         </div>
                       <!--For the mmonth of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="month-status" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Month</option>
                             <option value="1">January</option>
@@ -961,7 +961,7 @@
                             <option value="3">March</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year-status" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Year</option>
                             <option value="1">2017</option>
@@ -970,7 +970,7 @@
                           </select>
                         </div>
                       <!--For the year of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year2-status" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Year</option>
                             <option value="1">2017</option>
@@ -979,7 +979,7 @@
                           </select>
                         </div>
                       <!--For the day of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="month2-status" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Month</option>
                             <option value="1">January</option>
@@ -987,7 +987,7 @@
                             <option value="3">March</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectDay" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="day-status" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Day</option>
                             <option value="1">1</option>
@@ -995,7 +995,7 @@
                             <option value="3">3</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear3" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year3-status" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden> Year</option>
                             <option value="1">2017</option>
@@ -1162,7 +1162,7 @@
                     <div class="row">
                       <div class="col col-lg-4 input-date2" style="margin-left: 2rem;">
                         <label class="label-date" style="margin-right: 1rem;">Components Added</label>
-                        <select class="category-select4" id="category-select4" class="" style="width: 10rem; height: 1.9rem;">
+                        <select class="filter_Issuance" id="filter_Issuance" class="" style="width: 10rem; height: 1.9rem;">
                           <option id="initial-category-value"></option>
                           <option value="Time Unit">For the (time unit) of</option>
                           <option value="Month">For the Month of</option>
@@ -1171,15 +1171,15 @@
                         </select>
                       </div>
                       <!--For the Time Value Collapse-->
-                        <div class="col col-lg-3 input-date2 collapse" id="timeValue1" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue-issuance" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
                         </div>
-                        <p class="collapse" id="to">To</p>
-                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2" style="padding-right: 0!important; padding-left: 1.5rem;">
+                        <p class="collapse" id="to-issuance">To</p>
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2-issuance" style="padding-right: 0!important; padding-left: 1.5rem;">
                           <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
                         </div>
                       <!--For the mmonth of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="month-issuance" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Month</option>
                             <option value="1">January</option>
@@ -1187,7 +1187,7 @@
                             <option value="3">March</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year-issuance" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Year</option>
                             <option value="1">2017</option>
@@ -1196,7 +1196,7 @@
                           </select>
                         </div>
                       <!--For the year of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year2-issuance" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Year</option>
                             <option value="1">2017</option>
@@ -1205,7 +1205,7 @@
                           </select>
                         </div>
                       <!--For the day of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="month2-issuance" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Month</option>
                             <option value="1">January</option>
@@ -1213,7 +1213,7 @@
                             <option value="3">March</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectDay" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="day-issuance" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Day</option>
                             <option value="1">1</option>
@@ -1221,7 +1221,7 @@
                             <option value="3">3</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear3" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year3-issuance" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden> Year</option>
                             <option value="1">2017</option>
@@ -1476,14 +1476,16 @@
     <script src="../lib/dist/datatable/jquery.dataTables.min.js"></script>
     <script src="../lib/dist/datatable/dataTables.bootstrap4.min.js"></script>
 
-    <!-- <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/jspdf/1.2.61/jspdf.min.js"></script> -->
+
+    <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.flash.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
     <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js"></script>
     <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script> -->
+    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script>
 
     <!--dashboard icon sidenav collapse-->
     <script type="text/javascript">
@@ -1651,6 +1653,7 @@
     <!--filter select-->
     <script>
       $(document).ready(function(){
+        // Inventory Concerns Filter
         $(".category-select4").on('change', function() {
             var category = $(".category-select4").val();
             switch (category) {
@@ -1672,6 +1675,110 @@
                     break;
                 default:
             }
+        });
+      });
+
+      // Inventory Operations Filter
+      $(document).ready(function(){
+        $(".filter_InventoryOperation").on('change', function() {
+            var category = $(".filter_InventoryOperation").val();
+            switch (category) {
+                case "Time Unit":
+                    $("#timeValue-operations, #to-operations, #timeValue2-operations").show();
+                    $("#month-operations, #month2-operations, #year-operations, #year2-operations, #day-operations").hide();
+                    break;
+                case "Month":
+                    $("#month-operations, #year-operations").show();
+                    $("#timeValue-operations, #to-operations, #timeValue2-operations, #month2-operations, #year2-operations, #day-operations").hide();
+                    break;
+                case "Year":
+                    $("#year2-operations").show();
+                    $("#month-operations, #year-operations, #year3-operations, #month2-operations, #day-operations, #timeValue-operations, #to-operations, #timeValue2-operations").hide();
+                    break;
+                case "Day":
+                    $("#month2-operations, #day-operations, #year3-operations").show();
+                    $("#year2-operations, #month-operations, #year-operations, #timeValue-operations, #to-operations, #timeValue2-operations").hide();
+                    break;
+                default:
+            }
+        });
+
+        // Inventory Equipment Type Filter
+        $(document).ready(function(){
+          $(".filter_EquipmentType").on('change', function() {
+              var category = $(".filter_EquipmentType").val();
+              switch (category) {
+                  case "Time Unit":
+                      $("#timeValue-type, #to-type, #timeValue2-type").show();
+                      $("#month-type, #month2-type, #year-type, #year2-type, #day-type").hide();
+                      break;
+                  case "Month":
+                      $("#month-type, #year-type").show();
+                      $("#timeValue-type, #to-type, #timeValue2-type, #month2-type, #year2-type, #day-type").hide();
+                      break;
+                  case "Year":
+                      $("#year2-type").show();
+                      $("#month-type, #year-type, #year3-type, #month2-type, #day-type, #timeValue-type, #to-type, #timeValue2-type").hide();
+                      break;
+                  case "Day":
+                      $("#month2-type, #day-type, #year3-type").show();
+                      $("#year2-type, #month-type, #year-type, #timeValue-type, #to-type, #timeValue2-type").hide();
+                      break;
+                  default:
+              }
+          });
+        });
+
+        // Inventory Equipment Status Filter
+        $(document).ready(function(){
+          $(".filter_EquipmentStatus").on('change', function() {
+              var category = $(".filter_EquipmentStatus").val();
+              switch (category) {
+                  case "Time Unit":
+                      $("#timeValue-status, #to-status, #timeValue2-status").show();
+                      $("#month-status, #month2-status, #year-status, #year2-status, #day-status").hide();
+                      break;
+                  case "Month":
+                      $("#month-status, #year-status").show();
+                      $("#timeValue-status, #to-status, #timeValue2-status, #month2-status, #year2-status, #day-status").hide();
+                      break;
+                  case "Year":
+                      $("#year2-status").show();
+                      $("#month-status, #year-status, #year3-status, #month2-status, #day-status, #timeValue-status, #to-status, #timeValue2-status").hide();
+                      break;
+                  case "Day":
+                      $("#month2-status, #day-status, #year3-status").show();
+                      $("#year2-status, #month-status, #year-status, #timeValue-status, #to-status, #timeValue2-status").hide();
+                      break;
+                  default:
+              }
+          });
+        });
+
+        // Issuance Filter
+        $(document).ready(function(){
+          $(".filter_Issuance").on('change', function() {
+              var category = $(".filter_Issuance").val();
+              switch (category) {
+                  case "Time Unit":
+                      $("#timeValue-issuance, #to-issuance, #timeValue2-issuance").show();
+                      $("#month-issuance, #month2-issuance, #year-issuance, #year2-issuance, #day-issuance").hide();
+                      break;
+                  case "Month":
+                      $("#month-issuance, #year-issuance").show();
+                      $("#timeValue-issuance, #to-issuance, #timeValue2-issuance, #month2-issuance, #year2-issuance, #day-issuance").hide();
+                      break;
+                  case "Year":
+                      $("#year2-issuance").show();
+                      $("#month-issuance, #year-issuance, #year3-issuance, #month2-issuance, #day-issuance, #timeValue-issuance, #to-issuance, #timeValue2-issuance").hide();
+                      break;
+                  case "Day":
+                      $("#month2-issuance, #day-issuance, #year3-issuance").show();
+                      $("#year2-issuance, #month-issuance, #year-issuance, #timeValue-issuance, #to-issuance, #timeValue2-issuance").hide();
+                      break;
+                  default:
+              }
+          });
         });
       });
     </script>
@@ -1896,43 +2003,43 @@
     </script>
     <!-- date -->
     <script>
-    function ShowLocalDate(){
-      var dNow = new Date();
-      var localdate = 'Date:' + (dNow.getMonth()+1) + '/'
-                      + dNow.getDate() + '/'
-                      + dNow.getFullYear() + ' '
-                      + dNow.getHours() + ':'
-                      + dNow.getMinutes();
-      $('.date').text(localdate)
-    }
+      function ShowLocalDate(){
+        var dNow = new Date();
+        var localdate = 'Date:' + (dNow.getMonth()+1) + '/'
+                        + dNow.getDate() + '/'
+                        + dNow.getFullYear() + ' '
+                        + dNow.getHours() + ':'
+                        + dNow.getMinutes();
+        $('.date').text(localdate)
+      }
     </script>
     <!--Export sample-->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       $(document).ready(function() {
           var printCounter = 0;
-          var title = 'NEW MEDIA SERVICES';
+          var title1 = '<h5 style="color: #555555; font-size: 25px; margin-left: 35%;">NEW MEDIA SERVICES</h5>';
+            var title = 'NEW MEDIA SERVICES';
 
           $('#example').DataTable( {
               "searching": false,
               "paging": false,
               "info": false,
-              "bSort":false,
+              "bSort": false,
               dom: 'Bfrtip',
               buttons: [
                   'copy',
                   {
                       extend: 'excel',
-                      title: title,
-                      messageTop: 'The information in this table is copyright to Sirius Cybernetics Corp.'
+                      title: title1
                   },
                   {
                       extend: 'pdf',
-                      title: title,
-                      messageTop: 'The information in this table is copyright to Sirius Cybernetics Corp.',
-                      messageBottom: null
+                      title: title
                   },
                   {
                       extend: 'print',
+                      title: title,
+                      message: '<h5 style="color: #555555; font-size: 20px; margin-left: 30%;">Inventory Concerns Report as of January 2019</h5>',
                       messageTop: function () {
                           printCounter++;
 
@@ -1943,11 +2050,26 @@
                               return 'You have printed this document '+printCounter+' times';
                           }
                       },
-                      messageBottom: null
                   }
               ]
           } );
       } );
+    </script>
+
+    <!-- <script>
+      //I did not read up on formatting as in pdf.text(X1, X2,   <------ not sure of how X1 and X2 are used, you can do that
+      $('#export').click(function () {
+        var name_val = $('form#smdiv input[name="name"]').val();
+        var empid_val = $('form#smdiv input[name="empid"]').val();
+        var age_val = $('form#smdiv input[name="age"]').val();
+
+        var pdf = new jsPDF();
+        pdf.text(5, 5, '');
+        pdf.text(30, 30, 'Name: '+ name_val);
+        pdf.text(60, 60, 'Emp ID: '+ empid_val);
+        pdf.text(90, 90, 'Age: '+ age_val);
+        pdf.save('hello_world.pdf');
+      });
     </script> -->
 </body>
 
