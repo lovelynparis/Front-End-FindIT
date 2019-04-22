@@ -347,15 +347,19 @@
                             <div class="d-flex flex-row-reverse">
                                 <div class="p-2">
 
-                                    <!-- Add Associate Modal -->
-                                    <div class="modal fade" id="addAssociate" tabindex="-1" role="dialog" aria-labelledby="addAssociateTitle" aria-hidden="true">
+
+
+
+                                    <!-- Add User Modal -->
+                                    <div class="modal fade" id="addUser" tabindex="-1" role="dialog" aria-labelledby="addUserTitle" aria-hidden="true">
                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                             <div class="modal-content">
-                                                <div id="addAssociateHeader" class="modal-header">
-                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-user-plus"></i>&nbsp;Add Associate</h5>
+                                                <div id="addUserHeader" class="modal-header">
+                                                    <h5 class="modal-title" id="ModalTitle"><i class="fas fa-user-plus"></i>&nbsp;Add User</h5>
                                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                 </div>
                                                 <div class="modal-body">
+
                                                     <div class="row">
                                                         <div class="col">
                                                             <form>
@@ -376,8 +380,31 @@
                                                                     <option data-tokens="">Raymond	Holt</option>        
                                                                 </select>
                                                             </form>
+
+
+                                                        </div>
+
+
+                                                    </div>
+                                                    <br>
+                                                    
+<!--User type dropdown-->
+                                                    <div class="row">
+                                                        <div class="col">
+                                                            <form>
+                                                                <label class="label">User Type:</label>
+                                                                <br>
+                                                                <div class="form-group">
+                                                                    <select class="exampleFormControlSelect1">
+                                                                    <option>Admin</option>
+                                                                    <option>Associate</option>
+                                                                   
+                                                                    </select>
+                                                                </div>
+                                                            </form>
                                                         </div>
                                                     </div>
+
 
                                                     <br>
                                                     <!--Employee Details Table-->
@@ -404,6 +431,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
+
+
 
                                                 <div class="modal-footer">
                                                     <button id="save" type="button" class="btn btn-success" data-dismiss="modal" data-toggle="modal" href="#successAssociate"> <span class="fas fa-plus"></span>ADD</button>
@@ -545,7 +574,7 @@
 
                                     <!-- Associate tools ADD EDIT DELETE-->
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <button type="button" class="btn " data-toggle="modal" data-target="#addAssociate" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span>Add </button>
+                                        <button type="button" class="btn " data-toggle="modal" data-target="#addUser" style="padding-left: 15px;"><span class="fas fa-user-plus" data-toggle="tooltip" title="Add Associate" ></span>Add </button>
                                         <!--                                        <button type="button" class="btn" data-toggle="modal" data-target="#"><span class="fas fa-user-edit" data-toggle="tooltip" title="Edit Associate"></span></button>-->
                                         <button type="button" class="btn " data-toggle="modal" data-target="#removeAssociate"><span class="fas fa-user-minus" data-toggle="tooltip" title="Remove Associate"></span>Remove</button>
 
