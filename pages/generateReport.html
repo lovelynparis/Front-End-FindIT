@@ -299,7 +299,7 @@
                         <option value="Inventory Operations">Inventory Operations</option>
                         <option value="Inventory Equipment Type">Inventory Equipment Type</option>
                         <option value="Inventory Equipment Status">Inventory Equipment Status</option>
-                        <option value="Office Supplies">Office Supplies</option>
+                        <option value="Office Equipment">Office Equipment</option>
                         <option value="Issuance">Issuance</option>
                       </select>
                       <select class="selectpicker input-date2" id="category-select5" data-container="body">
@@ -1048,13 +1048,13 @@
                       </div>
                     </div>
                   </div>
-                  <!--Office Supplies-->
-                  <div class="card add collapse" id="officeSupplies" style="padding-top: 3rem; padding-bottom: 2rem;">
+                  <!--Office Equipment-->
+                  <div class="card add collapse" id="officeEquipment" style="padding-top: 3rem; padding-bottom: 2rem;">
                     <!--filter-->
                     <div class="row">
                       <div class="col col-lg-4 input-date2" style="margin-left: 2rem;">
                         <label class="label-date" style="margin-right: 1rem;">Components Added</label>
-                        <select class="category-select4" id="category-select4" class="" style="width: 10rem; height: 1.9rem;">
+                        <select class="filter_OfficeEquipment" id="" class="" style="width: 10rem; height: 1.9rem;">
                           <option id="initial-category-value"></option>
                           <option value="Time Unit">For the (time unit) of</option>
                           <option value="Month">For the Month of</option>
@@ -1063,15 +1063,15 @@
                         </select>
                       </div>
                       <!--For the Time Value Collapse-->
-                        <div class="col col-lg-3 input-date2 collapse" id="timeValue1" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue1-office" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
                         </div>
-                        <p class="collapse" id="to">To</p>
-                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2" style="padding-right: 0!important; padding-left: 1.5rem;">
+                        <p class="collapse" id="to-office">To</p>
+                        <div class="col col-lg-3 input-date2 collapse" id="timeValue2-office" style="padding-right: 0!important; padding-left: 1.5rem;">
                           <input type="text" class="form-control" placeholder="Input time value" style="width: 10rem; height: 1.9rem; font-size: 12px;">
                         </div>
                       <!--For the mmonth of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="month-office" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Month</option>
                             <option value="1">January</option>
@@ -1079,7 +1079,7 @@
                             <option value="3">March</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year-office" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Year</option>
                             <option value="1">2017</option>
@@ -1088,7 +1088,7 @@
                           </select>
                         </div>
                       <!--For the year of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year2-office" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Year</option>
                             <option value="1">2017</option>
@@ -1097,7 +1097,7 @@
                           </select>
                         </div>
                       <!--For the day of-->
-                        <div class="col col-lg-2 input-date2 collapse" id="selectMonth2" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="month2-office" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Month</option>
                             <option value="1">January</option>
@@ -1105,7 +1105,7 @@
                             <option value="3">March</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectDay" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="day-office" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden>Day</option>
                             <option value="1">1</option>
@@ -1113,7 +1113,7 @@
                             <option value="3">3</option>
                           </select>
                         </div>
-                        <div class="col col-lg-2 input-date2 collapse" id="selectYear3" style="padding-right: 0!important; padding-left: 3.5rem;">
+                        <div class="col col-lg-2 input-date2 collapse" id="year3-office" style="padding-right: 0!important; padding-left: 3.5rem;">
                           <select id="" class="" style="width: 10rem; height: 1.9rem;">
                             <option disabled selected hidden> Year</option>
                             <option value="1">2017</option>
@@ -1126,12 +1126,12 @@
                       <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
                         <p class="card-title text-right date" >Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
-                        <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory of Office Supplies Report as of January 2019</p>
+                        <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory of Office Equipment Report as of January 2019</p>
                       </div>
                       <!--table-->
                       <div class="all" id="">
                         <div class="inventory">
-                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Office Supplies</p>
+                          <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Office Equipment</p>
                         </div>
                         <table class="table">
                           <thead class="thead-dark" style="font-size: 14px;">
@@ -1603,8 +1603,7 @@
 
             'columnDefs': [{
                 'targets': 0,
-                'render': function(data, type, row, meta) {
-
+                'render': function(data, type, row, meta)
                     return data;
                 },
             }]
@@ -1623,33 +1622,34 @@
             switch (category) {
                 case "Inventory Concerns":
                     $("#inventoryConcernsFilter, #container2, #container3, #category-select5").show();
-                    $("#inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #officeSupplies, #Issuance, #category-select6, #category-select7, #category-select8").hide();
+                    $("#inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #officeEquipment, #Issuance, #category-select6, #category-select7, #category-select8").hide();
                     break;
                 case "Inventory Operations":
                     $("#inventoryOperationsFilter, #container2, #container3, #category-select6").show();
-                    $("#inventoryConcernsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #officeSupplies, #Issuance, #category-select5, #category-select7, #category-select8").hide();
+                    $("#inventoryConcernsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #officeEquipment, #Issuance, #category-select5, #category-select7, #category-select8").hide();
                     break;
                 case "Inventory Equipment Type":
                     $("#inventoryEquipmentTypeFilter, #container2, #container3, #category-select7").show();
-                    $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentStatusFilter, #officeSupplies, #Issuance, #category-select5, #category-select6, #category-select8").hide();
+                    $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentStatusFilter, #officeEquipment, #Issuance, #category-select5, #category-select6, #category-select8").hide();
                     break;
                 case "Inventory Equipment Status":
                     $("#inventoryEquipmentStatusFilter, #container2, #container3").show();
-                    $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #officeSupplies, #Issuance, #category-select5, #category-select6, #category-select7, #category-select8").hide();
+                    $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #officeEquipment, #Issuance, #category-select5, #category-select6, #category-select7, #category-select8").hide();
                     break;
-                case "Office Supplies":
-                    $("#officeSupplies, #container2, #container3").show();
+                case "Office Equipment":
+                    $("#officeEquipment, #container2, #container3").show();
                     $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #Issuance, #category-select5, #category-select6, #category-select7, #category-select8").hide();
                     break;
                 case "Issuance":
                     $("#Issuance, #container2, #container3, #category-select8").show();
-                    $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #officeSupplies, #category-select5, #category-select6, #category-select7").hide();
+                    $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #officeEquipment, #category-select5, #category-select6, #category-select7").hide();
                     break;
                 default:
             }
         });
       });
     </script>
+
     <!--filter select-->
     <script>
       $(document).ready(function(){
@@ -1749,6 +1749,32 @@
                   case "Day":
                       $("#month2-status, #day-status, #year3-status").show();
                       $("#year2-status, #month-status, #year-status, #timeValue-status, #to-status, #timeValue2-status").hide();
+                      break;
+                  default:
+              }
+          });
+        });
+
+        // Office Equipment Filter
+        $(document).ready(function(){
+          $(".filter_OfficeEquipment").on('change', function() {
+              var category = $(".filter_OfficeEquipment").val();
+              switch (category) {
+                  case "Time Unit":
+                      $("#timeValue-office, #to-office, #timeValue2-office").show();
+                      $("#month-office, #month2-office, #year-office, #year2-office, #day-office").hide();
+                      break;
+                  case "Month":
+                      $("#month-office, #year-office").show();
+                      $("#timeValue-office, #to-office, #timeValue2-office, #month2-office, #year2-office, #day-office").hide();
+                      break;
+                  case "Year":
+                      $("#year2-office").show();
+                      $("#month-office, #year-office, #year3-office, #month2-office, #day-office, #timeValue-office, #to-office, #timeValue2-office").hide();
+                      break;
+                  case "Day":
+                      $("#month2-office, #day-office, #year3-office").show();
+                      $("#year2-office, #month-office, #year-office, #timeValue-office, #to-office, #timeValue2-office").hide();
                       break;
                   default:
               }
@@ -2057,7 +2083,6 @@
     </script>
 
     <!-- <script>
-      //I did not read up on formatting as in pdf.text(X1, X2,   <------ not sure of how X1 and X2 are used, you can do that
       $('#export').click(function () {
         var name_val = $('form#smdiv input[name="name"]').val();
         var empid_val = $('form#smdiv input[name="empid"]').val();
