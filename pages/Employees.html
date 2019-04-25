@@ -382,7 +382,7 @@
                                                             <input type="text" name="email" size="51">
                                                             <br>
 
-                                                            
+
 
                                                         </form>
 
@@ -402,7 +402,7 @@
 
                                                         </div>
                                                         <div class="col-6">
-                                                             <label class="label">Status:</label>
+                                                            <label class="label">Status:</label>
                                                             <br>
                                                             <div class="form-group">
                                                                 <select class="exampleFormControlSelect1">
@@ -641,7 +641,7 @@
 
 
 
-                            <table id="myDataTable" class="table table-borderless table-striped table-hover" style="width:100%">
+                            <table id="myDataTable" class="table table-borderless table-striped table-hover " style="width:100%;cursor: pointer;">
                                 <thead class="thead-dark">
                                     <tr>
 
@@ -885,6 +885,14 @@
         $(function() {
             $('[data-toggle="tooltip"]').tooltip()
         });
+
+    </script>
+
+    <!--        change cursor -->
+    <script>
+        function myFunction() {
+            document.getElementById("myDataTable").style.cursor = "pointer";
+        }
 
     </script>
 </body>
