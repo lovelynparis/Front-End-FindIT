@@ -305,7 +305,7 @@
                       <select class="selectpicker input-date2" id="category-select5" data-container="body">
                         <option disabled selected hidden>Status Type</option>
                         <option value="All">All</option>
-                        <option value="For Repair">For Repair</option>
+                        <option value="For Repair" id="repair">For Repair</option>
                         <option value="To Be Returned">To be Returned</option>
                         <option value="Decommissioned">Decommissioned</option>
                         <option value="Pending">Pending</option>
@@ -347,7 +347,7 @@
                       </button>
                     </div>
                     <div class="selectpicker">
-                      <button type="button" id="print" class="btn btn-info p-2 text-uppercase">
+                      <button type="button" id="print" onclick="printContent('sample');" class="btn btn-info p-2 text-uppercase">
                         <span class="fas fa-print" style="padding-right: 5px"></span>Print
                       </button>
                     </div>
@@ -427,21 +427,21 @@
                         </div>
                     </div>
                     <div>
-                    <div class="card add" id="" style="margin-left: 2rem; margin-right: 2rem;">
-                      <div class="" style=" margin-top: 1rem;">
+                    <div class="card add" id="sample" style="margin-left: 2rem; margin-right: 2rem;">
+                      <div class="sample" style=" margin-top: 1rem;">
                         <p class="card-title text-right date" id="contents">Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" id="contents2" style="font-size: 20px; color: #555555;">Inventory Concerns Report as of January 2019</p>
                       </div>
                       <!--For repair table-->
-                      <div class="collapse all" id="inventoryTable">
+                      <div class="collapse all" id="inventoryTable" onchange="printContent('example1');">
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">For Repair Items</p>
                         </div>
-                        <table class="table examples" id="example">
+                        <table class="table examples" id="example1">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
-                              <th scope="col">Item Name </th>
+                              <th scope="col">Item Name</th>
                               <th scope="col">Type</th>
                               <th scope="col">Subtype</th>
                               <th scope="col">Description</th>
@@ -474,10 +474,10 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">To be Returned Items</p>
                         </div>
-                        <table class="table">
+                        <table class="table" id="example2">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
-                              <th scope="col">Item Name </th>
+                              <th scope="col">Item Name</th>
                               <th scope="col">Type</th>
                               <th scope="col">Subtype</th>
                               <th scope="col">Description</th>
@@ -510,7 +510,7 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Decommissioned Items</p>
                         </div>
-                        <table class="table">
+                        <table class="table" id="example3">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
                               <th scope="col">Item Name </th>
@@ -546,7 +546,7 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Pending Items</p>
                         </div>
-                        <table class="table">
+                        <table class="table" id="example4">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
                               <th scope="col">Item Name </th>
@@ -655,7 +655,7 @@
                         </div>
                     </div>
                     <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
-                      <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
+                      <div class="" id="sample2" style=" margin-top: 1rem; margin-bottom: 1rem;">
                         <p class="card-title text-right date" >Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory Operations Report as of January 2019</p>
@@ -1232,7 +1232,7 @@
                           </select>
                         </div>
                     </div>
-                    <div class="card add" style="margin-left: 2rem; margin-right: 2rem;">
+                    <div class="card add" id-="data"style="margin-left: 2rem; margin-right: 2rem;">
                       <div class="" style=" margin-top: 1rem; margin-bottom: 1rem;">
                         <p class="card-title text-right date">Date:</p>
                         <p class="card-title text-center" style="font-size: 24px; color: #555555; margin-bottom: 0 !important;">NEW MEDIA SERVICES</p>
@@ -2041,10 +2041,9 @@
         $('.date').text(localdate)
       }
     </script>
-    <!--Export sample-->
+    <!--Export-->
     <script>
       function genPDF(){
-        // var doc = new jsPDF(); widthMm > heightMm ? "L" : "P"
         var doc = new jsPDF({
                 orientation: "portrait",
                 unit: "mm",
@@ -2067,64 +2066,53 @@
             });
 
             doc.text(75,25,"NEW MEDIA SERVICES");
+
             doc.autoTable({
-                html: '#example',
-                margin: {
-                  horizontal: 7,
-                  vertical: 20
-                },
-                margin: {
-                  top: 35
-                }
+                  html: '#example1',
+                  margin: {
+                    horizontal: 7,
+                    vertical: 20,
+                  },
+                  margin: {
+                    top: 35
+                  }
             });
-            doc.save('sample-file.pdf');
+
+            doc.autoTable({
+                  html: '#example2',
+                  margin: {
+                    horizontal: 7,
+                    vertical: 20,
+                  },
+                  margin: {
+                    top: 35
+                  }
+            });
+
+            doc.autoTable({
+                  html: '#example3',
+                  margin: {
+                    horizontal: 7,
+                    vertical: 20,
+                  },
+                  margin: {
+                    top: 35
+                  }
+            });
+            doc.save('New Media Services Report.pdf');
         });
       }
     </script>
 
-
-    <!-- <script type="text/javascript">
-      $(document).ready(function() {
-          var printCounter = 0;
-          var title1 = '<h5 style="color: #555555; font-size: 25px; margin-left: 35%;">NEW MEDIA SERVICES</h5>';
-            var title = 'NEW MEDIA SERVICES';
-
-          $('#example').DataTable( {
-              "searching": false,
-              "paging": false,
-              "info": false,
-              "bSort": false,
-              dom: 'Bfrtip',
-              buttons: [
-                  'copy',
-                  {
-                      extend: 'excel',
-                      title: title1
-                  },
-                  {
-                      extend: 'pdf',
-                      title: title
-                  },
-                  {
-                      extend: 'print',
-                      title: title,
-                      message: '<h5 style="color: #555555; font-size: 20px; margin-left: 30%;">Inventory Concerns Report as of January 2019</h5>',
-                      messageTop: function () {
-                          printCounter++;
-
-                          if ( printCounter === 1 ) {
-                              return 'This is the first time you have printed this document.';
-                          }
-                          else {
-                              return 'You have printed this document '+printCounter+' times';
-                          }
-                      },
-                  }
-              ]
-          } );
-      } );
-    </script> -->
-
+    <!--Print-->
+    <script type="text/javascript">
+      function printContent(el){ //source: https://stackoverflow.com/questions/2255291/print-the-contents-of-a-div
+        var restorepage = $('body').html();
+        var printcontent = $('#' + el).clone();
+        $('body').empty().html(printcontent);
+        window.print();
+        $('body').html(restorepage);
+      }
+    </script>
 </body>
-
 </html>
