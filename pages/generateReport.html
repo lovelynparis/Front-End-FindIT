@@ -294,11 +294,10 @@
                     <div class="col col-lg-9 col-sm-12 col-xs-12 col-md-6" style="overflow:hidden;">
                       <label class="label-date">Category</label>
                       <select class="selectpicker input-date2" id="category-select2" onchange="ShowLocalDate()">
-                        <option id="initial-category-value"></option>
                         <option selected="selected" value="Inventory Concerns">Inventory Concerns</option>
                         <option value="Inventory Operations">Inventory Operations</option>
                         <option value="Inventory Equipment Type">Inventory Equipment Type</option>
-                        <option value="Inventory Equipment Status">Inventory Equipment Status</option>
+                        <!-- <option value="Inventory Equipment Status">Inventory Equipment Status</option> -->
                         <option value="Office Equipment">Office Equipment</option>
                         <option value="Issuance">Issuance</option>
                       </select>
@@ -340,10 +339,9 @@
                         <option value="Approved Users">Approved Users</option>
                       </select>
                     </div>
-                    <!--Export/Print-->
                     <div class="selectpicker" id="editor" style="margin-left: 2.3rem;">
-                      <button onclick="genPDF()" type="button" id="export" class="btn btn-secondary p-2 text-uppercase">
-                        <span class="fas fa-file-export" style="padding-right: 5px"></span>Export
+                      <button onclick="exportAll('csv')" type="button" id="export" class="btn btn-secondary p-2 text-uppercase export">Export CSV
+                        <!-- <span class="fas fa-file-export" style="padding-right: 5px"></span>Export CSV -->
                       </button>
                     </div>
                     <div class="selectpicker">
@@ -434,11 +432,11 @@
                         <p class="card-title text-center" id="contents2" style="font-size: 20px; color: #555555;">Inventory Concerns Report as of January 2019</p>
                       </div>
                       <!--For repair table-->
-                      <div class="collapse all" id="inventoryTable" onchange="printContent('example1');">
+                      <div class="collapse all table" id="inventoryTable">
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">For Repair Items</p>
                         </div>
-                        <table class="table examples" id="example1">
+                        <table class="table" id="example1">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
                               <th scope="col">Item Name</th>
@@ -477,7 +475,7 @@
                         <table class="table" id="example2">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
-                              <th scope="col">Item Name</th>
+                              <th scope="col">Item Namfghjkle</th>
                               <th scope="col">Type</th>
                               <th scope="col">Subtype</th>
                               <th scope="col">Description</th>
@@ -1449,10 +1447,11 @@
                         </table>
                       </div></div></div>
                   <!--Graph-->
-                  <div class="row" id="graph">
-                    <div class="col col-6" id="container2" style="height: 300px; margin-top: 2rem;"></div>
-                    <div class="col col-6" id="container3" style="height: 300px; margin-top: 2rem;"></div>
+                  <div class="row" id="graph" style="margin-bottom: 2rem;">
+                    <div class="col col-6" id="container2" style="height: 350px; margin-top: 2rem;"></div>
+                    <div class="col col-6" id="container3" style="height: 350px; margin-top: 2rem;"></div>
                   </div>
+
     <!-- JQuery Core -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="../lib/dist/jquery/dist/jquery.min.js"></script>
@@ -1466,12 +1465,18 @@
     <script src="../lib/dist/jqueryvalidation/dist/jquery.validate.min.js"></script>
     <script src="../lib/dist/jqueryvalidation/dist/additional-methods.min.js"></script>
 
+    <!--Table Export-->
+    <script src="../lib/dist/jQuery.tableExport/dist/tableExport.js"></script>
+    <script src="../lib/dist/jQuery.tableExport/dist/tableExport.min.js"></script>
+
     <!--JQuery editable table plugin-->
     <script src="https://rawgithub.com/indrimuska/jquery-editable-select/master/dist/jquery-editable-select.min.js"></script>
     <script type="text/javascript" src="../lib/dist/popper/popper.min.js"></script>
 
     <!-- Bootstrap -->
     <script type="text/javascript" src="../lib/dist/bootstrap/js/bootstrap.js"></script>
+
+    <script type="text/javascript" src="../lib/custom/js/custom-Mehanie.js"></script>
 
     <!-- DataTables -->
     <link rel="stylesheet" href="../lib/dist/datatable/dataTables.bootstrap4.min.css">
@@ -1481,14 +1486,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/jspdf/1.2.61/jspdf.min.js"></script>
     <script src="https://unpkg.com/jspdf-autotable@3.1.1/dist/jspdf.plugin.autotable.js"></script>
-    <!-- <script src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.2.4/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.flash.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
-    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/pdfmake.min.js"></script>
-    <script src="https://cdn.rawgit.com/bpampuch/pdfmake/0.1.24/build/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.html5.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/1.2.4/js/buttons.print.min.js"></script> -->
 
     <!--dashboard icon sidenav collapse-->
     <script type="text/javascript">
@@ -1591,32 +1588,6 @@
             });
         });
     </script>
-    <!--datatable-->
-    <!-- <script>
-        var table = $('').DataTable({
-            scrollY: '50vh',
-            scrollCollapse: true,
-            // scrollX: '100vw',
-
-            'ajax': '',
-            'select': 'multi',
-            'order': [
-                [1, 'asc']
-            ],
-
-            'columnDefs': [{
-                'targets': 0,
-                'render': function(data, type, row, meta)
-                    return data;
-                },
-            }]
-
-        });
-
-        $(function() {
-            $('[data-toggle="tooltip"]').tooltip()
-        });
-    </script> -->
     <!--category select-->
     <script>
       $(document).ready(function(){
@@ -2041,72 +2012,36 @@
         $('.date').text(localdate)
       }
     </script>
-    <!--Export-->
+
+    <!--Export sample-->
     <script>
-      function genPDF(){
-        var doc = new jsPDF({
-                orientation: "portrait",
-                unit: "mm",
-            });
-        var specialElementHandlers = {
-            '#editor': function (element, renderer) {
-                return true;
-            }
-        };
 
-        $('#export').click(function () {
-            doc.fromHTML($('#contents').html(), 12, 10, {
-                'width': 170,
-                'elementHandlers': specialElementHandlers
-            });
+    function exportTo(type) {
+    	$('.table').tableExport({
+    		filename: 'table_%DD%-%MM%-%YY%',
+    		format: type,
+    		cols: '2,3,4'
+    	});
+    }
 
-            doc.fromHTML($('#contents2').html(), 65, 25, {
-                'width': 170,
-                'elementHandlers': specialElementHandlers
-            });
+    function exportAll(type) {
+    	$('.table').tableExport({
+    		filename: 'table_%DD%-%MM%-%YY%-month(%MM%)',
+    		format: type
+    	});
+    }
 
-            doc.text(75,25,"NEW MEDIA SERVICES");
-
-            doc.autoTable({
-                  html: '#example1',
-                  margin: {
-                    horizontal: 7,
-                    vertical: 20,
-                  },
-                  margin: {
-                    top: 35
-                  }
-            });
-
-            doc.autoTable({
-                  html: '#example2',
-                  margin: {
-                    horizontal: 7,
-                    vertical: 20,
-                  },
-                  margin: {
-                    top: 35
-                  }
-            });
-
-            doc.autoTable({
-                  html: '#example3',
-                  margin: {
-                    horizontal: 7,
-                    vertical: 20,
-                  },
-                  margin: {
-                    top: 35
-                  }
-            });
-            doc.save('New Media Services Report.pdf');
-        });
-      }
+    $("#csv").on('click', function() {
+      $('.table').tableExport({
+        filename: 'table',
+        format: 'csv',
+      });
+    });
     </script>
 
     <!--Print-->
     <script type="text/javascript">
-      function printContent(el){ //source: https://stackoverflow.com/questions/2255291/print-the-contents-of-a-div
+      function printContent(el){ //https://stackoverflow.com/questions/2255291/print-the-contents-of-a-div
         var restorepage = $('body').html();
         var printcontent = $('#' + el).clone();
         $('body').empty().html(printcontent);
