@@ -341,6 +341,7 @@
                     </div>
                     <div class="selectpicker" id="editor" style="margin-left: 2.3rem;">
                       <button onclick="exportAll('csv')" type="button" id="export" class="btn btn-secondary p-2 text-uppercase export">Export CSV
+                      <!-- <button type="button" id="export" class="btn btn-secondary p-2 text-uppercase export">Export CSV -->
                         <!-- <span class="fas fa-file-export" style="padding-right: 5px"></span>Export CSV -->
                       </button>
                     </div>
@@ -432,11 +433,11 @@
                         <p class="card-title text-center" id="contents2" style="font-size: 20px; color: #555555;">Inventory Concerns Report as of January 2019</p>
                       </div>
                       <!--For repair table-->
-                      <div class="collapse all table" id="inventoryTable">
+                      <div class="collapse" id="inventoryTable">
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">For Repair Items</p>
                         </div>
-                        <table class="table" id="example1">
+                        <table class="table all" id="forRepair">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
                               <th scope="col">Item Name</th>
@@ -453,16 +454,47 @@
                           </thead>
                           <tbody>
                             <tr>
+                              <td>MSI B450-A Pro</td>
+                              <td>Computer Component</td>
+                              <td>Motherboard</td>
+                              <td>"Socket: AM4
+                                  Chipset: AMD B450
+                                  Size: ATX
+                                  RAM: 4 Slots, DDR4
+                                  PCIe: x16, PCIe 3.0
+                                  Ports: USB 3.1, SATA 6Gb/s"</td>
+                              <td>601-7577-010B0903273465</td>
+                              <td>For Repair</td>
+                              <td>Jon Paulo</td>
                               <td></td>
+                              <td>2019-01-18</td>
+                              <td>Aika Vien Dayrit</td>
+                            </tr>
+                            <tr>
+                              <td>R5 1500X</td>
+                              <td>Computer Component</td>
+                              <td>CPU</td>
+                              <td>"Socket: AM4
+                                  4-core 8-thread 3.5GHz-3.7GHz
+                                  TDP: 65W"</td>
+                              <td>YD170XBCM88AE</td>
+                              <td>For Repair</td>
+                              <td>Jon Paulo Faypon</td>
                               <td></td>
+                              <td>2019-01-25</td>
+                              <td>Aika Vien Dayrit</td>
+                            </tr>
+                            <tr>
+                              <td>HDD 1TB</td>
+                              <td>Computer Component</td>
+                              <td>Storage</td>
+                              <td>Seagate 1TB Harddisk Drive</td>
+                              <td>YST-657A-DATSDC</td>
+                              <td>For Repair</td>
+                              <td>Lovelyn Paris</td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td>2019-02-12</td>
+                              <td>Jon Paulo Faypon</td>
                             </tr>
                           </tbody>
                         </table>
@@ -472,10 +504,10 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">To be Returned Items</p>
                         </div>
-                        <table class="table" id="example2">
+                        <table class="table all table-responsive" id="toBeReturned">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
-                              <th scope="col">Item Namfghjkle</th>
+                              <th scope="col">Item</th>
                               <th scope="col">Type</th>
                               <th scope="col">Subtype</th>
                               <th scope="col">Description</th>
@@ -489,15 +521,33 @@
                           </thead>
                           <tbody>
                             <tr>
+                              <td>HDD 1TB</td>
+                              <td>Computer Unit</td>
                               <td></td>
+                              <td>Seagate SV35 1000GB 1TB SATA</td>
                               <td></td>
+                              <td>56892</td>
+                              <td>For Return</td>
                               <td></td>
+                              <td>2019-04-15</td>
+                              <td>Enigma</td>
                               <td></td>
+                            </tr>
+                            <tr>
+                              <td>iPad (3rd Generation)</td>
+                              <td>Mobile Device</td>
                               <td></td>
+                              <td>"Core Design: Apple Swift x 2
+                                  CPU: S5L8945 ""A5X""
+                                  CPU Speed: 1 GHz
+                                  RAM: 1 GB
+                                  Storage: 64 GB"</td>
                               <td></td>
+                              <td>78542</td>
+                              <td>Returned - Replaced</td>
                               <td></td>
-                              <td></td>
-                              <td></td>
+                              <td>2019-05-07</td>
+                              <td>Laser</td>
                               <td></td>
                             </tr>
                           </tbody>
@@ -508,7 +558,7 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Decommissioned Items</p>
                         </div>
-                        <table class="table" id="example3">
+                        <table class="table all" id="decommissioned">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
                               <th scope="col">Item Name </th>
@@ -525,15 +575,28 @@
                           </thead>
                           <tbody>
                             <tr>
+                              <td>Ballistix Sport Series DDR3</td>
+                              <td>Computer Unit</td>
                               <td></td>
+                              <td>8GB Ballistix Sport DDR3 1600 MHz UDIMM</td>
                               <td></td>
+                              <td>Decommissioned</td>
+                              <td>Obsolete, for replacement</td>
                               <td></td>
+                              <td>2019-04-19</td>
                               <td></td>
+                            </tr>
+                            <tr>
+                              <td>Aerocool Strike</td>
+                              <td>Computer Unit</td>
                               <td></td>
+                              <td>"Motherboards: Micro ATX / Mini ITX
+Chassis Dimensions: 280 x 380x 350 mm"</td>
                               <td></td>
+                              <td>Decommissioned</td>
+                              <td>Damaged beyond repair</td>
                               <td></td>
-                              <td></td>
-                              <td></td>
+                              <td>2019-10-18</td>
                               <td></td>
                             </tr>
                           </tbody>
@@ -544,32 +607,38 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Pending Items</p>
                         </div>
-                        <table class="table" id="example4">
+                        <table class="table all" id="pending">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
-                              <th scope="col">Item Name </th>
+                              <th scope="col">Item Name</th>
                               <th scope="col">Type</th>
-                              <th scope="col">Subtype</th>
                               <th scope="col">Description</th>
-                              <th scope="col">Serial No.</th>
-                              <th scope="col">Status</th>
-                              <th scope="col">Last User</th>
-                              <th scope="col">Remarks</th>
-                              <th scope="col">Date</th>
+                              <th scope="col">Supplier</th>
+                              <th scope="col">Remarks	Or No.</th>
+                              <th scope="col">Date Added</th>
                               <th scope="col">Added By</th>
                             </tr>
                           </thead>
                           <tbody>
                             <tr>
+                              <td>Apple MacBook Pro</td>
+                              <td>Computer Unit</td>
                               <td></td>
+                              <td>"CPU: 2.9GHz Intel Core i9-8950HK
+                                  Graphics: AMD Radeon Pro 560X
+                                  RAM: 32GB (2,400MHz DDR4)"</td>
                               <td></td>
+                              <td>Enigma</td>
                               <td></td>
+                            </tr>
+                            <tr>
+                              <td>Acer XR382CQK</td>
+                              <td>Computer Peripheral</td>
                               <td></td>
+                              <td>"38-inches Acer XR382CQK
+                                    Curved-screen monitor "</td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td>Laser</td>
                               <td></td>
                             </tr>
                           </tbody>
@@ -663,7 +732,7 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Items Added</p>
                         </div>
-                        <table class="table">
+                        <table class="table all2" id="added">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
                               <th scope="col">Item Name </th>
@@ -677,12 +746,27 @@
                           </thead>
                           <tbody>
                             <tr>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                              <td>Samsung Galaxy S9</td>
+                              <td>Mobile Device</td>
+                              <td>CPU: Snapdragon 845 / Exynos 9810
+                                  RAM: 4GB
+                                  Storage: 64GB</td>
+                              <td>ATY-V87RST-CHR90O</td>
+                              <td>46656</td>
+                              <td>2019-03-21 22:37:23</td>
+                              <td>Jon Paulo Faypon</td>
+                            </tr>
+
+                            <tr>
+                              <td>Macbook Air</td>
+                              <td>Mobile Device</td>
+                              <td>"CPU: 1.6GHz dual-core Intel Core i5
+                                    Graphics: Intel HD Graphics 6000
+                                    RAM: 8GB 1600MHz DDR3
+                                    Storage: 256GB "</td>
+                              <td>4CE-046-0D0-G</td>
+                              <td>78653</td>
+                              <td>2019-03-22 11:26:46</td>
                               <td></td>
                             </tr>
                           </tbody>
@@ -693,14 +777,13 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Items Edited</p>
                         </div>
-                        <table class="table">
+                        <table class="table all2" id="edited">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
-                              <th scope="col">Item Name </th>
+                              <th scope="col">Item Name</th>
                               <th scope="col">Type</th>
                               <th scope="col">Description</th>
                               <th scope="col">Serial No.</th>
-                              <th scope="col">OR No.</th>
                               <th scope="col">Added At</th>
                               <th scope="col">Edited At</th>
                               <th scope="col">Added By</th>
@@ -710,15 +793,32 @@
                           </thead>
                           <tbody>
                             <tr>
+                              <td>MSI B450-A Pro</td>
+                              <td>Computer Component</td>
+                              <td>"Socket: AM4
+                                Chipset: AMD B450
+                                Size: ATX
+                                RAM: 4 Slots, DDR4
+                                PCIe: x16, PCIe 3.0
+                                Ports: USB 3.1, SATA 6Gb/s"</td>
+                              <td>ATY-V87RST-CHR90O</td>
+                              <td>3/21/2019 22:37:23</td>
+                              <td>2019-03-30 2:10:23</td>
+                              <td>Kim Willy</td>
+                              <td>Geovelle Andres</td>
                               <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
-                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>R5 1500X</td>
+                              <td>Computer Component</td>
+                              <td>"Socket: AM4
+4-core 8-thread 3.5GHz-3.7GHz
+TDP: 65W"</td>
+                              <td>4CE-046-0D0-G</td>
+                              <td>2019-03-22 0:26:46</td>
+                              <td>2019-04-11 5:20:20</td>
+                              <td>Kim Willy</td>
+                              <td>Kim Willy</td>
                               <td></td>
                             </tr>
                           </tbody>
@@ -729,17 +829,14 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Items Deleted</p>
                         </div>
-                        <table class="table">
+                        <table class="table all2">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
-                              <th scope="col">Item Name </th>
-                              <th scope="col">Type</th>
-                              <th scope="col">Description</th>
-                              <th scope="col">Serial No.</th>
-                              <th scope="col">OR No.</th>
-                              <th scope="col">Added At</th>
-                              <th scope="col">Added By</th>
+                              <th scope="col">User Edit</th>
+                              <th scope="col">Modified Attributes</th>
+                              <th scope="col">Remarks</th>
                               <th scope="col">Deleted By</th>
+                              <th scope="col">Date</th>
                             </tr>
                           </thead>
                           <tbody>
@@ -747,6 +844,10 @@
                               <td></td>
                               <td></td>
                               <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
                               <td></td>
                               <td></td>
                               <td></td>
@@ -843,7 +944,7 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Computer Components</p>
                         </div>
-                        <table class="table">
+                        <table class="table" id="computerComponents">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
                               <th scope="col">Item Name </th>
@@ -873,7 +974,7 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Computer Peripherals</p>
                         </div>
-                        <table class="table">
+                        <table class="table" id="computerPeripherals">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
                               <th scope="col">Item Name </th>
@@ -903,7 +1004,7 @@
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Mobile Devices</p>
                         </div>
-                        <table class="table">
+                        <table class="table" id="mobileDevices">
                           <thead class="thead-dark" style="font-size: 14px;">
                             <tr>
                               <th scope="col">Item Name </th>
@@ -1129,7 +1230,7 @@
                         <p class="card-title text-center" style="font-size: 20px; color: #555555;">Inventory of Office Equipment Report as of January 2019</p>
                       </div>
                       <!--table-->
-                      <div class="all" id="">
+                      <div class="all" id="officeEquipment">
                         <div class="inventory">
                           <p class="card-title text-center" style="color: #555555; margin-bottom: 2rem;">Office Equipment</p>
                         </div>
@@ -1450,6 +1551,7 @@
                   <div class="row" id="graph" style="margin-bottom: 2rem;">
                     <div class="col col-6" id="container2" style="height: 350px; margin-top: 2rem;"></div>
                     <div class="col col-6" id="container3" style="height: 350px; margin-top: 2rem;"></div>
+                    <div class="col col-6" id="container4" style="height: 350px; margin-top: 2rem;"></div>
                   </div>
 
     <!-- JQuery Core -->
@@ -1613,6 +1715,7 @@
                 case "Office Equipment":
                     $("#officeEquipment, #container2, #container3").show();
                     $("#inventoryConcernsFilter, #inventoryOperationsFilter, #inventoryEquipmentTypeFilter, #inventoryEquipmentStatusFilter, #Issuance, #category-select5, #category-select6, #category-select7, #category-select8").hide();
+                    tableID = "#officeEquipment";
                     break;
                 case "Issuance":
                     $("#Issuance, #container2, #container3, #category-select8").show();
@@ -1832,6 +1935,53 @@
          }]
       });
     </script>
+
+    <script>
+      Highcharts.chart('container4', {
+      chart: {
+          type: 'column'
+      },
+      title: {
+          text: 'Inventory Concerns Report in 2nd week of january, 2019'
+      },
+      xAxis: {
+          categories: ['Mon','Tues','Wed','Thu','Fri'],
+          crosshair: true
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Quantity'
+          }
+      },
+      tooltip: {
+          headerFormat: '<span style="font-size:10px">{point.key}</span><table>',
+          pointFormat: '<tr><td style="color:{series.color};padding:0">{series.name}: </td>' + '<td style="padding:0"><b>{point.y:.1f} items</b></td></tr>',
+          footerFormat: '</table>',
+          shared: true,
+          useHTML: true
+      },
+      plotOptions: {
+          column: {
+              pointPadding: 0.2,
+              borderWidth: 0
+          }
+      },
+      series: [{
+          name: 'Items Added',
+          data: [49.9, 71.5, 106.4, 129.2, 144.0]
+
+      }, {
+          name: 'Total Available',
+          data: [48.9, 38.8, 39.3, 41.4, 47.0]
+
+      }, {
+          name: 'Total Issued',
+          data: [83.6, 78.8, 98.5, 93.4, 106.0]
+
+      }]
+      });
+    </script>
     <script>
       Highcharts.chart('container3', {
       chart: {
@@ -1880,126 +2030,6 @@
         }]
       });
     </script>
-    <!--Table select-->
-    <script>
-      $(document).ready(function(){
-        $("#category-select5").on('change', function() {
-            var category = $("#category-select5").val();
-            switch (category) {
-                case "For Repair":
-                    $("#inventoryTable").show();
-                    $("#inventoryTable2, #inventoryTable3, #inventoryTable4").hide();
-                    break;
-                case "To Be Returned":
-                    $("#inventoryTable2").show();
-                    $("#inventoryTable, #inventoryTable3, #inventoryTable4").hide();
-                    break;
-                case "Decommissioned":
-                    $("#inventoryTable3").show();
-                    $("#inventoryTable, #inventoryTable2, #inventoryTable4").hide();
-                    break;
-                case "Pending":
-                    $("#inventoryTable4").show();
-                    $("#inventoryTable, #inventoryTable2, #inventoryTable3").hide();
-                    break;
-                case "All":
-                    $("#inventoryTable, #inventoryTable2, #inventoryTable3, #inventoryTable4").show();
-                    break;
-                default:
-            }
-        });
-        $("#category-select6").on('change', function() {
-            var category = $("#category-select6").val();
-            switch (category) {
-                case "Items Added":
-                    $("#add").show();
-                    $("#edit, #delete").hide();
-                    break;
-                case "Items Edited":
-                    $("#edit").show();
-                    $("#add, #delete").hide();
-                    break;
-                case "Items Deleted":
-                    $("#delete").show();
-                    $("#add, #edit").hide();
-                    break;
-                case "All2":
-                    $("#add, #edit, #delete").show();
-                    break;
-                default:
-            }
-        });
-        $("#category-select7").on('change', function() {
-            var category = $("#category-select7").val();
-            switch (category) {
-                case "Computer Components":
-                    $("#components").show();
-                    $("#peripherals, #mobile").hide();
-                    break;
-                case "Computer Peripherals":
-                    $("#peripherals").show();
-                    $("#components, #mobile").hide();
-                    break;
-                case "Mobile Devices":
-                    $("#mobile").show();
-                    $("#components, #peripherals").hide();
-                    break;
-                case "All3":
-                    $("#components, #peripherals, #mobile").show();
-                    break;
-                default:
-            }
-        });
-        $("#category-select8").on('change', function() {
-            var category = $("#category-select8").val();
-            switch (category) {
-                case "Associates":
-                    $("#associates").show();
-                    $("#category-select9, #AdminAndAssociate, #users, #items, #associateIssuance, #approvedUsers").hide();
-                    break;
-                case "Admin":
-                    $("#category-select9").show();
-                    $("#associates, #AdminAndAssociate, #users").hide();
-                    break;
-                case "Admin and Associates":
-                    $("#AdminAndAssociate").show();
-                    $("#associates, #category-select9, #users, #items, #associateIssuance, #approvedUsers").hide();
-                    break;
-                case "User":
-                    $("#users").show();
-                    $("#associates, #category-select9, #AdminAndAssociate, #items, #associateIssuance, #approvedUsers").hide();
-                    break;
-                case "All4":
-                    $("#associates, #AdminAndAssociate, #users, #category-select9, #items, #associateIssuance, #approvedUsers").show();
-                    $("#category-select9").hide();
-                    break;
-                default:
-            }
-        });
-        $("#category-select9").on('change', function() {
-            var category = $("#category-select9").val();
-            switch (category) {
-                case "Items":
-                    $("#items").show();
-                    $("#associateIssuance, #approvedUsers").hide();
-                    break;
-                case "Associate Issuance":
-                    $("#associateIssuance").show();
-                    $("#items, #approvedUsers").hide();
-                    break;
-                case "Approved Users":
-                    $("#approvedUsers").show();
-                    $("#items, #associateIssuance").hide();
-                    break;
-                case "All5":
-                    $("#items, #associateIssuance, #approvedUsers").show();
-                    $("#associates, #AdminAndAssociate, #users#users").hide();
-                    break;
-                default:
-            }
-        });
-      });
-    </script>
     <!-- date -->
     <script>
       function ShowLocalDate(){
@@ -2012,33 +2042,159 @@
         $('.date').text(localdate)
       }
     </script>
-
-    <!--Export sample-->
+    <!--Table select - Export-->
     <script>
-
-    function exportTo(type) {
-    	$('.table').tableExport({
-    		filename: 'table_%DD%-%MM%-%YY%',
-    		format: type,
-    		cols: '2,3,4'
-    	});
-    }
-
-    function exportAll(type) {
-    	$('.table').tableExport({
-    		filename: 'table_%DD%-%MM%-%YY%-month(%MM%)',
-    		format: type
-    	});
-    }
-
-    $("#csv").on('click', function() {
-      $('.table').tableExport({
-        filename: 'table',
-        format: 'csv',
+      var tableID = "";
+      $('select').change(function() {
+        var category = $("#category-select5").val();
+        switch (category) {
+            case "For Repair":
+                $("#inventoryTable").show();
+                $("#inventoryTable2, #inventoryTable3, #inventoryTable4").hide();
+                tableID = "#forRepair"
+                break;
+            case "To Be Returned":
+                $("#inventoryTable2").show();
+                $("#inventoryTable, #inventoryTable3, #inventoryTable4").hide();
+                tableID = "#toBeReturned";
+                break;
+            case "Decommissioned":
+                $("#inventoryTable3").show();
+                $("#inventoryTable, #inventoryTable2, #inventoryTable4").hide();
+                tableID = "#decommissioned";
+                break;
+            case "Pending":
+                $("#inventoryTable4").show();
+                $("#inventoryTable, #inventoryTable2, #inventoryTable3").hide();
+                tableID = "#pending";
+                break;
+            case "All":
+                $("#inventoryTable, #inventoryTable2, #inventoryTable3, #inventoryTable4").show();
+                tableID = ".all";
+                break;
+        }
       });
-    });
-    </script>
 
+      $("#category-select6").on('change', function() {
+          var category = $("#category-select6").val();
+          switch (category) {
+              case "Items Added":
+                  $("#add").show();
+                  $("#edit, #delete").hide();
+                  tableID = "#added";
+                  break;
+              case "Items Edited":
+                  $("#edit").show();
+                  $("#add, #delete").hide();
+                  tableID = "#edited";
+                  break;
+              case "Items Deleted":
+                  $("#delete").show();
+                  $("#add, #edit").hide();
+                  tableID = "#delete";
+                  break;
+              case "All2":
+                  $("#add, #edit, #delete").show();
+                  tableID = ".all2"; // to edited
+                  break;
+              default:
+          }
+      });
+
+      $("#category-select7").on('change', function() {
+          var category = $("#category-select7").val();
+          switch (category) {
+              case "Computer Components":
+                  $("#components").show();
+                  $("#peripherals, #mobile").hide();
+                  tableID = "#computerComponents";
+                  break;
+              case "Computer Peripherals":
+                  $("#peripherals").show();
+                  $("#components, #mobile").hide();
+                  tableID = "#computerPeripherals";
+                  break;
+              case "Mobile Devices":
+                  $("#mobile").show();
+                  $("#components, #peripherals").hide();
+                  tableID = "#mobileDevices";
+                  break;
+              case "All3": // to edit
+                  $("#components, #peripherals, #mobile").show();
+                  tableID = ".all3";
+                  break;
+              default:
+          }
+      });
+
+      $("#category-select8").on('change', function() {
+          var category = $("#category-select8").val();
+          switch (category) {
+              case "Associates":
+                  $("#associates").show();
+                  $("#category-select9, #AdminAndAssociate, #users, #items, #associateIssuance, #approvedUsers").hide();
+                  tableID = "#associates";
+                  break;
+              case "Admin":
+                  $("#category-select9").show();
+                  $("#associates, #AdminAndAssociate, #users").hide();
+                  tableID = "#admin";
+                  break;
+              case "Admin and Associates":
+                  $("#AdminAndAssociate").show();
+                  $("#associates, #category-select9, #users, #items, #associateIssuance, #approvedUsers").hide();
+                  tableID = "#adminAndAssociates";
+                  break;
+              case "User":
+                  $("#users").show();
+                  $("#associates, #category-select9, #AdminAndAssociate, #items, #associateIssuance, #approvedUsers").hide();
+                  tableID = "#users";
+                  break;
+              case "All4":
+                  $("#associates, #AdminAndAssociate, #users, #category-select9, #items, #associateIssuance, #approvedUsers").show();
+                  $("#category-select9").hide();
+                  tableID = ".all4";
+                  break;
+              default:
+          }
+      });
+
+      $("#category-select9").on('change', function() {
+          var category = $("#category-select9").val();
+          switch (category) {
+              case "Items":
+                  $("#items").show();
+                  $("#associateIssuance, #approvedUsers").hide();
+                  tableID = "#items";
+                  break;
+              case "Associate Issuance":
+                  $("#associateIssuance").show();
+                  $("#items, #approvedUsers").hide();
+                  tableID = "#associateIssuance";
+                  break;
+              case "Approved Users":
+                  $("#approvedUsers").show();
+                  $("#items, #associateIssuance").hide();
+                  tableID = "#approvedUsers";
+                  break;
+              case "All5":
+                  $("#items, #associateIssuance, #approvedUsers").show();
+                  $("#associates, #AdminAndAssociate, #users#users").hide();
+                  tableID = ".all5";
+                  var exportData = instance.getExportData()['example']['xlsx'];
+                  instance.export2file(exportData.data, exportData.mimeType, exportData.filename);
+                  break;
+              default:
+          }
+      });
+
+      function exportAll(type) {
+        $(tableID).tableExport({
+          filename: 'table_%DD%-%MM%-%YY%-month(%MM%)',
+          format: type
+        });
+      }
+    </script>
     <!--Print-->
     <script type="text/javascript">
       function printContent(el){ //https://stackoverflow.com/questions/2255291/print-the-contents-of-a-div
