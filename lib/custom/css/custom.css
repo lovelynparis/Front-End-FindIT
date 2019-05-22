@@ -1392,3 +1392,23 @@ select.filter{
   /* padding-left: 1rem; */
   padding-top: 5px
 }
+
+  .controls {
+            margin-bottom: 10px;
+        }
+
+        .collapse-group {
+            padding: 10px;
+            border: 1px solid darkgrey;
+            margin-bottom: 10px;
+        }
+
+        .panel-title .trigger:before {
+            content: '\e082';
+            font-family: 'Glyphicons Halflings';
+            vertical-align: text-bottom;
+        }
+
+        .panel-title .trigger.collapsed:before {
+            content: '\e081';
+        }
